@@ -72,7 +72,7 @@ format:
 
 theme:
   light: [cosmo, style/sta199.scss]
-  dark: [cosmo, style/sta199.scss, style/dark.scss]
+#  dark: [cosmo, style/sta199.scss, style/dark.scss]
 linkcolor: "#798b93"
 toc: true
 code-copy: hover
