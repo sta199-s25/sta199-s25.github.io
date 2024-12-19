@@ -87,7 +87,7 @@ d |>
     locations = cells_body(
       columns = everything(),
       rows = str_detect(topic, "[Ll]ab|Milestone|Final|Review") 
-      # puts black line above rows where certain keywords are detected
+      # puts black line above rows where certain keywords are detected in certain columns
     )
   ) |>
   fmt_markdown(
