@@ -6,7 +6,7 @@ editor_options:
   chunk_output_type: console
 ---
 
-Below is a prospective outline for the course, assignment deadlines are firm, but topics may change with advanced notice:
+Below is a prospective outline for the course. Assignment deadlines are firm, but topics may change with advanced notice.
 
 ```{r}
 #| echo: false
