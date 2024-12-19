@@ -97,9 +97,9 @@ d |>
     week ~ pct(2),
     date ~ pct(10), 
     prepare ~ pct(25),
-    topic ~ pct(27),
+    topic ~ pct(20),
     materials ~ pct(18),
-    due ~ pct(18)
+    due ~ pct(15)
   ) |>
   cols_label_with(fn = function(x) {
       janitor::make_clean_names(x, case = "title") |>
