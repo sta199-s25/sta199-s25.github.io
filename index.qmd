@@ -86,7 +86,7 @@ d |>
     ),
     locations = cells_body(
       columns = everything(),
-      rows = str_detect(topic, "[Ll]ab|Project milestone|Final$")
+      rows = str_detect(topic, "[Ll]ab|Milestone|Final|Review")
     )
   ) |>
   fmt_markdown(
