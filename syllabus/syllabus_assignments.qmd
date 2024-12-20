@@ -31,7 +31,7 @@ Your final letter grade will be determined based on these thresholds:
 | F            | \< 60              |
 
 ::: callout-warning
-These thresholds will not change and will be applied exactly. This means that the final grade will not be curved, and a 92.99 will not be rounded up to an A.
+These thresholds will not change and will be applied exactly. This means that the final grades will not be curved, and a 92.99 will not be rounded up to an A.
 :::
 
 ## Application exercises (5%)
