@@ -1,5 +1,16 @@
 [
   {
+    "objectID": "syllabus/syllabus_policies.html",
+    "href": "syllabus/syllabus_policies.html",
+    "title": "Course policies and conduct",
+    "section": "",
+    "text": "collaboration\noutside resources\ncommunication\nlate work\nregrade requests",
+    "crumbs": [
+      "Syllabus",
+      "Policies and conduct"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
@@ -8,6 +19,105 @@
     "crumbs": [
       "Syllabus",
       "Schedule"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_overview.html",
+    "href": "syllabus/syllabus_overview.html",
+    "title": "Course overview",
+    "section": "",
+    "text": "Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.\nPrerequisites: none.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_overview.html#description",
+    "href": "syllabus/syllabus_overview.html#description",
+    "title": "Course overview",
+    "section": "",
+    "text": "Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.\nPrerequisites: none.",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_overview.html#meetings",
+    "href": "syllabus/syllabus_overview.html#meetings",
+    "title": "Course overview",
+    "section": "Meetings",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nBiological Sciences 111\nTuThu 11:45 AM - 12:00 PM\nJohn Z\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nM 08:30 AM - 09:45 AM\nTBD\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nM 10:05 AM - 11:20 AM\nTBD\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nM 10:05 AM - 11:20 AM\nTBD\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nM 11:45 AM - 01:00 PM\nTBD\n\n\nLab 05\nPerkins LINK 071 (Classroom 5)\nM 11:45 AM - 01:00 PM\nTBD\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nM 01:25 PM - 02:40 PM\nTBD\n\n\nLab 07\nPerkins LINK 071 (Classroom 5)\nM 01:25 PM - 02:40 PM\nTBD\n\n\nLab 08\nPerkins LINK 087 (Classroom 3)\nM 03:05 PM - 04:20 PM\nTBD\n\n\nLab 09\nPerkins LINK 071 (Classroom 5)\nM 03:05 PM - 04:20 PM\nTBD\n\n\nLab 10\nPerkins LINK 087 (Classroom 3)\nM 04:40 PM - 05:55 PM\nTBD",
+    "crumbs": [
+      "Syllabus",
+      "Overview"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html",
+    "href": "syllabus/syllabus_assignments.html",
+    "title": "Assignments and grading",
+    "section": "",
+    "text": "Your final course grade will be calculated as follows:\nYour final letter grade will be determined based on these thresholds:",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#application-exercises-5",
+    "href": "syllabus/syllabus_assignments.html#application-exercises-5",
+    "title": "Assignments and grading",
+    "section": "Application exercises (5%)",
+    "text": "Application exercises (5%)\nThat 70% thing",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#labs-15",
+    "href": "syllabus/syllabus_assignments.html#labs-15",
+    "title": "Assignments and grading",
+    "section": "Labs (15%)",
+    "text": "Labs (15%)\nLowest dropped",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#midterm-exams-20-each",
+    "href": "syllabus/syllabus_assignments.html#midterm-exams-20-each",
+    "title": "Assignments and grading",
+    "section": "Midterm Exams (20% each)",
+    "text": "Midterm Exams (20% each)\n\nIn-class\nTake-home\n\nmake appointments in the testing center",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#final-exam-20",
+    "href": "syllabus/syllabus_assignments.html#final-exam-20",
+    "title": "Assignments and grading",
+    "section": "Final Exam (20%)",
+    "text": "Final Exam (20%)\nYour final exam score will replace your lowest in-class midterm score if it’s higher",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_assignments.html#final-project-20",
+    "href": "syllabus/syllabus_assignments.html#final-project-20",
+    "title": "Assignments and grading",
+    "section": "Final project (20%)",
+    "text": "Final project (20%)",
+    "crumbs": [
+      "Syllabus",
+      "Assignments and grading"
     ]
   }
 ]
