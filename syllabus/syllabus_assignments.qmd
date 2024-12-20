@@ -31,7 +31,7 @@ Your final letter grade will be determined based on these thresholds:
 | F            | \< 60              |
 
 ::: callout-warning
-These thresholds will not change and will be applied exactly. This means that a curve will not be applied in this course, and a 92.99 will not be rounded up to an A.
+These thresholds will not change and will be applied exactly. This means that the final grade will not be curved, and a 92.99 will not be rounded up to an A.
 :::
 
 ## Application exercises (5%)
@@ -44,10 +44,8 @@ Lowest dropped
 
 ## Midterm Exams (20% each)
 
-- In-class 
-- Take-home
-
-
+-   In-class
+-   Take-home
 
 make appointments in the testing center
 
