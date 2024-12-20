@@ -1,0 +1,58 @@
+---
+title: "Assignments and grading"
+---
+
+Your final course grade will be calculated as follows:
+
+| Category              | Percentage |
+|-----------------------|------------|
+| Application exercises | 5%         |
+| Labs                  | 15%        |
+| Midterm Exam 1        | 20%        |
+| Midterm Exam 2        | 20%        |
+| Final exam            | 20%        |
+| Final project         | 20%        |
+
+Your final letter grade will be determined based on these thresholds:
+
+| Letter Grade | Final Course Grade |
+|--------------|--------------------|
+| A            | \>= 93             |
+| A-           | 90 - 92.99         |
+| B+           | 87 - 89.99         |
+| B            | 83 - 86.99         |
+| B-           | 80 - 82.99         |
+| C+           | 77 - 79.99         |
+| C            | 73 - 76.99         |
+| C-           | 70 - 72.99         |
+| D+           | 67 - 69.99         |
+| D            | 63 - 66.99         |
+| D-           | 60 - 62.99         |
+| F            | \< 60              |
+
+::: callout-warning
+These thresholds will not change and will be applied exactly. This means that a curve will not be applied in this course, and a 92.99 will not be rounded up to an A.
+:::
+
+## Application exercises (5%)
+
+That 70% thing
+
+## Labs (15%)
+
+Lowest dropped
+
+## Midterm Exams (20% each)
+
+- In-class 
+- Take-home
+
+
+
+make appointments in the testing center
+
+## Final Exam (20%)
+
+Your final exam score will replace your lowest in-class midterm score if it's higher
+
+## Final project (20%)

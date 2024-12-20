@@ -57,12 +57,24 @@ website:
     contents:
       - section: "Syllabus"
         contents:
+          - href: syllabus/syllabus_overview.qmd
+            text: Overview
+          - href: syllabus/syllabus_team.qmd
+            text: Teaching team
+          - href: syllabus/syllabus_materials.qmd
+            text: Course materials
+          - href: syllabus/syllabus_assignments.qmd
+            text: Assignments and grading
+          - href: syllabus/syllabus_policies.qmd
+            text: Policies and conduct
+          - href: syllabus/syllabus_resources.qmd
+            text: University resources
           - href: index.qmd
             text: Schedule
             
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
-    left: "&copy; Copyright 2025, Mine Çetinkaya-Rundel, John Zito"
+    left: "&copy; Copyright 2025 Mine Çetinkaya-Rundel, John Zito"
     background: "#9c1625"
 
 format: 
