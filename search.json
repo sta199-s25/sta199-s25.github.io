@@ -180,7 +180,7 @@
     "href": "syllabus/syllabus_assignments.html#application-exercises-5",
     "title": "Assignments and grading",
     "section": "Application exercises (5%)",
-    "text": "Application exercises (5%)\nDuring most lectures, we will work through an application exercise (AE) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. Note:\n\nAEs are due at 2PM ET on the day they are introduced;\nSubmit an AE by pushing your work to your GitHub repo;\nAEs are graded for completion; you will receive full credit if you make a good faith attempt at all parts.s\n\nSuccessful on-time completion of at least 70% of AEs will result in full credit for AEs in the final course grade.",
+    "text": "Application exercises (5%)\nDuring most lectures, we will work through an application exercise (AE) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. Note:\n\nAEs are due at 2PM ET on the day they are introduced;\nSubmit an AE by pushing your work to your GitHub repo;\nAEs are graded for completion; you will receive full credit if you make a good faith attempt at all parts of the exercise.\n\nOn-time completion of at least 70% of AEs will result in full credit for the AE component of the final course grade.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -191,7 +191,7 @@
     "href": "syllabus/syllabus_assignments.html#labs-15",
     "title": "Assignments and grading",
     "section": "Labs (15%)",
-    "text": "Labs (15%)\nLowest dropped",
+    "text": "Labs (15%)\n\n\n\n\n\n\nNote\n\n\n\nYour lowest lab score will be dropped. This policy will be applied to the gradebook at the end of the semester, after all labs have been graded/regraded, and before the final exam.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -202,7 +202,7 @@
     "href": "syllabus/syllabus_assignments.html#midterm-exams-20-each",
     "title": "Assignments and grading",
     "section": "Midterm Exams (20% each)",
-    "text": "Midterm Exams (20% each)\n\nIn-class\nTake-home\n\nmake appointments in the testing center",
+    "text": "Midterm Exams (20% each)\nThere will be two midterm exams, each with two components:\n\nIn-class (70% of the grade): sit-down, in-person, “pencil-and-paper,” with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5’ x 11’ piece of paper);\nTake-home (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto &gt; PDF &gt; Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.\n\n\n\n\n\n\n\nWarning\n\n\n\nSee the course schedule for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -213,7 +213,7 @@
     "href": "syllabus/syllabus_assignments.html#final-exam-20",
     "title": "Assignments and grading",
     "section": "Final Exam (20%)",
-    "text": "Final Exam (20%)\nOn Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams: sit-down, in-person, pencil-and-paper, with no technology, and with no outside resources apart from a note sheet of your creation (both sides of an 8.5’ x 11’ piece of paper).\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.\n\n\nYour final exam score will replace your lowest in-class midterm score if it’s higher",
+    "text": "Final Exam (20%)\nOn Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams.\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
