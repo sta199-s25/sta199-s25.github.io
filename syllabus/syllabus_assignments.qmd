@@ -36,7 +36,11 @@ These thresholds will not change and will be applied exactly. This means that th
 
 ## Application exercises (5%)
 
-During most lectures, we will work through an *application exercise* (*AE*) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. AEs are due at 2PM ET on the day they are introduced. To submit the AEs, you only need to push your work to your GitHub repo. Because these AEs are for practice, they will be graded based on a good-faith attempt to complete all parts.
+During most lectures, we will work through an *application exercise* (*AE*) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. Note:
+
+- AEs are due at 2PM ET on the day they are introduced;
+- Submit an AE by pushing your work to your GitHub repo;
+- AEs are graded for completion; you will receive full credit if you make a good faith attempt at all parts.s
 
 Successful on-time completion of at least 70% of AEs will result in full credit for AEs in the final course grade.
 
@@ -52,6 +56,8 @@ Lowest dropped
 make appointments in the testing center
 
 ## Final Exam (20%)
+
+On 
 
 Your final exam score will replace your lowest in-class midterm score if it's higher
 
