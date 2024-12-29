@@ -57,10 +57,14 @@ make appointments in the testing center
 
 ## Final Exam (20%)
 
-On 
+On Tuesday April 29	we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams: sit-down, in-person, pencil-and-paper, with no technology, and with no outside resources apart from a note sheet of your creation (both sides of an 8.5' x 11' piece of paper). 
+
+::: callout-note
+If you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.
+:::
 
 Your final exam score will replace your lowest in-class midterm score if it's higher
 
 ## Final project (20%)
 
-link elsewhere
+We will assign you to groups of 4 or 5 within your lab. You will then select a dataset and do some stuff. The final product is a 5 minute video and a write-up
