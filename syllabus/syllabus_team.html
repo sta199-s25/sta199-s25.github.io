@@ -31,6 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <meta name="quarto:offset" content="../">
 <link href="../syllabus/syllabus_materials.html" rel="next">
 <link href="../syllabus/syllabus_overview.html" rel="prev">
+<script src="../site_libs/quarto-listing/list.min.js"></script>
+<script src="../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -67,7 +69,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-ta-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-image','listing-title','listing-categories','listing-description','listing-subtitle',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-title-sort'] }],
+      
+      searchColumns: ["listing-categories","listing-description"],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-ta-listing'] = new List('listing-ta-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <meta property="og:title" content="STA 199 Spring 2025 - Teaching team">
 <meta property="og:site_name" content="STA 199 Spring 2025">
@@ -131,7 +191,7 @@ ul.task-list li input[type="checkbox"] {
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_materials.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Course materials</span></a>
+ <span class="menu-text">Materials</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -189,6 +249,93 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
+
+<div id="listing-ta-listing" class="quarto-listing quarto-listing-container-table">
+<div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-ta-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-ta-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-title-sort" data-direction="asc">
+          Name
+        </option>
+         <option value="listing-categories" data-direction="asc">
+          Role(s)
+        </option>
+         <option value="listing-description" data-direction="asc">
+          Section(s)
+        </option>
+         <option value="listing-subtitle" data-direction="asc">
+          Office hours
+        </option>
+     </select>
+  </div>
+    <div class="input-group input-group-sm quarto-listing-filter">
+      <span class="input-group-text"><i class="bi bi-search"></i></span>
+      <input type="text" class="search form-control" placeholder="Filter">
+    </div>
+</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+</th>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Name</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-categories" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Role(s)</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-description" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Section(s)</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-subtitle" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Office hours</a>
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-categories="Lab leader" data-listing-file-modified-sort="1735439348809" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="Domenic Fenoglio" data-listing-filename-sort="fenoglio.qmd">
+<td>
+<span class="listing-image"><img src="../syllabus/ta/headshots/dom.png" style="height: 40px;" alt="Headshot of TA"></span>
+</td>
+<td>
+<a href="../syllabus/ta/fenoglio.html" class="title listing-title">Domenic Fenoglio</a>
+</td>
+<td>
+<span class="listing-categories">Lab leader</span>
+</td>
+<td>
+<span class="listing-description">TBD</span>
+</td>
+<td>
+<span class="listing-subtitle">🔗</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="Instructor" data-listing-file-modified-sort="1735439298604" data-listing-reading-time-sort="1" data-listing-word-count-sort="1" data-listing-title-sort="John Zito" data-listing-filename-sort="zito.qmd">
+<td>
+<span class="listing-image"><img src="../syllabus/ta/headshots/zito.jpg" style="height: 40px;" alt="Headshot of TA"></span>
+</td>
+<td>
+<a href="../syllabus/ta/zito.html" class="title listing-title">John Zito</a>
+</td>
+<td>
+<span class="listing-categories">Instructor</span>
+</td>
+<td>
+<span class="listing-description">TBD</span>
+</td>
+<td>
+<span class="listing-subtitle">🔗</span>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div>
 
 
 
@@ -610,8 +757,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../syllabus/syllabus_materials.html" class="pagination-link" aria-label="Course materials">
-        <span class="nav-page-text">Course materials</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../syllabus/syllabus_materials.html" class="pagination-link" aria-label="Materials">
+        <span class="nav-page-text">Materials</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

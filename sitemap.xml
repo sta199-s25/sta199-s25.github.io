@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sta199-s25.github.io/syllabus/ta/fenoglio.html</loc>
+    <lastmod>2024-12-29T02:29:08.809Z</lastmod>
+  </url>
+  <url>
     <loc>https://sta199-s25.github.io/syllabus/syllabus_team.html</loc>
-    <lastmod>2024-12-20T03:56:20.104Z</lastmod>
+    <lastmod>2024-12-29T02:30:24.872Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s25.github.io/syllabus/syllabus_policies.html</loc>
-    <lastmod>2024-12-20T03:55:46.338Z</lastmod>
+    <lastmod>2024-12-29T02:15:00.068Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s25.github.io/syllabus/syllabus_materials.html</loc>
@@ -18,7 +22,7 @@
   </url>
   <url>
     <loc>https://sta199-s25.github.io/syllabus/syllabus_overview.html</loc>
-    <lastmod>2024-12-20T03:06:11.200Z</lastmod>
+    <lastmod>2024-12-20T04:03:54.508Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s25.github.io/syllabus/syllabus_resources.html</loc>
@@ -26,6 +30,10 @@
   </url>
   <url>
     <loc>https://sta199-s25.github.io/syllabus/syllabus_assignments.html</loc>
-    <lastmod>2024-12-20T03:54:16.314Z</lastmod>
+    <lastmod>2024-12-29T02:18:51.835Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/syllabus/ta/zito.html</loc>
+    <lastmod>2024-12-29T02:28:18.604Z</lastmod>
   </url>
 </urlset>

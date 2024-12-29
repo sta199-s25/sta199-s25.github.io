@@ -1,10 +1,87 @@
 [
   {
+    "objectID": "syllabus/syllabus_team.html",
+    "href": "syllabus/syllabus_team.html",
+    "title": "Teaching team",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Name\n        \n         \n          Role(s)\n        \n         \n          Section(s)\n        \n         \n          Office hours\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\nName\n\n\nRole(s)\n\n\nSection(s)\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\nDomenic Fenoglio\n\n\nLab leader\n\n\nTBD\n\n\n🔗\n\n\n\n\n\n\n\nJohn Zito\n\n\nInstructor\n\n\nTBD\n\n\n🔗\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Syllabus",
+      "Teaching team"
+    ]
+  },
+  {
     "objectID": "syllabus/syllabus_policies.html",
     "href": "syllabus/syllabus_policies.html",
-    "title": "Course policies and conduct",
+    "title": "Policies and conduct",
     "section": "",
-    "text": "collaboration\noutside resources\ncommunication\nlate work\nregrade requests",
+    "text": "If you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito@duke.edu).\n\n\n\n\n\n\nNote\n\n\n\nYou can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.",
+    "crumbs": [
+      "Syllabus",
+      "Policies and conduct"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_policies.html#communication",
+    "href": "syllabus/syllabus_policies.html#communication",
+    "title": "Policies and conduct",
+    "section": "",
+    "text": "If you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.\nIf you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito@duke.edu).\n\n\n\n\n\n\nNote\n\n\n\nYou can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.",
+    "crumbs": [
+      "Syllabus",
+      "Policies and conduct"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_policies.html#late-work-and-extensions",
+    "href": "syllabus/syllabus_policies.html#late-work-and-extensions",
+    "title": "Policies and conduct",
+    "section": "Late work and extensions",
+    "text": "Late work and extensions\nNo late work will be accepted for application exercises, exams, or projects. Labs may be submitted up to 3 days late. A 5% deduction will be applied for each 24-hour period during which the assignment is late.\nIf circumstances prevent you from completing a lab by the stated due date, you may email the course coordinator, Dr. Mary Knox, before the deadline to waive the late penalty. In your email, you only need to request the waiver; you do not need to provide an explanation. This waiver may only be used once a semester, so only use it for a truly extenuating circumstance.\nIf circumstances have a longer-term impact on your academic performance, please let your academic dean know. They can be a resource. Please let me know if you need help contacting your academic dean.",
+    "crumbs": [
+      "Syllabus",
+      "Policies and conduct"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_policies.html#regrade-requests",
+    "href": "syllabus/syllabus_policies.html#regrade-requests",
+    "title": "Policies and conduct",
+    "section": "Regrade requests",
+    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nRegrade requests are not a mechanism for asking for clarification on feedback. Those questions should be brought to office hours;\nNo grades will be changed after the final exam has been administered on Tuesday, April 29;\n\n\n\n\n\n\n\nWarning\n\n\n\nA regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
+    "crumbs": [
+      "Syllabus",
+      "Policies and conduct"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_policies.html#attendance",
+    "href": "syllabus/syllabus_policies.html#attendance",
+    "title": "Policies and conduct",
+    "section": "Attendance",
+    "text": "Attendance",
+    "crumbs": [
+      "Syllabus",
+      "Policies and conduct"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_policies.html#collaboration",
+    "href": "syllabus/syllabus_policies.html#collaboration",
+    "title": "Policies and conduct",
+    "section": "Collaboration",
+    "text": "Collaboration\nYou are encouraged to discuss and help one another with the labs, but you should not share solutions (e.g. emailing a friend your code). All submitted work must be your own; You are forbidden from collaborating in any way on the exams; You are enthusiastically encouraged to collaborate with your teammates on all aspects of the final project.",
+    "crumbs": [
+      "Syllabus",
+      "Policies and conduct"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
+    "href": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
+    "title": "Policies and conduct",
+    "section": "Use of outside resources, including AI",
+    "text": "Use of outside resources, including AI\nconduct",
     "crumbs": [
       "Syllabus",
       "Policies and conduct"
@@ -48,7 +125,7 @@
     "href": "syllabus/syllabus_overview.html#meetings",
     "title": "Course overview",
     "section": "Meetings",
-    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nBiological Sciences 111\nTuThu 11:45 AM - 12:00 PM\nJohn Z\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nM 08:30 AM - 09:45 AM\nTBD\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nM 10:05 AM - 11:20 AM\nTBD\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nM 10:05 AM - 11:20 AM\nTBD\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nM 11:45 AM - 01:00 PM\nTBD\n\n\nLab 05\nPerkins LINK 071 (Classroom 5)\nM 11:45 AM - 01:00 PM\nTBD\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nM 01:25 PM - 02:40 PM\nTBD\n\n\nLab 07\nPerkins LINK 071 (Classroom 5)\nM 01:25 PM - 02:40 PM\nTBD\n\n\nLab 08\nPerkins LINK 087 (Classroom 3)\nM 03:05 PM - 04:20 PM\nTBD\n\n\nLab 09\nPerkins LINK 071 (Classroom 5)\nM 03:05 PM - 04:20 PM\nTBD\n\n\nLab 10\nPerkins LINK 087 (Classroom 3)\nM 04:40 PM - 05:55 PM\nTBD",
+    "text": "Meetings\n\n\n\n\n\n\n\n\n\nMeeting\nLocation\nTime\nStaff\n\n\n\n\nLectures\nBiological Sciences 111\nTu Thu 11:45 AM - 01:00 PM\nJohn Z\n\n\nLab 01\nPerkins LINK 087 (Classroom 3)\nM 08:30 AM - 09:45 AM\nTBD\n\n\nLab 02\nPerkins LINK 087 (Classroom 3)\nM 10:05 AM - 11:20 AM\nTBD\n\n\nLab 03\nPerkins LINK 071 (Classroom 5)\nM 10:05 AM - 11:20 AM\nTBD\n\n\nLab 04\nPerkins LINK 087 (Classroom 3)\nM 11:45 AM - 01:00 PM\nTBD\n\n\nLab 05\nPerkins LINK 071 (Classroom 5)\nM 11:45 AM - 01:00 PM\nTBD\n\n\nLab 06\nPerkins LINK 087 (Classroom 3)\nM 01:25 PM - 02:40 PM\nTBD\n\n\nLab 07\nPerkins LINK 071 (Classroom 5)\nM 01:25 PM - 02:40 PM\nTBD\n\n\nLab 08\nPerkins LINK 087 (Classroom 3)\nM 03:05 PM - 04:20 PM\nTBD\n\n\nLab 09\nPerkins LINK 071 (Classroom 5)\nM 03:05 PM - 04:20 PM\nTBD\n\n\nLab 10\nPerkins LINK 087 (Classroom 3)\nM 04:40 PM - 05:55 PM\nTBD",
     "crumbs": [
       "Syllabus",
       "Overview"
@@ -114,7 +191,7 @@
     "href": "syllabus/syllabus_assignments.html#final-project-20",
     "title": "Assignments and grading",
     "section": "Final project (20%)",
-    "text": "Final project (20%)",
+    "text": "Final project (20%)\nlink elsewhere",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
