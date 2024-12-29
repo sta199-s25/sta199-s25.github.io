@@ -54,3 +54,5 @@ make appointments in the testing center
 Your final exam score will replace your lowest in-class midterm score if it's higher
 
 ## Final project (20%)
+
+link elsewhere
