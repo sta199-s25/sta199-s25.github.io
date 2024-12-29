@@ -40,30 +40,36 @@ During most lectures, we will work through an *application exercise* (*AE*) toge
 
 - AEs are due at 2PM ET on the day they are introduced;
 - Submit an AE by pushing your work to your GitHub repo;
-- AEs are graded for completion; you will receive full credit if you make a good faith attempt at all parts.s
+- AEs are graded for completion; you will receive full credit if you make a good faith attempt at *all* parts of the exercise.
 
-Successful on-time completion of at least 70% of AEs will result in full credit for AEs in the final course grade.
+On-time completion of at least 70% of AEs will result in full credit for the AE component of the final course grade.
 
 ## Labs (15%)
 
-Lowest dropped
+
+
+::: callout-note
+**Your lowest lab score will be dropped**. This policy will be applied to the gradebook at the end of the semester, after all labs have been graded/regraded, and before the final exam.
+:::
 
 ## Midterm Exams (20% each)
 
--   In-class
--   Take-home
+There will be two midterm exams, each with two components:
 
-make appointments in the testing center
+-   **In-class** (70% of the grade): sit-down, in-person, "pencil-and-paper," with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5' x 11' piece of paper);
+-   **Take-home** (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto > PDF > Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.
+
+::: callout-warning
+See the [course schedule](https://sta199-s25.github.io/) for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.
+:::
 
 ## Final Exam (20%)
 
-On Tuesday April 29	we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams: sit-down, in-person, pencil-and-paper, with no technology, and with no outside resources apart from a note sheet of your creation (both sides of an 8.5' x 11' piece of paper). 
+On Tuesday April 29	we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams.
 
 ::: callout-note
 If you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.
 :::
-
-Your final exam score will replace your lowest in-class midterm score if it's higher
 
 ## Final project (20%)
 
