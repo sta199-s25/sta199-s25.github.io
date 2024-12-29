@@ -1,14 +1,46 @@
 ---
-title: "Course policies and conduct"
+title: "Policies and conduct"
 ---
 
+## Communication
 
-collaboration
+If you wish to ask content-related questions in writing, please do not do so via e-mail. Instead, please use the course discussion forum Ed Discussion. That way all members of the teaching team can see your question, and all students can benefit from the ensuing discussion. You are also encouraged to answer one another’s questions.
 
-outside resources
+If you have questions about personal matters that may not be appropriate for the public course forum (e.g. illness, accommodations, etc), then please e-mail the instructor directly (john.zito\@duke.edu).
 
-communication
+::: callout-note
+You can ask questions anonymously on Ed. The teaching team will still know your identity, but your peers will not.
+:::
 
-late work 
+## Late work and extensions
 
-regrade requests
+No late work will be accepted for application exercises, exams, or projects. Labs may be submitted up to 3 days late. A 5% deduction will be applied for each 24-hour period during which the assignment is late.
+
+If circumstances prevent you from completing a lab by the stated due date, you may email the course coordinator, Dr. Mary Knox, before the deadline to waive the late penalty. In your email, you only need to request the waiver; you do not need to provide an explanation. This waiver may only be used once a semester, so only use it for a truly extenuating circumstance.
+
+If circumstances have a longer-term impact on your academic performance, please let your academic dean know. They can be a resource. Please let me know if you need help contacting your academic dean.
+
+## Regrade requests
+
+If you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a [regrade request](https://guides.gradescope.com/hc/en-us/articles/21854736042253-Submitting-a-Regrade-Request) in Gradescope. Note the following:
+
+-   You have one week after you receive a grade to submit a regrade request;
+-   You should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;
+-   Requests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;
+-   Requests to dispute the number of points deducted for an incorrect response will not be considered;
+-   Regrade requests are not a mechanism for asking for clarification on feedback. Those questions should be brought to office hours;
+-   **No grades will be changed after the final exam has been administered on Tuesday, April 29**;
+
+::: callout-warning
+A regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.
+:::
+
+## Attendance
+
+## Collaboration
+
+You are encouraged to discuss and help one another with the labs, but you should not share solutions (e.g. emailing a friend your code). All submitted work must be your own; You are forbidden from collaborating in any way on the exams; You are enthusiastically encouraged to collaborate with your teammates on all aspects of the final project.
+
+## Use of outside resources, including AI
+
+conduct
