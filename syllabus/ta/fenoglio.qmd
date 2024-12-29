@@ -1,0 +1,9 @@
+---
+title: Domenic Fenoglio
+categories: 
+  - Lab leader
+description: "TBD"
+subtitle: "🔗"
+image: headshots/dom.png
+image-alt: Headshot of TA
+---
