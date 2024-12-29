@@ -62,7 +62,7 @@ website:
           - href: syllabus/syllabus_team.qmd
             text: Teaching team
           - href: syllabus/syllabus_materials.qmd
-            text: Course materials
+            text: Materials
           - href: syllabus/syllabus_assignments.qmd
             text: Assignments and grading
           - href: syllabus/syllabus_policies.qmd
