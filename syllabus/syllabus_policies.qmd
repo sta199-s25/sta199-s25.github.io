@@ -1,5 +1,5 @@
 ---
-title: "Policies and conduct"
+title: "Policies"
 ---
 
 ## Communication
@@ -37,10 +37,18 @@ A regrade request can result in your grade going up, staying the same, or going 
 
 ## Attendance
 
+For the most part, attendance is not strictly required. You are an adult, and you are free to live your life. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, regular lecture attendance is likely the path of least resistance toward earning full credit for the application exercises. Lastly, there are some aspects of the final project that will require you to attend your lab section so that you can convene with your teammates. 
+
+### Lecture recording request
+
+Lectures will be recorded on Panopto and will be made available to students with an excused absence upon request. Videos shared with such students will be available for a week after the lecture date. To request a particular lecture’s video, please fill out the form at the link below (!!!). Please submit the form within 24 hours of missing lecture to ensure you have sufficient time to watch the recording. Please also make sure that any official documentation, such as STINFs, Dean’s excuses, NOVAPs, and quarantine/removal from class notices from student health are also uploaded to the form.
+
+## Accommodations
+
+If you need accommodations for this class, you will need to register with the Student Disability Access Office (SDAO) and provide them with documentation related to your needs. SDAO will work with you to determine what accommodations are appropriate for your situation. Please note that accommodations are not retroactive and disability accommodations cannot be provided until a Faculty Accommodation Letter has been given to me. Please contact SDAO for more information: `sdao@duke.edu` or `access.duke.edu`.
+
 ## Collaboration
 
 You are encouraged to discuss and help one another with the labs, but you should not share solutions (e.g. emailing a friend your code). All submitted work must be your own; You are forbidden from collaborating in any way on the exams; You are enthusiastically encouraged to collaborate with your teammates on all aspects of the final project.
 
 ## Use of outside resources, including AI
-
-conduct
