@@ -88,11 +88,44 @@
     ]
   },
   {
+    "objectID": "syllabus/syllabus_materials.html",
+    "href": "syllabus/syllabus_materials.html",
+    "title": "Course materials",
+    "section": "",
+    "text": "All books are freely available online:\n\n[ims]: Mine Çetinkaya-Rundel and Jo Hardin. Introduction to Modern Statistics. 2nd edition. OpenIntro, 2024.\n[r4ds]: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. R for Data Science. 2nd edition. O’Reilly, 2022.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_materials.html#textbooks",
+    "href": "syllabus/syllabus_materials.html#textbooks",
+    "title": "Course materials",
+    "section": "",
+    "text": "All books are freely available online:\n\n[ims]: Mine Çetinkaya-Rundel and Jo Hardin. Introduction to Modern Statistics. 2nd edition. OpenIntro, 2024.\n[r4ds]: Hadley Wickham, Mine Çetinkaya-Rundel, and Garrett Grolemund. R for Data Science. 2nd edition. O’Reilly, 2022.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_materials.html#technology",
+    "href": "syllabus/syllabus_materials.html#technology",
+    "title": "Course materials",
+    "section": "Technology",
+    "text": "Technology\nYou will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described here. Armed with your trusty laptop, you must be able to access the following:\n\nThis course page that you are on right now;\nR/RStudio as provided by the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
+    "crumbs": [
+      "Syllabus",
+      "Materials"
+    ]
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\n\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\n\n\n\n\n1\nMon, Jan 13\n\nLab 1\n\n\n\n\n\nTue, Jan 14\n\nMeet the Toolkit\n\n\n\n\n\nThu, Jan 16\n\nData Vizualization\n\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n\nData Transformation\n\nLab 1 @ 8:30AM\n\n\n\nThu, Jan 23\n\nData Exploration 1\n\n\n\n\n3\nMon, Jan 27\n\nLab 2\n\n\n\n\n\nTue, Jan 28\n\nData Exploration 2\n\n\n\n\n\nThu, Jan 30\n\nTidying data\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\n\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n\nJoining data\n\n\n\n\n\nThu, Feb 6\n\nData types and classes\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n\nImporting and recoding data\n\n\n\n\n\nThu, Feb 13\n\nWeb scraping\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n\nData science ethics\n\n\n\n\n\nThu, Feb 20\n\nMidterm 1\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nThe language of models\n\n\n\n\n\nThu, Feb 27\n\nSimple linear regression\n\n\n\n\n8\nMon, Mar 3\n\nMilestone 2\n\n\n\n\n\nTue, Mar 4\n\nMultiple linear regression 1\n\n\n\n\n\nThu, Mar 6\n\nMultiple linear regression 2\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\n\n\n\n\nTue, Mar 18\n\nModel selection\n\n\n\n\n\nThu, Mar 20\n\nLogistic regression 1\n\n\n\n\n11\nMon, Mar 24\n\nLab 6\n\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n\nLogistic regression 2\n\n\n\n\n\nThu, Mar 27\n\nIntervals\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n\nIntervals/Testing\n\n\n\n\n\nThu, Apr 3\n\nTesting\n\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nInference Overview\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nCommunication, Quarto\n\n\n\n\n\nThu, Apr 17\n\n\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12AM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\n\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\n\n\n\n\n1\nMon, Jan 13\n\nLab 1\n\n\n\n\n\nTue, Jan 14\n\nMeet the Toolkit\n\n\n\n\n\nThu, Jan 16\n\nData Vizualization\n\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n\nData Transformation\n\nLab 1 @ 8:30AM\n\n\n\nThu, Jan 23\n\nData Exploration 1\n\n\n\n\n3\nMon, Jan 27\n\nLab 2\n\n\n\n\n\nTue, Jan 28\n\nData Exploration 2\n\n\n\n\n\nThu, Jan 30\n\nTidying data\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\n\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n\nJoining data\n\n\n\n\n\nThu, Feb 6\n\nData types and classes\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n\nImporting and recoding data\n\n\n\n\n\nThu, Feb 13\n\nWeb scraping\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n\nData science ethics\n\n\n\n\n\nThu, Feb 20\n\nMidterm 1\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nThe language of models\n\n\n\n\n\nThu, Feb 27\n\nSimple linear regression\n\n\n\n\n8\nMon, Mar 3\n\nMilestone 2\n\n\n\n\n\nTue, Mar 4\n\nMultiple linear regression 1\n\n\n\n\n\nThu, Mar 6\n\nMultiple linear regression 2\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\n\n\n\n\nTue, Mar 18\n\nModel selection\n\n\n\n\n\nThu, Mar 20\n\nLogistic regression 1\n\n\n\n\n11\nMon, Mar 24\n\nLab 6\n\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n\nLogistic regression 2\n\n\n\n\n\nThu, Mar 27\n\nIntervals\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n\nIntervals/Testing\n\n\n\n\n\nThu, Apr 3\n\nTesting\n\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nInference Overview\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nCommunication, Quarto\n\n\n\n\n\nThu, Apr 17\n\n\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
@@ -147,7 +180,7 @@
     "href": "syllabus/syllabus_assignments.html#application-exercises-5",
     "title": "Assignments and grading",
     "section": "Application exercises (5%)",
-    "text": "Application exercises (5%)\nThat 70% thing",
+    "text": "Application exercises (5%)\nDuring most lectures, we will work through an application exercise (AE) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. Note:\n\nAEs are due at 2PM ET on the day they are introduced;\nSubmit an AE by pushing your work to your GitHub repo;\nAEs are graded for completion; you will receive full credit if you make a good faith attempt at all parts.s\n\nSuccessful on-time completion of at least 70% of AEs will result in full credit for AEs in the final course grade.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -180,7 +213,7 @@
     "href": "syllabus/syllabus_assignments.html#final-exam-20",
     "title": "Assignments and grading",
     "section": "Final Exam (20%)",
-    "text": "Final Exam (20%)\nYour final exam score will replace your lowest in-class midterm score if it’s higher",
+    "text": "Final Exam (20%)\nOn Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams: sit-down, in-person, pencil-and-paper, with no technology, and with no outside resources apart from a note sheet of your creation (both sides of an 8.5’ x 11’ piece of paper).\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.\n\n\nYour final exam score will replace your lowest in-class midterm score if it’s higher",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -191,7 +224,7 @@
     "href": "syllabus/syllabus_assignments.html#final-project-20",
     "title": "Assignments and grading",
     "section": "Final project (20%)",
-    "text": "Final project (20%)\nlink elsewhere",
+    "text": "Final project (20%)\nWe will assign you to groups of 4 or 5 within your lab. You will then select a dataset and do some stuff. The final product is a 5 minute video and a write-up",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
