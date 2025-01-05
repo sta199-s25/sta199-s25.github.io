@@ -1,0 +1,10 @@
+---
+title: Murphy, Caitrin
+categories: 
+  - TBD
+description: "TBD"
+subtitle: "🔗"
+image: headshots/caitrin.png
+image-alt: Headshot of TA
+---
+

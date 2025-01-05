@@ -1,0 +1,10 @@
+---
+title: Dey, Arijit
+categories: 
+  - TBD
+description: "TBD"
+subtitle: "🔗"
+image: headshots/dey.png
+image-alt: Headshot of TA
+---
+

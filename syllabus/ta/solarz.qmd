@@ -1,0 +1,10 @@
+---
+title: Solarz, Katie
+categories: 
+  - TBD
+description: "TBD"
+subtitle: "🔗"
+image: headshots/solarz.png
+image-alt: Headshot of TA
+---
+

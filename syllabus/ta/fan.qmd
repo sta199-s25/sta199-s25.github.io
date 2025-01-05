@@ -1,0 +1,10 @@
+---
+title: Fan, Li
+categories: 
+  - TBD
+description: "TBD"
+subtitle: "🔗"
+image: headshots/fan.png
+image-alt: Headshot of TA
+---
+
