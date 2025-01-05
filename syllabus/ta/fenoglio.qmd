@@ -1,7 +1,7 @@
 ---
 title: Fenoglio, Domenic
 categories: 
-  - Lab leader
+  - TBD
 description: "TBD"
 subtitle: "🔗"
 image: headshots/dom.png
