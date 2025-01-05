@@ -4,6 +4,6 @@ categories:
   - TBD
 description: "TBD"
 subtitle: "🔗"
-image: headshots/tapia.png
+image: headshots/tapia.jpg
 image-alt: Headshot of TA
 ---

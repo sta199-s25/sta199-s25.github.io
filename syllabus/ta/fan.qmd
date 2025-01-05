@@ -4,7 +4,6 @@ categories:
   - TBD
 description: "TBD"
 subtitle: "🔗"
-image: headshots/fan.png
+image: headshots/fan.jpg
 image-alt: Headshot of TA
 ---
-
