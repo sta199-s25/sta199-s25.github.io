@@ -1,0 +1,10 @@
+---
+title: Healey-Parera, Julia
+categories: 
+  - TBD
+description: "TBD"
+subtitle: "🔗"
+image: headshots/healeyparera.png
+image-alt: Headshot of TA
+---
+

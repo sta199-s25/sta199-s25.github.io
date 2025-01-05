@@ -1,0 +1,9 @@
+---
+title: Harris, Natasha
+categories: 
+  - TBD
+description: "TBD"
+subtitle: "🔗"
+image: headshots/harris.png
+image-alt: Headshot of TA
+---
