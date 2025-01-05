@@ -1,0 +1,9 @@
+---
+title: Lee, Hyunjin
+categories: 
+  - TBD
+description: "TBD"
+subtitle: "🔗"
+image: headshots/hyunjin.png
+image-alt: Headshot of TA
+---

@@ -1,0 +1,9 @@
+---
+title: Arboleda, Federico
+categories: 
+  - TBD
+description: "TBD"
+subtitle: "🔗"
+image: headshots/federico.png
+image-alt: Headshot of TA
+---

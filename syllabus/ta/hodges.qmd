@@ -1,0 +1,10 @@
+---
+title: Hodges, Avery
+categories: 
+  - TBD
+description: "TBD"
+subtitle: "🔗"
+image: headshots/avery.png
+image-alt: Headshot of TA
+---
+
