@@ -15,7 +15,7 @@ listing:
     subtitle: Office hours
 ---
 
-## Teaching assistants {#teaching-assistants}
+## {#teaching-assistants}
 
 ::: {#ta-listing}
 :::
