@@ -32,16 +32,12 @@ If you receive a graded assignment back, and you believe that some part of it wa
 -   **No grades will be changed after the final exam has been administered on Tuesday, April 29**;
 
 ::: callout-warning
-A regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.
+If you submit a regrade request for part of an assignment, we reserve the right to regrade the entire assignment. As such, a regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.
 :::
 
 ## Attendance
 
-For the most part, attendance is not strictly required. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, regular lecture attendance is most likely the path of least resistance toward earning full credit for the application exercises. Lastly, there are some aspects of the final project that will require you to attend your lab section so that you can convene with your teammates. 
-
-### Lecture recording request
-
-Lectures will be recorded on Panopto and will be made available to students with an excused absence upon request. Videos shared with such students will be available for a week after the lecture date. To request a particular lecture’s video, please fill out the form at the link below (!!!). Please submit the form within 24 hours of missing lecture to ensure you have sufficient time to watch the recording. Please also make sure that any official documentation, such as STINFs, Dean’s excuses, NOVAPs, and quarantine/removal from class notices from student health are also uploaded to the form.
+We are not tracking attendance, but success in this class and regular attendance are probably highly positively correlated. Furthermore, regular lecture attendance is necessary if you wish to earn full credit for the application exercises. Lastly, some components of the final project require you to complete activities with your teammates during lab. If you do not attend, you will forfeit these points.
 
 ## Accommodations
 
@@ -73,3 +69,17 @@ You should treat generative AI, such as ChatGPT, like other online resources. Tw
 In general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect *your* understanding of the course content. Identifying AI-generated content is fairly straightforward. Any code identified as AI-generated but not cited as such and any narrative identified as AI-generated will be considered plagiarism and treated as such.
 
 NEED TO ADD EXAMPLE OF PROPER CITATION.
+
+## Academic honesty
+
+As a student in this course, you have agreed to uphold the [Duke Community Standard](https://trinity.duke.edu/undergraduate/academic-policies/community-standard-student-conduct) and the practices specific to this course.
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_KN97j30ST4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+
+</iframe>
+
+Any violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a 0 for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action.
+
+- lab 0s won't be dropped
+- exam violations will result in permanent decrease in final letter grade
+- punished equally
