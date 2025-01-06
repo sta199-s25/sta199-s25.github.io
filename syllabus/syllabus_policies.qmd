@@ -37,7 +37,7 @@ A regrade request can result in your grade going up, staying the same, or going 
 
 ## Attendance
 
-For the most part, attendance is not strictly required. You are an adult, and you are free to live your life. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, regular lecture attendance is likely the path of least resistance toward earning full credit for the application exercises. Lastly, there are some aspects of the final project that will require you to attend your lab section so that you can convene with your teammates. 
+For the most part, attendance is not strictly required. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, regular lecture attendance is most likely the path of least resistance toward earning full credit for the application exercises. Lastly, there are some aspects of the final project that will require you to attend your lab section so that you can convene with your teammates. 
 
 ### Lecture recording request
 
@@ -55,7 +55,6 @@ Only work that is clearly assigned as teamwork should be completed collaborative
 -   You may not discuss or otherwise work with others on the exams. Unauthorized collaboration or using unauthorized materials will be considered a violation for all students involved. More details will be given closer to the exam date.
 -   Collaboration within teams is not only allowed but encouraged for the project. Communication between teams at a high level is also allowed; however, you may not share code or project components across teams.
 -   On individual assignments, you may not directly share work (including code) with another student in this class; on team assignments, you may not directly share work (including code) with another team.
-
 
 ## Use of outside resources, including AI
 
