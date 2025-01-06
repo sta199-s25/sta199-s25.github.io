@@ -36,7 +36,7 @@ These thresholds will not change, and they will be applied exactly. This means t
 
 ## Application exercises (5%)
 
-During most lectures, we will work through an *application exercise* (*AE*) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. On-time completion of at least 70% of AEs will result in full credit for the AE component of the final course grade. Here is  what that means:
+During most lectures, we will work through an *application exercise* (*AE*) together. This is essentially a guided mini-lab that shows you how to implement the concepts introduced that day. On-time completion of at least 70% of AEs will result in full credit for the AE component of the final course grade. Here is what that means:
 
 -   AEs are due at 2PM ET on the day they are introduced;
 -   Submit an AE by pushing your work to your GitHub repo;
@@ -54,10 +54,10 @@ In labs, you will apply what you have learned in the videos and during lectures 
 
 There will be two midterm exams, each with two components:
 
--   **In-class** (70% of the grade): sit-down, in-person, "pencil-and-paper," with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5' x 11' piece of paper);
+-   **In-class** (70% of the grade): sit-down, in-person, "pencil-and-paper," with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5" x 11" piece of paper);
 -   **Take-home** (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto \> PDF \> Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.
 
-Unless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AES, etc) are testable.
+Unless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.
 
 ::: callout-warning
 See the [course schedule](https://sta199-s25.github.io/) for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.
@@ -65,7 +65,7 @@ See the [course schedule](https://sta199-s25.github.io/) for dates and times of 
 
 ## Final Exam (20%)
 
-On Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams.
+On Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.
 
 ::: callout-note
 If you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.
