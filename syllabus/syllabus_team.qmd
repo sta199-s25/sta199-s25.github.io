@@ -15,7 +15,13 @@ listing:
     subtitle: Office hours
 ---
 
-## {#teaching-assistants}
+##  {#teaching-assistants}
 
 ::: {#ta-listing}
 :::
+
+## Course coordinator
+
+![](img/mary.png){.circular-portrait-mary style="float:right;" fig-alt="Headshot of Dr. Mary Knox"}
+
+Dr. Mary Knox (she/her) is the course coordinator for this course. You can contact her (at [mary.knox\@duke.edu](mailto:mary.knox@duke.edu)) with any questions regarding accommodations, missed work, extensions, registration, etc.
