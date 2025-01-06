@@ -19,13 +19,13 @@ website:
     logo: "img/logo.png"
     pinned: true
     align: center
-#    tools:
-#      - icon: github
-#        href: https://github.com/sta199-s25
-#        text: "GitHub organization"
-#      - icon: code-square
-#        href: https://cmgr.oit.duke.edu/containers
-#        text: "RStudio containers"
+    tools:
+      - icon: github
+        href: https://github.com/sta199-s25
+        text: "GitHub organization"
+      - icon: code-square
+        href: https://cmgr.oit.duke.edu/containers
+        text: "RStudio containers"
 #      - icon: life-preserver
 #        text: Support
 #        menu:
