@@ -4,14 +4,14 @@ title: "Course overview"
 
 ## Description
 
-Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, and data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.
+Learn to explore, visualize, and analyze data to understand natural phenomena, investigate patterns, model outcomes, and make predictions, and do so in a reproducible and shareable manner. Gain experience in data wrangling and munging, exploratory data analysis, predictive modeling, data visualization, and effective communication of results. Work on problems and case studies inspired by and based on real-world questions and data. The course will focus on the R statistical computing language.
 
 **Prerequisites:** none.
 
 ## Meetings
 
 | Meeting  | Location                       | Time                       | Staff  |
-|------------------|-------------------|------------------|------------------|
+|--------------|------------------------|---------------------|--------------|
 | Lectures | Biological Sciences 111        | Tu Thu 11:45 AM - 01:00 PM | John Z |
 | Lab 01   | Perkins LINK 087 (Classroom 3) | M 08:30 AM - 09:45 AM      | TBD    |
 | Lab 02   | Perkins LINK 087 (Classroom 3) | M 10:05 AM - 11:20 AM      | TBD    |
