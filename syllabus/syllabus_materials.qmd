@@ -11,7 +11,7 @@ All books are **freely available online**:
 
 ## Technology
 
-You will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described here (!!!). Armed with your trusty laptop, you must be able to access the following:
+You will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described [here](https://sta199-s25.github.io/syllabus/syllabus_resources.html#course-costs). Armed with your trusty laptop, you must be able to access the following:
 
 -   [This course page](https://sta199-s25.github.io/) that you are on right now;
 -   `R`/`RStudio` as provided by the [Duke Container Manager](https://cmgr.oit.duke.edu/containers);
