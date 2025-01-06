@@ -11,7 +11,7 @@ listing:
   field-display-names:
     title: Name
     categories: "Role(s)"
-    description: "Section(s)"
+    description: "Lab Section"
     subtitle: Office hours
 ---
 

@@ -1,10 +1,9 @@
 ---
 title: Fahrer, Alexa
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Helper
+description: "M 11:45AM - 1:00PM (Sec 4)"
 subtitle: "🔗"
 image: headshots/alexa.png
 image-alt: Headshot of TA
 ---
-

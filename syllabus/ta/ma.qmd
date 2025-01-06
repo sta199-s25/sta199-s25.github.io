@@ -1,8 +1,8 @@
 ---
 title: Ma, Liane
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Helper
+description: "M 10:05AM - 11:20AM (Sec 3)"
 subtitle: "🔗"
 image: headshots/liane.png
 image-alt: Headshot of TA

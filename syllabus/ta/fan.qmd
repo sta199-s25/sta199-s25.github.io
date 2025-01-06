@@ -1,8 +1,8 @@
 ---
 title: Fan, Li
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Leader
+description: "M 3:05PM - 4:20PM (Sec 9)"
 subtitle: "🔗"
 image: headshots/fan.jpg
 image-alt: Headshot of TA

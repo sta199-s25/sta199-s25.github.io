@@ -1,8 +1,8 @@
 ---
 title: Mittal, Netra
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Leader
+description: "M 4:40PM - 5:55PM (Sec 10)"
 subtitle: "🔗"
 image: headshots/netra.png
 image-alt: Headshot of TA

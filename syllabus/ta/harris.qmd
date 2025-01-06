@@ -1,8 +1,8 @@
 ---
 title: Harris, Natasha
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Helper
+description: "M 4:40PM - 5:55PM (Sec 10)"
 subtitle: "🔗"
 image: headshots/harris.png
 image-alt: Headshot of TA

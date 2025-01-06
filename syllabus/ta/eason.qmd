@@ -1,8 +1,8 @@
 ---
 title: Eason, Sonya
 categories: 
-  - TBD
-description: "TBD"
+  - Lecture Helper
+description: ""
 subtitle: "🔗"
 image: headshots/sonya.png
 image-alt: Headshot of TA

@@ -1,8 +1,8 @@
 ---
 title: Arboleda, Federico
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Leader
+description: "M 3:05PM - 4:20PM (Sec 8)"
 subtitle: "🔗"
 image: headshots/federico.png
 image-alt: Headshot of TA

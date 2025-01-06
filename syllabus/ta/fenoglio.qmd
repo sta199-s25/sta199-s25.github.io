@@ -1,8 +1,8 @@
 ---
 title: Fenoglio, Domenic
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Leader
+description: "M 11:45AM - 1:00PM (Sec 5)"
 subtitle: "🔗"
 image: headshots/dom.png
 image-alt: Headshot of TA

@@ -1,10 +1,9 @@
 ---
 title: King, Dav
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Leader
+description: "M 1:25PM - 2:40PM (Sec 6)"
 subtitle: "🔗"
 image: headshots/dav.png
 image-alt: Headshot of TA
 ---
-

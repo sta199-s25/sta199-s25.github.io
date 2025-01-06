@@ -1,8 +1,8 @@
 ---
 title: Bag, Devarpita
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Helper
+description: "M 3:05PM - 4:20PM (Sec 9)"
 subtitle: "🔗"
 image: headshots/bag.jpg
 image-alt: Headshot of TA

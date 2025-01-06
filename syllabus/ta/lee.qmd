@@ -1,8 +1,8 @@
 ---
 title: Lee, Hyunjin
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Helper
+description: "M 10:05AM - 11:20AM (Sec 2)"
 subtitle: "🔗"
 image: headshots/hyunjin.png
 image-alt: Headshot of TA

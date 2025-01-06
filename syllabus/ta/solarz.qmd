@@ -1,8 +1,8 @@
 ---
 title: Solarz, Katie
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Leader
+description: "M 10:05AM - 11:20AM (Sec 2)"
 subtitle: "🔗"
 image: headshots/solarz.jpg
 image-alt: Headshot of TA

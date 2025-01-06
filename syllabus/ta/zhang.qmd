@@ -1,10 +1,9 @@
 ---
 title: Zhang, Lisa
 categories: 
-  - TBD
-description: "TBD"
+  - Lab Helper
+description: "M 1:25PM - 2:40PM (Sec 6)"
 subtitle: "🔗"
 image: headshots/lisa.png
 image-alt: Headshot of TA
 ---
-
