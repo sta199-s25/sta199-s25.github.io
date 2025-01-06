@@ -1,38 +1,5 @@
 [
   {
-    "objectID": "syllabus/syllabus_conduct.html",
-    "href": "syllabus/syllabus_conduct.html",
-    "title": "Conduct violations",
-    "section": "",
-    "text": "As a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.",
-    "crumbs": [
-      "Syllabus",
-      "Conduct violations"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_conduct.html#violating-the-policy-on-use-of-outside-resources",
-    "href": "syllabus/syllabus_conduct.html#violating-the-policy-on-use-of-outside-resources",
-    "title": "Conduct violations",
-    "section": "Violating the policy on use of outside resources",
-    "text": "Violating the policy on use of outside resources\nIf you use outside resources (e.g. StackOverflow, ChatGPT, etc) without citing them, we treat that as plagiarism. If the grader has reasonable suspicion that outside resources were used without citation to complete some part of an assignment, they are empowered to immediately give that part a zero and leave a comment explaining why. If we make a mistake, you are welcome to submit a regrade request pleading your case.",
-    "crumbs": [
-      "Syllabus",
-      "Conduct violations"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_conduct.html#violating-the-policies-on-collaboration",
-    "href": "syllabus/syllabus_conduct.html#violating-the-policies-on-collaboration",
-    "title": "Conduct violations",
-    "section": "Violating the policies on collaboration",
-    "text": "Violating the policies on collaboration\nIf we suspect\n\n\n\n\n\n\nWarning\n\n\n\nIf a conduct violation results in a zero on a lab, that zero will not be dropped",
-    "crumbs": [
-      "Syllabus",
-      "Conduct violations"
-    ]
-  },
-  {
     "objectID": "syllabus/syllabus_assignments.html",
     "href": "syllabus/syllabus_assignments.html",
     "title": "Assignments and grading",
@@ -70,7 +37,7 @@
     "href": "syllabus/syllabus_assignments.html#midterm-exams-20-each",
     "title": "Assignments and grading",
     "section": "Midterm Exams (20% each)",
-    "text": "Midterm Exams (20% each)\nThere will be two midterm exams, each with two components:\n\nIn-class (70% of the grade): sit-down, in-person, “pencil-and-paper,” with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5’ x 11’ piece of paper);\nTake-home (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto &gt; PDF &gt; Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.\n\nUnless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AES, etc) are testable.\n\n\n\n\n\n\nWarning\n\n\n\nSee the course schedule for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.",
+    "text": "Midterm Exams (20% each)\nThere will be two midterm exams, each with two components:\n\nIn-class (70% of the grade): sit-down, in-person, “pencil-and-paper,” with no technology, and with no outside resources apart from a note sheet that you and only you have prepared (both sides of an 8.5” x 11” piece of paper);\nTake-home (30% of the grade): each in-class exam will end at 1:00 PM ET on a Thursday. You will then have until 8:00 AM ET the following Monday to work independently on the take-home. This will consist of a data analysis in R, and submission will be identical to our usual labs (Quarto &gt; PDF &gt; Gradescope). The take-home portion of the midterms is completely open resource, but the citation policies of the course still apply, and you are forbidden from discussing the exam with your peers in any way.\n\nUnless we indicate otherwise, you should assume that all course content and materials (videos, readings, lectures, labs, AEs, etc) are testable.\n\n\n\n\n\n\nWarning\n\n\n\nSee the course schedule for dates and times of the exams. Exam dates cannot be changed and no make-up exams will be given. If you cannot take the exams on these dates, you should drop this class.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -81,7 +48,7 @@
     "href": "syllabus/syllabus_assignments.html#final-exam-20",
     "title": "Assignments and grading",
     "section": "Final Exam (20%)",
-    "text": "Final Exam (20%)\nOn Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams.\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.",
+    "text": "Final Exam (20%)\nOn Tuesday April 29 we have our final exam from 9AM ET to 12PM ET. This exam will be cumulative, and it will have the same format as the in-class components of the midterm exams. The final exam does not have a take-home portion.\n\n\n\n\n\n\nNote\n\n\n\nIf you do better on the final exam than you did on the in-class component of a midterm, we will replace your lowest in-class midterm exam score with your final exam score.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -158,18 +125,7 @@
     "href": "syllabus/syllabus_resources.html#mental-health-and-well-being",
     "title": "University resources",
     "section": "Mental health and well-being",
-    "text": "Mental health and well-being\nDuke is committed to holistic student well-being, including mental, emotional, and physical health. The university offers resources to help students manage daily stress, encourage intentional self-care, and access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities and your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of well-being, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can reach the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS services include individual and group counseling services, psychiatric services, and workshops. CAPS also provides referrals to off-campus resources for specialized care. You can reach CAPS at (919) 660-1000.\nTimelyCare1: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nBC Fellows for Healthy Relationship: The BC Fellows meet with students individually and in groups, supporting the development of healthy relationships and building meaningful community in all areas of a student’s life.\nDukeLine: Students who want to connect anonymously with a Peer Coach can text 984-230-4888 from 5 to 11 p.m. daily. DukeLine offers in-the-moment anonymous, non-emergency text support from a peer.\nDuWell: DuWell provides Moments of Mindfulness (stress management and resilience building) and meditation programming (Koru workshop) to assist students in developing a daily emotional well-being practice. All are welcome, and no experience is necessary. You can reach DuWell at (919) 681-8421.",
-    "crumbs": [
-      "Syllabus",
-      "University resources"
-    ]
-  },
-  {
-    "objectID": "syllabus/syllabus_resources.html#footnotes",
-    "href": "syllabus/syllabus_resources.html#footnotes",
-    "title": "University resources",
-    "section": "Footnotes",
-    "text": "Footnotes\n\n\nFormerly known as Blue Devils Care.↩︎",
+    "text": "Mental health and well-being\nDuke is committed to holistic student well-being, including mental, emotional, and physical health. The university offers resources to help students manage daily stress, encourage intentional self-care, and access just-in-time support. If you find you need support, your mental and/or emotional health concerns are impacting your day-to-day activities and your academic performance, or you need someone to talk to, the resources below are available to you:\n\nDukeReach: DukeReach provides comprehensive outreach services to support students in managing all aspects of well-being, including referrals and follow-up services for students who are experiencing significant challenges related to mental health, physical health, social adjustment, and/or a variety of other stressors. You can reach the DukeReach team at dukereach@duke.edu.\nCounseling and Psychological Services (CAPS): CAPS services include individual and group counseling services, psychiatric services, and workshops. CAPS also provides referrals to off-campus resources for specialized care. You can reach CAPS at (919) 660-1000.\nTimelyCare: TimelyCare is an online platform that is a convenient, confidential, and free way for Duke students to receive 24/7 mental health support through TalkNow and scheduled counseling.\nBC Fellows for Healthy Relationship: The BC Fellows meet with students individually and in groups, supporting the development of healthy relationships and building meaningful community in all areas of a student’s life.\nDukeLine: Students who want to connect anonymously with a Peer Coach can text 984-230-4888 from 5 to 11 p.m. daily. DukeLine offers in-the-moment anonymous, non-emergency text support from a peer.\nDuWell: DuWell provides Moments of Mindfulness (stress management and resilience building) and meditation programming (Koru workshop) to assist students in developing a daily emotional well-being practice. All are welcome, and no experience is necessary. You can reach DuWell at (919) 681-8421.",
     "crumbs": [
       "Syllabus",
       "University resources"
@@ -358,7 +314,7 @@
     "href": "syllabus/syllabus_materials.html#technology",
     "title": "Course materials",
     "section": "Technology",
-    "text": "Technology\nYou will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described here (!!!). Armed with your trusty laptop, you must be able to access the following:\n\nThis course page that you are on right now;\nR/RStudio as provided by the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
+    "text": "Technology\nYou will need to bring a laptop to all lectures and labs. Options for obtaining a laptop through the university are described here. Armed with your trusty laptop, you must be able to access the following:\n\nThis course page that you are on right now;\nR/RStudio as provided by the Duke Container Manager;\nCanvas, through which you can access…\n\nGradescope;\nEd Discussion;\n\nZoom (e.g. for remote office hours).\n\nIf access to technology becomes a concern for you during the semester, contact the instructor immediately to discuss options.",
     "crumbs": [
       "Syllabus",
       "Materials"
@@ -402,7 +358,7 @@
     "href": "syllabus/syllabus_policies.html#regrade-requests",
     "title": "Policies",
     "section": "Regrade requests",
-    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nRegrade requests are not a mechanism for asking for clarification on feedback. Those questions should be brought to office hours;\nNo grades will be changed after the final exam has been administered on Tuesday, April 29;\n\n\n\n\n\n\n\nWarning\n\n\n\nA regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
+    "text": "Regrade requests\nIf you receive a graded assignment back, and you believe that some part of it was graded incorrectly, you may dispute the grade by submitting a regrade request in Gradescope. Note the following:\n\nYou have one week after you receive a grade to submit a regrade request;\nYou should submit separate regrade requests for each question you wish to dispute, not a single catch-all request;\nRequests will be considered if there was an error in the grade calculation or if a correct answer was mistakenly marked as incorrect;\nRequests to dispute the number of points deducted for an incorrect response will not be considered;\nRegrade requests are not a mechanism for asking for clarification on feedback. Those questions should be brought to office hours;\nNo grades will be changed after the final exam has been administered on Tuesday, April 29;\n\n\n\n\n\n\n\nWarning\n\n\n\nIf you submit a regrade request for part of an assignment, we reserve the right to regrade the entire assignment. As such, a regrade request can result in your grade going up, staying the same, or going down if we determine that, in fact, the original grader was too lenient.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -413,7 +369,7 @@
     "href": "syllabus/syllabus_policies.html#attendance",
     "title": "Policies",
     "section": "Attendance",
-    "text": "Attendance\nFor the most part, attendance is not strictly required. The responsibility lies with us to make class meetings sufficiently engaging and informative that you choose to attend. Having said that, success in this class and regular attendance are probably highly positively correlated. Furthermore, regular lecture attendance is most likely the path of least resistance toward earning full credit for the application exercises. Lastly, there are some aspects of the final project that will require you to attend your lab section so that you can convene with your teammates.\n\nLecture recording request\nLectures will be recorded on Panopto and will be made available to students with an excused absence upon request. Videos shared with such students will be available for a week after the lecture date. To request a particular lecture’s video, please fill out the form at the link below (!!!). Please submit the form within 24 hours of missing lecture to ensure you have sufficient time to watch the recording. Please also make sure that any official documentation, such as STINFs, Dean’s excuses, NOVAPs, and quarantine/removal from class notices from student health are also uploaded to the form.",
+    "text": "Attendance\nWe are not tracking attendance, but success in this class and regular attendance are probably highly positively correlated. Furthermore, regular lecture attendance is necessary if you wish to earn full credit for the application exercises. Lastly, some components of the final project require you to complete activities with your teammates during lab. If you do not attend, you will forfeit these points.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -446,7 +402,18 @@
     "href": "syllabus/syllabus_policies.html#use-of-outside-resources-including-ai",
     "title": "Policies",
     "section": "Use of outside resources, including AI",
-    "text": "Use of outside resources, including AI\nYou may make use of any online resources (e.g. StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nYou should treat generative AI, such as ChatGPT, like other online resources. Two guiding principles govern how to use AI in this course:\n\nCognitive dimension: Working with AI should not reduce your thinking ability. We will practice using AI to facilitate—rather than hinder—learning.\nEthical dimension: Students using AI should be transparent about their use and ensure it aligns with academic integrity.\n\n\n AI tools for code: You may use the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. You may use these guidelines to cite AI-generated content. The bare minimum citation must include the AI tool you’re using (e.g., ChatGPT) and your prompt. The prompt you use cannot be copied and pasted directly from the assignment; you must create a prompt yourself.\n AI tools for narrative: Unless instructed otherwise, you may not use generative AI to generate a narrative that you then copy-paste verbatim into an assignment or edit and then insert into your assignment.\n\nIn general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content. Identifying AI-generated content is fairly straightforward. Any code identified as AI-generated but not cited as such and any narrative identified as AI-generated will be considered plagiarism and treated as such.\nNEED TO ADD EXAMPLE OF PROPER CITATION.",
+    "text": "Use of outside resources, including AI\nYou may make use of any online resources (e.g. StackOverflow) but you must explicitly cite where you obtained any code you directly use (or use as inspiration). Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\nYou should treat generative AI, such as ChatGPT, like other online resources. Two guiding principles govern how to use AI in this course:\n\nCognitive dimension: Working with AI should not reduce your thinking ability. We will practice using AI to facilitate—rather than hinder—learning.\nEthical dimension: Students using AI should be transparent about their use and ensure it aligns with academic integrity.\n\n\n AI tools for code: You may use the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.\n AI tools for narrative: Unless instructed otherwise, you may not use generative AI to generate a narrative that you then copy-paste verbatim into an assignment or edit and then insert into your assignment.\n\nIn general, you may use generative AI as a resource as you complete assignments but not to answer the exercises for you. You are ultimately responsible for the work you turn in; it should reflect your understanding of the course content. Identifying AI-generated content is fairly straightforward. Any code identified as AI-generated but not cited as such and any narrative identified as AI-generated will be considered plagiarism and treated as such.\n\n\n\n\n\n\nCiting an LLM like ChatGPT\n\n\n\nHere are some general guidelines for citing AI-generated content. In this class, if you use something like ChatGPT to help you, you need to cite that by providing a direct link to the conversation you had with the bot, like this: https://chatgpt.com/share/677c4060-1d58-8008-8e47-5caa5556a825. You can generate such a link here:",
+    "crumbs": [
+      "Syllabus",
+      "Policies"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_policies.html#academic-honesty",
+    "href": "syllabus/syllabus_policies.html#academic-honesty",
+    "title": "Policies",
+    "section": "Academic honesty",
+    "text": "Academic honesty\nAs a student in this course, you have agreed to uphold the Duke Community Standard and the practices specific to this course.\n\n\nAny violations in academic honesty standards as outlined in the Duke Community Standard and those specific to this course will automatically results in a zero for the relevant portion or the entire assignment, and will be reported to the Office of Student Conduct & Community Standards for further action. Furthermore:\n\nIf a conduct violation results in a zero on a lab, that zero will not be dropped;\nIf a conduct violation results in a zero on the in-class portion of a midterm, that zero will not be replaced with your final exam score;\nIf a conduct violation of any kind is discovered on any part of an exam, your final letter grade will be permanently reduced (A- down to B+, B+ down to B, etc);\nIf we discover that students are sharing and copying assignment solutions, all students involved will be penalized equally, the sharer the same as the recipient.",
     "crumbs": [
       "Syllabus",
       "Policies"
@@ -457,7 +424,18 @@
     "href": "syllabus/syllabus_team.html",
     "title": "Teaching team",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Name\n        \n         \n          Role(s)\n        \n         \n          Lab Section\n        \n         \n          Office hours\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\nName\n\n\nRole(s)\n\n\nLab Section\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\nArboleda, Federico\n\n\nLab Leader\n\n\nM 3:05PM - 4:20PM (Sec 8)\n\n\n🔗\n\n\n\n\n\n\n\nBag, Devarpita\n\n\nLab Helper\n\n\nM 3:05PM - 4:20PM (Sec 9)\n\n\n🔗\n\n\n\n\n\n\n\nChen, Han\n\n\nLab Helper\n\n\nM 8:30AM - 9:45AM (Sec 1)\n\n\n🔗\n\n\n\n\n\n\n\nDey, Arijit\n\n\nLab Helper\n\n\nM 1:25PM - 2:40PM (Sec 7)\n\n\n🔗\n\n\n\n\n\n\n\nEason, Sonya\n\n\nLecture Helper\n\n\n\n\n\n🔗\n\n\n\n\n\n\n\nFahrer, Alexa\n\n\nLab Helper\n\n\nM 11:45AM - 1:00PM (Sec 4)\n\n\n🔗\n\n\n\n\n\n\n\nFan, Li\n\n\nLab Leader\n\n\nM 3:05PM - 4:20PM (Sec 9)\n\n\n🔗\n\n\n\n\n\n\n\nFenoglio, Domenic\n\n\nLab Leader\n\n\nM 11:45AM - 1:00PM (Sec 5)\n\n\n🔗\n\n\n\n\n\n\n\nHarris, Natasha\n\n\nLab Helper\n\n\nM 4:40PM - 5:55PM (Sec 10)\n\n\n🔗\n\n\n\n\n\n\n\nHealey-Parera, Julia\n\n\nLab Helper\n\n\nM 11:45AM - 1:00PM (Sec 5)\n\n\n🔗\n\n\n\n\n\n\n\nHodges, Avery\n\n\nLab Leader\n\n\nM 11:45AM - 1:00PM (Sec 4)\n\n\n🔗\n\n\n\n\n\n\n\nKing, Dav\n\n\nLab Leader\n\n\nM 1:25PM - 2:40PM (Sec 6)\n\n\n🔗\n\n\n\n\n\n\n\nLee, Hyunjin\n\n\nLab Helper\n\n\nM 10:05AM - 11:20AM (Sec 2)\n\n\n🔗\n\n\n\n\n\n\n\nMa, Liane\n\n\nLab Helper\n\n\nM 10:05AM - 11:20AM (Sec 3)\n\n\n🔗\n\n\n\n\n\n\n\nMittal, Netra\n\n\nLab Leader\n\n\nM 4:40PM - 5:55PM (Sec 10)\n\n\n🔗\n\n\n\n\n\n\n\nMurphy, Caitrin\n\n\nHead TA, Lab Leader\n\n\nM 8:30AM - 9:45AM (Sec 1)\n\n\n🔗\n\n\n\n\n\n\n\nSolarz, Katie\n\n\nLab Leader\n\n\nM 10:05AM - 11:20AM (Sec 2)\n\n\n🔗\n\n\n\n\n\n\n\nVasquez Tapia, Eduardo Alfonso\n\n\nLab Leader\n\n\nM 1:25PM - 2:40PM (Sec 7)\n\n\n🔗\n\n\n\n\n\n\n\nWang, Jasmine\n\n\nLab Leader\n\n\nM 10:05AM - 11:20AM (Sec 3)\n\n\n🔗\n\n\n\n\n\n\n\nWu, Sarah\n\n\nLab Helper\n\n\nM 3:05PM - 4:20PM (Sec 8)\n\n\n🔗\n\n\n\n\n\n\n\nZhang, Lisa\n\n\nLab Helper\n\n\nM 1:25PM - 2:40PM (Sec 6)\n\n\n🔗\n\n\n\n\n\n\n\nZito, John\n\n\nInstructor\n\n\nTBD\n\n\n🔗\n\n\n\n\n\nNo matching items",
+    "text": "John Zito blah blah blah.",
+    "crumbs": [
+      "Syllabus",
+      "Teaching team"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_team.html#instructor",
+    "href": "syllabus/syllabus_team.html#instructor",
+    "title": "Teaching team",
+    "section": "",
+    "text": "John Zito blah blah blah.",
     "crumbs": [
       "Syllabus",
       "Teaching team"
@@ -467,8 +445,19 @@
     "objectID": "syllabus/syllabus_team.html#teaching-assistants",
     "href": "syllabus/syllabus_team.html#teaching-assistants",
     "title": "Teaching team",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Name\n        \n         \n          Role(s)\n        \n         \n          Lab Section\n        \n         \n          Office hours\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\nName\n\n\nRole(s)\n\n\nLab Section\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\nArboleda, Federico\n\n\nLab Leader\n\n\nM 3:05PM - 4:20PM (Sec 8)\n\n\n🔗\n\n\n\n\n\n\n\nBag, Devarpita\n\n\nLab Helper\n\n\nM 3:05PM - 4:20PM (Sec 9)\n\n\n🔗\n\n\n\n\n\n\n\nChen, Han\n\n\nLab Helper\n\n\nM 8:30AM - 9:45AM (Sec 1)\n\n\n🔗\n\n\n\n\n\n\n\nDey, Arijit\n\n\nLab Helper\n\n\nM 1:25PM - 2:40PM (Sec 7)\n\n\n🔗\n\n\n\n\n\n\n\nEason, Sonya\n\n\nLecture Helper\n\n\n\n\n\n🔗\n\n\n\n\n\n\n\nFahrer, Alexa\n\n\nLab Helper\n\n\nM 11:45AM - 1:00PM (Sec 4)\n\n\n🔗\n\n\n\n\n\n\n\nFan, Li\n\n\nLab Leader\n\n\nM 3:05PM - 4:20PM (Sec 9)\n\n\n🔗\n\n\n\n\n\n\n\nFenoglio, Domenic\n\n\nLab Leader\n\n\nM 11:45AM - 1:00PM (Sec 5)\n\n\n🔗\n\n\n\n\n\n\n\nHarris, Natasha\n\n\nLab Helper\n\n\nM 4:40PM - 5:55PM (Sec 10)\n\n\n🔗\n\n\n\n\n\n\n\nHealey-Parera, Julia\n\n\nLab Helper\n\n\nM 11:45AM - 1:00PM (Sec 5)\n\n\n🔗\n\n\n\n\n\n\n\nHodges, Avery\n\n\nLab Leader\n\n\nM 11:45AM - 1:00PM (Sec 4)\n\n\n🔗\n\n\n\n\n\n\n\nKing, Dav\n\n\nLab Leader\n\n\nM 1:25PM - 2:40PM (Sec 6)\n\n\n🔗\n\n\n\n\n\n\n\nLee, Hyunjin\n\n\nLab Helper\n\n\nM 10:05AM - 11:20AM (Sec 2)\n\n\n🔗\n\n\n\n\n\n\n\nMa, Liane\n\n\nLab Helper\n\n\nM 10:05AM - 11:20AM (Sec 3)\n\n\n🔗\n\n\n\n\n\n\n\nMittal, Netra\n\n\nLab Leader\n\n\nM 4:40PM - 5:55PM (Sec 10)\n\n\n🔗\n\n\n\n\n\n\n\nMurphy, Caitrin\n\n\nHead TA, Lab Leader\n\n\nM 8:30AM - 9:45AM (Sec 1)\n\n\n🔗\n\n\n\n\n\n\n\nSolarz, Katie\n\n\nLab Leader\n\n\nM 10:05AM - 11:20AM (Sec 2)\n\n\n🔗\n\n\n\n\n\n\n\nVasquez Tapia, Eduardo Alfonso\n\n\nLab Leader\n\n\nM 1:25PM - 2:40PM (Sec 7)\n\n\n🔗\n\n\n\n\n\n\n\nWang, Jasmine\n\n\nLab Leader\n\n\nM 10:05AM - 11:20AM (Sec 3)\n\n\n🔗\n\n\n\n\n\n\n\nWu, Sarah\n\n\nLab Helper\n\n\nM 3:05PM - 4:20PM (Sec 8)\n\n\n🔗\n\n\n\n\n\n\n\nZhang, Lisa\n\n\nLab Helper\n\n\nM 1:25PM - 2:40PM (Sec 6)\n\n\n🔗\n\n\n\n\n\n\n\nZito, John\n\n\nInstructor\n\n\nTBD\n\n\n🔗\n\n\n\n\n\nNo matching items",
+    "section": "Teaching assistants",
+    "text": "Teaching assistants\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Name\n        \n         \n          Role(s)\n        \n         \n          Lab Section\n        \n         \n          Office hours\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\n\nName\n\n\nRole(s)\n\n\nLab Section\n\n\nOffice hours\n\n\n\n\n\n\n\n\n\nArboleda, Federico\n\n\nLab Leader\n\n\nM 3:05PM - 4:20PM (Sec 8)\n\n\n🔗\n\n\n\n\n\n\n\nBag, Devarpita\n\n\nLab Helper\n\n\nM 3:05PM - 4:20PM (Sec 9)\n\n\n🔗\n\n\n\n\n\n\n\nChen, Han\n\n\nLab Helper\n\n\nM 8:30AM - 9:45AM (Sec 1)\n\n\n🔗\n\n\n\n\n\n\n\nDey, Arijit\n\n\nLab Helper\n\n\nM 1:25PM - 2:40PM (Sec 7)\n\n\n🔗\n\n\n\n\n\n\n\nEason, Sonya\n\n\nLecture Helper\n\n\n\n\n\n🔗\n\n\n\n\n\n\n\nFahrer, Alexa\n\n\nLab Helper\n\n\nM 11:45AM - 1:00PM (Sec 4)\n\n\n🔗\n\n\n\n\n\n\n\nFan, Li\n\n\nLab Leader\n\n\nM 3:05PM - 4:20PM (Sec 9)\n\n\n🔗\n\n\n\n\n\n\n\nFenoglio, Domenic\n\n\nLab Leader\n\n\nM 11:45AM - 1:00PM (Sec 5)\n\n\n🔗\n\n\n\n\n\n\n\nHarris, Natasha\n\n\nLab Helper\n\n\nM 4:40PM - 5:55PM (Sec 10)\n\n\n🔗\n\n\n\n\n\n\n\nHealey-Parera, Julia\n\n\nLab Helper\n\n\nM 11:45AM - 1:00PM (Sec 5)\n\n\n🔗\n\n\n\n\n\n\n\nHodges, Avery\n\n\nLab Leader\n\n\nM 11:45AM - 1:00PM (Sec 4)\n\n\n🔗\n\n\n\n\n\n\n\nKing, Dav\n\n\nLab Leader\n\n\nM 1:25PM - 2:40PM (Sec 6)\n\n\n🔗\n\n\n\n\n\n\n\nLee, Hyunjin\n\n\nLab Helper\n\n\nM 10:05AM - 11:20AM (Sec 2)\n\n\n🔗\n\n\n\n\n\n\n\nMa, Liane\n\n\nLab Helper\n\n\nM 10:05AM - 11:20AM (Sec 3)\n\n\n🔗\n\n\n\n\n\n\n\nMittal, Netra\n\n\nLab Leader\n\n\nM 4:40PM - 5:55PM (Sec 10)\n\n\n🔗\n\n\n\n\n\n\n\nMurphy, Caitrin\n\n\nHead TA, Lab Leader\n\n\nM 8:30AM - 9:45AM (Sec 1)\n\n\n🔗\n\n\n\n\n\n\n\nSolarz, Katie\n\n\nLab Leader\n\n\nM 10:05AM - 11:20AM (Sec 2)\n\n\n🔗\n\n\n\n\n\n\n\nVasquez Tapia, Eduardo Alfonso\n\n\nLab Leader\n\n\nM 1:25PM - 2:40PM (Sec 7)\n\n\n🔗\n\n\n\n\n\n\n\nWang, Jasmine\n\n\nLab Leader\n\n\nM 10:05AM - 11:20AM (Sec 3)\n\n\n🔗\n\n\n\n\n\n\n\nWu, Sarah\n\n\nLab Helper\n\n\nM 3:05PM - 4:20PM (Sec 8)\n\n\n🔗\n\n\n\n\n\n\n\nZhang, Lisa\n\n\nLab Helper\n\n\nM 1:25PM - 2:40PM (Sec 6)\n\n\n🔗\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Syllabus",
+      "Teaching team"
+    ]
+  },
+  {
+    "objectID": "syllabus/syllabus_team.html#course-coordinator",
+    "href": "syllabus/syllabus_team.html#course-coordinator",
+    "title": "Teaching team",
+    "section": "Course coordinator",
+    "text": "Course coordinator\n\nDr. Mary Knox (she/her) is the course coordinator for this course. You can contact her (at mary.knox@duke.edu) with any questions regarding accommodations, missed work, extensions, registration, etc.",
     "crumbs": [
       "Syllabus",
       "Teaching team"
