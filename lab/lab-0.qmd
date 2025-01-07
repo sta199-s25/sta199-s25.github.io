@@ -7,36 +7,25 @@ execute:
   eval: false
 ---
 
-This lab will set you up for the computing workflow and give you an opportunity to introduce yourselves to each other and the teaching team.
+This lab will walk you through setting up the course technology, which consists of the following:
 
-# `Hello, World!`
+-   **R**: The programming language you'll learn in this course. It is very popular in statistics and data science;
 
-You may have heard/seen this phrase, `Hello, World!`, elsewhere before. It's usually the first thing you learn in programming – to learn to write a computer program to print this sentence to screen. Things will be different in this course, as it's not a programming, but a data science course. So, starting tomorrow in class, you'll learn to use a computer program (called R) to work with data.
+-   **RStudio**: The piece of software (a.k.a. the integrated development environment, IDE) you'll use to write R code in. So, R is the name of the programming language itself, and RStudio is a convenient interface;
 
-But today, we need to set you up for success! Let's first briefly review the components of the computational toolkit for the course:
+-   **Git**: Version control system (like "Track Changes" features from Microsoft Word but more powerful);
 
-1.  R: The programming language you'll learn in this course.
+-   **GitHub**: A web hosting service for the Git version control system that also allows for transparent collaboration between team members. GitHub is the home for your Git-based projects on the internet (like DropBox but much better).
 
-2.  RStudio: The piece of software (a.k.a. the integrated development environment, IDE) you'll use to write R code in.
+Version control software like Git and GitHub is indispensable in modern data science practice, and learning how to use it is one of the things that distinguishes STA 199 from a similar course like STA 101. Version control helps prevent your files from looking like this:
 
-::: callout-note
-R is the name of the programming language itself and RStudio is a convenient interface.
-:::
+![](images/lab-0/bad-version-control.png)
 
-3.  Quarto: The tool you'll use to create reproducible computational documents that contain both your narrative (i.e. words in English) and your code (i.e. code in R). Every piece of assignment you hand in will be a Quarto document.
+We've all been there, but it's time to kick the habit.
 
-::: callout-note
-You might be familiar with word processors like MS Word or Google Docs. We will not be using these in this class. Instead, the words you would write in such a document as well as the code will go into a Quarto document, and when you *render* the document (more on what this means later) you will get a document out that has your words, your code, and the output of that code. Everything in one place, beautifully formatted!
-:::
+## 1. Access R and RStudio
 
-4.  Git: Version control system.
-5.  GitHub: A web hosting service for the Git version control system that also allows for transparent collaboration between team members.
-
-::: callout-note
-Git is a version control system (like "Track Changes" features from Microsoft Word but more powerful) and GitHub is the home for your Git-based projects on the internet (like DropBox but much better).
-:::
-
-## Access R and RStudio
+Instead of asking you to download any new programs onto your computer, we host everything pre-packaged for you in the cloud. You just have to login through your web browser, and you're ready to go:
 
 -   Go to <https://cmgr.oit.duke.edu/containers> and login with your Duke NetID and Password.
 -   Click `STA198-199` to log into the Docker container. You should now see the RStudio environment.
@@ -53,7 +42,11 @@ To launch your container click on it under My reservations, then click *Login*, 
 
 [^1]: Yes, it's too many steps. I don't know why! But it works, and you'll get used to it. Trust me, it beats downloading and installing everything you need on your computers!
 
-## Create a GitHub account
+::: callout-warning
+Please double and triple check that you have reserved the `STA 198-199` container and not some other. The various containers differ in the software they include, so if you reserve something else, you may be missing something we need.
+:::
+
+## 2. Create a GitHub account
 
 Go to <https://github.com/> and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.[^2]
 
@@ -66,10 +59,10 @@ You'll need to choose a user name. I recommend reviewing the user name advice at
 ::: {.callout-important collapse="true"}
 ## What if I already have a GitHub account?
 
-If you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password.
+If you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password. If you are unsure of your login credentials, carefully follow GitHub's instructions for recovering this information. If you accumulate too many failed login attempts, you will be locked out of your account for the day, which will make it difficult for you to complete the rest of this lab.
 :::
 
-## Set up your SSH key
+## 3. Set up your SSH key
 
 You will authenticate GitHub using SSH (Secure Shell Protocol – it doesn't really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.
 
@@ -84,9 +77,9 @@ You only need to do this authentication process one time on a single system.
 
 You can find more detailed instructions [here](https://github.com/DukeStatSci/github_auth_guide) if you're interested.
 
-## Configure Git to introduce yourself
+## 4. Configure Git to introduce yourself
 
-There is one more thing we need to do before getting started on the assignment. Specifically, we need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.
+Next, you need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.
 
 To do so, you will use the `use_git_config()` function from the `usethis` package.
 
@@ -107,21 +100,17 @@ For example, mine would be
 
 ```{r}
 usethis::use_git_config(
-  user.name = "Mine Çetinkaya-Rundel", 
-  user.email = "cetinkaya.mine@gmail.com"
+  user.name = "John Zito", 
+  user.email = "johnczito@gmail.com"
 )
 ```
 
-::: callout-note
 I used my gmail because that is the one I used to create my GitHub account. You should also be using the email address you used to create your GitHub account, it's ok if it isn't your Duke email.
-:::
 
-You are now ready interact with GitHub via RStudio!
+::: {.callout-important collapse="true"}
+## How do I know if I did it right?
 
-If you don't do this, we won't be able to tell who you are and give you points for the work you do...
-
-::: callout-note
-Well, a more accurate statement would be that we will be reaching out to you to get things right during the first few weeks of classes. But, it's best if you can get it right today!
+When you input the `usethis::use_git_config(...)` command into the console and hit enter/return, it will appear as if nothing happened. To verify that everything worked, you can briefly switch over to the **Terminal** tab (should be to the right of **Console**) and type the commands `git config user.name` and `git config user.email`. If all is well, these will return whatever text you originally provided. If you notice a mistake or typo, you can just go back to the Console and rerun `usethis::use_git_config(...)` with modified inputs.
 :::
 
 ::: {.callout-tip collapse="true"}
@@ -132,8 +121,8 @@ The following video walks you through the steps outlined in the SSH key generati
 {{< video https://youtu.be/3lONVzFw680 >}}
 :::
 
-# Hello STA 199!
+## 5. Hello STA 199!
 
-Fill out the course "Getting to know you" survey on Canvas: <https://canvas.duke.edu/courses/39994/quizzes/25798>.
+Fill out the course "Getting to know you" survey on Canvas: <https://canvas.duke.edu/courses/50057/quizzes/30406>.
 
 We will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.
