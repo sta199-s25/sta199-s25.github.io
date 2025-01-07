@@ -21,8 +21,9 @@ listing:
 
 John Zito blah blah blah.
 
+**Office Hours**: Friday 1:00 PM - 3:00 PM in Old Chem 207.
 
-##  Teaching assistants {#teaching-assistants}
+## Teaching assistants {#teaching-assistants}
 
 ::: {#ta-listing}
 :::
