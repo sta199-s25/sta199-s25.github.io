@@ -4,6 +4,6 @@ categories:
   - Lecture Helper
 description: ""
 subtitle: "🔗"
-image: headshots/sonya.png
+image: headshots/eason.jpeg
 image-alt: Headshot of TA
 ---
