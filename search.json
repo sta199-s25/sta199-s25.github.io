@@ -169,56 +169,88 @@
     "href": "lab/lab-0.html",
     "title": "Lab 0",
     "section": "",
-    "text": "This lab will walk you through setting up the course technology, which consists of the following:\nVersion control software like Git and GitHub is indispensable in modern data science practice, and learning how to use it is one of the things that distinguishes STA 199 from a similar course like STA 101. At a minimum, version control helps prevent your files from looking like this:\nWe’ve all been there, but it’s time to kick the habit."
+    "text": "This lab will walk you through setting up the course technology, which consists of the following:\nVersion control software like Git and GitHub is indispensable in modern data science practice, and learning how to use it is one of the things that distinguishes STA 199 from a similar course like STA 101. At a minimum, version control helps prevent your files from looking like this:\nWe’ve all been there, but it’s time to kick the habit.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
   },
   {
     "objectID": "lab/lab-0.html#access-r-and-rstudio",
     "href": "lab/lab-0.html#access-r-and-rstudio",
     "title": "Lab 0",
     "section": "1. Access R and RStudio",
-    "text": "1. Access R and RStudio\nInstead of asking you to download any new programs onto your computer, we host everything pre-packaged for you in the cloud. You just have to login through your web browser, and you’re ready to go:\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 to log into the Docker container. You should now see the RStudio environment.\n\nGo to https://cmgr.oit.duke.edu/containers and under Reservations available click on reserve STA 198-199 to reserve a container for yourself.\n\n\n\n\n\n\nNote\n\n\n\nA container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.\n\n\nOnce you’ve reserved the container you’ll see that it will show up under My reservations.\nTo launch your container click on it under My reservations, then click Login, and then Start.1\n\n\n\n\n\n\nWarning\n\n\n\nPlease double and triple check that you have reserved the STA 198-199 container and not some other. The various containers differ in the software they include, so if you reserve something else, you may be missing something we need."
+    "text": "1. Access R and RStudio\nInstead of asking you to download any new programs onto your computer, we host everything pre-packaged for you in the cloud. You just have to login through your web browser, and you’re ready to go:\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 to log into the Docker container. You should now see the RStudio environment.\n\nGo to https://cmgr.oit.duke.edu/containers and under Reservations available click on reserve STA 198-199 to reserve a container for yourself.\n\n\n\n\n\n\nNote\n\n\n\nA container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.\n\n\nOnce you’ve reserved the container you’ll see that it will show up under My reservations.\nTo launch your container click on it under My reservations, then click Login, and then Start.1\n\n\n\n\n\n\nWarning\n\n\n\nPlease double and triple check that you have reserved the STA 198-199 container and not some other. The various containers differ in the software they include, so if you reserve something else, you may be missing something we need.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
   },
   {
     "objectID": "lab/lab-0.html#create-a-github-account",
     "href": "lab/lab-0.html#create-a-github-account",
     "title": "Lab 0",
     "section": "2. Create a GitHub account",
-    "text": "2. Create a GitHub account\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.2\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password. If you are unsure of your login credentials, carefully follow GitHub’s instructions for recovering this information. If you accumulate too many failed login attempts, you will be locked out of your account for the day, which will make it difficult for you to complete the rest of this lab."
+    "text": "2. Create a GitHub account\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.2\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password. If you are unsure of your login credentials, carefully follow GitHub’s instructions for recovering this information. If you accumulate too many failed login attempts, you will be locked out of your account for the day, which will make it difficult for you to complete the rest of this lab.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
   },
   {
     "objectID": "lab/lab-0.html#set-up-your-ssh-key",
     "href": "lab/lab-0.html#set-up-your-ssh-key",
     "title": "Lab 0",
     "section": "3. Set up your SSH key",
-    "text": "3. Set up your SSH key\nYou will authenticate GitHub using SSH (Secure Shell Protocol – it doesn’t really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nGo back to your RStudio container and type credentials::ssh_setup_github() into your console.\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. R will then ask “Would you like to open a browser now?” You should click 1 for yes.\nYou may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., sta199).\n\nYou can find more detailed instructions here if you’re interested."
+    "text": "3. Set up your SSH key\nYou will authenticate GitHub using SSH (Secure Shell Protocol – it doesn’t really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nGo back to your RStudio container and type credentials::ssh_setup_github() into your console.\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. R will then ask “Would you like to open a browser now?” You should click 1 for yes.\nYou may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., sta199).\n\nYou can find more detailed instructions here if you’re interested.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
   },
   {
     "objectID": "lab/lab-0.html#configure-git-to-introduce-yourself",
     "href": "lab/lab-0.html#configure-git-to-introduce-yourself",
     "title": "Lab 0",
     "section": "4. Configure Git to introduce yourself",
-    "text": "4. Configure Git to introduce yourself\nNext, you need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\n\n\n\n\n\n\nNote\n\n\n\nYou’ll hear about 📦 packages a lot in the context of R – basically they’re how developers write functions and bundle them to distribute to the community (and more on this later too!).\n\n\nType the following lines of code in the console in RStudio filling in your name and the address associated with your GitHub account.\n\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n)\n\nFor example, mine would be\n\nusethis::use_git_config(\n  user.name = \"John Zito\", \n  user.email = \"johnczito@gmail.com\"\n)\n\nI used my gmail because that is the one I used to create my GitHub account. You should also be using the email address you used to create your GitHub account, it’s ok if it isn’t your Duke email.\n\n\n\n\n\n\nHow do I know if I did it right?\n\n\n\n\n\nWhen you input the usethis::use_git_config(...) command into the console and hit enter/return, it will appear as if nothing happened. To verify that everything worked, you can briefly switch over to the Terminal tab (should be to the right of Console) and type the commands git config user.name and git config user.email. If all is well, these will return whatever text you originally provided. If you notice a mistake or typo, you can just go back to the Console and rerun usethis::use_git_config(...) with modified inputs.\n\n\n\n\n\n\n\n\n\nNeed a recap? Watch this video!\n\n\n\n\n\nThe following video walks you through the steps outlined in the SSH key generation and Git configuration sections above."
+    "text": "4. Configure Git to introduce yourself\nNext, you need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\n\n\n\n\n\n\nNote\n\n\n\nYou’ll hear about 📦 packages a lot in the context of R – basically they’re how developers write functions and bundle them to distribute to the community (and more on this later too!).\n\n\nType the following lines of code in the console in RStudio filling in your name and the address associated with your GitHub account.\n\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n)\n\nFor example, mine would be\n\nusethis::use_git_config(\n  user.name = \"John Zito\", \n  user.email = \"johnczito@gmail.com\"\n)\n\nI used my gmail because that is the one I used to create my GitHub account. You should also be using the email address you used to create your GitHub account, it’s ok if it isn’t your Duke email.\n\n\n\n\n\n\nHow do I know if I did it right?\n\n\n\n\n\nWhen you input the usethis::use_git_config(...) command into the console and hit enter/return, it will appear as if nothing happened. To verify that everything worked, you can briefly switch over to the Terminal tab (should be to the right of Console) and type the commands git config user.name and git config user.email. If all is well, these will return whatever text you originally provided. If you notice a mistake or typo, you can just go back to the Console and rerun usethis::use_git_config(...) with modified inputs.\n\n\n\n\n\n\n\n\n\nNeed a recap? Watch this video!\n\n\n\n\n\nThe following video walks you through the steps outlined in the SSH key generation and Git configuration sections above.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
   },
   {
     "objectID": "lab/lab-0.html#babys-first-repo",
     "href": "lab/lab-0.html#babys-first-repo",
     "title": "Lab 0",
     "section": "5. Baby’s first repo",
-    "text": "5. Baby’s first repo\nA GitHub repository (repo) is a collection of files hosted on GitHub. Repos are the main way we will distribute files to you during the semester. When you copy the files in a repo to your local computing environment (your container, in this case), that’s called “cloning”. So, let’s clone our first repo:\n\nGo to the course organization at github.com/sta199-s25 organization on GitHub. Click on the repo hello-world.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nYou will need to get used to these steps, because you’ll probably clone at least one new repo every week."
+    "text": "5. Baby’s first repo\nA GitHub repository (repo) is a collection of files hosted on GitHub. Repos are the main way we will distribute files to you during the semester. When you copy the files in a repo to your local computing environment (your container, in this case), that’s called “cloning”. So, let’s clone our first repo:\n\nGo to the course organization at github.com/sta199-s25 organization on GitHub. Click on the repo hello-world.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nYou will need to get used to these steps, because you’ll probably clone at least one new repo every week.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
   },
   {
     "objectID": "lab/lab-0.html#hello-sta-199",
     "href": "lab/lab-0.html#hello-sta-199",
     "title": "Lab 0",
     "section": "6. Hello STA 199!",
-    "text": "6. Hello STA 199!\nFill out the course “Getting to know you” survey on Canvas: https://canvas.duke.edu/courses/50057/quizzes/30406.\nWe will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns."
+    "text": "6. Hello STA 199!\nFill out the course “Getting to know you” survey on Canvas: https://canvas.duke.edu/courses/50057/quizzes/30406.\nWe will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
   },
   {
     "objectID": "lab/lab-0.html#footnotes",
     "href": "lab/lab-0.html#footnotes",
     "title": "Lab 0",
     "section": "Footnotes",
-    "text": "Footnotes\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.↩︎"
+    "text": "Footnotes\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
   },
   {
     "objectID": "lab/lab-1.html",
