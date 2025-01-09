@@ -59,7 +59,7 @@
     "href": "syllabus/syllabus_assignments.html#final-project-20",
     "title": "Assignments and grading",
     "section": "Final project (20%)",
-    "text": "Final project (20%)\nSee here (!!!) for a detailed description of the final project.\nAfter the first midterm exam, we will assign you to teams of four or five within your lab section. Teams will select a dataset and conduct an original data analysis using the tools from the course. The project has various intermediate deadlines (“Milestones”) that contribute to the project grade, and on the last day of the semester (Wednesday April 23) teams will submit a final written report and a five minute video presentation summarizing the results of the analysis.\n\n\n\n\n\n\nWarning\n\n\n\nIf you do not complete the project, you will not receive a passing grade in this course.",
+    "text": "Final project (20%)\nAfter the first midterm exam, we will assign you to teams of four or five within your lab section. Teams will select a dataset and conduct an original data analysis using the tools from the course. The project has various intermediate deadlines (“Milestones”) that contribute to the project grade, and on the last day of the semester (Wednesday April 23) teams will submit a final written report and a five minute video presentation summarizing the results of the analysis.\n\n\n\n\n\n\nWarning\n\n\n\nIf you do not complete the project, you will not receive a passing grade in this course.",
     "crumbs": [
       "Syllabus",
       "Assignments and grading"
@@ -163,6 +163,202 @@
       "Syllabus",
       "Overview"
     ]
+  },
+  {
+    "objectID": "slides/00-welcome.html#teaching-team",
+    "href": "slides/00-welcome.html#teaching-team",
+    "title": "Welcome to STA 199!",
+    "section": "Teaching team",
+    "text": "Teaching team"
+  },
+  {
+    "objectID": "slides/00-welcome.html#homepage",
+    "href": "slides/00-welcome.html#homepage",
+    "title": "Welcome to STA 199!",
+    "section": "Homepage",
+    "text": "Homepage\nhttps://sta199-s25.github.io\n\nAll course materials\nLinks to Canvas, GitHub, RStudio containers, etc."
+  },
+  {
+    "objectID": "slides/00-welcome.html#course-toolkit",
+    "href": "slides/00-welcome.html#course-toolkit",
+    "title": "Welcome to STA 199!",
+    "section": "Course toolkit",
+    "text": "Course toolkit\nAll linked from the course website:\n\nGitHub organization: github.com/sta199-s25\nRStudio containers: cmgr.oit.duke.edu/containers\nCommunication: Ed Discussion\nAssignment submission and feedback: Gradescope"
+  },
+  {
+    "objectID": "slides/00-welcome.html#activities",
+    "href": "slides/00-welcome.html#activities",
+    "title": "Welcome to STA 199!",
+    "section": "Activities",
+    "text": "Activities\n\nIntroduce new content and prepare for lectures by watching the videos and completing the readings\nAttend and actively participate in lectures and labs, office hours, team meetings\nPractice applying statistical concepts and computing with application exercises during lecture, graded for attempting\nPut together what you’ve learned to analyze real-world data\n\nLab assignments (7 or 8 throughout semester)\nExams (midterm x 2 + final)\nTerm project completed in teams"
+  },
+  {
+    "objectID": "slides/00-welcome.html#application-exercises",
+    "href": "slides/00-welcome.html#application-exercises",
+    "title": "Welcome to STA 199!",
+    "section": "Application exercises",
+    "text": "Application exercises\n\nDaily-ish in lecture\n“Graded” for attempt, not accuracy\nPractice Weeks 1 + 2, graded thereafter\nAt least one commit by 2 pm of the day of lecture\nTurn in at least 70% for full credit"
+  },
+  {
+    "objectID": "slides/00-welcome.html#labs",
+    "href": "slides/00-welcome.html#labs",
+    "title": "Welcome to STA 199!",
+    "section": "Labs",
+    "text": "Labs\n\nStart in lab session\nComplete at home\nDue within a week\nDiscussion with classmates ok, copying not ok!\nLowest score dropped"
+  },
+  {
+    "objectID": "slides/00-welcome.html#exams",
+    "href": "slides/00-welcome.html#exams",
+    "title": "Welcome to STA 199!",
+    "section": "Exams",
+    "text": "Exams\n\nThree exams, each 20%\nMidterm comprised of two parts:\n\nIn-class: 75 minute in-class exam. Closed book, one sheet of notes (“cheat sheet”) – 70% of the grade.\nTake-home: Follow from the in class exam and focus on the analysis of a dataset introduced in the take home exam – 30% of the grade.\n\nFinal in-class only (Apr 29, 9am - 12pm): Closed book, one sheet of notes (“cheat sheet”).\n“Cheat sheet”: No larger than 8.5” x 11”, both sides, must be prepared by you.\n\n\n\n\n\n\n\nCaution\n\n\nExam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class."
+  },
+  {
+    "objectID": "slides/00-welcome.html#project",
+    "href": "slides/00-welcome.html#project",
+    "title": "Welcome to STA 199!",
+    "section": "Project",
+    "text": "Project\n\nDataset of your choice, method of your choice\nTeamwork\nFive milestones, interim deadline throughout semester\nFinal milestone: Presentation (video) and write-up\nPresentations submitted as videos\nPeer review between teams for content, peer evaluation within teams for contribution\nSome lab sessions allocated to project progress\n\n\n\n\n\n\n\nCaution\n\n\nProject due date cannot be changed. You must complete the project to pass this class."
+  },
+  {
+    "objectID": "slides/00-welcome.html#teams-of-4---5",
+    "href": "slides/00-welcome.html#teams-of-4---5",
+    "title": "Welcome to STA 199!",
+    "section": "Teams of 4 - 5",
+    "text": "Teams of 4 - 5\n\nAssigned by us within your lab section\nProject\nPeer evaluation during teamwork and after completion\nExpectations and roles\n\nEveryone is expected to contribute equal effort\nEveryone is expected to understand all code turned in\nIndividual contribution evaluated by peer evaluation, commits, etc."
+  },
+  {
+    "objectID": "slides/00-welcome.html#grading",
+    "href": "slides/00-welcome.html#grading",
+    "title": "Welcome to STA 199!",
+    "section": "Grading",
+    "text": "Grading\n\n\n\nCategory\nPercentage\n\n\n\n\nApplication Exercises\n5%\n\n\nLabs\n15%\n\n\nMidterm 1\n20%\n\n\nMidterm 2\n20%\n\n\nFinal\n20%\n\n\nProject\n20%\n\n\n\nNo specific points allocated to attendance, but the application exercise score is implicitly tied to attendance.\nSee course syllabus for how the final letter grade will be determined."
+  },
+  {
+    "objectID": "slides/00-welcome.html#support",
+    "href": "slides/00-welcome.html#support",
+    "title": "Welcome to STA 199!",
+    "section": "Support",
+    "text": "Support\n\nHelp from humans:\n\nAttend office hours\nAsk and answer questions on the discussion forum\n\nReserve email for questions on personal matters and/or grades\nRead the course support page"
+  },
+  {
+    "objectID": "slides/00-welcome.html#announcements",
+    "href": "slides/00-welcome.html#announcements",
+    "title": "Welcome to STA 199!",
+    "section": "Announcements",
+    "text": "Announcements\n\nPosted on Canvas (Announcements tool) and sent via email, be sure to check both regularly\nI’ll assume that you’ve read an announcement by the next “business” day\nI’ll (try my best to) send a weekly update announcement each Friday, outlining the plan for the following week and reminding you what you need to do to prepare, practice, and perform"
+  },
+  {
+    "objectID": "slides/00-welcome.html#accessibility",
+    "href": "slides/00-welcome.html#accessibility",
+    "title": "Welcome to STA 199!",
+    "section": "Accessibility",
+    "text": "Accessibility\n\nThe Student Disability Access Office (SDAO) is available to ensure that students are able to engage with their courses and related assignments.\nI am committed to making all course materials accessible and I’m always learning how to do this better. If any course component is not accessible to you in any way, please don’t hesitate to let me know."
+  },
+  {
+    "objectID": "slides/00-welcome.html#late-work-waivers-lecture-recordings-regrades",
+    "href": "slides/00-welcome.html#late-work-waivers-lecture-recordings-regrades",
+    "title": "Welcome to STA 199!",
+    "section": "Late work, waivers, lecture recordings, regrades…",
+    "text": "Late work, waivers, lecture recordings, regrades…\n\nWe have policies!\nRead about them on the course syllabus and refer back to them when you need it"
+  },
+  {
+    "objectID": "slides/00-welcome.html#use-of-ai-tools",
+    "href": "slides/00-welcome.html#use-of-ai-tools",
+    "title": "Welcome to STA 199!",
+    "section": "Use of AI tools",
+    "text": "Use of AI tools\n\n AI tools for code:\n\nSure, but be careful/critical! Working code != correct/good code.\nMust explicitly cite, with at a minimum AI tool you’re using (e.g., ChatGPT) and your prompt.\n\n AI tools for narrative: Absolutely not!\n AI tools for learning: Sure, but be careful/critical!"
+  },
+  {
+    "objectID": "slides/00-welcome.html#academic-integrity",
+    "href": "slides/00-welcome.html#academic-integrity",
+    "title": "Welcome to STA 199!",
+    "section": "Academic integrity",
+    "text": "Academic integrity\n\nTo uphold the Duke Community Standard:\n\nI will not lie, cheat, or steal in my academic endeavors;\nI will conduct myself honorably in all my endeavors; and\nI will act if the Standard is compromised."
+  },
+  {
+    "objectID": "slides/00-welcome.html#how-old-is-this-person",
+    "href": "slides/00-welcome.html#how-old-is-this-person",
+    "title": "Welcome to STA 199!",
+    "section": "How old is this person?",
+    "text": "How old is this person?\n\n\n\n \n\n\n\n\nEthel Merman"
+  },
+  {
+    "objectID": "slides/00-welcome.html#ethel-merman",
+    "href": "slides/00-welcome.html#ethel-merman",
+    "title": "Welcome to STA 199!",
+    "section": "Ethel Merman",
+    "text": "Ethel Merman\n\n\n\n\nBorn: January 16, 1908\nDied: February 15, 1984\nAge: 76"
+  },
+  {
+    "objectID": "slides/00-welcome.html#how-old-is-this-person-1",
+    "href": "slides/00-welcome.html#how-old-is-this-person-1",
+    "title": "Welcome to STA 199!",
+    "section": "How old is this person?",
+    "text": "How old is this person?\n\n\n\n \n\n\n\n\nMegan Pete"
+  },
+  {
+    "objectID": "slides/00-welcome.html#megan-thee-stallion",
+    "href": "slides/00-welcome.html#megan-thee-stallion",
+    "title": "Welcome to STA 199!",
+    "section": "Megan Thee Stallion",
+    "text": "Megan Thee Stallion\n\n\n\n\nRapper\nBorn: February 15, 1995\nAge: 29"
+  },
+  {
+    "objectID": "slides/00-welcome.html#how-old-is-this-person-2",
+    "href": "slides/00-welcome.html#how-old-is-this-person-2",
+    "title": "Welcome to STA 199!",
+    "section": "How old is this person?",
+    "text": "How old is this person?\n\n\n\n \n\n\n\n\n봉준호"
+  },
+  {
+    "objectID": "slides/00-welcome.html#bong-joon-ho",
+    "href": "slides/00-welcome.html#bong-joon-ho",
+    "title": "Welcome to STA 199!",
+    "section": "Bong Joon-ho",
+    "text": "Bong Joon-ho\n\n\n\n\nFilm director\nBorn: September 14, 1969\nAge: 55"
+  },
+  {
+    "objectID": "slides/00-welcome.html#now-do-it-with-pictures",
+    "href": "slides/00-welcome.html#now-do-it-with-pictures",
+    "title": "Welcome to STA 199!",
+    "section": "Now do it with pictures…",
+    "text": "Now do it with pictures…\n\n\nWhen the picture was taken, how old was the person?"
+  },
+  {
+    "objectID": "slides/00-welcome.html#before-we-analyze-these-data",
+    "href": "slides/00-welcome.html#before-we-analyze-these-data",
+    "title": "Welcome to STA 199!",
+    "section": "Before we analyze these data…",
+    "text": "Before we analyze these data…\nThe stakes are low today. We’re just getting our feet wet and working out the kinks:\n\n\nIt’s the first time all 300+ of us are attempting to access our containers simultaneously. It may choke;\nIf you get stuck on a loading screen of some kind, be patient and let it do its thing. Refreshing, reloading, etc will just amplify our collective problem;\nIf yours never loads, no big deal. Just sit back and watch me, or follow along on a neighbor’s screen;\nEven if your does load, you’re welcome to just watch."
+  },
+  {
+    "objectID": "slides/00-welcome.html#whence-ggplot",
+    "href": "slides/00-welcome.html#whence-ggplot",
+    "title": "Welcome to STA 199!",
+    "section": "Whence ggplot?",
+    "text": "Whence ggplot?\ntwo column grammar of graphics cover and a cake"
+  },
+  {
+    "objectID": "slides/00-welcome.html#statistical-lessons",
+    "href": "slides/00-welcome.html#statistical-lessons",
+    "title": "Welcome to STA 199!",
+    "section": "Statistical lessons",
+    "text": "Statistical lessons\n\nModeling assumptions;\nDomain knowledge;\nData type;\nData quality;\nSome uncertainty is simply irreducible;\nThe wisdom of crowds."
+  },
+  {
+    "objectID": "slides/00-welcome.html#hard-skills",
+    "href": "slides/00-welcome.html#hard-skills",
+    "title": "Welcome to STA 199!",
+    "section": "Hard skills",
+    "text": "Hard skills\n\nGitHub repositories: cloning and pulling;\nWorking with data in CSV format;\nRendering a Quarto document to get PDFs that seamlessly integrate written text, images, code, and output;\nUsing ggplot to build up visualizations in layers, like a cake.\n\n\n\n\n\n\n\nGet ready\n\n\nYou will do all of these things on a weekly basis in this course."
+  },
+  {
+    "objectID": "slides/00-welcome.html#this-weeks-tasks",
+    "href": "slides/00-welcome.html#this-weeks-tasks",
+    "title": "Welcome to STA 199!",
+    "section": "This week’s tasks",
+    "text": "This week’s tasks\n\nComplete Lab 0\n\nComputational setup\nGetting to know you survey\n\nRead the syllabus\nComplete readings and videos for next class"
   },
   {
     "objectID": "lab/lab-0.html",
