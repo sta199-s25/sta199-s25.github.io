@@ -73,8 +73,6 @@ If you do better on the final exam than you did on the in-class component of a m
 
 ## Final project (20%)
 
-See here (!!!) for a detailed description of the final project.
-
 After the first midterm exam, we will assign you to teams of four or five **within your lab section**. Teams will select a dataset and conduct an original data analysis using the tools from the course. The project has various intermediate deadlines ("Milestones") that contribute to the project grade, and on the last day of the semester (Wednesday April 23) teams will submit a final written report and a five minute video presentation summarizing the results of the analysis.
 
 ::: callout-warning
