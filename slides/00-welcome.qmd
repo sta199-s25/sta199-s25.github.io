@@ -4,11 +4,87 @@ format: revealjs
 auto-stretch: false
 ---
 
-# Introductions
+```{r}
+#| echo: false 
+#| message: false 
+#| warning: false
+library(tidyverse)
+age_guesses <- read_csv("data/age_guesses.csv")
+```
 
-## Teaching team
+## Teaching team: a glamorous assemblage {.small}
 
-# What are data science and statistical thinking?
+::: columns
+::: {.column width="50%"}
+Caitrin Murphy
+
+Han Chen
+
+Katie Solarz
+
+Hyunjin Lee
+
+Jasmine Wang
+
+Liane Ma
+
+Avery Hodges
+
+Alexa Fahrer
+
+Domenic Fenoglio
+
+Julia Healey-Parera
+
+David King
+
+Lisa Zhang
+:::
+
+::: {.column width="50%"}
+Eduardo Vasquez
+
+Arijit Dey
+
+Federico Arboleda
+
+Sarah Wu
+
+Li Fan
+
+Devarpita Bag
+
+Netra Mittal
+
+Natasha Harris
+
+Sonya Eason
+
+Noah Obuya
+
+Mary Knox
+
+John Zito
+:::
+:::
+
+## What are we studying? {.large}
+
+::: callout-important
+## Data science
+
+Transforming messy, incomplete, imperfect data into knowledge.
+:::
+
+::: callout-important
+## Statistical thinking
+
+Quantifying our uncertainty about that knowledge.
+:::
+
+## The data science life cycle
+
+![](images/data-science-cycle.001.png)
 
 # Syllabus highlights
 
@@ -38,7 +114,7 @@ All linked from the course website:
     -   Exams (midterm x 2 + final)
     -   Term project completed in teams
 
-## Application exercises {.smaller}
+## Application exercises
 
 -   Daily-ish in lecture
 
@@ -50,7 +126,7 @@ All linked from the course website:
 
 -   Turn in at least 70% for full credit
 
-## Labs {.smaller}
+## Labs
 
 -   Start in lab session
 
@@ -74,7 +150,7 @@ All linked from the course website:
 
 -   Final in-class only (Apr 29, 9am - 12pm): Closed book, one sheet of notes (“cheat sheet”).
 
-- "Cheat sheet": No larger than 8.5" x 11", both sides, **must be prepared by you**.
+-   "Cheat sheet": No larger than 8.5" x 11", both sides, **must be prepared by you**.
 
 ::: callout-caution
 Exam dates cannot be changed and no make-up exams will be given. If you can’t take the exams on these dates, you should drop this class.
@@ -110,7 +186,7 @@ Project due date cannot be changed. You must complete the project to pass this c
     -   Everyone is expected to understand *all* code turned in
     -   Individual contribution evaluated by peer evaluation, commits, etc.
 
-## Grading {.smaller}
+## Grading 
 
 | Category              | Percentage |
 |-----------------------|------------|
@@ -124,6 +200,12 @@ Project due date cannot be changed. You must complete the project to pass this c
 No specific points allocated to attendance, but the application exercise score is implicitly tied to attendance.
 
 See course syllabus for how the final letter grade will be determined.
+
+## Wiggle room
+
+-   You only have to complete 70% of the AEs to receive full credit;
+-   We drop the lowest lab score;
+-   We replace the lowest *in-class* midterm score with your final exam score (if it's better).
 
 ## Support
 
@@ -145,18 +227,23 @@ See course syllabus for how the final letter grade will be determined.
 
 -   I am committed to making all course materials accessible and I'm always learning how to do this better. If any course component is not accessible to you in any way, please don't hesitate to let me know.
 
-# Course policies
+::: callout-note
+## If you need testing accommodations
+
+Make sure I get a letter, and make your appointments in the Testing Center now.
+:::
 
 ## Late work, waivers, lecture recordings, regrades...
 
 -   We have policies!
--   Read about them on the [course syllabus](https://sta199-f22-1.github.io/course-syllabus.html) and refer back to them when you need it
+-   Read about them on the [course syllabus](https://sta199-s25.github.io/syllabus/syllabus_policies.html) and refer back to them when you need it
 
 ## Use of AI tools
 
--   {{< fa check >}} **AI tools for code:** 
-    - Sure, but be careful/critical! Working code `!=` correct/good code.
-    - Must explicitly cite, with **at a minimum** AI tool you're using (e.g., ChatGPT) and your prompt.
+-   {{< fa check >}} **AI tools for code:**
+
+    -   Sure, but be careful/critical! Working code `!=` correct/good code.
+    -   Must explicitly cite with a direct url linking to the conversation you had.
 
 -   {{< fa ban >}} **AI tools for narrative:** Absolutely not!
 
@@ -172,53 +259,59 @@ See course syllabus for how the final letter grade will be determined.
 >
 > -   I will act if the Standard is compromised.
 
+-   Zeros from conduct violations will not be dropped or replaced;
+
+-   If people are copying, sharer and recipients penalized equally;
+
+-   If we discover any violations, it goes straight to the conduct office.
+
 # A game
 
 ## How old is this person? {.larger}
 
 ::: {layout="[[-1], [1], [-1]]"}
-
 Ethel Merman
-
 :::
 
 ## Ethel Merman
 
 ::: {.columns .v-center-container}
-::: {.column width="50%"}
+::: {.column width="40%"}
 ![](images/ethel_merman.jpg)
 :::
 
-::: {.column width="50%"}
-**Born**: January 16, 1908
+::: {.column width="60%"}
 
-**Died**: February 15, 1984
+|     |     |
+|-----|-----|
+| Born | January 16, 1908    |
+| Die | February 15, 1984    |
+| Age |  76   |
+| Claim to fame | [JZ's favorite singer](https://youtu.be/s62MrU8mHx4?feature=shared) |
 
-**Age**: 76
 :::
 :::
 
 ## How old is this person? {.larger}
 
 ::: {layout="[[-1], [1], [-1]]"}
-
 Megan Pete
-
 :::
 
 ## Megan Thee Stallion
 
 ::: {.columns .v-center-container}
-::: {.column width="50%"}
-![](images/meghan_thee_stallion.jpg){width="80%"}
+::: {.column width="40%"}
+![](images/meghan_thee_stallion.jpg)
 :::
 
-::: {.column width="50%"}
-Rapper
+::: {.column width="60%"}
 
-**Born**: February 15, 1995
-
-**Age**: 29
+|     |     |
+|-----|-----|
+| Born | February 15, 1995 |
+| Age |  29   |
+| Claim to fame | Rapper |
 
 :::
 :::
@@ -226,24 +319,26 @@ Rapper
 ## How old is this person? {.larger}
 
 ::: {layout="[[-1], [1], [-1]]"}
-
 봉준호
-
 :::
 
 ## Bong Joon-ho
 
 ::: {.columns .v-center-container}
-::: {.column width="50%"}
-![](images/bongjoonho.jpg){width="80%"}
+::: {.column width="40%"}
+![](images/bongjoonho.jpg)
 :::
 
-::: {.column width="50%"}
-Film director
+::: {.column width="60%"}
 
-**Born**: September 14, 1969
 
-**Age**: 55
+|     |     |
+|-----|-----|
+| Born | September 14, 1969 |
+| Age |  55   |
+| Claim to fame | Directed *Parasite*, *Snowpiercer*, etc |
+
+
 :::
 :::
 
@@ -255,48 +350,280 @@ When the picture was taken, how old was the person?
 :::
 
 ::: {.column width="50%"}
-![](images/quiz_qr.png){fig-align="center"}
+![](images/age_qr.png){fig-align="center"}
 :::
 :::
 
-## Before we analyze these data...
+## Managing expectations
 
 The stakes are low today. We're just getting our feet wet and working out the kinks:
 
 ::: incremental
-- It's the first time all 300+ of us are attempting to access our containers simultaneously. It may choke;
+-   It's the first time all 300+ of us are attempting to access our containers simultaneously. It may choke;
 
-- If you get stuck on a loading screen of some kind, be patient and let it do its thing. Refreshing, reloading, etc will just amplify our collective problem;
+-   If you get stuck on a loading screen of some kind, be patient and let it do its thing. Refreshing, reloading, etc will just amplify our collective problem;
 
-- If yours never loads, no big deal. Just sit back and watch me, or follow along on a neighbor's screen;
+-   If yours never loads, no big deal. Just sit back and watch me, or follow along on a neighbor's screen;
 
-- Even if your *does* load, you're welcome to just watch.
+-   Even if yours *does* load, you're welcome to just watch.
 :::
+
+## Yuja Wang
+
+::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/celeb-1.png){fig-align="center" width="80%"}
+:::
+
+::: {.column width="60%"}
+
+|     |     |
+|-----|-----|
+| Born | 2/10/1987    |
+| Age in pic |  36   |
+| Claim to fame | [Classical pianist](https://youtu.be/RGAPTRrAilY?feature=shared) |
+
+:::
+:::
+
+## I'm sure she'd be pleased
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(age_guesses, aes(x = celeb1)) + 
+  geom_histogram() + 
+  labs(title = "199-s25 students guess Yuja Wang's age",
+       x = "Guess") + 
+  geom_vline(xintercept = 36, color = "red")
+
+```
+
+
+## Joan Crawford
+
+A secret she took to her grave:
+
+::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/celeb-2.jpg){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+
+|     |     |
+|-----|-----|
+| Born | 3/23/(1904 - 1908)    |
+| Died | 5/10/1977    |
+| Age in pic |  38 - 42   |
+| Claim to fame | [Oscar-winning actor](https://youtu.be/KoOr_OoHbv4?feature=shared) |
+
+:::
+:::
+
+## We'll never know...
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot() +
+  geom_histogram(data = age_guesses, aes(x = celeb2)) + 
+  labs(title = "199-s25 students guess Joan Crawford's age",
+       x = "Guess") + 
+  geom_rect(aes(xmin = 38, xmax = 42, ymin = 0, ymax = Inf), 
+            alpha = 0.5, fill = "red")
+
+```
+
+## Eubie Blake
+
+His actual birthday was not known at the time:
+
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+![](images/celeb-3.jpg){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+
+|     |     |
+|-----|-----|
+| Born | 2/7/1887    |
+| Died | 2/12/1983    |
+| Age in pic |  82   |
+| Claim to fame | [Composer](https://youtu.be/mN89vHZ414s?feature=shared) |
+
+:::
+:::
+
+## lol that bar at 86
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(age_guesses, aes(x = celeb3)) + 
+  geom_histogram() + 
+  labs(title = "199-s25 students guess Eubie Blake's age",
+       x = "Guess") + 
+  geom_vline(xintercept = 82, color = "red")
+
+```
+
+
+
+## Watch out for data quality!
+
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+![](images/celeb-4-noisy.jpg){width="75%"}
+:::
+
+::: {.column width="50%"}
+![](images/celeb-4-original.jpg){width="75%"}
+:::
+:::
+
+## Raghuram Rajan
+
+::: {.columns .v-center-container}
+::: {.column width="35%"}
+![](images/celeb-4-original.jpg){width="90%"}
+:::
+
+::: {.column width="65%"}
+|     |     |
+|-----|-----|
+| Born | 2/3/1963    |
+| Age in pic |  48   |
+| Claim to fame | [UChicago economist](https://youtu.be/3rvUXmrv5Hk?feature=shared) |
+| | [RBI governor](https://en.wikipedia.org/wiki/Raghuram_Rajan) |
+:::
+:::
+
+## You're natural denoisers!
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(age_guesses, aes(x = celeb4)) + 
+  geom_histogram() + 
+  labs(title = "199-s25 students guess Raghuram Rajan's age",
+       x = "Guess") + 
+  geom_vline(xintercept = 48, color = "red")
+
+```
+
+## James Gandolfini
+
+::: {.columns .v-center-container}
+::: {.column width="39%"}
+![](images/celeb5.png){fig-align="center"}
+:::
+
+::: {.column width="61%"}
+
+|     |     |
+|-----|-----|
+| Born | 9/18/1961    |
+| Died | 6/19/2013    |
+| Age in pic |  51   |
+| Claim to fame | [played Tony Soprano](https://youtu.be/fOYJVL9bzk4?feature=shared) |
+
+:::
+:::
+
+## The wisdom of crowds
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(age_guesses, aes(x = celeb5)) + 
+  geom_histogram() + 
+  labs(title = "199-s25 students guess James Gandolfini's age",
+       x = "Guess") + 
+  geom_vline(xintercept = 51, color = "red")
+
+```
+
+## Celia Cruz
+
+::: {.columns .v-center-container}
+::: {.column width="40%"}
+![](images/celeb6.png){fig-align="center"}
+:::
+
+::: {.column width="60%"}
+
+|     |     |
+|-----|-----|
+| Born | 10/21/1925    |
+| Died | 7/16/2003  |
+| Age in pic |  76   |
+| Claim to fame | [Queen of Salsa](https://youtu.be/AXN-_asIaYs?feature=shared) |
+
+:::
+:::
+
+## ¡Azúcar!
+
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+
+ggplot(age_guesses, aes(x = celeb6)) + 
+  geom_histogram() + 
+  labs(title = "199-s25 students guess Celia Cruz's age",
+       x = "Guess") + 
+  geom_vline(xintercept = 76, color = "red")
+
+```
 
 ## Whence `ggplot`?
 
-two column grammar of graphics cover and a cake
+::: {.columns .v-center-container}
+::: {.column width="50%"}
+![](images/gg.jpg){width="80%"}
+:::
+
+::: {.column width="50%"}
+![](images/cake.jpg){width="80%"}
+:::
+:::
 
 # Silly exercise, serious themes
 
 ## Statistical lessons
 
-- Modeling assumptions;
-- Domain knowledge;
-- Data type;
-- Data quality;
-- Some uncertainty is simply irreducible; 
-- The wisdom of crowds.
+-   Modeling assumptions;
+-   Domain knowledge;
+-   Data type;
+-   Data quality;
+-   Data cleaning;
+-   Don't let the mere act of quantification lull you into a false sense of security that you understand more than you actually do;
+-   Some uncertainty is simply irreducible;
+-   The wisdom of crowds.
 
 ## Hard skills
 
-- GitHub repositories: cloning and pulling;
-- Working with data in CSV format;
-- Rendering a Quarto document to get PDFs that seamlessly integrate written text, images, code, and output;
-- Using `ggplot` to build up visualizations in layers, like a cake.
+-   GitHub repositories: cloning and pulling;
+-   Working with data in CSV format;
+-   Rendering a Quarto document to get PDFs that seamlessly integrate written text, code, and output;
+-   Using `ggplot` to build up visualizations in layers, like a cake.
 
 ::: callout-note
 ## Get ready
+
 You will do all of these things on a weekly basis in this course.
 :::
 
@@ -309,4 +636,3 @@ You will do all of these things on a weekly basis in this course.
     -   Getting to know you survey
 -   Read the syllabus
 -   Complete readings and videos for next class
-
