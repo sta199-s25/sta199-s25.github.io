@@ -634,6 +634,6 @@ You will do all of these things on a weekly basis in this course.
 -   Complete Lab 0
     -   Computational setup
     -   Getting to know you survey
--   Read the syllabus
+-   Read the syllabus and ask questions on Ed
 -   Complete readings and videos for next class
 - Accept your invitation to the GitHub organization pronto!
