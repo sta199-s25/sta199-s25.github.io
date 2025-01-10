@@ -636,3 +636,4 @@ You will do all of these things on a weekly basis in this course.
     -   Getting to know you survey
 -   Read the syllabus
 -   Complete readings and videos for next class
+- Accept your invitation to the GitHub organization pronto!
