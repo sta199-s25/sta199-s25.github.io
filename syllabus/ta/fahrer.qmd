@@ -3,7 +3,7 @@ title: Fahrer, Alexa
 categories: 
   - Lab Helper
 description: "M 11:45AM - 1:00PM (Sec 4)"
-subtitle: "🔗"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
 image: headshots/alexa.png
 image-alt: Headshot of TA
 ---

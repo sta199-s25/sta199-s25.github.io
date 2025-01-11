@@ -3,7 +3,7 @@ title: Hodges, Avery
 categories: 
   - Lab Leader
 description: "M 11:45AM - 1:00PM (Sec 4)"
-subtitle: "🔗"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
 image: headshots/avery.png
 image-alt: Headshot of TA
 ---

@@ -3,7 +3,7 @@ title: King, Dav
 categories: 
   - Lab Leader
 description: "M 1:25PM - 2:40PM (Sec 6)"
-subtitle: "🔗"
+subtitle: "[🔗](https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing)"
 image: headshots/dav.png
 image-alt: Headshot of TA
 ---
