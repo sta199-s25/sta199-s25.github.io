@@ -186,7 +186,7 @@ Project due date cannot be changed. You must complete the project to pass this c
     -   Everyone is expected to understand *all* code turned in
     -   Individual contribution evaluated by peer evaluation, commits, etc.
 
-## Grading 
+## Grading
 
 | Category              | Percentage |
 |-----------------------|------------|
@@ -238,6 +238,14 @@ Make sure I get a letter, and make your appointments in the Testing Center now.
 -   We have policies!
 -   Read about them on the [course syllabus](https://sta199-s25.github.io/syllabus/syllabus_policies.html) and refer back to them when you need it
 
+## Collaboration
+
+- **Labs**: discussing and helping is fine. Sharing your solutions and copying others is not; 
+
+- **Exams**: collaboration of any kind is completely forbidden on any part of any exam;
+
+- **Projects**: collaboration of any kind is enthusiastically encouraged *within your team*. Between teams, it's the same as labs; do not directly share your stuff or copy off of others.
+
 ## Use of AI tools
 
 -   {{< fa check >}} **AI tools for code:**
@@ -261,9 +269,9 @@ Make sure I get a letter, and make your appointments in the Testing Center now.
 
 -   Zeros from conduct violations will not be dropped or replaced;
 
--   If people are copying, sharer and recipients penalized equally;
+-   If people are copying, sharer and recipients penalized equally. It does not matter how well-intentioned everyone was;
 
--   If we discover any violations, it goes straight to the conduct office.
+-   If we discover violations, they go straight to the conduct office.
 
 # A game
 
@@ -281,14 +289,12 @@ Ethel Merman
 :::
 
 ::: {.column width="60%"}
-
-|     |     |
-|-----|-----|
-| Born | January 16, 1908    |
-| Died | February 15, 1984    |
-| Age |  76   |
+|               |                                                                     |
+|------------------------------------|------------------------------------|
+| Born          | January 16, 1908                                                    |
+| Died          | February 15, 1984                                                   |
+| Age           | 76                                                                  |
 | Claim to fame | [JZ's favorite singer](https://youtu.be/s62MrU8mHx4?feature=shared) |
-
 :::
 :::
 
@@ -306,13 +312,11 @@ Megan Pete
 :::
 
 ::: {.column width="60%"}
-
-|     |     |
-|-----|-----|
-| Born | February 15, 1995 |
-| Age |  29   |
-| Claim to fame | Rapper |
-
+|               |                                                       |
+|---------------|-------------------------------------------------------|
+| Born          | February 15, 1995                                     |
+| Age           | 29                                                    |
+| Claim to fame | [Rapper](https://youtu.be/4Fhm9ulCwUU?feature=shared) |
 :::
 :::
 
@@ -330,15 +334,11 @@ Megan Pete
 :::
 
 ::: {.column width="60%"}
-
-
-|     |     |
-|-----|-----|
-| Born | September 14, 1969 |
-| Age |  55   |
+|               |                                         |
+|---------------|-----------------------------------------|
+| Born          | September 14, 1969                      |
+| Age           | 55                                      |
 | Claim to fame | Directed *Parasite*, *Snowpiercer*, etc |
-
-
 :::
 :::
 
@@ -376,13 +376,11 @@ The stakes are low today. We're just getting our feet wet and working out the ki
 :::
 
 ::: {.column width="60%"}
-
-|     |     |
-|-----|-----|
-| Born | 2/10/1987    |
-| Age in pic |  36   |
+|               |                                                                  |
+|------------------------------------|------------------------------------|
+| Born          | 2/10/1987                                                        |
+| Age in pic    | 36                                                               |
 | Claim to fame | [Classical pianist](https://youtu.be/RGAPTRrAilY?feature=shared) |
-
 :::
 :::
 
@@ -401,7 +399,6 @@ ggplot(age_guesses, aes(x = celeb1)) +
 
 ```
 
-
 ## Joan Crawford
 
 A secret she took to her grave:
@@ -412,14 +409,12 @@ A secret she took to her grave:
 :::
 
 ::: {.column width="60%"}
-
-|     |     |
-|-----|-----|
-| Born | 3/23/(1904 - 1908)    |
-| Died | 5/10/1977    |
-| Age in pic |  38 - 42   |
+|               |                                                                    |
+|------------------------------------|------------------------------------|
+| Born          | 3/23/(1904 - 1908)                                                 |
+| Died          | 5/10/1977                                                          |
+| Age in pic    | 38 - 42                                                            |
 | Claim to fame | [Oscar-winning actor](https://youtu.be/KoOr_OoHbv4?feature=shared) |
-
 :::
 :::
 
@@ -449,14 +444,12 @@ His actual birthday was not known at the time:
 :::
 
 ::: {.column width="50%"}
-
-|     |     |
-|-----|-----|
-| Born | 2/7/1887    |
-| Died | 2/12/1983    |
-| Age in pic |  82   |
+|               |                                                         |
+|---------------|---------------------------------------------------------|
+| Born          | 2/7/1887                                                |
+| Died          | 2/12/1983                                               |
+| Age in pic    | 82                                                      |
 | Claim to fame | [Composer](https://youtu.be/mN89vHZ414s?feature=shared) |
-
 :::
 :::
 
@@ -474,8 +467,6 @@ ggplot(age_guesses, aes(x = celeb3)) +
   geom_vline(xintercept = 82, color = "red")
 
 ```
-
-
 
 ## Watch out for data quality!
 
@@ -497,12 +488,12 @@ ggplot(age_guesses, aes(x = celeb3)) +
 :::
 
 ::: {.column width="65%"}
-|     |     |
-|-----|-----|
-| Born | 2/3/1963    |
-| Age in pic |  48   |
+|               |                                                                   |
+|------------------------------------|------------------------------------|
+| Born          | 2/3/1963                                                          |
+| Age in pic    | 48                                                                |
 | Claim to fame | [UChicago economist](https://youtu.be/3rvUXmrv5Hk?feature=shared) |
-| | [RBI governor](https://en.wikipedia.org/wiki/Raghuram_Rajan) |
+|               | [RBI governor](https://en.wikipedia.org/wiki/Raghuram_Rajan)      |
 :::
 :::
 
@@ -529,14 +520,12 @@ ggplot(age_guesses, aes(x = celeb4)) +
 :::
 
 ::: {.column width="61%"}
-
-|     |     |
-|-----|-----|
-| Born | 9/18/1961    |
-| Died | 6/19/2013    |
-| Age in pic |  51   |
+|               |                                                                    |
+|------------------------------------|------------------------------------|
+| Born          | 9/18/1961                                                          |
+| Died          | 6/19/2013                                                          |
+| Age in pic    | 51                                                                 |
 | Claim to fame | [played Tony Soprano](https://youtu.be/fOYJVL9bzk4?feature=shared) |
-
 :::
 :::
 
@@ -563,14 +552,12 @@ ggplot(age_guesses, aes(x = celeb5)) +
 :::
 
 ::: {.column width="60%"}
-
-|     |     |
-|-----|-----|
-| Born | 10/21/1925    |
-| Died | 7/16/2003  |
-| Age in pic |  76   |
+|               |                                                               |
+|------------------------------------|------------------------------------|
+| Born          | 10/21/1925                                                    |
+| Died          | 7/16/2003                                                     |
+| Age in pic    | 76                                                            |
 | Claim to fame | [Queen of Salsa](https://youtu.be/AXN-_asIaYs?feature=shared) |
-
 :::
 :::
 
@@ -589,6 +576,18 @@ ggplot(age_guesses, aes(x = celeb6)) +
 
 ```
 
+## Our best guessers
+
+|            | Truth   | No. 1 | No. 2 | No. 4 | No. 4 |
+|------------|---------|-------|-------|-------|-------|
+| Wang       | **36**  | 34    | 36    | 27    | 34    |
+| Crawford   | **40?** | 38    | 42    | 33    | 40    |
+| Blake      | **82**  | 77    | 74    | 80    | 72    |
+| Rajan      | **48**  | 50    | 50    | 45    | 53    |
+| Gandolfini | **51**  | 58    | 48    | 50    | 46    |
+| Cruz       | **76**  | 72    | 68    | 73    | 73    |
+|            |         | 3.66  | 3.83  | 4.16  | 4.16  |
+
 ## Whence `ggplot`?
 
 ::: {.columns .v-center-container}
@@ -605,14 +604,15 @@ ggplot(age_guesses, aes(x = celeb6)) +
 
 ## Statistical lessons
 
--   Modeling assumptions;
--   Domain knowledge;
--   Data type;
--   Data quality;
--   Data cleaning;
--   Don't let the mere act of quantification lull you into a false sense of security that you understand more than you actually do;
--   Some uncertainty is simply irreducible;
--   The wisdom of crowds.
+- **Domain knowledge and modeling assumptions**: data do not speak for themselves. You need some subject-matter expertise about what you're studying, as well as an interpretive lens;
+- Are you asking questions the data can actually answer? 
+- Uncertainty has many sources, and in some cases, it may be simply irreducible, no matter how hard you try;
+- **Data quality and data cleaning**: Data are not gospel. There could be noise and mistakes. Then what?
+- **Wisdom of crowds**: aggregating many imperfect guesses can do better than any one individual guess.
+
+
+
+
 
 ## Hard skills
 
@@ -636,4 +636,4 @@ You will do all of these things on a weekly basis in this course.
     -   Getting to know you survey
 -   Read the syllabus and ask questions on Ed
 -   Complete readings and videos for next class
-- Accept your invitation to the GitHub organization pronto!
+-   Accept your invitation to the GitHub organization pronto!
