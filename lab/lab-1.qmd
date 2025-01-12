@@ -2,7 +2,7 @@
 title: Lab 1
 subtitle: From the Midwest to North Carolina
 categories: Lab
-description: "Due Tuesday January 21 at 8:30 AM"
+description: "Due Wednesday January 22 at 11:59 PM"
 draft: false
 ---
 
@@ -168,9 +168,7 @@ You should have at least 3 commits with meaningful commit messages by the end of
 
 # Questions
 
-## Part 1
-
-**Let's take a trip to the Midwest!**
+## Part 1 - Let's take a trip to the Midwest!
 
 We will use the `midwest` data frame for this lab. It is part of the **ggplot2** R package, so the `midwest` data set is automatically loaded when you load the tidyverse package.
 
@@ -217,7 +215,7 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 ### Question 3
 
-Create a scatterplot of the percentage below poverty (`percbelowpoverty` on the y-axis) versus percentage of people with a college degree (`percollege` on the x-axis), where the color [**and**]{.underline} shape of points are determined by `state`. Make sure to set informative titles, axis, and legend labels for your plot. First, describe the overall relationship between percentage of people with a college degree and percentage below poverty in Midwestern states, making sure to identify at least one county that is a clear outlier by name in your narrative. You can use the data viewer to identify the outliers interactively, you do not have to write code to identify them. Then, comment on whether you can identify how this relationship varies across states.
+Use `geom_point` to create a scatterplot of the percentage below poverty (`percbelowpoverty` on the y-axis) versus percentage of people with a college degree (`percollege` on the x-axis), where the color [**and**]{.underline} shape of points are determined by `state`. Make sure to set informative titles, axis, and legend labels for your plot. First, describe the overall relationship between percentage of people with a college degree and percentage below poverty in Midwestern states, making sure to identify at least one county that is a clear outlier by name in your narrative. You can use the data viewer to identify the outliers interactively, you do not have to write code to identify them. Then, comment on whether you can identify how this relationship varies across states.
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 3".
@@ -240,43 +238,6 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 :::
 
 ### Question 5
-
-*Do some states have counties that tend to be geographically larger than others?*
-
-To explore this question, create side-by-side boxplots of area (`area`) of a county based on state (`state`). How do typical county area sizes compare across states? How do variabilities of county sizes compare across states? Which state has the single largest county? Identify the name of this county. You can use the data viewer to identify it interactively, you do not have to write code.
-
-::: render-commit-push
-Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.
-
-Once again, make sure to commit and push all changed files so that your Git pane is empty afterwards.
-:::
-
-### Question 6
-
-*Do some states have a higher percentage of their counties located in a metropolitan area?*
-
-Create a segmented bar chart with one bar per state and the bar filled with colors according to the value of `metro` – one color indicating `Yes` and the other color indicating `No` for whether a county is considered to be a metro area. The y-axis of the segmented barplot should range from 0 to 1, indicating proportions. Compare the percentage of counties in metro areas across the states based on this plot. Make sure to supplement your narrative with rough estimates of these percentages.
-
-::: callout-tip
-## Hint
-
-For this question, you should begin with the data wrangling pipeline below. We will learn more about data wrangling in the coming weeks, so this is a mini-preview. This pipeline creates a new variable called `metro` based on the value of the existing variable called `inmetro`. If the value of `inmetro` is equal to 1 (`inmetro == 1`), it sets the value of `metro` to `"Yes"`, and if not, it sets the value of `metro` to `"No"`. The resulting data frame is assigned back to `midwest`, overwriting the existing `midwest` data frame with a version that includes the new `metro` variable.
-
-```{r}
-#| label: hint
-#| eval: false
-midwest <- midwest |>
-  mutate(metro = if_else(inmetro == 1, "Yes", "No"))
-```
-:::
-
-::: render-commit-push
-Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.
-
-And once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it's important and because we see students forget to do this. So take a moment to make sure you're following along with the version control instructions.
-:::
-
-### Question 7
 
 Recreate the plot below, and then give it a title. Then, identify at least one county that is a clear outlier in Wisconsin (WI) by name. You can use the data viewer to identify them interactively, you do not have to write code. Comment on the population composition of this county by investigating the percentage of other races living there.
 
@@ -308,14 +269,12 @@ ggplot(
 :::
 
 ::: render-commit-push
-Render, commit, and push your final changes to GitHub with a meaningful commit message.
+Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.
 
-Make sure to commit and push all changed files so that your Git pane is empty afterwards.
+And once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it's important and because we see students forget to do this. So take a moment to make sure you're following along with the version control instructions.
 :::
 
-## Part 2
-
-**Enough about the Midwest!**
+## Part 2 - Enough about the Midwest!
 
 In this part we will use a new, more recent, and potentially more relevant dataset on counties in North Carolina.
 
@@ -342,21 +301,57 @@ The variables in the dataset and their descriptions are as follows:
 
 In addition to being more recent and more relevant, this dataset is also more complete in the sense that we know the units of population density: people per mile-squared!
 
-### Question 8
+### Question 6
 
 First, guess what the relationship between population density and land area might be – positive? negative? no relationship?
 
 Then, make a scatter plot of population density (`density` on the y-axis) vs. land area in miles-squared (`land_area_mi2` on the x-axis). Make sure to set an informative title and axis labels for your plot. Describe the relationship. Was your guess correct?
 
-### Question 9
+### Question 7
 
 Now make a scatter plot of population density (`density` on the y-axis) vs. land area in meters-squared (`land_area_m2` on the x-axis). Make sure to set an informative title and axis labels for your plot. Comment on how this scatterplot compares to the one in Exercise 8 — is the relationship displayed same or different. Explain why.
+
+## Part 3 - Potpourri graded for a good faith effort
+
+### Question 8
+
+One of the key reasons we care about data science and statistics in the first place is because they can help us make decisions under uncertainty. For example:
+
+- When we save for retirement, we have to make a decision about what asset classes to invest in (stocks, bonds, real estate, etc) and in what proportions. We want to make the most stable and lucrative choice possible, accounting for the fact that we are uncertain about how the assets will ultimately perform. Data on past asset performance may help guide this decision;
+- When insurance companies sell policies, they have to decide who to sell to and what sized premium to charge. They face uncertainty about how many policies will ultimately result in a claim (if it's everyone, they're ruined). In order to navigate this environment, they employ armies of *actuaries* to study historical data and help make decisions about profit, loss, and risk of ruin;
+- Good barbecue cannot be made-to-order. A restaurant has to start preparing in the morning, before they know for certain how many folks will show up that day. If they prepare too little, they have to turn a lot of folks away and forfeit their money. If they prepare too much, it can go to waste. So a decision must be made under uncertainty, and it can be guided by historical data on demand, as it varies over the week and the year and during holidays and special events;
+- The manager of a presidential campaign must decide how to allocate the campaign's resources to different states, counties, neighborhoods, types of media, etc. But these decisions are made before they know how the voters will ultimately behave, and so they try to resolve this uncertainty by analyzing all sorts of data: polling, prediction markets, social media sentiment, economic indicators, historical trends, etc.
+- You darn Duke students must decide what time you're going to grab lunch at WU, subject to uncertainty about how long the lines will be. When you first matriculate, you might get burned a few times because you have no experience to base this decision on. By your senior year, you've accumulated a lot of data about the good and bad times at the different vendors, and how these vary across the days of the week and seasons of the year.
+
+You get the idea. Now it's your turn. Write a few paragraph describing an example from your everyday life where you have to make a decision under uncertainty (obviously, don't recycle one of the examples above). What's the decision? What are the sources of uncertainty? What is your decision-making process? What data, if it were available, could you consult to resolve some of this uncertainty and help you meet your objective? 
+
+::: callout-warning
+## Don't break my heart.
+
+This is graded for completion, but JZ will read all of them. I am not interested in an example from ChatGPT's everyday life where it has to make a decision under uncertainty. I want to know about you.
+:::
+
+### Question 9
+
+**Data science** is the process of turning messy, incomplete, imperfect data into knowledge, and **statistics** studies how we can quantify our uncertainty about that knowledge. To illustrate these ideas, we played a game on the first day of class; you were given data of various kinds about a celebrity (names vs pictures, clear pictures vs noisy ones), and you were asked to answer a simple question with a quantitative answer: how old is the person? The results of this exercise are memorialized in the lecture slides from that day, and I summarized some of the high-level lessons [here](https://sta199-s25.github.io/slides/00-welcome.html#/statistical-lessons).
+
+Write a paragraph or two summarizing another lesson that we can learn from this game. It can be a generic, high-level lesson about the practice of data science and stats, like the ones I listed. It can be a lesson about the application itself that you took away from reviewing the substantive results. Or, you can cast your mind back to when you were guessing, and you can describe and evaluate your guessing process with the benefit of hindsight. What factors were you weighing and/or neglecting? Did you learn anything that could make you a better age-guesser in the future?
+
+As you ponder this, note that you have access to [the complete dataset](https://github.com/sta199-s25/hello-world/blob/main/age_guesses.csv) of everyone's guesses. Feel free to play around with it.
 
 ### Question 10
 
 Did you select your pages on Gradescope? You don't need to write an answer for this question, if you select your pages when you upload your lab to Gradescope, you'll get full points on this question. Otherwise, you'll get a 0 on this question.[^2]
 
 [^2]: We're assigning points to this seemingly trivial task because not selecting your pages and questions will greatly slow down the grading. So we want to make sure you're properly motivated to complete this task!
+
+### Question 11
+
+Recommend some music for us to listen to while we grade this.
+
+::: callout-note
+Not worth any points, but still important.
+:::
 
 # Wrap-up
 
