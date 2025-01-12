@@ -26,30 +26,27 @@ website:
       - icon: code-square
         href: https://cmgr.oit.duke.edu/containers
         text: "RStudio containers"
-#      - icon: life-preserver
-#        text: Support
-#        menu:
-#          - icon: person-raised-hand
-#            text: Office hours
-#            href: https://docs.google.com/spreadsheets/d/1gXNQ9UMT01bU9qr-YDsA2GIpslldHmfwPg1gcOj2GTA/edit?usp=sharing
-#          - icon: people-fill
-#            text: Help from humans (Ed Discussion)
-#            href: https://edstem.org/us/courses/62468/discussion/
-#          - icon: robot
-#            text: Help from AI (Chatbot)
-#            href: https://canvas.duke.edu/courses/39994/external_tools/5887
-#      - icon: file-check-fill
-#        text: "Canvas"
-#        menu:
-#          - icon: megaphone-fill
-#            text: Announcements
-#            url: https://canvas.duke.edu/courses/39994/announcements
-#          - icon: file-arrow-up-fill
-#            text: Gradescope
-#            url: https://canvas.duke.edu/courses/39994/external_tools/181
-#          - icon: alphabet-uppercase
-#            text: Gradebook
-#            url: https://canvas.duke.edu/courses/39994/gradebook
+      - icon: life-preserver
+        text: Support
+        menu:
+          - icon: person-raised-hand
+            text: Office hours
+            href: https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing
+          - icon: people-fill
+            text: Help from humans (Ed Discussion)
+            href: https://edstem.org/us/courses/70595/discussion
+      - icon: file-check-fill
+        text: "Canvas"
+        menu:
+          - icon: megaphone-fill
+            text: Announcements
+            url: https://canvas.duke.edu/courses/50057/announcements
+          - icon: file-arrow-up-fill
+            text: Gradescope
+            url: https://canvas.duke.edu/courses/50057/external_tools/181
+          - icon: alphabet-uppercase
+            text: Gradebook
+            url: https://canvas.duke.edu/courses/50057/gradebook
 
     style: docked
     search: true
