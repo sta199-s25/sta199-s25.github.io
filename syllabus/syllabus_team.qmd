@@ -4,12 +4,12 @@ listing:
   id: ta-listing
   contents: ta
   sort: title
-  sort-ui: [mug, title, categories, description, subtitle]
+  sort-ui: [image, title, categories, description, subtitle]
   filter-ui: [categories, description]
   type: table
   fields: [image, title, categories, description, subtitle]
   field-display-names:
-    mug: Mug
+    image: Mug
     title: Name
     categories: "Role(s)"
     description: "Lab Section"
