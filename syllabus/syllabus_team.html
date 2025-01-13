@@ -341,6 +341,9 @@ window.Quarto = {
      <select id="listing-ta-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-ta-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
        <option value="" disabled="" selected="" hidden="">Order By</option>
        <option value="index" data-direction="asc">Default</option>
+         <option value="listing-image" data-direction="asc">
+          Mug
+        </option>
          <option value="listing-title-sort" data-direction="asc">
           Name
         </option>
@@ -364,6 +367,7 @@ window.Quarto = {
 <thead>
 <tr>
 <th>
+<a class="sort" data-sort="listing-image" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Mug</a>
 </th>
 <th>
 <a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Name</a>
