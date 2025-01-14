@@ -100,7 +100,7 @@ What does it mean for a data analysis to be "reproducible"?
 -   It's easily extensible with *packages*
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
 ![](images/01/rstudio-logo.png){fig-alt="RStudio logo"}
 
 -   RStudio is a convenient interface for R called an **IDE** (integrated development environment), e.g. *"I write R code in the RStudio IDE"*
