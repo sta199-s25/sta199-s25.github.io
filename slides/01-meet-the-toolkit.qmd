@@ -12,6 +12,8 @@ auto-stretch: false
 
 -   If you have not yet accepted the invite to join the course GitHub Organization, please do so pronto!
 
+-   Make your appointments in the Testing Center now!
+
 -   Any questions about the syllabus?
 
 # Course toolkit
@@ -310,13 +312,11 @@ with human readable messages
 **Option 1:**
 
 Sit back and enjoy the show!
-
 :::
 
 ::: callout-note
 You'll need to stick to this option if you haven't yet accepted your GitHub invite and don't have a repo created for you.
 :::
-
 :::
 
 ::: {.column width="50%"}
@@ -346,13 +346,13 @@ Go to the [course GitHub organization](https://github.com/sta199-f24) and clone 
 
 ## What could have gone wrong?
 
-- Never received GitHub invite $\rightarrow$ Fill out "Getting to know you survey
+-   Never received GitHub invite $\rightarrow$ Fill out "Getting to know you survey
 
-- Never accepted GitHub invite $\rightarrow$ Look for it in your email and accept it
+-   Never accepted GitHub invite $\rightarrow$ Look for it in your email and accept it
 
-- Cloning repo fails $\rightarrow$ Review/redo Lab 0 steps for setting up SSH key
+-   Cloning repo fails $\rightarrow$ Review/redo Lab 0 steps for setting up SSH key
 
-- Still no luck? Visit OH or post on Ed.
+-   Still no luck? Visit OH or post on Ed.
 
 # Quarto
 
@@ -384,7 +384,6 @@ If you chose (or had to choose) this option for the previous tour, or if you cou
 **Option 2:**
 
 Go to RStudio and open the document `ae-01-meet-the-penguins.qmd`.
-
 :::
 :::
 :::
@@ -397,19 +396,18 @@ Go to RStudio and open the document `ae-01-meet-the-penguins.qmd`.
 
 Once we made changes to our Quarto document, we
 
-- went to the Git pane in RStudio
+-   went to the Git pane in RStudio
 
-- staged our changes by clicking the checkboxes next to the relevant files
+-   staged our changes by clicking the checkboxes next to the relevant files
 
-- committed our changes with an informative commit message
+-   committed our changes with an informative commit message
 
-- pushed our changes to our application exercise repos
+-   pushed our changes to our application exercise repos
 
-- confirmed on GitHub that we could see our changes pushed from RStudio
+-   confirmed on GitHub that we could see our changes pushed from RStudio
 
 ## How will we use Quarto?
 
 -   Every application exercise, lab, project, etc. is an Quarto document
 -   You'll always have a template Quarto document to start with
 -   The amount of scaffolding in the template will decrease over the semester
-
