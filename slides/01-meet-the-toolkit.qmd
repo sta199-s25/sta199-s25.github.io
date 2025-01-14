@@ -185,9 +185,13 @@ library(palmerpenguins)
 If data analysis was cooking...
 
 ::: incremental
--   Installing a package would be like buying ingredients from the store
+-   RStudio is your kitchen. It comes with a fridge, a stove, a sink, etc pre-installed;
 
--   Loading a package would be like getting the ingredients out of your pantry and setting them on your counter top to be used
+-   Installing a package would be like buying more appliances at the store: mixer, blender, toaster, instapot, air fryer;
+
+-   Loading a package would be like taking these things out of the cupboard;
+
+-   Your containers are like kitchens where we have already bought all of the extra appliances for you. In other words, "batteries included."
 :::
 
 ## tidyverse
@@ -201,7 +205,7 @@ aka the package you'll hear about the most...
 [![](images/01/tidyverse.png){fig-alt="Hex logos for dplyr, ggplot2, forcats, tibble, readr, stringr, tidyr, and purrr"}](https://tidyverse.org)
 :::
 
-::: {.column .fragment width="60%"}
+::: {.column width="60%"}
 [tidyverse.org](https://www.tidyverse.org/)
 
 -   The **tidyverse** is an opinionated collection of R packages designed for data science
@@ -248,14 +252,14 @@ Object documentation can be accessed with `?`
 ## Git and GitHub {.smaller}
 
 ::: columns
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
 ![](images/01/git-logo.png){fig-alt="Git logo" fig-align="center" width="150"}
 
 -   Git is a version control system -- like "Track Changes" features from Microsoft Word, on steroids
 -   It's not the only version control system, but it's a very popular one
 :::
 
-::: {.column .fragment width="50%"}
+::: {.column width="50%"}
 ![](images/01/github-logo.png){fig-alt="GitHub logo" fig-align="center" width="150"}
 
 -   GitHub is the home for your Git-based projects on the internet -- like DropBox but much, much better
@@ -323,7 +327,7 @@ You'll need to stick to this option if you haven't yet accepted your GitHub invi
 ::: appex
 **Option 2:**
 
-Go to the [course GitHub organization](https://github.com/sta199-f24) and clone `ae-your_github_name` repo to [your container](https://cmgr.oit.duke.edu/containers).
+Go to the [course GitHub organization](https://github.com/sta199-s25) and clone `ae-your_github_name` repo to [your container](https://cmgr.oit.duke.edu/containers).
 :::
 :::
 :::
