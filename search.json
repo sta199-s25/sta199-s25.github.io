@@ -215,7 +215,7 @@
     "href": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
     "title": "Meet the toolkit",
     "section": "R and RStudio",
-    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
   },
   {
     "objectID": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
