@@ -176,14 +176,322 @@
     ]
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "STA 199 Introduction to Data Science and Statistical Thinking",
+    "objectID": "slides/01-meet-the-toolkit.html#reminders",
+    "href": "slides/01-meet-the-toolkit.html#reminders",
+    "title": "Meet the toolkit",
+    "section": "Reminders",
+    "text": "Reminders\n\nIf you have not yet completed the Getting to Know You survey, please do so ASAP!\nIf you have not yet accepted the invite to join the course GitHub Organization, please do so pronto!\nMake your appointments in the Testing Center now!\nAny questions about the syllabus?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#course-toolkit-1",
+    "href": "slides/01-meet-the-toolkit.html#course-toolkit-1",
+    "title": "Meet the toolkit",
+    "section": "Course toolkit",
+    "text": "Course toolkit\n\n\nCourse operation\n\nMaterials: sta199-f24.github.io\n\nSubmission: Gradescope\nDiscussion: Ed Discussion\nGradebook: Canvas\n\n\nDoing data science\n\nComputing:\n\nR\nRStudio\ntidyverse\nQuarto\n\n\nVersion control and collaboration:\n\nGit\nGitHub"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#learning-goals",
+    "href": "slides/01-meet-the-toolkit.html#learning-goals",
+    "title": "Meet the toolkit",
+    "section": "Learning goals",
+    "text": "Learning goals\nBy the end of the course, you will be able to…\n\n\ngain insight from data\ngain insight from data, reproducibly\n\ngain insight from data, reproducibly, using modern programming tools and techniques\n\ngain insight from data, reproducibly and collaboratively, using modern programming tools and techniques\ngain insight from data, reproducibly (with literate programming and version control) and collaboratively, using modern programming tools and techniques"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "href": "slides/01-meet-the-toolkit.html#reproducibility-checklist",
+    "title": "Meet the toolkit",
+    "section": "Reproducibility checklist",
+    "text": "Reproducibility checklist\n\nWhat does it mean for a data analysis to be “reproducible”?\n\n\nShort-term goals:\n\nAre the tables and figures reproducible from the code and data?\nDoes the code actually do what you think it does?\nIn addition to what was done, is it clear why it was done?\n\n\n\nLong-term goals:\n\nCan the code be used for other data?\nCan you extend the code to do other things?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "href": "slides/01-meet-the-toolkit.html#toolkit-for-reproducibility",
+    "title": "Meet the toolkit",
+    "section": "Toolkit for reproducibility",
+    "text": "Toolkit for reproducibility\n\nScriptability \\(\\rightarrow\\) R\nLiterate programming (code, narrative, output in one place) \\(\\rightarrow\\) Quarto\nVersion control \\(\\rightarrow\\) Git / GitHub"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "href": "slides/01-meet-the-toolkit.html#r-and-rstudio-1",
+    "title": "Meet the toolkit",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n\n\n\n\n\n\n\nR is an open-source statistical programming language\n\nR is also an environment for statistical computing and graphics\nIt’s easily extensible with packages\n\n\n\n\n\n\nRStudio is a convenient interface for R called an IDE (integrated development environment), e.g. “I write R code in the RStudio IDE”\n\nRStudio is not a requirement for programming with R, but it’s very commonly used by R programmers and data scientists"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#r-vs.-rstudio",
+    "title": "Meet the toolkit",
+    "section": "R vs. RStudio",
+    "text": "R vs. RStudio\n\n\n\n\n\n\nSource: Modern Dive."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#r-packages",
+    "href": "slides/01-meet-the-toolkit.html#r-packages",
+    "title": "Meet the toolkit",
+    "section": "R packages",
+    "text": "R packages\n\n\nPackages: Fundamental units of reproducible R code, including reusable R functions, the documentation that describes how to use them, and sample data1\nAs of 27 August 2024, there are 21,168 R packages available on CRAN (the Comprehensive R Archive Network)2\nWe’re going to work with a small (but important) subset of these!\n\n\n\n\n1 Wickham and Bryan, R Packages.\n2CRAN contributed packages."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-r-rstudio",
+    "title": "Meet the toolkit",
+    "section": "Tour: R + RStudio",
+    "text": "Tour: R + RStudio\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\nOption 2:\nGo to your container and launch RStudio."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-r-rstudio",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: R + RStudio",
+    "text": "Tour recap: R + RStudio"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#packages",
+    "href": "slides/01-meet-the-toolkit.html#packages",
+    "title": "Meet the toolkit",
+    "section": "Packages",
+    "text": "Packages\n\nInstalled with install.packages(), once per system:\n\n\ninstall.packages(\"palmerpenguins\")\n\n\n\n\n\n\n\nNote\n\n\nWe already pre-installed many of the package you’ll need for this course, so you might go the whole semester without needing to run install.packages()!\n\n\n\n\n\nLoaded with library(), once per session:\n\n\nlibrary(palmerpenguins)"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#packages-an-analogy",
+    "href": "slides/01-meet-the-toolkit.html#packages-an-analogy",
+    "title": "Meet the toolkit",
+    "section": "Packages, an analogy",
+    "text": "Packages, an analogy\nIf data analysis was cooking…\n\n\nRStudio is your kitchen. It comes with a fridge, a stove, a sink, etc pre-installed;\nInstalling a package would be like buying more appliances at the store: mixer, blender, toaster, instapot, air fryer;\nLoading a package would be like taking these things out of the cupboard;\nYour containers are like kitchens where we have already bought all of the extra appliances for you. In other words, “batteries included.”"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tidyverse",
+    "href": "slides/01-meet-the-toolkit.html#tidyverse",
+    "title": "Meet the toolkit",
+    "section": "tidyverse",
+    "text": "tidyverse\n\naka the package you’ll hear about the most…\n\n\n\n\n\ntidyverse.org\n\nThe tidyverse is an opinionated collection of R packages designed for data science\nAll packages share an underlying philosophy and a common grammar"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#data-frames-and-variables",
+    "href": "slides/01-meet-the-toolkit.html#data-frames-and-variables",
+    "title": "Meet the toolkit",
+    "section": "Data frames and variables",
+    "text": "Data frames and variables\n\nEach row of a data frame is an observation\n\n\n\n\nEach column of a data frame is a variable\n\n\n\n\n\nColumns (variables) in data frames can be accessed with $:\n\n\ndataframe$variable_name"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#help",
+    "href": "slides/01-meet-the-toolkit.html#help",
+    "title": "Meet the toolkit",
+    "section": "Help",
+    "text": "Help\nObject documentation can be accessed with ?\n\n\n\n?mean\n\n\nVideo"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#git-and-github",
+    "href": "slides/01-meet-the-toolkit.html#git-and-github",
+    "title": "Meet the toolkit",
+    "section": "Git and GitHub",
+    "text": "Git and GitHub\n\n\n\n\n\n\n\nGit is a version control system – like “Track Changes” features from Microsoft Word, on steroids\nIt’s not the only version control system, but it’s a very popular one\n\n\n\n\n\n\n\nGitHub is the home for your Git-based projects on the internet – like DropBox but much, much better\nWe will use GitHub as a platform for web hosting and collaboration (and as our course management system!)"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#versioning---done-badly",
+    "href": "slides/01-meet-the-toolkit.html#versioning---done-badly",
+    "title": "Meet the toolkit",
+    "section": "Versioning - done badly",
+    "text": "Versioning - done badly"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#versioning---done-better",
+    "href": "slides/01-meet-the-toolkit.html#versioning---done-better",
+    "title": "Meet the toolkit",
+    "section": "Versioning - done better",
+    "text": "Versioning - done better"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#versioning---done-even-better",
+    "href": "slides/01-meet-the-toolkit.html#versioning---done-even-better",
+    "title": "Meet the toolkit",
+    "section": "Versioning - done even better",
+    "text": "Versioning - done even better\n\nwith human readable messages"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github",
+    "title": "Meet the toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-1",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-1",
+    "title": "Meet the toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-2",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-2",
+    "title": "Meet the toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-3",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-git-and-github-3",
+    "title": "Meet the toolkit",
+    "section": "How will we use Git and GitHub?",
+    "text": "How will we use Git and GitHub?"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#git-and-github-tips",
+    "href": "slides/01-meet-the-toolkit.html#git-and-github-tips",
+    "title": "Meet the toolkit",
+    "section": "Git and GitHub tips",
+    "text": "Git and GitHub tips\n\n\nThere are millions of git commands – ok, that’s an exaggeration, but there are a lot of them – and very few people know them all. 99% of the time you will use git to add, commit, push, and pull.\nWe will be doing Git things and interfacing with GitHub through RStudio, but if you google for help you might come across methods for doing these things in the command line – skip that and move on to the next resource unless you feel comfortable trying it out.\nThere is a great resource for working with git and R: happygitwithr.com. Some of the content in there is beyond the scope of this course, but it’s a good place to look for help."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-git-github",
+    "href": "slides/01-meet-the-toolkit.html#tour-git-github",
+    "title": "Meet the toolkit",
+    "section": "Tour: Git + GitHub",
+    "text": "Tour: Git + GitHub\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\n\n\n\n\nNote\n\n\nYou’ll need to stick to this option if you haven’t yet accepted your GitHub invite and don’t have a repo created for you.\n\n\n\n\n\nOption 2:\nGo to the course GitHub organization and clone ae-your_github_name repo to your container."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-git-github",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-git-github",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: Git + GitHub",
+    "text": "Tour recap: Git + GitHub\n\nFind your application repo, that will always be named using the naming convention assignment_title-your_github_name\nClick on the green “Code” button, make sure SSH is selected, copy the repo URL"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-git-github-1",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-git-github-1",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: Git + GitHub",
+    "text": "Tour recap: Git + GitHub\n\nIn RStudio, File &gt; New Project &gt; From Version Control &gt; Git\nPaste repo URL copied in previous step, then click tab to auto-fill the project name, then click Create Project\n\nFor one time only, type yes in the pop-up dialogue\n\n\nVideo"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#what-could-have-gone-wrong",
+    "href": "slides/01-meet-the-toolkit.html#what-could-have-gone-wrong",
+    "title": "Meet the toolkit",
+    "section": "What could have gone wrong?",
+    "text": "What could have gone wrong?\n\nNever received GitHub invite \\(\\rightarrow\\) Fill out “Getting to know you survey\nNever accepted GitHub invite \\(\\rightarrow\\) Look for it in your email and accept it\nCloning repo fails \\(\\rightarrow\\) Review/redo Lab 0 steps for setting up SSH key\nStill no luck? Visit OH or post on Ed."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#quarto-1",
+    "href": "slides/01-meet-the-toolkit.html#quarto-1",
+    "title": "Meet the toolkit",
+    "section": "Quarto",
+    "text": "Quarto\n\n\nFully reproducible reports – each time you render the analysis is ran from the beginning\nCode goes in chunks narrative goes outside of chunks\nA visual editor for a familiar / Google docs-like editing experience"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "href": "slides/01-meet-the-toolkit.html#tour-quarto",
+    "title": "Meet the toolkit",
+    "section": "Tour: Quarto",
+    "text": "Tour: Quarto\n\n\n\nOption 1:\nSit back and enjoy the show!\n\n\n\n\n\n\n\nNote\n\n\nIf you chose (or had to choose) this option for the previous tour, or if you couldn’t clone your repo for any reason, you’ll need to stick to this option.\n\n\n\n\n\nOption 2:\nGo to RStudio and open the document ae-01-meet-the-penguins.qmd."
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-quarto",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: Quarto",
+    "text": "Tour recap: Quarto"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#tour-recap-git-github-2",
+    "href": "slides/01-meet-the-toolkit.html#tour-recap-git-github-2",
+    "title": "Meet the toolkit",
+    "section": "Tour recap: Git + GitHub",
+    "text": "Tour recap: Git + GitHub\nOnce we made changes to our Quarto document, we\n\nwent to the Git pane in RStudio\nstaged our changes by clicking the checkboxes next to the relevant files\ncommitted our changes with an informative commit message\npushed our changes to our application exercise repos\nconfirmed on GitHub that we could see our changes pushed from RStudio"
+  },
+  {
+    "objectID": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "href": "slides/01-meet-the-toolkit.html#how-will-we-use-quarto",
+    "title": "Meet the toolkit",
+    "section": "How will we use Quarto?",
+    "text": "How will we use Quarto?\n\nEvery application exercise, lab, project, etc. is an Quarto document\nYou’ll always have a template Quarto document to start with\nThe amount of scaffolding in the template will decrease over the semester"
+  },
+  {
+    "objectID": "lab/lab-0.html",
+    "href": "lab/lab-0.html",
+    "title": "Lab 0",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\nlab 0\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\nslides 00\n\n\n\n1\nMon, Jan 13\n\nLab 1\nlab 1\n\n\n\n\nTue, Jan 14\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\nMeet the Toolkit\nslides 01\n\n\n\n\nThu, Jan 16\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\nData Vizualization\n\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n\nData Transformation\n\n\n\n\n\nWed, Jan 22\n\n\n\nLab 1 @ 11:59 PM\n\n\n\nThu, Jan 23\n\nData Exploration 1\n\n\n\n\n3\nMon, Jan 27\n\nLab 2\n\n\n\n\n\nTue, Jan 28\n\nData Exploration 2\n\n\n\n\n\nThu, Jan 30\n\nTidying data\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\n\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n\nJoining data\n\n\n\n\n\nThu, Feb 6\n\nData types and classes\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n\nImporting and recoding data\n\n\n\n\n\nThu, Feb 13\n\nWeb scraping\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n\nData science ethics\n\n\n\n\n\nThu, Feb 20\n\nMidterm 1\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nThe language of models\n\n\n\n\n\nThu, Feb 27\n\nSimple linear regression\n\n\n\n\n8\nMon, Mar 3\n\nMilestone 2\n\n\n\n\n\nTue, Mar 4\n\nMultiple linear regression 1\n\n\n\n\n\nThu, Mar 6\n\nMultiple linear regression 2\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\n\n\n\n\nTue, Mar 18\n\nModel selection\n\n\n\n\n\nThu, Mar 20\n\nLogistic regression 1\n\n\n\n\n11\nMon, Mar 24\n\nLab 6\n\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n\nLogistic regression 2\n\n\n\n\n\nThu, Mar 27\n\nIntervals\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n\nIntervals/Testing\n\n\n\n\n\nThu, Apr 3\n\nTesting\n\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nInference Overview\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nCommunication, Quarto\n\n\n\n\n\nThu, Apr 17\n\n\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12PM)",
+    "text": "This lab will walk you through setting up the course technology, which consists of the following:\nVersion control software like Git and GitHub is indispensable in modern data science practice, and learning how to use it is one of the things that distinguishes STA 199 from a similar course like STA 101. At a minimum, version control helps prevent your files from looking like this:\nWe’ve all been there, but it’s time to kick the habit.",
     "crumbs": [
-      "Syllabus",
-      "Schedule"
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#access-r-and-rstudio",
+    "href": "lab/lab-0.html#access-r-and-rstudio",
+    "title": "Lab 0",
+    "section": "1. Access R and RStudio",
+    "text": "1. Access R and RStudio\nInstead of asking you to download any new programs onto your computer, we host everything pre-packaged for you in the cloud. You just have to login through your web browser, and you’re ready to go:\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 to log into the Docker container. You should now see the RStudio environment.\n\nGo to https://cmgr.oit.duke.edu/containers and under Reservations available click on reserve STA 198-199 to reserve a container for yourself.\n\n\n\n\n\n\nNote\n\n\n\nA container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.\n\n\nOnce you’ve reserved the container you’ll see that it will show up under My reservations.\nTo launch your container click on it under My reservations, then click Login, and then Start.1\n\n\n\n\n\n\nWarning\n\n\n\nPlease double and triple check that you have reserved the STA 198-199 container and not some other. The various containers differ in the software they include, so if you reserve something else, you may be missing something we need.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#create-a-github-account",
+    "href": "lab/lab-0.html#create-a-github-account",
+    "title": "Lab 0",
+    "section": "2. Create a GitHub account",
+    "text": "2. Create a GitHub account\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.2\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password. If you are unsure of your login credentials, carefully follow GitHub’s instructions for recovering this information. If you accumulate too many failed login attempts, you will be locked out of your account for the day, which will make it difficult for you to complete the rest of this lab.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#set-up-your-ssh-key",
+    "href": "lab/lab-0.html#set-up-your-ssh-key",
+    "title": "Lab 0",
+    "section": "3. Set up your SSH key",
+    "text": "3. Set up your SSH key\nYou will authenticate GitHub using SSH (Secure Shell Protocol – it doesn’t really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nGo back to your RStudio container and type credentials::ssh_setup_github() into your console.\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. R will then ask “Would you like to open a browser now?” You should click 1 for yes.\nYou may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., sta199).\n\nYou can find more detailed instructions here if you’re interested.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#configure-git-to-introduce-yourself",
+    "href": "lab/lab-0.html#configure-git-to-introduce-yourself",
+    "title": "Lab 0",
+    "section": "4. Configure Git to introduce yourself",
+    "text": "4. Configure Git to introduce yourself\nNext, you need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\n\n\n\n\n\n\nNote\n\n\n\nYou’ll hear about 📦 packages a lot in the context of R – basically they’re how developers write functions and bundle them to distribute to the community (and more on this later too!).\n\n\nType the following lines of code in the console in RStudio filling in your name and the address associated with your GitHub account.\n\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n)\n\nFor example, mine would be\n\nusethis::use_git_config(\n  user.name = \"John Zito\", \n  user.email = \"johnczito@gmail.com\"\n)\n\nI used my gmail because that is the one I used to create my GitHub account. You should also be using the email address you used to create your GitHub account, it’s ok if it isn’t your Duke email.\n\n\n\n\n\n\nHow do I know if I did it right?\n\n\n\n\n\nWhen you input the usethis::use_git_config(...) command into the console and hit enter/return, it will appear as if nothing happened. To verify that everything worked, you can briefly switch over to the Terminal tab (should be to the right of Console) and type the commands git config user.name and git config user.email. If all is well, these will return whatever text you originally provided. If you notice a mistake or typo, you can just go back to the Console and rerun usethis::use_git_config(...) with modified inputs.\n\n\n\n\n\n\n\n\n\nNeed a recap? Watch this video!\n\n\n\n\n\nThe following video walks you through the steps outlined in the SSH key generation and Git configuration sections above.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#babys-first-repo",
+    "href": "lab/lab-0.html#babys-first-repo",
+    "title": "Lab 0",
+    "section": "5. Baby’s first repo",
+    "text": "5. Baby’s first repo\nA GitHub repository (repo) is a collection of files hosted on GitHub. Repos are the main way we will distribute files to you during the semester. When you copy the files in a repo to your local computing environment (your container, in this case), that’s called “cloning”. So, let’s clone our first repo:\n\nGo to the course organization at github.com/sta199-s25 organization on GitHub. Click on the repo hello-world.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nYou will need to get used to these steps, because you’ll probably clone at least one new repo every week.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#hello-sta-199",
+    "href": "lab/lab-0.html#hello-sta-199",
+    "title": "Lab 0",
+    "section": "6. Hello STA 199!",
+    "text": "6. Hello STA 199!\nFill out the course “Getting to know you” survey on Canvas: https://canvas.duke.edu/courses/50057/quizzes/30406.\nWe will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
+    ]
+  },
+  {
+    "objectID": "lab/lab-0.html#footnotes",
+    "href": "lab/lab-0.html#footnotes",
+    "title": "Lab 0",
+    "section": "Footnotes",
+    "text": "Footnotes\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.↩︎",
+    "crumbs": [
+      "Labs",
+      "Lab 0"
     ]
   },
   {
@@ -308,91 +616,14 @@
     ]
   },
   {
-    "objectID": "lab/lab-0.html",
-    "href": "lab/lab-0.html",
-    "title": "Lab 0",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "This lab will walk you through setting up the course technology, which consists of the following:\nVersion control software like Git and GitHub is indispensable in modern data science practice, and learning how to use it is one of the things that distinguishes STA 199 from a similar course like STA 101. At a minimum, version control helps prevent your files from looking like this:\nWe’ve all been there, but it’s time to kick the habit.",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\nlab 0\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\nslides 00\n\n\n\n1\nMon, Jan 13\n\nLab 1\nlab 1\n\n\n\n\nTue, Jan 14\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\nMeet the Toolkit\nslides 01\n\n\n\n\nThu, Jan 16\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\nData Vizualization\n\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n\nData Transformation\n\n\n\n\n\nWed, Jan 22\n\n\n\nLab 1 @ 11:59 PM\n\n\n\nThu, Jan 23\n\nData Exploration 1\n\n\n\n\n3\nMon, Jan 27\n\nLab 2\n\n\n\n\n\nTue, Jan 28\n\nData Exploration 2\n\n\n\n\n\nThu, Jan 30\n\nTidying data\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\n\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n\nJoining data\n\n\n\n\n\nThu, Feb 6\n\nData types and classes\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n\nImporting and recoding data\n\n\n\n\n\nThu, Feb 13\n\nWeb scraping\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n\nData science ethics\n\n\n\n\n\nThu, Feb 20\n\nMidterm 1\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nThe language of models\n\n\n\n\n\nThu, Feb 27\n\nSimple linear regression\n\n\n\n\n8\nMon, Mar 3\n\nMilestone 2\n\n\n\n\n\nTue, Mar 4\n\nMultiple linear regression 1\n\n\n\n\n\nThu, Mar 6\n\nMultiple linear regression 2\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\n\n\n\n\nTue, Mar 18\n\nModel selection\n\n\n\n\n\nThu, Mar 20\n\nLogistic regression 1\n\n\n\n\n11\nMon, Mar 24\n\nLab 6\n\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n\nLogistic regression 2\n\n\n\n\n\nThu, Mar 27\n\nIntervals\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n\nIntervals/Testing\n\n\n\n\n\nThu, Apr 3\n\nTesting\n\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nInference Overview\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nCommunication, Quarto\n\n\n\n\n\nThu, Apr 17\n\n\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12PM)",
     "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "lab/lab-0.html#access-r-and-rstudio",
-    "href": "lab/lab-0.html#access-r-and-rstudio",
-    "title": "Lab 0",
-    "section": "1. Access R and RStudio",
-    "text": "1. Access R and RStudio\nInstead of asking you to download any new programs onto your computer, we host everything pre-packaged for you in the cloud. You just have to login through your web browser, and you’re ready to go:\n\nGo to https://cmgr.oit.duke.edu/containers and login with your Duke NetID and Password.\nClick STA198-199 to log into the Docker container. You should now see the RStudio environment.\n\nGo to https://cmgr.oit.duke.edu/containers and under Reservations available click on reserve STA 198-199 to reserve a container for yourself.\n\n\n\n\n\n\nNote\n\n\n\nA container is a self-contained instance of RStudio for you, and you alone. You will do all of your computing in your container.\n\n\nOnce you’ve reserved the container you’ll see that it will show up under My reservations.\nTo launch your container click on it under My reservations, then click Login, and then Start.1\n\n\n\n\n\n\nWarning\n\n\n\nPlease double and triple check that you have reserved the STA 198-199 container and not some other. The various containers differ in the software they include, so if you reserve something else, you may be missing something we need.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "lab/lab-0.html#create-a-github-account",
-    "href": "lab/lab-0.html#create-a-github-account",
-    "title": "Lab 0",
-    "section": "2. Create a GitHub account",
-    "text": "2. Create a GitHub account\nGo to https://github.com/ and walk through the steps for creating an account. You do not have to use your Duke email address, but I recommend doing so.2\n\n\n\n\n\n\nNote\n\n\n\nYou’ll need to choose a user name. I recommend reviewing the user name advice at https://happygitwithr.com/github-acct#username-advice before choosing a username.\n\n\n\n\n\n\n\n\nWhat if I already have a GitHub account?\n\n\n\n\n\nIf you already have a GitHub account, you do not need to create a new one for this course. Just log in to that account to make sure you still remember your username and password. If you are unsure of your login credentials, carefully follow GitHub’s instructions for recovering this information. If you accumulate too many failed login attempts, you will be locked out of your account for the day, which will make it difficult for you to complete the rest of this lab.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "lab/lab-0.html#set-up-your-ssh-key",
-    "href": "lab/lab-0.html#set-up-your-ssh-key",
-    "title": "Lab 0",
-    "section": "3. Set up your SSH key",
-    "text": "3. Set up your SSH key\nYou will authenticate GitHub using SSH (Secure Shell Protocol – it doesn’t really matter what this means for the purpose of this course). Below is an outline of the authentication steps; you are encouraged to follow along as your TA demonstrates the steps.\n\n\n\n\n\n\nNote\n\n\n\nYou only need to do this authentication process one time on a single system.\n\n\n\nGo back to your RStudio container and type credentials::ssh_setup_github() into your console.\nR will ask “No SSH key found. Generate one now?” You should click 1 for yes.\nYou will generate a key. R will then ask “Would you like to open a browser now?” You should click 1 for yes.\nYou may be asked to provide your GitHub username and password to log into GitHub. After entering this information, you should paste the key in and give it a name. You might name it in a way that indicates where the key will be used, e.g., sta199).\n\nYou can find more detailed instructions here if you’re interested.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "lab/lab-0.html#configure-git-to-introduce-yourself",
-    "href": "lab/lab-0.html#configure-git-to-introduce-yourself",
-    "title": "Lab 0",
-    "section": "4. Configure Git to introduce yourself",
-    "text": "4. Configure Git to introduce yourself\nNext, you need to configure your git so that RStudio can communicate with GitHub. This requires two pieces of information: your name and email address.\nTo do so, you will use the use_git_config() function from the usethis package.\n\n\n\n\n\n\nNote\n\n\n\nYou’ll hear about 📦 packages a lot in the context of R – basically they’re how developers write functions and bundle them to distribute to the community (and more on this later too!).\n\n\nType the following lines of code in the console in RStudio filling in your name and the address associated with your GitHub account.\n\nusethis::use_git_config(\n  user.name = \"Your name\", \n  user.email = \"Email associated with your GitHub account\"\n)\n\nFor example, mine would be\n\nusethis::use_git_config(\n  user.name = \"John Zito\", \n  user.email = \"johnczito@gmail.com\"\n)\n\nI used my gmail because that is the one I used to create my GitHub account. You should also be using the email address you used to create your GitHub account, it’s ok if it isn’t your Duke email.\n\n\n\n\n\n\nHow do I know if I did it right?\n\n\n\n\n\nWhen you input the usethis::use_git_config(...) command into the console and hit enter/return, it will appear as if nothing happened. To verify that everything worked, you can briefly switch over to the Terminal tab (should be to the right of Console) and type the commands git config user.name and git config user.email. If all is well, these will return whatever text you originally provided. If you notice a mistake or typo, you can just go back to the Console and rerun usethis::use_git_config(...) with modified inputs.\n\n\n\n\n\n\n\n\n\nNeed a recap? Watch this video!\n\n\n\n\n\nThe following video walks you through the steps outlined in the SSH key generation and Git configuration sections above.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "lab/lab-0.html#babys-first-repo",
-    "href": "lab/lab-0.html#babys-first-repo",
-    "title": "Lab 0",
-    "section": "5. Baby’s first repo",
-    "text": "5. Baby’s first repo\nA GitHub repository (repo) is a collection of files hosted on GitHub. Repos are the main way we will distribute files to you during the semester. When you copy the files in a repo to your local computing environment (your container, in this case), that’s called “cloning”. So, let’s clone our first repo:\n\nGo to the course organization at github.com/sta199-s25 organization on GitHub. Click on the repo hello-world.\nClick on the green CODE button, select Use SSH (this might already be selected by default, and if it is, you’ll see the text Clone with SSH). Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\n\nYou will need to get used to these steps, because you’ll probably clone at least one new repo every week.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "lab/lab-0.html#hello-sta-199",
-    "href": "lab/lab-0.html#hello-sta-199",
-    "title": "Lab 0",
-    "section": "6. Hello STA 199!",
-    "text": "6. Hello STA 199!\nFill out the course “Getting to know you” survey on Canvas: https://canvas.duke.edu/courses/50057/quizzes/30406.\nWe will use the information collected in this survey for a variety of goals, from inviting you to the course GitHub organization (more on that later) to getting to know you as a person and your course goals and concerns.",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
-    ]
-  },
-  {
-    "objectID": "lab/lab-0.html#footnotes",
-    "href": "lab/lab-0.html#footnotes",
-    "title": "Lab 0",
-    "section": "Footnotes",
-    "text": "Footnotes\n\nYes, it’s too many steps. I don’t know why! But it works, and you’ll get used to it. Trust me, it beats downloading and installing everything you need on your computers!↩︎\nGitHub has some perks for students you can take advantage of later in the course or in your future work, and it helps to have a .edu address to get verified as a student.↩︎",
-    "crumbs": [
-      "Labs",
-      "Lab 0"
+      "Syllabus",
+      "Schedule"
     ]
   },
   {
