@@ -84,7 +84,7 @@ Quantifying our uncertainty about that knowledge.
 
 ## The data science life cycle
 
-![](images/data-science-cycle.001.png)
+![](images/00/data-science-cycle.001.png)
 
 # Syllabus highlights
 
@@ -240,11 +240,11 @@ Make sure I get a letter, and make your appointments in the Testing Center now.
 
 ## Collaboration
 
-- **Labs**: discussing and helping is fine. Sharing your solutions and copying others is not; 
+-   **Labs**: discussing and helping is fine. Sharing your solutions and copying others is not;
 
-- **Exams**: collaboration of any kind is completely forbidden on any part of any exam;
+-   **Exams**: collaboration of any kind is completely forbidden on any part of any exam;
 
-- **Projects**: collaboration of any kind is enthusiastically encouraged *within your team*. Between teams, it's the same as labs; do not directly share your stuff or copy off of others.
+-   **Projects**: collaboration of any kind is enthusiastically encouraged *within your team*. Between teams, it's the same as labs; do not directly share your stuff or copy off of others.
 
 ## Use of AI tools
 
@@ -285,7 +285,7 @@ Ethel Merman
 
 ::: {.columns .v-center-container}
 ::: {.column width="40%"}
-![](images/ethel_merman.jpg)
+![](images/00/ethel_merman.jpg)
 :::
 
 ::: {.column width="60%"}
@@ -308,7 +308,7 @@ Megan Pete
 
 ::: {.columns .v-center-container}
 ::: {.column width="40%"}
-![](images/meghan_thee_stallion.jpg)
+![](images/00/meghan_thee_stallion.jpg)
 :::
 
 ::: {.column width="60%"}
@@ -330,7 +330,7 @@ Megan Pete
 
 ::: {.columns .v-center-container}
 ::: {.column width="40%"}
-![](images/bongjoonho.jpg)
+![](images/00/bongjoonho.jpg)
 :::
 
 ::: {.column width="60%"}
@@ -350,7 +350,7 @@ When the picture was taken, how old was the person?
 :::
 
 ::: {.column width="50%"}
-![](images/age_qr.png){fig-align="center"}
+![](images/00/age_qr.png){fig-align="center"}
 :::
 :::
 
@@ -372,7 +372,7 @@ The stakes are low today. We're just getting our feet wet and working out the ki
 
 ::: {.columns .v-center-container}
 ::: {.column width="40%"}
-![](images/celeb-1.png){fig-align="center" width="80%"}
+![](images/00/celeb-1.png){fig-align="center" width="80%"}
 :::
 
 ::: {.column width="60%"}
@@ -405,7 +405,7 @@ A secret she took to her grave:
 
 ::: {.columns .v-center-container}
 ::: {.column width="40%"}
-![](images/celeb-2.jpg){fig-align="center"}
+![](images/00/celeb-2.jpg){fig-align="center"}
 :::
 
 ::: {.column width="60%"}
@@ -440,7 +440,7 @@ His actual birthday was not known at the time:
 
 ::: {.columns .v-center-container}
 ::: {.column width="50%"}
-![](images/celeb-3.jpg){fig-align="center"}
+![](images/00/celeb-3.jpg){fig-align="center"}
 :::
 
 ::: {.column width="50%"}
@@ -472,11 +472,11 @@ ggplot(age_guesses, aes(x = celeb3)) +
 
 ::: {.columns .v-center-container}
 ::: {.column width="50%"}
-![](images/celeb-4-noisy.jpg){width="75%"}
+![](images/00/celeb-4-noisy.jpg){width="75%"}
 :::
 
 ::: {.column width="50%"}
-![](images/celeb-4-original.jpg){width="75%"}
+![](images/00/celeb-4-original.jpg){width="75%"}
 :::
 :::
 
@@ -484,7 +484,7 @@ ggplot(age_guesses, aes(x = celeb3)) +
 
 ::: {.columns .v-center-container}
 ::: {.column width="35%"}
-![](images/celeb-4-original.jpg){width="90%"}
+![](images/00/celeb-4-original.jpg){width="90%"}
 :::
 
 ::: {.column width="65%"}
@@ -516,7 +516,7 @@ ggplot(age_guesses, aes(x = celeb4)) +
 
 ::: {.columns .v-center-container}
 ::: {.column width="39%"}
-![](images/celeb5.png){fig-align="center"}
+![](images/00/celeb5.png){fig-align="center"}
 :::
 
 ::: {.column width="61%"}
@@ -548,7 +548,7 @@ ggplot(age_guesses, aes(x = celeb5)) +
 
 ::: {.columns .v-center-container}
 ::: {.column width="40%"}
-![](images/celeb6.png){fig-align="center"}
+![](images/00/celeb6.png){fig-align="center"}
 :::
 
 ::: {.column width="60%"}
@@ -592,11 +592,11 @@ ggplot(age_guesses, aes(x = celeb6)) +
 
 ::: {.columns .v-center-container}
 ::: {.column width="50%"}
-![](images/gg.jpg){width="80%"}
+![](images/00/gg.jpg){width="80%"}
 :::
 
 ::: {.column width="50%"}
-![](images/cake.jpg){width="80%"}
+![](images/00/cake.jpg){width="80%"}
 :::
 :::
 
@@ -604,15 +604,11 @@ ggplot(age_guesses, aes(x = celeb6)) +
 
 ## Statistical lessons
 
-- **Domain knowledge and modeling assumptions**: data do not speak for themselves. You need some subject-matter expertise about what you're studying, as well as an interpretive lens;
-- Are you asking questions the data can actually answer? 
-- Uncertainty has many sources, and in some cases, it may be simply irreducible, no matter how hard you try;
-- **Data quality and data cleaning**: Data are not gospel. There could be noise and mistakes. Then what?
-- **Wisdom of crowds**: aggregating many imperfect guesses can do better than any one individual guess.
-
-
-
-
+-   **Domain knowledge and modeling assumptions**: data do not speak for themselves. You need some subject-matter expertise about what you're studying, as well as an interpretive lens;
+-   Are you asking questions the data can actually answer?
+-   Uncertainty has many sources, and in some cases, it may be simply irreducible, no matter how hard you try;
+-   **Data quality and data cleaning**: Data are not gospel. There could be noise and mistakes. Then what?
+-   **Wisdom of crowds**: aggregating many imperfect guesses can do better than any one individual guess.
 
 ## Hard skills
 
