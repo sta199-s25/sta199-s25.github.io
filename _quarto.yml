@@ -36,7 +36,7 @@ website:
             text: Office hours
             href: https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing
           - icon: people-fill
-            text: Help from humans (Ed Discussion)
+            text: Ed Discussion
             href: https://edstem.org/us/courses/70595/discussion
       - icon: file-check-fill
         text: "Canvas"
