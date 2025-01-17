@@ -26,6 +26,9 @@ website:
       - icon: code-square
         href: https://cmgr.oit.duke.edu/containers
         text: "RStudio containers"
+      - icon: camera-reels-fill
+        href: https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=74a0ba52-f70b-4868-8324-b260017e1689
+        text: "Class recordings"
       - icon: life-preserver
         text: Support
         menu:
