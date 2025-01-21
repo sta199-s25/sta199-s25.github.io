@@ -1,45 +1,55 @@
 ---
 title: "Grammar of data transformation"
 subtitle: "Lecture 3"
-date: "2024-01-21"
+date: "2025-01-21"
 format: revealjs
 auto-stretch: false
 ---
 
-<!-- begin: webr fodder -->
+# Now, where was I?
 
-{{< include ../_extensions/r-wasm/live/_knitr.qmd >}}
+## Alison Bechdel
 
-```{webr}
-#| edit: false
-#| echo: false
-#| output: false
-options(width = 60)
+::: columns
+::: {.column width="50%"}
+![](images/03/alison.png){fig-align="center" width="80%"}
+:::
 
-bechdel <- read_csv("bechdel.csv")
-```
+::: {.column width="50%"}
+![](images/03/fun_home.jpg){fig-align="center" width="80%"}
+:::
+:::
 
-<!-- end: webr fodder -->
+## The Bechdel Test
 
-# Warm-up
+::: columns
+::: {.column width="72%"}
+![](images/03/bechdel.png){fig-align="center"} (*Dykes to Watch Out For* - 1985)
+:::
 
-## Announcements {.smaller}
+::: {.column width="28%"}
+Film passes if...
 
--   AE 01 and AE 02 suggested answers posted on the course website.
+1.  two female characters;
+2.  talk to each other;
+3.  about something besides a man.
+:::
+:::
 
--   Ed Discussion posts:
+## Do JZ's favorite movies pass?
 
-    -   Keep them coming!
-    -   Keep them public!
-    -   Feel free to make them anonymous if you prefer.
-
--   Monday's lab:
-
-    -   Show up on time
-    -   Show up to learn and get support
-    -   Leave with all questions answered and a plan to work on the lab throughout the week
-
-# From last time
+|                                         |     |
+|-----------------------------------------|-----|
+| *Double Indemnity* (1944)               | 🥴  |
+| *Sunset Boulevard* (1950)               | 🥴  |
+| *Sweet Smell of Success* (1957)         | ❌  |
+| *One Hundred and One Dalmatians* (1961) | ✅  |
+| *Chinatown* (1974)                      | ❌  |
+| *Amadeus* (1984)                        | ❌  |
+| *Goodfellas* (1990)                     | 🥴  |
+| *Bram Stoker's Dracula* (1992)          | ❌  |
+| *The Lord of the Rings* (2001 - 2003)   | ❌  |
+| *Vera Drake* (2004)                     | ✅  |
 
 ## `ae-02-bechdel-dataviz`
 
@@ -54,20 +64,6 @@ Go to RStudio, confirm that you're in the `ae` project, and open the document ae
 -   Cell `label`s are helpful for describing what the code is doing, for jumping between code cells in the editor, and for troubleshooting
 
 -   `message: false` hides any messages emitted by the code in your rendered document
-
-# Application exercise
-
-## `ae-03-bechdel-data-viz-transform` {.smaller}
-
-::: appex
--   Go to your ae project in RStudio.
-
--   Make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
-
--   If you haven't yet done so, click Pull to get today's application exercise file: `ae-03-bechdel-data-viz-transform.qmd`.
-
--   Work through the application exercise in class, and render, commit, and push your edits by the end of class.
-:::
 
 # Data transformation
 
@@ -150,7 +146,7 @@ Find movies that pass the Bechdel test and display their titles and ROIs in desc
 
 Start with the `bechdel` data frame:
 
-```{webr}
+```{r}
 bechdel
 ```
 
@@ -162,7 +158,7 @@ Find movies that pass the Bechdel test and display their titles and ROIs in desc
 
 Filter for rows where `binary` is equal to `"PASS"`:
 
-```{webr}
+```{r}
 bechdel |>
   filter(binary == "PASS")
 ```
@@ -175,7 +171,7 @@ Find movies that pass the Bechdel test and display their titles and ROIs in desc
 
 Arrange the rows in `desc`ending order of `roi`:
 
-```{webr}
+```{r}
 bechdel |>
   filter(binary == "PASS") |>
   arrange(desc(roi))
@@ -189,20 +185,23 @@ Find movies that pass the Bechdel test and display their titles and ROIs in desc
 
 Select columns `title` and `roi`:
 
-```{webr}
+```{r}
 bechdel |>
   filter(binary == "PASS") |>
   arrange(desc(roi)) |>
   select(title, roi)
 ```
 
-## Time permitting {.smaller}
+## In this class, you will...
 
-::: task
-Ask another question of the data that can be answered with a data transformation pipeline.
+::: columns
+::: {.column width="35%"}
+Build cakes (`ggplot`) ![](images/03/cake.jpg)
 :::
 
-```{webr}
-bechdel |>
-  ___
-```
+::: {.column width="65%"}
+Stack dolls (pipe `|>`) ![](images/03/matryoshka.jpg)
+:::
+:::
+
+Master these constructs, and everything will be coming up roses!
