@@ -7,18 +7,20 @@
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
-<meta name="author" content="John Zito">
-<meta name="dcterms.date" content="2025-01-16">
-<title>STA 199 Spring 2025 - Grammar of data visualization</title>
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
-<link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
-<style>
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.4.555">
+
+  <meta name="author" content="John Zito">
+  <meta name="dcterms.date" content="2025-01-21">
+  <title>STA 199 Spring 2025 - Grammar of data transformation</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/reveal.css">
+  <style>
     code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
     div.columns{display: flex; gap: min(4vw, 1.5em);}
@@ -96,14 +98,14 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-<link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
-<link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
-<link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
-<style type="text/css">
+  <link rel="stylesheet" href="../site_libs/revealjs/dist/theme/quarto.css">
+  <link href="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/font-awesome/css/all.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/reveal-chalkboard/style.css" rel="stylesheet">
+  <link href="../site_libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
 
   .callout {
     margin-top: 1em;
@@ -301,7 +303,7 @@
   }
 
   </style>
-<style type="text/css">
+  <style type="text/css">
     .reveal div.sourceCode {
       margin: 0;
       overflow: auto;
@@ -388,16 +390,17 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 Spring 2025 - Grammar of data visualization">
-<meta property="og:description" content="Lecture 2">
+<meta property="og:title" content="STA 199 Spring 2025 - Grammar of data transformation">
+<meta property="og:description" content="Lecture 3">
 <meta property="og:site_name" content="STA 199 Spring 2025">
 </head>
 <body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center"><h1 class="title">Grammar of data visualization</h1>
-  <p class="subtitle">Lecture 2</p>
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Grammar of data transformation</h1>
+  <p class="subtitle">Lecture 3</p>
 
 <div class="quarto-title-authors">
 <div class="quarto-title-author">
@@ -410,359 +413,463 @@ John Zito
     </div>
 </div>
 
-  <p class="date">2025-01-16</p>
-</section><section id="outline" class="slide level2 smaller"><h2>Outline</h2>
-<ul>
-<li>
-<p>Last time:</p>
-<ul>
-<li><p>We introduced you to the course toolkit.</p></li>
-<li><p>You <strong>cloned</strong> your <code>ae</code> repositories and started making some updates in your Quarto documents.</p></li>
-<li><p>You did not <strong>commit and push</strong> your changes back.</p></li>
-</ul>
-</li>
-</ul>
-<div class="fragment">
-<ul>
-<li>
-<p>Today:</p>
-<ul>
-<li><p>You will <strong>commit</strong> your changes from last time and <strong>push</strong> them to wrap up that application exercise.</p></li>
-<li><p>We will introduce data visualization.</p></li>
-<li><p>You will <strong>pull</strong> to get today’s application exercise file.</p></li>
-<li><p>You will work on the new application exercise on data visualization, <strong>commit</strong> your changes, and <strong>push</strong> them.</p></li>
-</ul>
-</li>
-</ul>
-</div>
-</section><section><section id="from-last-time" class="title-slide slide level1 center"><h1>From last time</h1>
+  <p class="date">2025-01-21</p>
+</section>
+<section>
+<section id="now-where-was-i" class="title-slide slide level1 center">
+<h1>Now, where was I?</h1>
 
-</section><section id="ae-01-meet-the-penguins" class="slide level2"><h2><code>ae-01-meet-the-penguins</code></h2>
-<div class="appex">
-<p>Go to RStudio, confirm that you’re in the <code>ae</code> project, and open the document <code>ae-01-meet-the-penguins.qmd</code>.</p>
-</div>
-</section><section id="tour-recap-quarto" class="slide level2"><h2>Tour recap: Quarto</h2>
+</section>
+<section id="alison-bechdel" class="slide level2">
+<h2>Alison Bechdel</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
 <div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/01/tour-quarto.png" class="quarto-figure quarto-figure-center" alt="RStudio IDE with a Quarto document, source code on the left and output on the right. Annotated to show the YAML, a link, a header, and a code chunk."></p>
+<figure>
+<p><img data-src="images/03/alison.png" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
-</section><section id="tour-recap-git-github" class="slide level2 smaller"><h2>Tour recap: Git + GitHub</h2>
-<p>Once we made changes to our Quarto document, we</p>
-<ul>
-<li><p>went to the Git pane in RStudio</p></li>
-<li><p>staged our changes by clicking the checkboxes next to the relevant files</p></li>
-<li><p>committed our changes with an informative commit message</p></li>
-<li>
-<p>pushed our changes to our application exercise repos</p>
-<ul>
-<li>if this failed, we pulled first to get the new application exercise files, and then pushed</li>
-</ul>
-</li>
-<li><p>confirmed on GitHub that we could see our changes pushed from RStudio</p></li>
-</ul></section><section id="how-will-we-use-quarto" class="slide level2"><h2>How will we use Quarto?</h2>
-<ul>
-<li>Every application exercise, lab, project, etc. is an Quarto document</li>
-<li>You’ll always have a template Quarto document to start with</li>
-<li>The amount of scaffolding in the template will decrease over the semester</li>
-</ul></section></section><section><section id="data-visualization" class="title-slide slide level1 center"><h1>Data visualization</h1>
-
-</section><section id="un-votes" class="slide level2 smaller"><h2>UN Votes</h2>
-<div class="question">
-<p>Remember this visualization from the videos?</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/03/fun_home.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
+</figure>
 </div>
-<p><img data-src="images/02/un-data-viz.png"></p>
-</section><section id="let-see" class="slide level2 center"><h2>Let’ see…</h2>
-<div class="hand large">
-<p>how the sausage is made!</p>
 </div>
-</section><section id="load-packages" class="slide level2"><h2>Load packages</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(unvotes)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-3"><a></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section><section id="prepare-the-data" class="slide level2 smaller"><h2>Prepare the data</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>us_uk_tr_votes <span class="ot">&lt;-</span> un_votes <span class="sc">|&gt;</span></span>
-<span id="cb2-2"><a></a>  <span class="fu">inner_join</span>(un_roll_calls, <span class="at">by =</span> <span class="st">"rcid"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-3"><a></a>  <span class="fu">inner_join</span>(un_roll_call_issues, <span class="at">by =</span> <span class="st">"rcid"</span>, <span class="at">relationship =</span> <span class="st">"many-to-many"</span>) <span class="sc">|&gt;</span></span>
-<span id="cb2-4"><a></a>  <span class="fu">filter</span>(country <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"United Kingdom"</span>, <span class="st">"United States"</span>, <span class="st">"Turkey"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb2-5"><a></a>  <span class="fu">mutate</span>(<span class="at">year =</span> <span class="fu">year</span>(date)) <span class="sc">|&gt;</span></span>
-<span id="cb2-6"><a></a>  <span class="fu">group_by</span>(country, year, issue) <span class="sc">|&gt;</span></span>
-<span id="cb2-7"><a></a>  <span class="fu">summarize</span>(<span class="at">percent_yes =</span> <span class="fu">mean</span>(vote <span class="sc">==</span> <span class="st">"yes"</span>), <span class="at">.groups =</span> <span class="st">"drop"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="the-bechdel-test" class="slide level2">
+<h2>The Bechdel Test</h2>
+<div class="columns">
+<div class="column" style="width:72%;">
+<p><img data-src="images/03/bechdel.png" class="quarto-figure quarto-figure-center"> (<em>Dykes to Watch Out For</em> - 1985)</p>
+</div><div class="column" style="width:28%;">
+<p>Film passes if…</p>
+<ol type="1">
+<li>two female characters;</li>
+<li>talk to each other;</li>
+<li>about something besides a man.</li>
+</ol>
 </div>
-<div class="fragment">
+</div>
+</section>
+<section id="do-jzs-favorite-movies-pass" class="slide level2">
+<h2>Do JZ’s favorite movies pass?</h2>
+<table class="caption-top">
+<tbody>
+<tr class="odd">
+<td><em>Double Indemnity</em> (1944)</td>
+<td>🥴</td>
+</tr>
+<tr class="even">
+<td><em>Sunset Boulevard</em> (1950)</td>
+<td>🥴</td>
+</tr>
+<tr class="odd">
+<td><em>Sweet Smell of Success</em> (1957)</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td><em>One Hundred and One Dalmatians</em> (1961)</td>
+<td>✅</td>
+</tr>
+<tr class="odd">
+<td><em>Chinatown</em> (1974)</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td><em>Amadeus</em> (1984)</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td><em>Goodfellas</em> (1990)</td>
+<td>🥴</td>
+</tr>
+<tr class="even">
+<td><em>Bram Stoker’s Dracula</em> (1992)</td>
+<td>❌</td>
+</tr>
+<tr class="odd">
+<td><em>The Lord of the Rings</em> (2001 - 2003)</td>
+<td>❌</td>
+</tr>
+<tr class="even">
+<td><em>Vera Drake</em> (2004)</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="our-starting-point" class="slide level2">
+<h2>Our starting point</h2>
 <div class="callout callout-note callout-titled callout-style-default">
 <div class="callout-body">
 <div class="callout-title">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
 </div>
-<p><strong>Note</strong></p>
+<p><strong>From <a href="https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/">FiveThirtyEight</a></strong></p>
 </div>
 <div class="callout-content">
-<p>Let’s leave these details aside for a bit, we’ll revisit this code at a later point in the semester. For now, let’s agree that we need to do some “data wrangling” to get the data into the right format for the plot we want to create. Just note that we called the data frame we’ll visualize <code>us_uk_tr_votes</code>.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/03/five_thirty_eight.png" class="quarto-figure quarto-figure-center" style="width:85.0%"></p>
+</figure>
 </div>
 </div>
 </div>
 </div>
-</section><section id="visualize-the-data" class="slide level2"><h2>Visualize the data</h2>
-<div class="cell" data-layout-align="center">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">ggplot</span>(</span>
-<span id="cb3-2"><a></a>  us_uk_tr_votes, </span>
-<span id="cb3-3"><a></a>  <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)</span>
-<span id="cb3-4"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb3-5"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb3-6"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb3-7"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
-<span id="cb3-8"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb3-9"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb3-10"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>, </span>
-<span id="cb3-11"><a></a>    <span class="at">y =</span> <span class="st">"% yes"</span>, </span>
-<span id="cb3-12"><a></a>    <span class="at">color =</span> <span class="st">"Country"</span></span>
-<span id="cb3-13"><a></a>  ) <span class="sc">+</span></span>
-<span id="cb3-14"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>“We did a statistical analysis of films to test two claims: first, that films that pass the Bechdel test — featuring women in stronger roles — see a lower return on investment, and second, that they see lower gross profits. We found no evidence to support either claim.”</p>
+</section>
+<section id="ae-02-bechdel-dataviz" class="slide level2">
+<h2><code>ae-02-bechdel-dataviz</code></h2>
+<div class="appex">
+<p>Go to RStudio, confirm that you’re in the <code>ae</code> project, and open the document ae-02-bechdel-dataviz<code>.qmd</code>.</p>
 </div>
+</section>
+<section id="recap-code-cells-aka-code-chunks" class="slide level2 smaller">
+<h2>Recap: Code cells (aka code chunks)</h2>
+<p><img data-src="images/03/code-cell.png"> . . .</p>
+<ul>
+<li><p>Cell <code>label</code>s are helpful for describing what the code is doing, for jumping between code cells in the editor, and for troubleshooting</p></li>
+<li><p><code>message: false</code> hides any messages emitted by the code in your rendered document</p></li>
+</ul>
+</section></section>
+<section>
+<section id="describing-distributions-and-relationships" class="title-slide slide level1 center">
+<h1>Describing distributions and relationships</h1>
 
-</section><section id="visualize-the-data-output" class="slide level2 output-location-slide"><h2>Visualize the data</h2><div class="cell output-location-slide" data-layout-align="center">
-<div class="cell-output-display">
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/un-data-viz-1.png" class="quarto-figure quarto-figure-center" width="864"></p>
-</figure>
-</div>
-</div>
-</div></section><section id="step-1.-prepare-a-canvas-for-plotting" class="slide level2"><h2>Step 1. Prepare a canvas for plotting</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-4-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-2.-map-variables-to-aesthetics" class="slide level2 smaller"><h2>Step 2. Map variables to aesthetics</h2>
-<p><em>Map</em> <code>year</code> to the <code>x</code> <em>aesthetic</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-5-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-3.-map-variables-to-aesthetics" class="slide level2 smaller"><h2>Step 3. Map variables to aesthetics</h2>
-<p><em>Map</em> <code>percent_yes</code> to the <code>y</code> <em>aesthetic</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-6-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="mapping-and-aesthetics" class="slide level2 smaller"><h2>Mapping and aesthetics</h2>
-<ul>
-<li><p><strong>Aesthetics</strong> are visual properties of a plot</p></li>
-<li><p>In the <em>grammar of graphics</em>, variables from the data frame are <strong>map</strong>ped to aesthetics</p></li>
-</ul>
-<div class="quarto-figure quarto-figure-center">
-<figure><p><img data-src="images/02/aesthetic-mapping.gif" class="quarto-figure quarto-figure-center"></p>
-</figure>
-</div>
-</section><section id="argument-names" class="slide level2 smaller"><h2>Argument names</h2>
-<p>It’s common practice in R to omit the names of first two arguments of a function:</p>
-<div class="fragment">
-<ul>
-<li>Instead of</li>
-</ul>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">ggplot</span>(<span class="at">data =</span> us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<ul>
-<li>Use</li>
-</ul>
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="step-4.-represent-data-on-your-canvas" class="slide level2 smaller"><h2>Step 4. Represent data on your canvas</h2>
-<p>with a <code>geom</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes)) <span class="sc">+</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-7-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-5.-map-variables-to-aesthetics" class="slide level2 smaller"><h2>Step 5. Map variables to aesthetics</h2>
-<p><em>Map</em> <code>country</code> to the <code>color</code> <em>aesthetic</em></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb10-2"><a></a>  <span class="fu">geom_point</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-8-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-6.-represent-data-on-your-canvas" class="slide level2 smaller"><h2>Step 6. Represent data on your canvas</h2>
-<p>with another <code>geom</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb11-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb11-3"><a></a>  <span class="fu">geom_smooth</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-9-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="warnings-and-messages" class="slide level2"><h2>Warnings and messages</h2>
-<ul>
-<li>Adding <code>geom_smooth()</code> resulted in the following warning:</li>
-</ul>
-<pre><code>`geom_smooth()` using method = 'loess' and formula = 'y ~ x'</code></pre>
-<div class="fragment">
-<ul>
-<li>It tells us the type of smoothing ggplot2 does under the hood when drawing the smooth curves that represent trends for each country.</li>
-</ul>
-</div>
-<div class="fragment">
-<ul>
-<li>Going forward we’ll suppress this warning to save some space.</li>
-</ul>
-</div>
-</section><section id="step-7.-split-plot-into-facets" class="slide level2 smaller"><h2>Step 7. Split plot into facets</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb13-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb13-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-10-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-8.-use-a-different-color-scale" class="slide level2"><h2>Step 8. Use a different color scale</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb14-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb14-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb14-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
-<span id="cb14-5"><a></a>  <span class="fu">scale_color_colorblind</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-11-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-10.-apply-a-different-theme" class="slide level2"><h2>Step 10. Apply a different theme</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb15-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb15-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb15-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
-<span id="cb15-5"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb15-6"><a></a>  <span class="fu">theme_minimal</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-12-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-11.-add-labels" class="slide level2"><h2>Step 11. Add labels</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb16-2"><a></a>  <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb16-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb16-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
-<span id="cb16-5"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb16-6"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb16-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"% yes"</span>, <span class="at">color =</span> <span class="st">"Country"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-13-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-12.-set-transparency-of-points" class="slide level2"><h2>Step 12. Set transparency of points</h2>
-<p>with <code>alpha</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb17-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb17-3"><a></a>  <span class="fu">geom_smooth</span>() <span class="sc">+</span></span>
-<span id="cb17-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
-<span id="cb17-5"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb17-6"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb17-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"% yes"</span>, <span class="at">color =</span> <span class="st">"Country"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-14-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="step-13.-hide-standard-errors-of-curves" class="slide level2"><h2>Step 13. Hide standard errors of curves</h2>
-<p>with <code>se = FALSE</code></p>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">ggplot</span>(us_uk_tr_votes, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> percent_yes, <span class="at">color =</span> country)) <span class="sc">+</span></span>
-<span id="cb18-2"><a></a>  <span class="fu">geom_point</span>(<span class="at">alpha =</span> <span class="fl">0.5</span>) <span class="sc">+</span></span>
-<span id="cb18-3"><a></a>  <span class="fu">geom_smooth</span>(<span class="at">se =</span> <span class="cn">FALSE</span>) <span class="sc">+</span></span>
-<span id="cb18-4"><a></a>  <span class="fu">facet_wrap</span>(<span class="sc">~</span>issue) <span class="sc">+</span></span>
-<span id="cb18-5"><a></a>  <span class="fu">scale_color_colorblind</span>() <span class="sc">+</span></span>
-<span id="cb18-6"><a></a>  <span class="fu">theme_minimal</span>() <span class="sc">+</span></span>
-<span id="cb18-7"><a></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"% yes"</span>, <span class="at">color =</span> <span class="st">"Country"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output-display">
-<div>
-<figure><p><img data-src="02-grammar-of-data-visualization_files/figure-revealjs/unnamed-chunk-15-1.png" width="864"></p>
-</figure>
-</div>
-</div>
-</div>
-</section><section id="grammar-of-graphics" class="slide level2 smaller"><h2>Grammar of graphics</h2>
+</section>
+<section id="talking-about-one-numerical-variable" class="slide level2">
+<h2>Talking about one numerical variable</h2>
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>We built a plot layer-by-layer</p>
-<ul>
-<li>just like described in the book <em>The Grammar of Graphics</em> and</li>
-<li>implemented in the <strong>ggplot2</strong> package, the data visualization package of the tidyverse.</li>
-</ul>
-</div><div class="column" style="width:20%;">
-<p><img data-src="images/02/gg-book.png"></p>
-</div><div class="column" style="width:30%;">
-<p><img data-src="images/02/gg-layers.png"></p>
-</div>
-</div>
-</section></section><section><section id="application-exercise" class="title-slide slide level1 center"><h1>Application exercise</h1>
-
-</section><section id="ae-02-bechdel-dataviz" class="slide level2 smaller"><h2><code>ae-02-bechdel-dataviz</code></h2>
-<div class="appex">
-<ul>
-<li>Go to your <code>ae</code> project in RStudio.</li>
-<li>Make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.</li>
-<li>If you haven’t yet done so, click <strong>Pull</strong> to get today’s application exercise file.</li>
-<li>Work through the application exercise in class, and <strong>render, commit, and push</strong> your edits by the end of class.</li>
-</ul>
-</div>
-</section><section id="recap" class="slide level2 smaller"><h2>Recap</h2>
-<ul>
-<li>Construct plots with <code>ggplot()</code>.</li>
-<li>Layers of ggplots are separated by <code>+</code>s.</li>
-<li>The formula is (almost) always as follows:</li>
-</ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">ggplot</span>(DATA, <span class="fu">aes</span>(<span class="at">x =</span> X<span class="sc">-</span>VAR, <span class="at">y =</span> Y<span class="sc">-</span>VAR, ...)) <span class="sc">+</span></span>
-<span id="cb19-2"><a></a>  <span class="fu">geom_XXX</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="03-grammar-of-data-transformation_files/figure-revealjs/unnamed-chunk-2-1.png" width="960"></p>
+</figure>
 </div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="03-grammar-of-data-transformation_files/figure-revealjs/unnamed-chunk-3-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>center</strong>: what is the “typical” value (mean, median, mode) the data are concentrating around?</li>
+<li><strong>spread</strong>: how concentrated are the data around a typical value?</li>
+<li><strong>shape</strong>: does the distribution have one peak, or many? is it symmetric or skewed?</li>
+</ul>
+</section>
+<section id="interaction-between-shape-and-center" class="slide level2">
+<h2>Interaction between shape and center</h2>
+<p><img data-src="images/03/mean_median_mode.png"></p>
+</section>
+<section id="histograms-provide-more-detail" class="slide level2">
+<h2>Histograms provide more detail…</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="03-grammar-of-data-transformation_files/figure-revealjs/unnamed-chunk-4-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="cell">
+<div class="cell-output-display">
+<div>
+<figure>
+<p><img data-src="03-grammar-of-data-transformation_files/figure-revealjs/unnamed-chunk-5-1.png" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="but-boxplots-are-nice-for-side-by-side-comparisons" class="slide level2">
+<h2>…but boxplots are nice for side-by-side comparisons</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="03-grammar-of-data-transformation_files/figure-revealjs/unnamed-chunk-6-1.png" class="quarto-figure quarto-figure-center" width="960"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="talking-about-two-numerical-variables" class="slide level2">
+<h2>Talking about two numerical variables</h2>
+<div class="cell" data-layout-align="center">
+<div class="cell-output-display">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="03-grammar-of-data-transformation_files/figure-revealjs/unnamed-chunk-7-1.png" class="quarto-figure quarto-figure-center" width="864"></p>
+</figure>
+</div>
+</div>
+</div>
+<ul>
+<li><strong>direction</strong>: positive or negative</li>
+<li><strong>shape</strong>: linear or nonlinear</li>
+<li><strong>strength</strong>: how close are points to the “trend”</li>
+</ul>
+</section>
+<section id="strength-and-direction-of-linear-relationships" class="slide level2">
+<h2>Strength and direction of linear relationships</h2>
+<p><img data-src="images/03/corr-example.png"></p>
+</section>
+<section id="nonlinear-relationships" class="slide level2">
+<h2>Nonlinear relationships</h2>
+<p><img data-src="images/02/un-data-viz.png"></p>
+</section></section>
+<section>
+<section id="data-transformation" class="title-slide slide level1 center">
+<h1>Data transformation</h1>
+
+</section>
+<section id="a-quick-reminder" class="slide level2 smaller">
+<h2>A quick reminder</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="annotated-cell-1"><pre class="sourceCode numberSource r code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode r"><a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-1-1" class="code-annotation-target"><a href="#annotated-cell-1-1"></a>bechdel <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-1-2" class="code-annotation-target"><a href="#annotated-cell-1-2"></a>  <span class="fu">filter</span>(roi <span class="sc">&gt;</span> <span class="dv">400</span>) <span class="sc">|&gt;</span></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-1" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-1-3" class="code-annotation-target"><a href="#annotated-cell-1-3"></a>  <span class="fu">select</span>(title, roi, budget_2013, gross_2013, year, clean_test)</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-annotation">
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-1" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="1" data-code-annotation="1">Start with the <code>bechdel</code> data frame</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="2" data-code-annotation="2">Filter for movies with <code>roi</code> greater than 400 (gross is more than 400 times budget)</span>
+</dd>
+<dt data-target-cell="annotated-cell-1" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-1" data-code-lines="3" data-code-annotation="3">Select the columns <code>title</code>, <code>roi</code>, <code>budget_2013</code>, <code>gross_2013</code>, <code>year</code>, and <code>clean_test</code></span>
+</dd>
+</dl>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 6
+  title                     roi budget_2013 gross_2013  year clean_test
+  &lt;chr&gt;                   &lt;dbl&gt;       &lt;dbl&gt;      &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;     
+1 Paranormal Activity      671.      505595  339424558  2007 dubious   
+2 The Blair Witch Project  648.      839077  543776715  1999 ok        
+3 El Mariachi              583.       11622    6778946  1992 nowomen   </code></pre>
+</div>
+</div>
+</section>
+<section id="the-pipe" class="slide level2 smaller">
+<h2>The pipe <code>|&gt;</code></h2>
+<p>The pipe operator passes what comes before it into the function that comes after it as the first argument in that function.</p>
+<div class="columns">
+<div class="column fragment" style="width:55%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">sum</span>(<span class="dv">1</span>, <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</div><div class="column fragment" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="dv">1</span> <span class="sc">|&gt;</span> </span>
+<span id="cb4-2"><a></a>  <span class="fu">sum</span>(<span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 3</code></pre>
+</div>
+</div>
+</div>
+</div>
+<p><br></p>
+<div class="columns">
+<div class="column fragment" style="width:55%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">select</span>(<span class="fu">filter</span>(bechdel, roi <span class="sc">&gt;</span> <span class="dv">400</span>), title)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 1
+  title                  
+  &lt;chr&gt;                  
+1 Paranormal Activity    
+2 The Blair Witch Project
+3 El Mariachi            </code></pre>
+</div>
+</div>
+</div><div class="column fragment" style="width:45%;">
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">filter</span>(roi <span class="sc">&gt;</span> <span class="dv">400</span>) <span class="sc">|&gt;</span></span>
+<span id="cb8-3"><a></a>  <span class="fu">select</span>(title)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 1
+  title                  
+  &lt;chr&gt;                  
+1 Paranormal Activity    
+2 The Blair Witch Project
+3 El Mariachi            </code></pre>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="code-style-tip" class="slide level2 smaller">
+<h2>Code style tip <i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i></h2>
+<ul>
+<li>In data transformation pipelines, always use a
+<ul>
+<li>space before <code>|&gt;</code></li>
+<li>line break after <code>|&gt;</code></li>
+<li>indent the next line of code</li>
+</ul></li>
+</ul>
+<div class="fragment">
+<ul>
+<li>In data visualization layers, always use a
+<ul>
+<li>space before <code>+</code></li>
+<li>line break after <code>+</code></li>
+<li>indent the next line of code</li>
+</ul></li>
+</ul>
+</div>
+</section>
+<section id="the-pipe-in-action" class="slide level2 smaller">
+<h2>The pipe, in action</h2>
+<div class="task">
+<p>Find movies that pass the Bechdel test and display their titles and ROIs in descending order of ROI.</p>
+</div>
+<div class="fragment">
+<p>Start with the <code>bechdel</code> data frame:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>bechdel</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1,615 × 7
+   title                   year gross_2013 budget_2013    roi binary clean_test
+   &lt;chr&gt;                  &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt;  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     
+ 1 21 &amp; Over               2013   67878146    13000000  5.22  FAIL   notalk    
+ 2 Dredd 3D                2012   55078343    45658735  1.21  PASS   ok        
+ 3 12 Years a Slave        2013  211714070    20000000 10.6   FAIL   notalk    
+ 4 2 Guns                  2013  208105475    61000000  3.41  FAIL   notalk    
+ 5 42                      2013  190040426    40000000  4.75  FAIL   men       
+ 6 47 Ronin                2013  184166317   225000000  0.819 FAIL   men       
+ 7 A Good Day to Die Hard  2013  371598396    92000000  4.04  FAIL   notalk    
+ 8 About Time              2013  102648667    12000000  8.55  PASS   ok        
+ 9 Admission               2013   36014634    13000000  2.77  PASS   ok        
+10 After Earth             2013  304895295   130000000  2.35  FAIL   notalk    
+# ℹ 1,605 more rows</code></pre>
+</div>
+</div>
+</div>
+</section>
+<section id="the-pipe-in-action-1" class="slide level2 smaller">
+<h2>The pipe, in action</h2>
+<div class="task">
+<p>Find movies that pass the Bechdel test and display their titles and ROIs in descending order of ROI.</p>
+</div>
+<p>Filter for rows where <code>binary</code> is equal to <code>"PASS"</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
+<span id="cb12-2"><a></a>  <span class="fu">filter</span>(binary <span class="sc">==</span> <span class="st">"PASS"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 753 × 7
+   title                 year gross_2013 budget_2013   roi binary clean_test
+   &lt;chr&gt;                &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     
+ 1 Dredd 3D              2012   55078343    45658735  1.21 PASS   ok        
+ 2 About Time            2013  102648667    12000000  8.55 PASS   ok        
+ 3 Admission             2013   36014634    13000000  2.77 PASS   ok        
+ 4 American Hustle       2013  397915817    40000000  9.95 PASS   ok        
+ 5 August: Osage County  2013   87609748    25000000  3.50 PASS   ok        
+ 6 Beautiful Creatures   2013   75392809    50000000  1.51 PASS   ok        
+ 7 Blue Jasmine          2013  101793664    18000000  5.66 PASS   ok        
+ 8 Carrie                2013  120268278    30000000  4.01 PASS   ok        
+ 9 Despicable Me 2       2013 1338831390    76000000 17.6  PASS   ok        
+10 Elysium               2013  379242208   120000000  3.16 PASS   ok        
+# ℹ 743 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="the-pipe-in-action-2" class="slide level2 smaller">
+<h2>The pipe, in action</h2>
+<div class="task">
+<p>Find movies that pass the Bechdel test and display their titles and ROIs in descending order of ROI.</p>
+</div>
+<p>Arrange the rows in <code>desc</code>ending order of <code>roi</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">filter</span>(binary <span class="sc">==</span> <span class="st">"PASS"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb14-3"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(roi))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 753 × 7
+   title                     year gross_2013 budget_2013   roi binary clean_test
+   &lt;chr&gt;                    &lt;dbl&gt;      &lt;dbl&gt;       &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;     
+ 1 The Blair Witch Project   1999  543776715      839077 648.  PASS   ok        
+ 2 The Devil Inside          2012  157289709     1014639 155.  PASS   ok        
+ 3 My Big Fat Greek Wedding  2002  768922942     6475896 119.  PASS   ok        
+ 4 Chasing Amy               1997   39417963      362810 109.  PASS   ok        
+ 5 Slacker                   1991    4200140       39349 107.  PASS   ok        
+ 6 Insidious                 2010  164379554     1602348 103.  PASS   ok        
+ 7 Paranormal Activity 2     2010  280159759     3204696  87.4 PASS   ok        
+ 8 Paranormal Activity 3     2011  322170936     5178454  62.2 PASS   ok        
+ 9 The Last Exorcism         2010  118787648     1922817  61.8 PASS   ok        
+10 Cinderella                1997  246710482     4208591  58.6 PASS   ok        
+# ℹ 743 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="the-pipe-in-action-3" class="slide level2 smaller">
+<h2>The pipe, in action</h2>
+<div class="task">
+<p>Find movies that pass the Bechdel test and display their titles and ROIs in descending order of ROI.</p>
+</div>
+<p>Select columns <code>title</code> and <code>roi</code>:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>bechdel <span class="sc">|&gt;</span></span>
+<span id="cb16-2"><a></a>  <span class="fu">filter</span>(binary <span class="sc">==</span> <span class="st">"PASS"</span>) <span class="sc">|&gt;</span></span>
+<span id="cb16-3"><a></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(roi)) <span class="sc">|&gt;</span></span>
+<span id="cb16-4"><a></a>  <span class="fu">select</span>(title, roi)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 753 × 2
+   title                      roi
+   &lt;chr&gt;                    &lt;dbl&gt;
+ 1 The Blair Witch Project  648. 
+ 2 The Devil Inside         155. 
+ 3 My Big Fat Greek Wedding 119. 
+ 4 Chasing Amy              109. 
+ 5 Slacker                  107. 
+ 6 Insidious                103. 
+ 7 Paranormal Activity 2     87.4
+ 8 Paranormal Activity 3     62.2
+ 9 The Last Exorcism         61.8
+10 Cinderella                58.6
+# ℹ 743 more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="in-this-class-you-will" class="slide level2">
+<h2>In this class, you will…</h2>
+<div class="columns">
+<div class="column" style="width:35%;">
+<p>Build cakes (<code>ggplot</code>) <img data-src="images/03/cake.jpg"></p>
+</div><div class="column" style="width:65%;">
+<p>Stack dolls (pipe <code>|&gt;</code>) <img data-src="images/03/matryoshka.jpg"></p>
+</div>
+</div>
+<p>Master these constructs, and everything will be coming up roses!</p>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -770,10 +877,27 @@ John Zito
 </div>
 </div>
 </section></section>
-</div>
+    </div>
   </div>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="../site_libs/revealjs/dist/reveal.js"></script><!-- reveal.js plugins --><script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script><script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script><script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script><script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script><script src="../site_libs/revealjs/plugin/notes/notes.js"></script><script src="../site_libs/revealjs/plugin/search/search.js"></script><script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script><script src="../site_libs/revealjs/plugin/math/math.js"></script><script>window.define = window.backupDefine; window.backupDefine = undefined;</script><script>
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="../site_libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="../site_libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="../site_libs/revealjs/plugin/reveal-chalkboard/plugin.js"></script>
+  <script src="../site_libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="../site_libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="../site_libs/revealjs/plugin/search/search.js"></script>
+  <script src="../site_libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="../site_libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
 
       // Full list of configuration options available at:
       // https://revealjs.com/config/
@@ -964,7 +1088,9 @@ John Zito
           RevealZoom
         ]
       });
-    </script><script>
+    </script>
+    
+    <script>
       // htmlwidgets need to know to resize themselves when slides are shown/hidden.
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
@@ -999,7 +1125,9 @@ John Zito
         }
 
       })();
-    </script><script id="quarto-html-after-body" type="application/javascript">
+    </script>
+
+    <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
         const mode = bsSheetEl.getAttribute("data-mode");
@@ -1175,6 +1303,6 @@ John Zito
       }
     });
     </script>
-
+    
 
 </body></html>
