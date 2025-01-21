@@ -6,6 +6,12 @@ format: revealjs
 auto-stretch: false
 ---
 
+```{r}
+#| include: false
+library(tidyverse)
+bechdel <- read_csv("data/bechdel.csv")
+```
+
 # Now, where was I?
 
 ## Alison Bechdel
@@ -36,15 +42,6 @@ Film passes if...
 :::
 :::
 
-## Our starting point
-
-::: callout-note
-## From [FiveThirtyEight](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/)
-![](images/03/five_thirty_eight.png){fig-align="center" width="85%"}
-:::
-
-"We did a statistical analysis of films to test two claims: first, that films that pass the Bechdel test — featuring women in stronger roles — see a lower return on investment, and second, that they see lower gross profits. We found no evidence to support either claim."
-
 ## Do JZ's favorite movies pass?
 
 |                                         |     |
@@ -60,6 +57,16 @@ Film passes if...
 | *The Lord of the Rings* (2001 - 2003)   | ❌  |
 | *Vera Drake* (2004)                     | ✅  |
 
+## Our starting point
+
+::: callout-note
+## From [FiveThirtyEight](https://fivethirtyeight.com/features/the-dollar-and-cents-case-against-hollywoods-exclusion-of-women/)
+
+![](images/03/five_thirty_eight.png){fig-align="center" width="85%"}
+:::
+
+"We did a statistical analysis of films to test two claims: first, that films that pass the Bechdel test — featuring women in stronger roles — see a lower return on investment, and second, that they see lower gross profits. We found no evidence to support either claim."
+
 ## `ae-02-bechdel-dataviz`
 
 ::: appex
@@ -74,15 +81,131 @@ Go to RStudio, confirm that you're in the `ae` project, and open the document ae
 
 -   `message: false` hides any messages emitted by the code in your rendered document
 
+# Describing distributions and relationships
+
+## Talking about one numerical variable
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.7
+
+ggplot(bechdel, aes(x = budget_2013)) + 
+  geom_histogram() + 
+  labs(x = "Budget (2013 USD)",
+       title = "Histogram of film budgets (1990 - 2013)") + 
+  geom_vline(xintercept = mean(bechdel$budget_2013, na.rm = T), color = "red") + 
+  geom_vline(xintercept = median(bechdel$budget_2013, na.rm = T), color = "blue") + 
+  theme(title = element_text(size = 24, face = "bold"))
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.7
+
+ggplot(bechdel, aes(x = budget_2013)) + 
+  geom_boxplot() + 
+  labs(x = "Budget (2013 USD)",
+       title = "Boxplot of film budgets (1990 - 2013)") + 
+  theme(title = element_text(size = 24, face = "bold"))
+```
+:::
+:::
+
+- **center**: what is the "typical" value (mean, median, mode) the data are concentrating around?
+- **spread**: how concentrated are the data around a typical value?
+- **shape**: does the distribution have one peak, or many? is it symmetric or skewed?
+
+## Interaction between shape and center
+
+![](images/03/mean_median_mode.png)
+
+## Histograms provide more detail...
+
+::: columns
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.7
+
+set.seed(34567)
+df <- tibble(x = c(rnorm(500, -3, 1), rnorm(200, 1, 1)))
+
+ggplot(df, aes(x = x)) + 
+  geom_histogram()
+```
+:::
+
+::: {.column width="50%"}
+```{r}
+#| echo: false
+#| warning: false
+#| message: false
+#| fig-asp: 0.7
+
+ggplot(df, aes(x = x)) + 
+  geom_boxplot()
+```
+:::
+:::
+
+
+## ...but boxplots are nice for side-by-side comparisons
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-align: center
+ggplot(bechdel, aes(x = clean_test, y = roi, color = binary)) +
+  geom_boxplot() +
+  labs(
+    title = "Return on investment vs. Bechdel test result",
+    x = "Detailed Bechdel result",
+    y = "Return-on-investment (gross / budget)",
+    color = "Bechdel\nresult"
+  ) +
+  coord_cartesian(ylim = c(0, 16))
+```
+
+## Talking about two numerical variables
+
+```{r}
+#| echo: false
+#| warning: false
+#| fig-align: center
+#| fig-width: 9
+#| fig-height: 4
+ggplot(bechdel, aes(x = budget_2013, y = gross_2013)) + 
+  geom_point() + 
+  labs(x = "Budget (2013 USD)",
+       y = "Gross (2013 USD)",
+       title = "Finances of films (1990 - 2013)")
+```
+
+- **direction**: positive or negative
+- **shape**: linear or nonlinear
+- **strength**: how close are points to the "trend"
+
+## Strength and direction of linear relationships
+
+![](images/03/corr-example.png)
+
+## Nonlinear relationships
+
+![](images/02/un-data-viz.png)
+
 # Data transformation
 
 ## A quick reminder {.smaller}
-
-```{r}
-#| include: false
-library(tidyverse)
-bechdel <- read_csv("data/bechdel.csv")
-```
 
 ```{r}
 bechdel |> # <1>
