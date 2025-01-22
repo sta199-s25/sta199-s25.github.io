@@ -71,6 +71,8 @@ website:
             text: University resources
           - href: index.qmd
             text: Schedule
+          - href: course-faq.qmd
+            text: FAQ
       - section: "Labs"
         contents:
           - href: lab/lab-0.qmd
