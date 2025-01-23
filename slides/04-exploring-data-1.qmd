@@ -61,7 +61,7 @@ gerrymander
 
 ## What is gerrymandering?
 
-<iframe width="560" height="315" src="https://www.youtube.com/watch?v=bGLRJ12uqmk" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/bGLRJ12uqmk?si=DAoLH-0Cwd2yg1LL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 ## JZ's tour of the USA
 
