@@ -303,19 +303,11 @@ window.Quarto = {
   </ul>
 </li>
   <li>
-<a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
-  <ul class="collapse">
-<li>
-<a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a>
+<a href="#back-to-the-midwest" id="toc-back-to-the-midwest" class="nav-link" data-scroll-target="#back-to-the-midwest"><strong>Back to the Midwest!</strong></a>
   <ul class="collapse">
 <li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
   <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  </ul>
-</li>
-  <li>
-<a href="#part-2" id="toc-part-2" class="nav-link" data-scroll-target="#part-2">Part 2</a>
-  <ul class="collapse">
-<li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
+  <li><a href="#question-3" id="toc-question-3" class="nav-link" data-scroll-target="#question-3">Question 3</a></li>
   <li><a href="#question-4" id="toc-question-4" class="nav-link" data-scroll-target="#question-4">Question 4</a></li>
   <li><a href="#question-5" id="toc-question-5" class="nav-link" data-scroll-target="#question-5">Question 5</a></li>
   <li><a href="#question-6" id="toc-question-6" class="nav-link" data-scroll-target="#question-6">Question 6</a></li>
@@ -323,8 +315,6 @@ window.Quarto = {
   <li><a href="#question-8" id="toc-question-8" class="nav-link" data-scroll-target="#question-8">Question 8</a></li>
   <li><a href="#question-9" id="toc-question-9" class="nav-link" data-scroll-target="#question-9">Question 9</a></li>
   <li><a href="#question-10" id="toc-question-10" class="nav-link" data-scroll-target="#question-10">Question 10</a></li>
-  </ul>
-</li>
   </ul>
 </li>
   <li>
@@ -447,79 +437,40 @@ Important
 <p>You should have at least 3 commits with meaningful commit messages by the end of the assignment.</p>
 </div>
 </div>
-</section></section><section id="questions" class="level1"><h1>Questions</h1>
-<section id="part-1" class="level2"><h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
-<p><strong>All about <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code>!</strong></p>
-<p>Use the following data frame for Question 1 and Question 2:</p>
-<div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
-<span>  var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">30</span>, <span class="fl">40</span>, <span class="fl">50</span><span class="op">)</span>,</span>
-<span>  var_2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Pizza"</span>, <span class="st">"Burger"</span>, <span class="st">"Pizza"</span>, <span class="st">"Pizza"</span>, <span class="st">"Burger"</span><span class="op">)</span>,</span>
-<span>  var_3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Apple"</span>, <span class="st">"Apple"</span>, <span class="st">"Pear"</span>, <span class="st">"Pear"</span>, <span class="st">"Banana"</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 5 × 3
-  var_1 var_2  var_3 
-  &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; 
-1    10 Pizza  Apple 
-2    20 Burger Apple 
-3    30 Pizza  Pear  
-4    40 Pizza  Pear  
-5    50 Burger Banana</code></pre>
+</section></section><section id="back-to-the-midwest" class="level1"><h1><strong>Back to the Midwest!</strong></h1>
+<p>You will revisit and build on some of your findings from Lab 1, where you explored the <code>midwest</code> data frame. Remember that this data frame is bundled with the <strong>ggplot2</strong> package and is automatically loaded when you load the tidyverse package. As a refresher, the data contains demographic characteristics of counties in the Midwest region of the United States. You can read the documentation for the data set, including variable definitions, by typing <code><a href="https://ggplot2.tidyverse.org/reference/midwest.html">?midwest</a></code> in the Console or searching for <code>midwest</code> in the Help pane.</p>
+<section id="question-1" class="level2"><h2 class="anchored" data-anchor-id="question-1">Question 1</h2>
+<p><em>Do some states have counties that tend to be geographically larger than others?</em></p>
+<p>To explore this question, create side-by-side boxplots of area (<code>area</code>) of a county based on state (<code>state</code>). How do typical county area sizes compare across states? How do variabilities of county sizes compare across states? Which state has the single largest county? Identify the name of this county. You can use the data viewer to identify it interactively, you do not have to write code.</p>
+<div class="render-commit-push">
+<p>Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.</p>
+<p>Once again, make sure to commit and push all changed files so that your Git pane is empty afterwards.</p>
+</div>
+</section><section id="question-2" class="level2"><h2 class="anchored" data-anchor-id="question-2">Question 2</h2>
+<p><em>Do some states have a higher percentage of their counties located in a metropolitan area?</em></p>
+<p>Create a segmented bar chart with one bar per state and the bar filled with colors according to the value of <code>metro</code> – one color indicating <code>Yes</code> and the other color indicating <code>No</code> for whether a county is considered to be a metro area. The y-axis of the segmented barplot should range from 0 to 1, indicating proportions. Compare the percentage of counties in metro areas across the states based on this plot. Make sure to supplement your narrative with rough estimates of these percentages.</p>
+<div class="callout callout-style-default callout-tip callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Hint
 </div>
 </div>
-<section id="question-1" class="level3"><h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>Grouping by a single variable.</p>
-<p>a. What does the following code chunk do? Run it, analyze the result, and articulate in words what <code><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange()</a></code> does.</p>
+<div class="callout-body-container callout-body">
+<p>For this question, you should begin with the data wrangling pipeline below. We will learn more about data wrangling in the coming weeks, so this is a mini-preview. This pipeline creates a new variable called <code>metro</code> based on the value of the existing variable called <code>inmetro</code>. If the value of <code>inmetro</code> is equal to 1 (<code>inmetro == 1</code>), it sets the value of <code>metro</code> to <code>"Yes"</code>, and if not, it sets the value of <code>metro</code> to <code>"No"</code>. The resulting data frame is assigned back to <code>midwest</code>, overwriting the existing <code>midwest</code> data frame with a version that includes the new <code>metro</code> variable.</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">var_2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">midwest</span> <span class="op">&lt;-</span> <span class="va">midwest</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>metro <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">inmetro</span> <span class="op">==</span> <span class="fl">1</span>, <span class="st">"Yes"</span>, <span class="st">"No"</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>b. What does the following code chunk do? Run it, analyze the result, and articulate in words what <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> does. Also, comment on how it’s different from the <code><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange()</a></code> in part (a).</p>
-<div class="cell">
-<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>c. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does.</p>
-<div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section><section id="question-2" class="level3"><h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
-<p>Grouping by two variables.</p>
-<p>a. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does. Then, comment on what the message says.</p>
-<div class="cell">
-<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span>, <span class="va">var_3</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>b. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does, especially mentioning what the <code>.groups</code> argument does. How is the output different from the one in part (a)?</p>
-<div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span>, <span class="va">var_3</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-<p>c. What do the following pipelines do? Run both, analyze their results, and articulate in words what each pipeline does. How are the outputs of the two pipelines different?</p>
-<div class="cell">
-<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span>, <span class="va">var_3</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span></span>
-<span></span>
-<span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span>, <span class="va">var_3</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="render-commit-push">
-<p>Render, commit, and push your changes to GitHub with the commit message “Added answers for Questions 1 and 2”.</p>
-<p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
+<p>Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.</p>
+<p>And once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it’s important and because we see students forget to do this. So take a moment to make sure you’re following along with the version control instructions.</p>
 </div>
-</section></section><section id="part-2" class="level2"><h2 class="anchored" data-anchor-id="part-2">Part 2</h2>
-<p><strong>Back to the Midwest!</strong></p>
-<p>In this part, you will revisit and build on some of your findings from Lab 1, where you explored the <code>midwest</code> data frame. Remember that this data frame is bundled with the <strong>ggplot2</strong> package and is automatically loaded when you load the tidyverse package. As a refresher, the data contains demographic characteristics of counties in the Midwest region of the United States. You can read the documentation for the data set, including variable definitions, by typing <code><a href="https://ggplot2.tidyverse.org/reference/midwest.html">?midwest</a></code> in the Console or searching for <code>midwest</code> in the Help pane.</p>
-<section id="question-3" class="level3"><h3 class="anchored" data-anchor-id="question-3">Question 3</h3>
+</section><section id="question-3" class="level2"><h2 class="anchored" data-anchor-id="question-3">Question 3</h2>
 <p>Calculate the number of counties in each state and display your results in descending order of number of counties. Which state has the highest number of counties, and how many? Which state has the lowest number, and how many?</p>
 <div class="callout callout-style-default callout-note callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -538,7 +489,7 @@ Note
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 3”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
-</section><section id="question-4" class="level3"><h3 class="anchored" data-anchor-id="question-4">Question 4</h3>
+</section><section id="question-4" class="level2"><h2 class="anchored" data-anchor-id="question-4">Question 4</h2>
 <p>While two counties in a given state can’t have the same name, some county names might be shared across states. A classmate says “Look at that, there is a county called ___ in each state in this dataset!” In a single pipeline, discover all counties that could fill in the blanks. Your response should be a data frame with only the county names that could fill in the blank and the number of times they appear in the data.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
 <div class="callout-header d-flex align-content-center">
@@ -629,7 +580,7 @@ Tip
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 4”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
-</section><section id="question-5" class="level3"><h3 class="anchored" data-anchor-id="question-5">Question 5</h3>
+</section><section id="question-5" class="level2"><h2 class="anchored" data-anchor-id="question-5">Question 5</h2>
 <p>Return to the following box plot of population densities where you were asked to identify at least one outlier.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -647,7 +598,7 @@ Tip
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 5”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
-</section><section id="question-6" class="level3"><h3 class="anchored" data-anchor-id="question-6">Question 6</h3>
+</section><section id="question-6" class="level2"><h2 class="anchored" data-anchor-id="question-6">Question 6</h2>
 <p>In Lab 1 you were also asked to describe the distribution of population densities. The following is one acceptable description that touches on the shape, center, and spread of this distribution. Calculate the values that should go into the blanks.</p>
 <blockquote class="blockquote">
 <p>The distribution of population density of counties is unimodal and extremely right-skewed. A typical Midwestern county has population density of ____ people per unit area. The middle 50% of the counties have population densities between ___ to ___ people per unit area.</p>
@@ -669,7 +620,7 @@ Tip
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 6”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
-</section><section id="question-7" class="level3"><h3 class="anchored" data-anchor-id="question-7">Question 7</h3>
+</section><section id="question-7" class="level2"><h2 class="anchored" data-anchor-id="question-7">Question 7</h2>
 <p>Another visualization from Lab 1 was the following, which showed the proportion of urban counties in each state.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -697,7 +648,7 @@ Tip
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 7”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
-</section><section id="question-8" class="level3"><h3 class="anchored" data-anchor-id="question-8">Question 8</h3>
+</section><section id="question-8" class="level2"><h2 class="anchored" data-anchor-id="question-8">Question 8</h2>
 <p>Return to the following scatter plot of percentage below poverty vs.&nbsp;percentage of people with a college degree, where the color and shape of points are determined by <code>state</code> where you were asked to identify at least one county that is a clear outlier by name.</p>
 <div class="cell">
 <div class="cell-output-display">
@@ -721,7 +672,7 @@ Tip
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 8”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
-</section><section id="question-9" class="level3"><h3 class="anchored" data-anchor-id="question-9">Question 9</h3>
+</section><section id="question-9" class="level2"><h2 class="anchored" data-anchor-id="question-9">Question 9</h2>
 <p>a. In a single pipeline, calculate the total population for each state and save the resulting data frame as <code>state_population</code>. Then, display the data frame, <code>state_population</code>, in descending order of total population.</p>
 <p>b. Then, in a separate pipeline, calculate the proportion of the total population in each state. Once again, display the results in descending order of proportion of population.</p>
 <div class="callout callout-style-default callout-tip callout-titled">
@@ -742,14 +693,14 @@ Tip
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 9”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
-</section><section id="question-10" class="level3"><h3 class="anchored" data-anchor-id="question-10">Question 10</h3>
+</section><section id="question-10" class="level2"><h2 class="anchored" data-anchor-id="question-10">Question 10</h2>
 <p>Calculate the average percentage below poverty for each state and save the resulting data frame as <code>state_poverty</code> with the columns <code>state</code> and <code>mean_percbelowpoverty</code>.</p>
 <p>Then, in a new pipeline, display the <code>state_poverty</code> data frame in ascending order of <code>mean_percbelowpoverty</code>. Which state has the lowest average percentage below poverty across its counties? Which state has the highest average percentage below poverty across its counties?</p>
 <div class="render-commit-push">
 <p>Render, commit, and push your changes to GitHub with the commit message “Added answer for Question 10”.</p>
 <p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
 </div>
-</section></section></section><section id="wrap-up" class="level1"><h1>Wrap-up</h1>
+</section></section><section id="wrap-up" class="level1"><h1>Wrap-up</h1>
 <section id="submission" class="level2"><h2 class="anchored" data-anchor-id="submission">Submission</h2>
 <p>Once you are finished with the lab, you will submit your final PDF document to Gradescope.</p>
 <div class="callout callout-style-default callout-warning callout-titled">
