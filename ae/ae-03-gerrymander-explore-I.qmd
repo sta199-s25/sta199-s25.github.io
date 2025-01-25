@@ -1,0 +1,108 @@
+---
+title: "AE 03: Gerrymandering + data exploration I"
+subtitle: "Suggested answers"
+---
+
+::: callout-important
+These are suggested answers.
+This document should be used as a reference only; it's not designed to be an exhaustive key.
+:::
+
+## Getting started
+
+### Packages
+
+We'll use the **tidyverse** package for this analysis.
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(usdata)
+```
+
+### Data
+
+The data are available in the **usdata** package.
+
+```{r}
+#| label: gerrymander
+glimpse(gerrymander)
+```
+
+Since this dataset is shipped with a package, it has documentation that you can access via `?gerrymander`. The `flip18` variable is categorical with three levels:
+
+- -1: control of the district flipped from Democrats to Republicans between 2016 and 2018;
+- 0: the district did not flip. If Democrats controlled it in 2016, they kept it in 2018. If Republicans controlled it in 2016, they kept it in 2018;
+- 1: control of the district flipped from Republicans to Democrats between 2016 and 2018.
+
+## Districts at the tails
+
+Make side-by-side box plots of percent of vote received by Trump in 2016 Presidential Election by prevalence of gerrymandering.
+Identify any Congressional Districts that are potential outliers.
+Are they different from the rest of the Congressional Districts due to high support or low support for Trump in the 2016 Presidential Election?
+Which state are they in?
+Which city are they in?
+
+```{r}
+#| label: outliers
+ggplot(gerrymander, aes(x = trump16, y = gerry)) +
+  geom_boxplot() + 
+  labs(
+    x = "% vote for Trump in 2016",
+    y = "Extent of gerrymandering in district"
+  )
+```
+The outliers are:
+
+```{r}
+gerrymander |>
+  filter(gerry == "low", trump16 < 10)
+```
+
+## Flips
+
+Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election?
+Support your answer with a visualization as well as summary statistics.
+
+::: callout-tip
+## Hint
+Calculate the conditional distribution of prevalance of gerrymandering based on whether a Democrat was able to flip the seat in the 2018 election.
+:::
+
+This code gives you a bar chart counting how many districts fall into each level of `flip18`, and then divides each bar according to the prevalence of gerrymandering in the districts: 
+
+```{r}
+ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
+  geom_bar()
+```
+However, because the total number of counts is different in the three groups, it's hard to directly compare the information about gerrmandering. So, this code normalizes each bar so that you can compare by eye:
+
+```{r}
+ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
+  geom_bar(position = "fill")
+```
+
+This code gives you the raw numbers that underpin the plot:
+
+```{r}
+gerrymander |>
+  count(flip18, gerry) |>
+  group_by(flip18) |>
+  mutate(prop = n / sum(n))
+```
+
+Based on this information, which party would you say benefited from gerrymandering more in the 2018 midterms?
+
+
+## Render, commit, and push
+
+1.  Render your Quarto document.
+
+2.  Go to the Git pane and check the box next to each file listed, i.e., stage your changes.
+    Commit your staged changes using a simple and informative message.
+
+3.  Click on push (the green arrow) to push your changes to your application exercise repo on GitHub.
+
+4.  Go to your repo on GitHub and confirm that you can see the updated files.
+    Once your updated files are in your repo on GitHub, you're good to go!
