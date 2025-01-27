@@ -11,7 +11,7 @@ draft: false
 In this lab, you'll continue to hone your data science workflow and integrate what you learned so far in the course (data visualization) with what's coming up (data wrangling).
 
 ::: callout-note
-This lab assumes you've completed [Lab 0](/labs/lab-0.html) and [Lab 1](/labs/lab-1.html) and doesn't repeat setup and overview content from those labs. If you haven't done those yet, you should review them before starting with this one.
+This lab assumes you've completed [Lab 0](/lab/lab-0.html) and [Lab 1](/lab/lab-1.html) and doesn't repeat setup and overview content from those labs. If you haven't done those yet, you should review them before starting with this one.
 :::
 
 ## Learning objectives
@@ -264,10 +264,6 @@ ggplot(midwest, aes(x = state, fill = metro)) +
 ```
 
 Calculate these proportions in a single data pipeline.
-
-::: callout-tip
-Remember, you'll first need to create a new variable called `metro` which takes on the value `Yes` if the value of `inmetro` is 1, and `No` otherwise. You can refer to [Lab 1](/labs/lab-1.html#question-6) if you need a refresher on how to do this.
-:::
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 7".
