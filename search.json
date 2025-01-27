@@ -886,7 +886,7 @@
     "href": "lab/lab-2.html#question-7",
     "title": "Lab 2",
     "section": "Question 7",
-    "text": "Question 7\nAnother visualization from Lab 1 was the following, which showed the proportion of urban counties in each state.\n\n\n\n\n\n\n\n\nCalculate these proportions in a single data pipeline.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 7”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
+    "text": "Question 7\nThis is the plot we ask for in Question 2:\n\n\n\n\n\n\n\n\nUse a single data pipeline to calculate the proportions that underlie this plot.\n\nRender, commit, and push your changes to GitHub with the commit message “Added answer for Question 7”.\nMake sure to commit and push all changed files so that your Git pane is empty afterward.",
     "crumbs": [
       "Labs",
       "Lab 2"
