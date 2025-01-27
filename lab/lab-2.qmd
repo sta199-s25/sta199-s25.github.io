@@ -98,12 +98,7 @@ You will revisit and build on some of your findings from Lab 1, where you explor
 
 *Do some states have counties that tend to be geographically larger than others?*
 
-To explore this question, create side-by-side boxplots of area (`area`) of a county based on state (`state`).
-How do typical county area sizes compare across states?
-How do variabilities of county sizes compare across states?
-Which state has the single largest county?
-Identify the name of this county.
-You can use the data viewer to identify it interactively, you do not have to write code.
+To explore this question, create side-by-side boxplots of area (`area`) of a county based on state (`state`). How do typical county area sizes compare across states? How do variabilities of county sizes compare across states? Which state has the single largest county? Identify the name of this county. You can use the data viewer to identify it interactively, you do not have to write code.
 
 ::: render-commit-push
 Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.
@@ -115,19 +110,12 @@ Once again, make sure to commit and push all changed files so that your Git pane
 
 *Do some states have a higher percentage of their counties located in a metropolitan area?*
 
-Create a segmented bar chart with one bar per state and the bar filled with colors according to the value of `metro` – one color indicating `Yes` and the other color indicating `No` for whether a county is considered to be a metro area.
-The y-axis of the segmented barplot should range from 0 to 1, indicating proportions.
-Compare the percentage of counties in metro areas across the states based on this plot.
-Make sure to supplement your narrative with rough estimates of these percentages.
+Create a segmented bar chart with one bar per state and the bar filled with colors according to the value of `metro` – one color indicating `Yes` and the other color indicating `No` for whether a county is considered to be a metro area. The y-axis of the segmented barplot should range from 0 to 1, indicating proportions. Compare the percentage of counties in metro areas across the states based on this plot. Make sure to supplement your narrative with rough estimates of these percentages.
 
 ::: callout-tip
 ## Hint
 
-For this question, you should begin with the data wrangling pipeline below.
-We will learn more about data wrangling in the coming weeks, so this is a mini-preview.
-This pipeline creates a new variable called `metro` based on the value of the existing variable called `inmetro`.
-If the value of `inmetro` is equal to 1 (`inmetro == 1`), it sets the value of `metro` to `"Yes"`, and if not, it sets the value of `metro` to `"No"`.
-The resulting data frame is assigned back to `midwest`, overwriting the existing `midwest` data frame with a version that includes the new `metro` variable.
+For this question, you should begin with the data wrangling pipeline below. We will learn more about data wrangling in the coming weeks, so this is a mini-preview. This pipeline creates a new variable called `metro` based on the value of the existing variable called `inmetro`. If the value of `inmetro` is equal to 1 (`inmetro == 1`), it sets the value of `metro` to `"Yes"`, and if not, it sets the value of `metro` to `"No"`. The resulting data frame is assigned back to `midwest`, overwriting the existing `midwest` data frame with a version that includes the new `metro` variable.
 
 ```{r}
 #| label: hint
@@ -140,9 +128,7 @@ midwest <- midwest |>
 ::: render-commit-push
 Now is another good time to render, commit, and push your changes to GitHub with a meaningful commit message.
 
-And once again, make sure to commit and push all changed files so that your Git pane is empty afterward.
-We keep repeating this because it's important and because we see students forget to do this.
-So take a moment to make sure you're following along with the version control instructions.
+And once again, make sure to commit and push all changed files so that your Git pane is empty afterward. We keep repeating this because it's important and because we see students forget to do this. So take a moment to make sure you're following along with the version control instructions.
 :::
 
 ## Question 3
@@ -242,7 +228,7 @@ Make sure to commit and push all changed files so that your Git pane is empty af
 
 ## Question 7
 
-Another visualization from Lab 1 was the following, which showed the proportion of urban counties in each state.
+This is the plot we ask for in Question 2:
 
 ```{r}
 #| label: metro-barplot
@@ -263,7 +249,7 @@ ggplot(midwest, aes(x = state, fill = metro)) +
   )
 ```
 
-Calculate these proportions in a single data pipeline.
+Use a single data pipeline to calculate the proportions that underlie this plot.
 
 ::: render-commit-push
 Render, commit, and push your changes to GitHub with the commit message "Added answer for Question 7".
