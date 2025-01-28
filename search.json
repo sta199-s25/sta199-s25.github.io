@@ -598,11 +598,25 @@
     "href": "slides/05-exploring-data-2.html#from-last-time",
     "title": "Exploring data II",
     "section": "From last time",
-    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"fill\")"
+    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar()"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#from-last-time-1",
     "href": "slides/05-exploring-data-2.html#from-last-time-1",
+    "title": "Exploring data II",
+    "section": "From last time",
+    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"dodge\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#from-last-time-2",
+    "href": "slides/05-exploring-data-2.html#from-last-time-2",
+    "title": "Exploring data II",
+    "section": "From last time",
+    "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\nggplot(gerrymander, aes(x = flip18, fill = gerry)) +\n  geom_bar(position = \"fill\")"
+  },
+  {
+    "objectID": "slides/05-exploring-data-2.html#from-last-time-3",
+    "href": "slides/05-exploring-data-2.html#from-last-time-3",
     "title": "Exploring data II",
     "section": "From last time",
     "text": "From last time\n\nIs a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.\n\n\ngerrymander |&gt;\n  count(flip18, gerry) |&gt;\n  group_by(flip18) |&gt;\n  mutate(prop = n / sum(n))\n\n# A tibble: 8 × 4\n# Groups:   flip18 [3]\n  flip18 gerry     n  prop\n   &lt;dbl&gt; &lt;fct&gt; &lt;int&gt; &lt;dbl&gt;\n1     -1 low       2 0.4  \n2     -1 mid       3 0.6  \n3      0 low      52 0.133\n4      0 mid     242 0.617\n5      0 high     98 0.25 \n6      1 low       8 0.211\n7      1 mid      25 0.658\n8      1 high      5 0.132"
