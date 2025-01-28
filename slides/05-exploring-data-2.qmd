@@ -41,15 +41,16 @@ Successful completion means at least one commit + push by 2PM today
 
 ::: {.columns .v-center-container}
 ::: column
-- 8:30 PM Thursday January 30;
-- Social Sciences 139;
-- Space is limited, so please sign up;
-- Materials will be posted afterward;
-- We might do more if there is interest and Dav is available.
+-   8:30 PM Thursday January 30;
+-   Social Sciences 139;
+-   Space is limited, so please sign up;
+-   Materials will be posted afterward;
+-   We might do more if there is interest and Dav is available.
 :::
 
 ![](images/05/dav_qr.png)
 :::
+
 :::
 
 ## Reminder: Lab guidelines {.medium}
@@ -111,7 +112,6 @@ ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
 Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.
 :::
 
-
 ```{r}
 gerrymander |>
   count(flip18, gerry) |>
@@ -121,13 +121,11 @@ gerrymander |>
 
 ## Step 1 {.scrollable .medium}
 
-
 ```{r}
 gerrymander
 ```
 
 ## Step 2 {.scrollable}
-
 
 ```{r}
 gerrymander |>
@@ -135,7 +133,6 @@ gerrymander |>
 ```
 
 ## Step 3 {.scrollable}
-
 
 ```{r}
 gerrymander |>
@@ -152,9 +149,7 @@ gerrymander |>
   mutate(prop = n / sum(n))
 ```
 
-
 ## Same thing, without the pipe {.scrollable .small}
-
 
 ```{r}
 
@@ -428,14 +423,14 @@ glimpse(gerrymander)
 
 -   The `mutate()` function transforms (*mutates*) a data frame by creating a new column or updating an existing one
 
-## `mutate()` in action {.scrollable .medium}
+## `mutate()` in action {.scrollable .small}
 
 ```{r}
 gerrymander |>
   mutate(flip18 = as.factor(flip18))
 ```
 
-## `mutate()` in action {.scrollable .medium}
+## `mutate()` in action {.scrollable .small}
 
 ```{r}
 gerrymander |>
