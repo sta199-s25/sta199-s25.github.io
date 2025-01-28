@@ -103,6 +103,28 @@ Is a Congressional District more likely to have high prevalence of gerrymanderin
 
 ```{r}
 ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
+  geom_bar()
+```
+
+## From last time {.scrollable .smaller}
+
+::: question
+Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.
+:::
+
+```{r}
+ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
+  geom_bar(position = "dodge")
+```
+
+## From last time {.scrollable .smaller}
+
+::: question
+Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.
+:::
+
+```{r}
+ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
   geom_bar(position = "fill")
 ```
 
