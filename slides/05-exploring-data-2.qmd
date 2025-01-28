@@ -17,7 +17,7 @@ todays_ae <- "ae-04-gerrymander-explore-II"
 
 # Warm-up
 
-## While you wait... {.smaller}
+## While you wait... {.medium}
 
 Prepare for today's application exercise: **`{r} todays_ae`**
 
@@ -37,12 +37,22 @@ Prepare for today's application exercise: **`{r} todays_ae`**
 Successful completion means at least one commit + push by 2PM today
 :::
 
-## Announcements
+## Intro to Coding Principles with Dav King
 
-- Dav thing 
-- Julia HP thing
+::: {.columns .v-center-container}
+::: column
+- 8:30 PM Thursday January 30;
+- Social Sciences 139;
+- Space is limited, so please sign up;
+- Materials will be posted afterward;
+- We might do more if there is interest and Dav is available.
+:::
 
-## Reminder: Lab guidelines
+![](images/05/dav_qr.png)
+:::
+:::
+
+## Reminder: Lab guidelines {.medium}
 
 ::: {.incremental .xsmall}
 -   Plots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.
@@ -54,9 +64,7 @@ Successful completion means at least one commit + push by 2PM today
     -   code should be properly indented
     -   spaces around `=` signs and spaces after commas
 
--   All code should be visible in the PDF output, i.e., should not run off the page on the PDF.
-    Long lines that run off the page should be split across multiple lines with line breaks.
-    **Tip:** Haikus not novellas when writing code!
+-   **Proofread your rendered PDF before submission!** We cannot give you points for stuff we cannot see, so make sure your code and output is not running off the page. Use line breaks.
 
 -   At least three commits with meaningful commit messages.
 :::
@@ -71,7 +79,7 @@ Successful completion means at least one commit + push by 2PM today
 
 # `gerrymander`
 
-## Packages {.smaller}
+## Packages
 
 -   For the data: [**usdata**](https://openintrostat.github.io/usdata/)
 
@@ -89,23 +97,79 @@ library(ggthemes)
 ## From last time {.scrollable .smaller}
 
 ::: question
-Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election?
-Support your answer with a visualization as well as summary statistics.
+Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.
 :::
 
-```{webr}
-#| autorun: true
+```{r}
 ggplot(gerrymander, aes(x = flip18, fill = gerry)) +
   geom_bar(position = "fill")
 ```
 
-```{webr}
-#| autorun: true
+## From last time {.scrollable .smaller}
+
+::: question
+Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election? Support your answer with a visualization as well as summary statistics.
+:::
+
+
+```{r}
 gerrymander |>
   count(flip18, gerry) |>
   group_by(flip18) |>
   mutate(prop = n / sum(n))
 ```
+
+## Step 1 {.scrollable .medium}
+
+
+```{r}
+gerrymander
+```
+
+## Step 2 {.scrollable}
+
+
+```{r}
+gerrymander |>
+  count(flip18, gerry)
+```
+
+## Step 3 {.scrollable}
+
+
+```{r}
+gerrymander |>
+  count(flip18, gerry) |>
+  group_by(flip18)
+```
+
+## Step 4 {.scrollable}
+
+```{r}
+gerrymander |>
+  count(flip18, gerry) |>
+  group_by(flip18) |>
+  mutate(prop = n / sum(n))
+```
+
+
+## Same thing, without the pipe {.scrollable .small}
+
+
+```{r}
+
+
+
+mutate(group_by(count(gerrymander, flip18, gerry), flip18), prop = n / sum(n))
+```
+
+## With the pipe
+
+![](images/05/dolls_pipe.png)
+
+## Without the pipe
+
+![](images/05/dolls_nest.png)
 
 # `group_by()`, `summarize()`, `count()`
 
@@ -115,10 +179,23 @@ gerrymander |>
 What does `group_by()` do in the following pipeline?
 :::
 
-```{webr}
+```{r}
 gerrymander |>
   count(flip18, gerry) |>
   group_by(flip18) |>
+  mutate(prop = n / sum(n))
+```
+
+## What does `group_by()` do? {.scrollable}
+
+::: question
+What does `group_by()` do in the following pipeline?
+:::
+
+```{r}
+gerrymander |>
+  count(flip18, gerry) |>
+  #group_by(flip18) |>
   mutate(prop = n / sum(n))
 ```
 
@@ -128,19 +205,42 @@ gerrymander |>
 What does `group_by()` do in the following pipeline?
 :::
 
-```{webr}
+```{r}
 gerrymander |>
   group_by(state) |>
   summarize(mean_trump16 = mean(trump16))
 ```
 
-## `group_by()` {.scrollable}
+## Let's simplify! {.scrollable}
 
--   Group by converts a data frame to a grouped data frame, where subsequent operations are performed once per group
+::: question
+What does `group_by()` do in the following pipeline?
+:::
+
+```{r}
+gerrymander |>
+  #group_by(state) |>
+  summarize(mean_trump16 = mean(trump16))
+```
+
+## `group_by()` {.scrollable .medium}
+
+-   it converts a data frame to a grouped data frame, where subsequent operations are performed once per group
 
 -   `ungroup()` removes grouping
 
-```{webr}
+```{r}
+gerrymander |>
+  group_by(state)
+```
+
+## `group_by()` {.scrollable .medium}
+
+-   it converts a data frame to a grouped data frame, where subsequent operations are performed once per group
+
+-   `ungroup()` removes grouping
+
+```{r}
 gerrymander |>
   group_by(state) |>
   ungroup()
@@ -236,36 +336,57 @@ gerrymander |>
 ## `count()` and `sort` {.scrollable}
 
 ::: question
-What does the following pipeline do?
-Rewrite it with `count()` instead.
+What does the following pipeline do? Rewrite it with `count()` instead.
 :::
 
-```{webr}
+```{r}
 gerrymander |>
   group_by(state) |>
   summarize(n = n()) |>
   arrange(desc(n))
 ```
 
+## `count()` and `sort` {.scrollable}
+
+::: question
+What does the following pipeline do? Rewrite it with `count()` instead.
+:::
+
+```{r}
+gerrymander |>
+  count(state) |>
+  arrange(desc(n))
+```
+
+## `count()` and `sort` {.scrollable}
+
+::: question
+What does the following pipeline do? Rewrite it with `count()` instead.
+:::
+
+```{r}
+gerrymander |>
+  count(state, sort = TRUE)
+```
+
 # `mutate()`
 
 ## Flip the question
 
-::: question
+::: callout-note
 Is a Congressional District more likely to have high prevalence of gerrymandering if a Democrat was able to flip the seat in the 2018 election?
 :::
 
 vs.
 
-::: question
+::: callout-note
 Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?
 :::
 
 ## Flipping vs. gerrymandering prevalence {.smaller}
 
 ::: {.question .xsmall}
-The following code should produce a visualization that answers the question "Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?" However, it produces a `warning` and an unexpected plot.
-What's going on?
+The following code should produce a visualization that answers the question "Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?" However, it produces a `warning` and an unexpected plot. What's going on?
 :::
 
 ::: columns
@@ -307,20 +428,28 @@ glimpse(gerrymander)
 
 -   The `mutate()` function transforms (*mutates*) a data frame by creating a new column or updating an existing one
 
-## `mutate()` in action {.scrollable}
+## `mutate()` in action {.scrollable .medium}
 
-```{webr}
+```{r}
 gerrymander |>
   mutate(flip18 = as.factor(flip18))
 ```
 
-## Revisit the plot {.scrollable}
+## `mutate()` in action {.scrollable .medium}
+
+```{r}
+gerrymander |>
+  mutate(flip18 = as.factor(flip18)) |>
+  relocate(flip18)
+```
+
+## Revisit the plot {.scrollable .medium}
 
 ::: question
 "Is a Congressional District more likely to be flipped to a Democratic seat if it has high prevalence of gerrymandering or low prevalence of gerrymandering?"
 :::
 
-```{webr}
+```{r}
 gerrymander |>
   mutate(flip18 = as.factor(flip18)) |>
   ggplot(aes(x = gerry, fill = flip18)) +
