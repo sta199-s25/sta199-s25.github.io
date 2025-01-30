@@ -11,8 +11,7 @@ draft: true
 In this lab you'll build the data wrangling and visualization skills you've developed so far and data tidying and joining to your repertoire.
 
 ::: callout-note
-This lab assumes you've completed the labs so far and doesn't repeat setup and overview content from those labs.
-If you have not yet done those, you should go back and review the previous labs before starting on this one.
+This lab assumes you've completed the labs so far and doesn't repeat setup and overview content from those labs. If you have not yet done those, you should go back and review the previous labs before starting on this one.
 :::
 
 ## Learning objectives
@@ -40,12 +39,9 @@ Log in to RStudio, clone your `lab-3` repo from GitHub, open your `lab-3.qmd` do
 
 ### Step 2: Clone the repo & start new RStudio project
 
--   Go to the course organization at [github.com/sta199-s25](https://github.com/sta199-s25) organization on GitHub.
-    Click on the repo with the prefix **lab-3**.
-    It contains the starter documents you need to complete the lab.
+-   Go to the course organization at [github.com/sta199-s25](https://github.com/sta199-s25) organization on GitHub. Click on the repo with the prefix **lab-3**. It contains the starter documents you need to complete the lab.
 
--   Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**).
-    Click on the clipboard icon to copy the repo URL.
+-   Click on the green **CODE** button, select **Use SSH** (this might already be selected by default, and if it is, you'll see the text **Clone with SSH**). Click on the clipboard icon to copy the repo URL.
 
 -   In RStudio, go to *File* ➛ *New Project* ➛*Version Control* ➛ *Git*.
 
@@ -53,14 +49,11 @@ Log in to RStudio, clone your `lab-3` repo from GitHub, open your `lab-3.qmd` do
 
 -   Click *Create Project*, and the files from your GitHub repo will be displayed in the *Files* pane in RStudio.
 
--   Click *lab-3.qmd* to open the template Quarto file.
-    This is where you will write up your code and narrative for the lab.
+-   Click *lab-3.qmd* to open the template Quarto file. This is where you will write up your code and narrative for the lab.
 
 ### Step 3: Update the YAML
 
-In `lab-3.qmd`, update the `author` field to your name, render your document and examine the changes.
-Then, in the Git pane, click on **Diff** to view your changes, add a commit message (e.g., "Added author name"), and click **Commit**.
-Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.
+In `lab-3.qmd`, update the `author` field to your name, render your document and examine the changes. Then, in the Git pane, click on **Diff** to view your changes, add a commit message (e.g., "Added author name"), and click **Commit**. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.
 :::
 
 ::: callout-important
@@ -109,9 +102,7 @@ df
 
 Grouping by a single variable.
 
-a\.
-What does the following code chunk do?
-Run it, analyze the result, and articulate in words what `arrange()` does.
+a\. What does the following code chunk do? Run it, analyze the result, and articulate in words what `arrange()` does.
 
 ```{r}
 #| eval: false
@@ -119,10 +110,7 @@ df |>
   arrange(var_2)
 ```
 
-b\.
-What does the following code chunk do?
-Run it, analyze the result, and articulate in words what `group_by()` does.
-Also, comment on how it's different from the `arrange()` in part (a).
+b\. What does the following code chunk do? Run it, analyze the result, and articulate in words what `group_by()` does. Also, comment on how it's different from the `arrange()` in part (a).
 
 ```{r}
 #| eval: false
@@ -130,9 +118,7 @@ df |>
   group_by(var_2)
 ```
 
-c\.
-What does the following code chunk do?
-Run it, analyze the result, and articulate in words what the pipeline does.
+c\. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does.
 
 ```{r}
 #| eval: false
@@ -141,14 +127,19 @@ df |>
   summarize(mean_var_1 = mean(var_1))
 ```
 
+d.\ Compare this behavior to the following code chunk. Run it, analyze the result, and articulate in words what the pipeline does, and how it's behavior is different from part c.
+
+```{r}
+#| eval: false
+df |>
+  summarize(mean_var_1 = mean(var_1))
+```
+
 ### Question 2
 
 Grouping by two variables.
 
-a\.
-What does the following code chunk do?
-Run it, analyze the result, and articulate in words what the pipeline does.
-Then, comment on what the message says.
+a\. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does. Then, comment on what the message says.
 
 ```{r}
 #| eval: false
@@ -157,10 +148,7 @@ df |>
   summarize(mean_var_1 = mean(var_1))
 ```
 
-b\.
-What does the following code chunk do?
-Run it, analyze the result, and articulate in words what the pipeline does, especially mentioning what the `.groups` argument does.
-How is the output different from the one in part (a)?
+b\. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does, especially mentioning what the `.groups` argument does. How is the output different from the one in part (a)?
 
 ```{r}
 #| eval: false
@@ -169,10 +157,7 @@ df |>
   summarize(mean_var_1 = mean(var_1), .groups = "drop")
 ```
 
-c\.
-What do the following pipelines do?
-Run both, analyze their results, and articulate in words what each pipeline does.
-How are the outputs of the two pipelines different?
+c\. What do the following pipelines do? Run both, analyze their results, and articulate in words what each pipeline does. How are the outputs of the two pipelines different?
 
 ```{r}
 #| eval: false
@@ -207,23 +192,17 @@ country_inflation <- read_csv("data/country-inflation.csv")
 
 Get to know the data.
 
-a.  `glimpse()` at the `country_inflation` data frame and answer the following questions based on the output.
-    How many rows does `country_inflation` have and what does each row represent?
-    How many columns does `country_inflation` have and what does each column represent?
+a.  `glimpse()` at the `country_inflation` data frame and answer the following questions based on the output. How many rows does `country_inflation` have and what does each row represent? How many columns does `country_inflation` have and what does each column represent?
 
-b.  Display a list of the unique countries included in the dataset.
-    *Hint:* Another word for "unique" is `distinct()`.
+b.  Display a list of the unique countries included in the dataset. *Hint:* Another word for "unique" is `distinct()`.
 
 ::: callout-tip
-A function that can be useful for part (b) is `pull()`.
-Check out its documentation for examples of usage.
+A function that can be useful for part (b) is `pull()`. Check out its documentation for examples of usage.
 :::
 
 ### Question 4
 
-Which countries had the top three highest inflation rates in 2023?
-Your output should be a data frame with two columns, `country` and `2023`, with inflation rates in descending order, and three rows for the top three countries.
-Briefly comment on how the inflation rates for these countries compare to the inflation rate for United States in that year.
+Which countries had the top three highest inflation rates in 2023? Your output should be a data frame with two columns, `country` and `2023`, with inflation rates in descending order, and three rows for the top three countries. Briefly comment on how the inflation rates for these countries compare to the inflation rate for United States in that year.
 
 ::: callout-tip
 Column names that are numbers are not considered "proper" in R, therefore to select them you'll need to surround them with backticks, e.g. `` select( ` 1993 ` ) ``.
@@ -242,18 +221,15 @@ Then, in two separate pipelines,
 -   arrange `country_inflation_ratios` in increasing order of `inf_ratio` and
 -   arrange `country_inflation_ratios` in decreasing order of `inf_ratio`.
 
-Which country’s inflation increase is the largest over this time period and by how much?
-Which country’s inflation decrease is the largest over this time period and by how much?
+Which country’s inflation increase is the largest over this time period and by how much? Which country’s inflation decrease is the largest over this time period and by how much?
 
 ::: callout-tip
-For this question you'll once again need to use variables whose names are numbers (years) in your pipeline.
-Make sure to surround the names of such variables with backticks (`` ` ``).
+For this question you'll once again need to use variables whose names are numbers (years) in your pipeline. Make sure to surround the names of such variables with backticks (`` ` ``).
 :::
 
 ### Question 6
 
-Reshape (pivot) `country_inflation` such that each row represents a country/year combination, with columns `country`, `year`, and `annual_inflation`.
-Then, display the resulting data frame and state how many rows and columns it has.
+Reshape (pivot) `country_inflation` such that each row represents a country/year combination, with columns `country`, `year`, and `annual_inflation`. Then, display the resulting data frame and state how many rows and columns it has.
 
 Requirements:
 
@@ -266,8 +242,7 @@ The remaining questions in Part 1 require the use of the pivoted data frame from
 :::
 
 ::: render-commit-push
-If you haven't yet done so, now is a good time to render, commit, and push.
-Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+If you haven't yet done so, now is a good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
 :::
 
 ### Question 7
@@ -276,22 +251,15 @@ Use a separate, single pipeline to answer each of the following questions.
 
 Requirement: Your code must use the `filter()` function for each part, not `arrange()`.
 
-a.  What is the highest inflation rate observed between 1993 and 2023?
-    The output of the pipeline should be a data frame with one row and three columns.
-    In addition to code and output, your response should include a single sentence stating the country and year.
+a.  What is the highest inflation rate observed between 1993 and 2023? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.
 
-b.  What is the lowest inflation rate observed between 1993 and 2023?
-    The output of the pipeline should be a data frame with one row and three columns.
-    In addition to code and output, your response should include a single sentence stating the country and year.
+b.  What is the lowest inflation rate observed between 1993 and 2023? The output of the pipeline should be a data frame with one row and three columns. In addition to code and output, your response should include a single sentence stating the country and year.
 
-c.  Putting (a) and (b) together: What are the highest and the lowest inflation rates observed between 1993 and 2023?
-    The output of the pipeline should be a data frame with two rows and three columns.
+c.  Putting (a) and (b) together: What are the highest and the lowest inflation rates observed between 1993 and 2023? The output of the pipeline should be a data frame with two rows and three columns.
 
 ### Question 8
 
-a\.
-Create a vector called `countries_of_interest` which contains the names of up to five countries you want to visualize the inflation rates for over the years.
-For example, if these countries are Türkiye and United States, you can express this as follows:
+a\. Create a vector called `countries_of_interest` which contains the names of up to five countries you want to visualize the inflation rates for over the years. For example, if these countries are Türkiye and United States, you can express this as follows:
 
 ```{r}
 countries_of_interest <- c("Türkiye", "United States")
@@ -305,29 +273,21 @@ countries_of_interest <- c(
 )
 ```
 
-So on and so forth...
-Then, in 1-2 sentences, state why you chose these countries.
+So on and so forth... Then, in 1-2 sentences, state why you chose these countries.
 
 ::: callout-note
-Your `countries_of_interest` should consist of no more than five countries.
-Make sure that the spelling of your countries matches how they appear in the dataset.
+Your `countries_of_interest` should consist of no more than five countries. Make sure that the spelling of your countries matches how they appear in the dataset.
 :::
 
-b\.
-In a single pipeline, filter your reshaped dataset to include only the `countries_of_interest` from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you're starting with.
-Use a short but informative name.
-Then, in a new pipeline, find the `distinct()` countries in the data frame you created.
+b\. In a single pipeline, filter your reshaped dataset to include only the `countries_of_interest` from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you're starting with. Use a short but informative name. Then, in a new pipeline, find the `distinct()` countries in the data frame you created.
 
 ::: callout-tip
-The number of distinct countries in the filtered data frame you created in part (b) should equal the number of countries you chose in part (a).
-If it doesn't, you might have misspelled a country name or made a mistake in filtering for these countries.
-Go back and correct your work.
+The number of distinct countries in the filtered data frame you created in part (b) should equal the number of countries you chose in part (a). If it doesn't, you might have misspelled a country name or made a mistake in filtering for these countries. Go back and correct your work.
 :::
 
 ### Question 9
 
-Using your data frame from the previous question, create a plot of annual inflation vs. year for these countries.
-Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of these countries economies.
+Using your data frame from the previous question, create a plot of annual inflation vs. year for these countries. Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of these countries economies.
 
 Requirements for the plot:
 
@@ -338,8 +298,7 @@ Requirements for the plot:
 -   Plot should be customized in at least one way – you could use a different than default color scale, or different than default theme, or some other customization.
 
 ::: render-commit-push
-Now is another good time to render, commit, and push.
-Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
+Now is another good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
 :::
 
 ### Question 10
@@ -353,8 +312,7 @@ Make sure that you commit and push all changed documents and your Git pane is co
 Once you are finished with the lab, you will submit your final PDF document to Gradescope.
 
 ::: callout-warning
-Before you wrap up the assignment, make sure all of your documents are updated on your GitHub repo.
-We will be checking these to make sure you have been practicing how to commit and push changes.
+Before you wrap up the assignment, make sure all of your documents are updated on your GitHub repo. We will be checking these to make sure you have been practicing how to commit and push changes.
 
 You must turn in a PDF file to the Gradescope page by the submission deadline to be considered "on time".
 :::
