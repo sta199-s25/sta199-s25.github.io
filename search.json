@@ -1985,39 +1985,39 @@
     "text": "Miscellany: assignment\n\nSuppose you run the following and then you inspect df, will the x variable have values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?\n\n\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\n\n\nDo something and show me"
   },
   {
-    "objectID": "slides/06-tidying-data.html#recap-assignment",
-    "href": "slides/06-tidying-data.html#recap-assignment",
+    "objectID": "slides/06-tidying-data.html#miscellany-assignment-3",
+    "href": "slides/06-tidying-data.html#miscellany-assignment-3",
     "title": "Tidying data",
-    "section": "Recap: assignment",
-    "text": "Recap: assignment\n\nSuppose you run the following and then you inspect df, will the x variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?\n\n\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\n\n\n\ndf"
+    "section": "Miscellany: assignment",
+    "text": "Miscellany: assignment\n\nSuppose you run the following and then you inspect df, will the x variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?\n\n\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\n\n\n\ndf"
   },
   {
-    "objectID": "slides/06-tidying-data.html#recap-assignment-1",
-    "href": "slides/06-tidying-data.html#recap-assignment-1",
+    "objectID": "slides/06-tidying-data.html#miscellany-assignment-4",
+    "href": "slides/06-tidying-data.html#miscellany-assignment-4",
     "title": "Tidying data",
-    "section": "Recap: assignment",
-    "text": "Recap: assignment\n\nSuppose you run the following and then you inspect df, will the x variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?\n\n\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\n\n\n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     4 a    \n2     8 a    \n3    12 b    \n4    16 c    \n5    20 c    \n\n\n\n\n\n\nDo something and save result"
+    "section": "Miscellany: assignment",
+    "text": "Miscellany: assignment\n\nSuppose you run the following and then you inspect df, will the x variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?\n\n\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\n\n\n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     4 a    \n2     8 a    \n3    12 b    \n4    16 c    \n5    20 c    \n\n\n\n\n\n\nDo something and save result"
   },
   {
-    "objectID": "slides/06-tidying-data.html#recap-assignment-2",
-    "href": "slides/06-tidying-data.html#recap-assignment-2",
+    "objectID": "slides/06-tidying-data.html#miscellany-assignment-5",
+    "href": "slides/06-tidying-data.html#miscellany-assignment-5",
     "title": "Tidying data",
-    "section": "Recap: assignment",
-    "text": "Recap: assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+    "section": "Miscellany: assignment",
+    "text": "Miscellany: assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
   },
   {
-    "objectID": "slides/06-tidying-data.html#recap-assignment-3",
-    "href": "slides/06-tidying-data.html#recap-assignment-3",
+    "objectID": "slides/06-tidying-data.html#miscellany-assignment-6",
+    "href": "slides/06-tidying-data.html#miscellany-assignment-6",
     "title": "Tidying data",
-    "section": "Recap: assignment",
-    "text": "Recap: assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
+    "section": "Miscellany: assignment",
+    "text": "Miscellany: assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
   },
   {
-    "objectID": "slides/06-tidying-data.html#recap-assignment-4",
-    "href": "slides/06-tidying-data.html#recap-assignment-4",
+    "objectID": "slides/06-tidying-data.html#miscellany-assignment-7",
+    "href": "slides/06-tidying-data.html#miscellany-assignment-7",
     "title": "Tidying data",
-    "section": "Recap: assignment",
-    "text": "Recap: assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
+    "section": "Miscellany: assignment",
+    "text": "Miscellany: assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
   },
   {
     "objectID": "slides/06-tidying-data.html#tidy-data",
