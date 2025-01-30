@@ -310,7 +310,28 @@ place <- "Durham, NC"
 typeof(place)
 ```
 
-However, there is an important point of caution here. Sometimes, when you load in a data frame, there will be columns that should be represented as numbers, but are accidentally represented as strings. If you're not careful, this can have consequences. For example, consider the following:
+In order for R to recognize a variable as a string, it needs to be wrapped in quotation marks. Single or double quotation marks are acceptable:
+
+```{r}
+#| label: string example 2
+
+new_place <- 'Cincinnati'
+typeof(new_place)
+```
+
+However, missing quotation marks will generate an error:
+
+```{r}
+#| label: string example 3
+#| error: true
+
+another_place <- Timbuktu
+typeof(another_place)
+```
+
+In this case, since Timbuktu is not wrapped in quotation marks, R is looking for a pre-existing object - a variable or a function - called `Timbuktu`. Since no such object exists, R throws an error, and will refuse to compile your document (unless you force it to).
+
+There is another important point of caution here. Sometimes, when you load in a data frame, there will be columns that should be represented as numbers, but are accidentally represented as strings. If you're not careful, this can have consequences. For example, consider the following:
 
 ```{r}
 #| label: string vs numeric
@@ -353,7 +374,7 @@ e
 
 Be mindful with your casting - you can lose information along the way!
 
-**Note:** `NA` is a specific type in R. It essentially means "nothing" or "this value has not been declared". You cannot use == to check whether a value is `NA`. Instead, you must use `is.na()`.
+**Note:** `NA` is a specific type in R. It essentially means "nothing" or "there was an error". You cannot use == to check whether a value is `NA`. Instead, you must use `is.na()`. Similarly, you may come across `NULL`, which essentially means "this memory has not been declared". To check for `NULL`, you must use `is.null()`.
 
 # Boolean Operators
 
@@ -517,6 +538,37 @@ Why?
 When we look at the `aes()` documentation, we see that `x` is the first named argument and `y` is the second, but after that there are no named arguments.
 That means, while you can add more aesthetics, you must name them explicitly, since they do not appear by default.
 
+### Arguments Requiring Quotes
+
+In R, you will sometimes need to pass a function an argument that is from a list of options. In this case, you need to wrap it in quotation marks (can anyone tell me why?) Let's take a look at the following function, and try to identify arguments with and without quotes:
+
+```{r}
+#| label: stacked bar plot
+ggplot(midwest, aes(
+                    x = state,
+                    y = poptotal,
+                    fill = county
+                  )) +
+  geom_col(position = "stack") +
+  theme(legend.position = "none") # STA 199 students are not allowed to do this
+```
+
+In this case, we can pass in `x = state`, `y = poptotal`, and `fill = county` without quotation marks, because R knows we are referencing columns in a data frame, which are actual objects in our environment. However, we pass in `position = "stack"` with quotation marks. To see why, let's look at what happens when we drop our quotes:
+
+```{r}
+#| label: stacked bar plot error
+#| error: true
+ggplot(midwest, aes(
+                    x = state,
+                    y = poptotal,
+                    fill = county
+                  )) +
+  geom_col(position = stack) +
+  theme(legend.position = "none") # STA 199 students are not allowed to do this
+```
+
+The argument for `position` is looking for either a string or a `<Position>` object. Since we don't know what `<Position>` objects are, it's clear that we should be giving it a string. R needs to find this argument in a list: we could say `position = "dodge"` or `position = "fill"`, so long as we include quotation marks, since those are on the list of accepted arguments.
+
 ### Pipe Operator
 
 Many times in this class, you will see the symbol `|>` used.
@@ -534,6 +586,7 @@ Strictly speaking, under the hood, the pipe operator is reconstructing your code
 However, this is nearly impossible to read (I've been coding in R for years, and I still ran into multiple errors trying to write this).
 
 With the pipe operator, we can skip this and execute each function on its own line.
+Every pipeline starts with a data frame or equivalent object, so that R knows what we are operating on.
 By default, the pipe operator "pipes" your data into the first argument of a function - which, in the tidyverse, is almost always the "data" argument.
 This lets us write our data in a much neater pipeline, where you can see step-by-step what is happening to the data:
 
