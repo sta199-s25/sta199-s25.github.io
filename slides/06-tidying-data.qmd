@@ -158,7 +158,7 @@ df
 
 > **Do something and show me**
 
-## Recap: assignment 
+## Miscellany: assignment 
 
 ::: question
 Suppose you run the following and **then** you inspect `df`, will the `x` variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?
@@ -181,7 +181,7 @@ df
 :::
 :::
 
-## Recap: assignment
+## Miscellany: assignment
 
 ::: question
 Suppose you run the following and **then** you inspect `df`, will the `x` variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?
@@ -207,7 +207,7 @@ df
 
 > **Do something and save result**
 
-## Recap: assignment {.smaller}
+## Miscellany: assignment {.smaller}
 
 ::: columns
 ::: {.column .fragment width="49%"}
@@ -243,7 +243,7 @@ df_new
 :::
 :::
 
-## Recap: assignment {.smaller}
+## Miscellany: assignment {.smaller}
 
 ::: columns
 ::: {.column .fragment width="49%"}
@@ -281,7 +281,7 @@ df_summary
 :::
 :::
 
-## Recap: assignment {.smaller}
+## Miscellany: assignment {.smaller}
 
 ::: columns
 ::: {.column .fragment width="49%"}
