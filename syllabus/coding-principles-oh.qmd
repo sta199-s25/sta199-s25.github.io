@@ -650,6 +650,10 @@ R executes a program, called a "compiler", that runs your entire .qmd file in a 
 In other words, if you have loaded a library, or edited a variable, or done any number of things in the console (or even later in the .qmd file) without saving them in the .qmd file, and then you try to render, you will get an error because that function/variable/etc has not been defined in the rendering environment.
 This forces you to write reproducible code, and it's the first thing to think about when you run into errors while rendering!
 
+### Aside: LaTeX
+
+When you click "Render", if you are rendering to a .pdf file, R uses a tool called LaTeX to pull all of your code together. LaTeX is a very cool program, which allows you to input all sorts of things: Greek letters, formatted exponents, etc. If you want to insert such things, place code between dollar signs: For example, to write the Greek letter $\gamma$, you would input \$\gamma\$ in your quarto document. You can google LaTeX for more information!
+
 # Documentation + Errors
 
 ## Documentation
