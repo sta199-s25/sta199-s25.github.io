@@ -69,6 +69,8 @@ website:
             text: Policies
           - href: syllabus/syllabus_resources.qmd
             text: University resources
+          - href: syllabus/coding-principles-oh.qmd
+            text: Coding Principles
           - href: index.qmd
             text: Schedule
           - href: syllabus/syllabus_faq.qmd
