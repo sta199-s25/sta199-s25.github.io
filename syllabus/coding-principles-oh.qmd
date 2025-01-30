@@ -326,7 +326,6 @@ However, missing quotation marks will generate an error:
 #| error: true
 
 another_place <- Timbuktu
-typeof(another_place)
 ```
 
 In this case, since Timbuktu is not wrapped in quotation marks, R is looking for a pre-existing object - a variable or a function - called `Timbuktu`. Since no such object exists, R throws an error, and will refuse to compile your document (unless you force it to).
@@ -568,6 +567,18 @@ ggplot(midwest, aes(
 ```
 
 The argument for `position` is looking for either a string or a `<Position>` object. Since we don't know what `<Position>` objects are, it's clear that we should be giving it a string. R needs to find this argument in a list: we could say `position = "dodge"` or `position = "fill"`, so long as we include quotation marks, since those are on the list of accepted arguments.
+
+```{r}
+#| label: stacked bar plot 2
+#| error: true
+ggplot(midwest, aes(
+                    x = state,
+                    y = poptotal,
+                    fill = county
+                  )) +
+  geom_col(position = "fill") +
+  theme(legend.position = "none") # STA 199 students are not allowed to do this
+```
 
 ### Pipe Operator
 
