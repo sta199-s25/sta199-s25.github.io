@@ -10,11 +10,11 @@
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.56">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="John Zito">
   <meta name="dcterms.date" content="2025-01-21">
-  <title>STA 199 Spring 2025 – Grammar of data transformation</title>
+  <title>STA 199 Spring 2025 - Grammar of data transformation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -45,7 +45,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -73,7 +73,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.cf { color: #003b4f; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -87,7 +87,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.kw { color: #003b4f; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -390,7 +390,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Grammar of data transformation – STA 199 Spring 2025">
+<meta property="og:title" content="STA 199 Spring 2025 - Grammar of data transformation">
 <meta property="og:description" content="Lecture 3">
 <meta property="og:site_name" content="STA 199 Spring 2025">
 </head>
@@ -435,7 +435,8 @@ John Zito
 <p><img data-src="images/03/fun_home.jpg" class="quarto-figure quarto-figure-center" style="width:80.0%"></p>
 </figure>
 </div>
-</div></div>
+</div>
+</div>
 </section>
 <section id="the-bechdel-test" class="slide level2">
 <h2>The Bechdel Test</h2>
@@ -449,7 +450,8 @@ John Zito
 <li>talk to each other;</li>
 <li>about something besides a man.</li>
 </ol>
-</div></div>
+</div>
+</div>
 </section>
 <section id="do-jzs-favorite-movies-pass" class="slide level2">
 <h2>Do JZ’s favorite movies pass?</h2>
@@ -561,7 +563,8 @@ John Zito
 </div>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 <ul>
 <li><strong>center</strong>: what is the “typical” value (mean, median, mode) the data are concentrating around?</li>
 <li><strong>spread</strong>: how concentrated are the data around a typical value?</li>
@@ -595,7 +598,8 @@ John Zito
 </div>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 </section>
 <section id="but-boxplots-are-nice-for-side-by-side-comparisons" class="slide level2">
 <h2>…but boxplots are nice for side-by-side comparisons</h2>
@@ -690,7 +694,8 @@ John Zito
 <pre><code>[1] 3</code></pre>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 <p><br></p>
 <div class="columns">
 <div class="column fragment" style="width:55%;">
@@ -719,7 +724,8 @@ John Zito
 3 El Mariachi            </code></pre>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 </section>
 <section id="code-style-tip" class="slide level2 smaller">
 <h2>Code style tip <i class="fa-solid fa-lightbulb" aria-label="lightbulb"></i></h2>
@@ -861,7 +867,8 @@ John Zito
 <p>Build cakes (<code>ggplot</code>) <img data-src="images/03/cake.jpg"></p>
 </div><div class="column" style="width:65%;">
 <p>Stack dolls (pipe <code>|&gt;</code>) <img data-src="images/03/matryoshka.jpg"></p>
-</div></div>
+</div>
+</div>
 <p>Master these constructs, and everything will be coming up roses!</p>
 
 <div class="quarto-auto-generated-content">
@@ -1152,7 +1159,18 @@ John Zito
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1184,29 +1202,7 @@ John Zito
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/sta199-s25\.github\.io\/");
@@ -1214,7 +1210,7 @@ John Zito
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
