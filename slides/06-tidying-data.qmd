@@ -56,17 +56,18 @@ Successful completion means at least one commit + push by 2PM today
 
 ## Syllabus clarifications {.medium}
 
-::: {.incremental}
+::: incremental
+-   You can miss 30% of AEs before it starts affecting your final grade. This policy is meant to smooth over technical mishaps, absences due to illness, athletics, etc. So we're generally not granting extensions or exemptions. Just let the 30% policy do its thing;
 
-- You can miss 30% of AEs before it starts affecting your final grade. This policy is meant to smooth over technical mishaps, absences due to illness, athletics, etc. So we're generally not granting extensions or exemptions. Just let the 30% policy do its thing;
-- **ChatGPT**: Thank (most of) you for citing! But please do not just dump the question verbatim into the chat. It irritates my valve;
-- Lab grade includes *workflow points*:
+-   **ChatGPT**: Thank (most of) you for citing! But please do not just dump the question verbatim into the chat. It irritates my valve;
 
-  - Git was configured successfully such that a GitHub name is associated with the commit on GitHub (i.e., did Lab 0 successfully).
-  
-  - PDF exists in GitHub repo for lab.
-  
-  - At least 3 commits were made and pushed to the GitHub repo for lab.
+-   Lab grade includes *workflow points*:
+
+    -   Git was configured successfully such that a GitHub name is associated with the commit on GitHub (i.e., did Lab 0 successfully).
+
+    -   PDF exists in GitHub repo for lab.
+
+    -   At least 3 commits were made and pushed to the GitHub repo for lab.
 :::
 
 ## Miscellany: logical operators
@@ -89,9 +90,9 @@ Generally useful in a `filter()` but will come up in various other places as wel
 Generally useful in a `filter()` but will come up in various other places as well...
 
 | operator      | definition                                                            |
-|:--------------|:----------------------------------------------------------------------|
+|:---------------|:-------------------------------------------------------|
 | `x & y`       | [is x AND y?]{.fragment}                                              |
-| `x | y`      | [is x OR y?]{.fragment}                                               |
+| `x | y`       | [is x OR y?]{.fragment}                                               |
 | `is.na(x)`    | [is x NA?]{.fragment}                                                 |
 | `!is.na(x)`   | [is x not NA?]{.fragment}                                             |
 | `x %in% y`    | [is x in y?]{.fragment}                                               |
@@ -100,7 +101,7 @@ Generally useful in a `filter()` but will come up in various other places as wel
 
 : {tbl-colwidths="\[25,75\]"}
 
-## Miscellany: assignment 
+## Miscellany: assignment
 
 Let's make a tiny data frame to use as an example:
 
@@ -109,7 +110,7 @@ df <- tibble(x = c(1, 2, 3, 4, 5), y = c("a", "a", "b", "c", "c"))
 df
 ```
 
-## Miscellany: assignment 
+## Miscellany: assignment
 
 ::: question
 Suppose you run the following and **then** you inspect `df`, will the `x` variable have values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?
@@ -124,7 +125,6 @@ df |>
 :::
 
 ::: column
-
 ```{r}
 #| eval: false
 df
@@ -132,7 +132,7 @@ df
 :::
 :::
 
-## Miscellany: assignment 
+## Miscellany: assignment
 
 ::: question
 Suppose you run the following and **then** you inspect `df`, will the `x` variable have values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?
@@ -147,7 +147,6 @@ df |>
 :::
 
 ::: column
-
 ```{r}
 df
 ```
@@ -157,29 +156,6 @@ df
 . . .
 
 > **Do something and show me**
-
-## Miscellany: assignment 
-
-::: question
-Suppose you run the following and **then** you inspect `df`, will the `x` variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?
-:::
-
-::: columns
-::: column
-```{r}
-df <- df |>
-  mutate(x = x * 2)
-```
-:::
-
-::: column
-
-```{r}
-#| eval: false
-df
-```
-:::
-:::
 
 ## Miscellany: assignment
 
@@ -196,7 +172,29 @@ df <- df |>
 :::
 
 ::: column
+```{r}
+#| eval: false
+df
+```
+:::
+:::
 
+## Miscellany: assignment
+
+::: question
+Suppose you run the following and **then** you inspect `df`, will the `x` variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?
+:::
+
+::: columns
+::: column
+```{r}
+#| eval: false
+df <- df |>
+  mutate(x = x * 2)
+```
+:::
+
+::: column
 ```{r}
 df
 ```
@@ -370,7 +368,6 @@ But the data are not in a format that will allow us to do that.
 
 ::: columns
 ::: {.column .fragment width="69%"}
-
 > How do we go from this...
 
 ```{r}
@@ -387,7 +384,6 @@ statsci |>
 :::
 
 ::: {.column .fragment width="29%"}
-
 > ...to this?
 
 ```{r}
@@ -436,7 +432,7 @@ With the command `pivot_longer()`!
 -   You can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.
 :::
 
-## {.scrollable .medium}
+##  {.scrollable .medium}
 
 ```{r}
 #| eval: false
