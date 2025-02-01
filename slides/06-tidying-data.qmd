@@ -90,7 +90,7 @@ Generally useful in a `filter()` but will come up in various other places as wel
 Generally useful in a `filter()` but will come up in various other places as well...
 
 | operator      | definition                                                            |
-|:---------------|:-------------------------------------------------------|
+|:-----------------|:-----------------------------------------------------|
 | `x & y`       | [is x AND y?]{.fragment}                                              |
 | `x | y`       | [is x OR y?]{.fragment}                                               |
 | `is.na(x)`    | [is x NA?]{.fragment}                                                 |
@@ -412,6 +412,125 @@ statsci |>
 
 With the command `pivot_longer()`!
 
+## `pivot_longer()` {.smaller .scrollable}
+
+::: task
+Pivot the `statsci` data frame *longer* such that each row represents a degree type / year combination and `year` and `n`umber of graduates for that year are columns in the data frame.
+:::
+
+```{r}
+statsci |>
+  pivot_longer(
+    cols = -degree,
+    names_to = "year",
+    values_to = "n"
+  )
+```
+
+## `year`
+
+::: question
+What is the type of the `year` variable?
+Why?
+What should it be?
+:::
+
+. . .
+
+It's a character (`chr`) variable since the information came from the columns of the original data frame and R cannot know that these character strings represent years.
+The variable type should be numeric.
+
+## `pivot_longer()` again {.smaller .scrollable}
+
+::: question
+Start over with pivoting, and this time also make sure `year` is a numerical variable in the resulting data frame.
+:::
+
+```{r}
+statsci |>
+  pivot_longer(
+    cols = -degree,
+    names_to = "year",
+    values_to = "n",
+    names_transform = as.numeric,
+  )
+```
+
+## `NA` counts
+
+::: question
+What does an `NA` mean in this context?
+*Hint:* The data come from the university registrar, and they have records on every single graduates, there shouldn't be anything "unknown" to them about who graduated when.
+:::
+
+. . .
+
+`NA`s should actually be 0s.
+
+## Clean-up {.smaller .scrollable}
+
+::: task
+Add on to your pipeline that you started with pivoting and convert `NA`s in `n` to `0`s.
+:::
+
+```{r}
+statsci |>
+  pivot_longer(
+    cols = -degree,
+    names_to = "year",
+    names_transform = as.numeric,
+    values_to = "n"
+  ) |>
+  mutate(n = if_else(is.na(n), 0, n))
+```
+
+## More clean-up {.smaller .scrollable}
+
+::: task
+In our plot the degree types are BS, BS2, AB, and AB2.
+This information is in our dataset, in the `degree` column, but this column also has additional characters we don't need.
+Create a new column called `degree_type` with levels BS, BS2, AB, and AB2 (in this order) based on `degree`.
+Do this by adding on to your pipeline from earlier.
+:::
+
+```{r}
+statsci |>
+  pivot_longer(
+    cols = -degree,
+    names_to = "year",
+    names_transform = as.numeric,
+    values_to = "n"
+  ) |>
+  mutate(n = if_else(is.na(n), 0, n)) |>
+  separate(degree, sep = " \\(", into = c("major", "degree_type")) |>
+  mutate(
+    degree_type = str_remove(degree_type, "\\)"),
+    degree_type = fct_relevel(degree_type, "BS", "BS2", "AB", "AB2")
+  )
+```
+
+## Finish {.smaller .scrollable}
+
+::: task
+Now that you have your data pivoting and cleaning pipeline figured out, save the resulting data frame as `statsci_longer`.
+:::
+
+```{r}
+statsci_longer <- statsci |>
+  pivot_longer(
+    cols = -degree,
+    names_to = "year",
+    names_transform = as.numeric,
+    values_to = "n"
+  ) |>
+  mutate(n = if_else(is.na(n), 0, n)) |>
+  separate(degree, sep = " \\(", into = c("major", "degree_type")) |>
+  mutate(
+    degree_type = str_remove(degree_type, "\\)"),
+    degree_type = fct_relevel(degree_type, "BS", "BS2", "AB", "AB2")
+  )
+```
+
 ## `{r} todays_ae`
 
 ::: appex
@@ -431,22 +550,3 @@ With the command `pivot_longer()`!
 -   When pivoting longer, variable names that turn into values are characters by default. If you need them to be in another format, you need to explicitly make that transformation, which you can do so within the `pivot_longer()` function.
 -   You can tweak a plot forever, but at some point the tweaks are likely not very productive. However, you should always be critical of defaults (however pretty they might be) and see if you can improve the plot to better portray your data / results / what you want to communicate.
 :::
-
-##  {.scrollable .medium}
-
-```{r}
-#| eval: false
-statsci_longer <- statsci |>
-  pivot_longer(
-    cols = -degree,
-    names_to = "year",
-    names_transform = as.numeric,
-    values_to = "n"
-  ) |>
-  mutate(n = if_else(is.na(n), 0, n)) |>
-  separate(degree, sep = " \\(", into = c("major", "degree_type")) |>
-  mutate(
-    degree_type = str_remove(degree_type, "\\)"),
-    degree_type = fct_relevel(degree_type, "BS", "BS2", "AB", "AB2")
-  )
-```
