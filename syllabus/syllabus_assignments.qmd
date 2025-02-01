@@ -42,6 +42,10 @@ During most lectures, we will work through an *application exercise* (*AE*) toge
 -   Submit an AE by pushing your work to your GitHub repo;
 -   AEs are graded for completion; if you make a good faith attempt at *all* parts of the exercisem you get the credit.
 
+::: callout-note
+You can miss 30% of AEs before it starts affecting your final grade. This policy is meant to smooth over technical mishaps, absences due to illness, athletics, etc. So we generally will not grant extensions or exemptions for AEs. We just let the 30% policy do its thing;
+:::
+
 ## Labs (15%)
 
 In labs, you will apply what you have learned in the videos and during lectures to complete data analysis tasks. You may discuss lab assignments with other students; however, the lab should be completed and submitted individually. Lab assignments must be typed up using Quarto, all work must be pushed to your GitHub repository for the lab, and the lab’s PDF output must be submitted on Gradescope by the deadline. Labs are due at 8:30 am ET on the indicated due date (generally the Monday after the lab is first introduced).
