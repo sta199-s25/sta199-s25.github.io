@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://sta199-s25.github.io/computing/coding-principles-oh.html</loc>
+    <lastmod>2025-01-31T00:21:27.955Z</lastmod>
+  </url>
+  <url>
     <loc>https://sta199-s25.github.io/syllabus/ta/wang.html</loc>
     <lastmod>2025-01-11T12:14:59.735Z</lastmod>
   </url>
@@ -61,72 +65,68 @@
     <lastmod>2025-01-06T18:23:55.234Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/17-logistic.html</loc>
-    <lastmod>2025-01-06T00:55:05.946Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/slides/02-grammar-of-data-visualization.html</loc>
-    <lastmod>2025-01-21T06:42:03.383Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/slides/04-exploring-data-1.html</loc>
-    <lastmod>2025-01-23T16:13:35.453Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/slides/01-meet-the-toolkit.html</loc>
-    <lastmod>2025-01-21T06:42:10.690Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/index.html</loc>
-    <lastmod>2025-01-05T00:31:41.913Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/lab/lab-1.html</loc>
-    <lastmod>2025-01-13T01:05:58.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/lab/lab-2.html</loc>
-    <lastmod>2025-01-27T16:59:43.240Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/ae/ae-02-bechdel-dataviz.html</loc>
-    <lastmod>2025-01-25T19:16:37.181Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/ae/ae-04-gerrymander-explore-II.html</loc>
-    <lastmod>2025-02-01T19:05:17.074Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/ae/ae-03-gerrymander-explore-I.html</loc>
-    <lastmod>2025-01-29T23:16:03.900Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/ae/ae-05-majors-tidy.html</loc>
-    <lastmod>2025-02-01T19:02:44.727Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/lab/lab-0.html</loc>
-    <lastmod>2025-01-07T11:26:18.535Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/slides/05-exploring-data-2.html</loc>
-    <lastmod>2025-01-28T16:28:15.552Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/slides/03-grammar-of-data-transformation.html</loc>
-    <lastmod>2025-01-21T16:07:51.425Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/00-welcome.html</loc>
+    <lastmod>2025-01-21T06:42:19.273Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s25.github.io/slides/06-tidying-data.html</loc>
     <lastmod>2025-01-31T17:52:42.623Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/00-welcome.html</loc>
-    <lastmod>2025-01-21T06:42:19.273Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/03-grammar-of-data-transformation.html</loc>
+    <lastmod>2025-01-21T16:07:51.425Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/syllabus/coding-principles-oh.html</loc>
-    <lastmod>2025-01-31T00:21:27.955Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/05-exploring-data-2.html</loc>
+    <lastmod>2025-01-28T16:28:15.552Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/lab/lab-0.html</loc>
+    <lastmod>2025-01-07T11:26:18.535Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/ae/ae-05-majors-tidy.html</loc>
+    <lastmod>2025-02-01T19:02:44.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/ae/ae-03-gerrymander-explore-I.html</loc>
+    <lastmod>2025-01-29T23:16:03.900Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/ae/ae-04-gerrymander-explore-II.html</loc>
+    <lastmod>2025-02-01T19:05:17.074Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/ae/ae-02-bechdel-dataviz.html</loc>
+    <lastmod>2025-01-25T19:16:37.181Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/lab/lab-2.html</loc>
+    <lastmod>2025-01-27T16:59:43.240Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/lab/lab-1.html</loc>
+    <lastmod>2025-01-13T01:05:58.727Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/index.html</loc>
+    <lastmod>2025-01-05T00:31:41.913Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/01-meet-the-toolkit.html</loc>
+    <lastmod>2025-01-21T06:42:10.690Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/04-exploring-data-1.html</loc>
+    <lastmod>2025-01-23T16:13:35.453Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/02-grammar-of-data-visualization.html</loc>
+    <lastmod>2025-01-21T06:42:03.383Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/17-logistic.html</loc>
+    <lastmod>2025-01-06T00:55:05.946Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s25.github.io/syllabus/syllabus_materials.html</loc>
@@ -183,5 +183,9 @@
   <url>
     <loc>https://sta199-s25.github.io/syllabus/ta/fenoglio.html</loc>
     <lastmod>2025-01-11T12:13:48.896Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/computing/coding-cheatsheets.html</loc>
+    <lastmod>2025-02-01T19:26:05.615Z</lastmod>
   </url>
 </urlset>
