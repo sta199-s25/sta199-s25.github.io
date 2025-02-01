@@ -385,6 +385,11 @@ Make sure you have:
 
 -   Some will be graded for completion.
 
--   There are also workflow points, for coding style, for committing at least three times as you work through your lab, and for overall organization.
+-   There are also workflow points:
+
+    - for coding style;
+    - for committing at least three times as you work through your lab;
+    - for pushing your final rendered PDF into your lab repo before the deadline (in addition to uploading it to Gradescope);
+    - for overall organization.
 
 -   You'll receive feedback on your lab on Gradescope within a week.
