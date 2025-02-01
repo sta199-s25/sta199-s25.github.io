@@ -75,10 +75,12 @@ website:
             text: FAQ
       - section: "Computing"
         contents:
-          - href: syllabus/coding-cheatsheets.qmd
-            text: Cheatsheets
-          - href: syllabus/coding-principles-oh.qmd
+          - href: computing/coding-access.qmd
+            text: Access
+          - href: computing/coding-principles-oh.qmd
             text: Dav's coding review
+          - href: computing/coding-cheatsheets.qmd
+            text: Cheatsheets
       - section: "Labs"
         contents:
           - href: lab/lab-0.qmd
