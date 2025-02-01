@@ -62,7 +62,7 @@ You should treat generative AI, such as ChatGPT, like other online resources. Tw
 
 2.  *Ethical dimension***:** Students using AI should be transparent about their use and ensure it aligns with academic integrity.
 
--   {{< fa check >}} **AI tools for code:** You may use the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism.
+-   {{< fa check >}} **AI tools for code:** You may use the technology for coding examples on assignments; if you do so, you must explicitly cite where you obtained the code. Any recycled code that is discovered and is not explicitly cited will be treated as plagiarism. Furthermore, you should not directly copy-paste the prompt from an assignment into the chat. 
 
 -   {{< fa ban >}} **AI tools for narrative:** Unless instructed otherwise, you may not use generative AI to generate a narrative that you then copy-paste verbatim into an assignment or edit and then insert into your assignment.
 
@@ -70,7 +70,8 @@ In general, you may use generative AI as a resource as you complete assignments 
 
 ::: callout-tip
 ## Citing an LLM like ChatGPT
-[Here](https://www.monash.edu/student-academic-success/build-digital-capabilities/create-online/acknowledging-the-use-of-generative-artificial-intelligence) are some general guidelines for citing AI-generated content. In this class, if you use something like ChatGPT to help you, you need to cite that by providing a direct link to the conversation you had with the bot, like this: [https://chatgpt.com/share/677c4060-1d58-8008-8e47-5caa5556a825](https://chatgpt.com/share/677c4060-1d58-8008-8e47-5caa5556a825). You can generate such a link here:
+
+[Here](https://www.monash.edu/student-academic-success/build-digital-capabilities/create-online/acknowledging-the-use-of-generative-artificial-intelligence) are some general guidelines for citing AI-generated content. In this class, if you use something like ChatGPT to help you, you need to cite that by providing a direct link to the conversation you had with the bot, like this: <https://chatgpt.com/share/677c4060-1d58-8008-8e47-5caa5556a825>. You can generate such a link here:
 
 ![](chatgpt_link.png){fig-align="center" width="80%"}
 :::
