@@ -127,7 +127,7 @@ df |>
   summarize(mean_var_1 = mean(var_1))
 ```
 
-d. Compare this behavior to the following code chunk. Run it, analyze the result, and articulate in words what the pipeline does, and how it's behavior is different from part c.
+d. Compare this behavior to the following code chunk. Run it, analyze the result, and articulate in words what the pipeline does, and how it's behavior is different from part c.
 
 ```{r}
 #| eval: false
@@ -345,9 +345,9 @@ Make sure you have:
 
 -   There are also workflow points:
 
-    - for coding style;
-    - for committing at least three times as you work through your lab;
-    - for pushing your final rendered PDF into your lab repo before the deadline (in addition to uploading it to Gradescope);
-    - for overall organization.
+    -   for coding style;
+    -   for committing at least three times as you work through your lab;
+    -   for pushing your final rendered PDF into your lab repo before the deadline (in addition to uploading it to Gradescope);
+    -   for overall organization.
 
 -   You'll receive feedback on your lab on Gradescope within a week.
