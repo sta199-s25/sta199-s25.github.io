@@ -209,8 +209,8 @@ Which countries had the top three highest inflation rates in 2023? Your output s
 
 ::: callout-tip
 ## Tips
-- Column names that are numbers are not considered "proper" in R, therefore to select them you'll need to surround them with backticks, e.g. `` select( ` 1993 ` ) ``;
 - You might find the command `slice_head` helpful here.
+- Column names that are numbers are not considered "proper" in R, therefore to select them you'll need to surround them with backticks, e.g. `` select( ` 1993 ` ) ``.
 :::
 
 
