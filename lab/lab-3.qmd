@@ -3,7 +3,6 @@ title: Lab 3
 subtitle: Inflation everywhere
 categories: Lab
 description: "Due Monday February 10 at 8:30 AM"
-draft: true
 ---
 
 # Introduction
@@ -81,8 +80,6 @@ library(tidyverse)
 
 ## Part 1
 
-NEED TO UPDATE ALL THIS!
-
 **All about `group_by()`!**
 
 Use the following data frame for Question 1 and Question 2:
@@ -90,9 +87,11 @@ Use the following data frame for Question 1 and Question 2:
 ```{r}
 #| eval: true
 df <- tibble(
-  var_1 = c(10, 20, 30, 40, 50),
-  var_2 = c("Pizza", "Burger", "Pizza", "Pizza", "Burger"),
-  var_3 = c("Apple", "Apple", "Pear", "Pear", "Banana")
+  var_1 = c(50, 20, 70, 10, 100, 30, 40, 80, 120, 60, 90, 110),
+  var_2 = c("Pizza", "Burger", "Pizza", "Pizza", "Burger", "Burger",
+            "Burger", "Pizza", "Burger", "Pizza", "Pizza", "Burger"),
+  var_3 = c("Apple", "Apple", "Pear", "Banana", "Pear", "Banana",
+            "Apple", "Apple", "Pear", "Pear", "Banana", "Banana")
 )
 
 df
@@ -110,7 +109,7 @@ df |>
   arrange(var_2)
 ```
 
-b\. What does the following code chunk do? Run it, analyze the result, and articulate in words what `group_by()` does. Also, comment on how it's different from the `arrange()` in part (a).
+b\. What does the following code chunk do? Run it, analyze the result, and articulate in words what `group_by()` does. Also, comment on how it's different from the `arrange()` in part (b).
 
 ```{r}
 #| eval: false
@@ -127,7 +126,7 @@ df |>
   summarize(mean_var_1 = mean(var_1))
 ```
 
-d. Compare this behavior to the following code chunk. Run it, analyze the result, and articulate in words what the pipeline does, and how it's behavior is different from part c.
+d\. Compare this behavior to the following code chunk. Run it, analyze the result, and articulate in words what the pipeline does, and how it's behavior is different from part (c).
 
 ```{r}
 #| eval: false
@@ -139,7 +138,11 @@ df |>
 
 Grouping by two variables.
 
-a\. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does. Then, comment on what the message says.
+a\. How many levels does `var_2` have? How many levels does `var_3` have? How many possible combinations are there of the levels of `var_2` and `var_3`?
+
+b\. Write some code that uses basic arithmetic operations to manually compute the average value of `var_1` among all the rows that have Burger-Apple. Do the same thing for the rows that have Burger-Banana. 
+
+c\. You're probably sick of that, right? What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does and how it compared to part (b). Then, comment on what the message says.
 
 ```{r}
 #| eval: false
@@ -148,7 +151,7 @@ df |>
   summarize(mean_var_1 = mean(var_1))
 ```
 
-b\. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does, especially mentioning what the `.groups` argument does. How is the output different from the one in part (a)?
+d\. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does, especially mentioning what the `.groups` argument does. How is the output different from the one in part (c)?
 
 ```{r}
 #| eval: false
@@ -157,7 +160,7 @@ df |>
   summarize(mean_var_1 = mean(var_1), .groups = "drop")
 ```
 
-c\. What do the following pipelines do? Run both, analyze their results, and articulate in words what each pipeline does. How are the outputs of the two pipelines different?
+e\. What do the following pipelines do? Run both, analyze their results, and articulate in words what each pipeline does. How are the outputs of the two pipelines different?
 
 ```{r}
 #| eval: false
@@ -300,10 +303,6 @@ Requirements for the plot:
 ::: render-commit-push
 Now is another good time to render, commit, and push. Make sure that you commit and push all changed documents and your Git pane is completely empty before proceeding.
 :::
-
-### Question 10
-
-????
 
 # Wrap-up
 
