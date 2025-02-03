@@ -7,7 +7,7 @@ description: "Due Monday February 10 at 8:30 AM"
 
 # Introduction
 
-In this lab you'll build the data wrangling and visualization skills you've developed so far and data tidying and joining to your repertoire.
+In this lab gives you more practice on data wrangling and data pipelines, with an emphasis on mastering the subtleties of `group_by`, as well as introducing pivoting to the mix.
 
 ::: callout-note
 This lab assumes you've completed the labs so far and doesn't repeat setup and overview content from those labs. If you have not yet done those, you should go back and review the previous labs before starting on this one.
@@ -140,7 +140,7 @@ Grouping by two variables.
 
 a\. How many levels does `var_2` have? How many levels does `var_3` have? How many possible combinations are there of the levels of `var_2` and `var_3`?
 
-b\. Write some code that uses basic arithmetic operations to manually compute the average value of `var_1` among all the rows that have Burger-Apple. Do the same thing for the rows that have Burger-Banana. 
+b\. Write some code that uses basic arithmetic operations to manually compute the average value of `var_1` among all the rows that have Burger-Apple. Do the same thing for the rows that have Burger-Banana.
 
 c\. You're probably sick of that, right? What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does and how it compared to part (b). Then, comment on what the message says.
 
@@ -209,10 +209,10 @@ Which countries had the top three highest inflation rates in 2023? Your output s
 
 ::: callout-tip
 ## Tips
-- You might find the command `slice_head` helpful here.
-- Column names that are numbers are not considered "proper" in R, therefore to select them you'll need to surround them with backticks, e.g. `` select( ` 1993 ` ) ``.
-:::
 
+-   You might find the command `slice_head` helpful here.
+-   Column names that are numbers are not considered "proper" in R, therefore to select them you'll need to surround them with backticks, e.g. `` select( ` 1993 ` ) ``.
+:::
 
 ### Question 5
 
