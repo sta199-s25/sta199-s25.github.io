@@ -348,6 +348,13 @@
     "text": "anti_join()\n\n\n\n\n\nanti_join(x, y)\n\n# A tibble: 1 × 2\n     id value_x\n  &lt;dbl&gt; &lt;chr&gt;  \n1     3 x3"
   },
   {
+    "objectID": "slides/07-joining-data.html#summary",
+    "href": "slides/07-joining-data.html#summary",
+    "title": "Joining data",
+    "section": "Summary",
+    "text": "Summary"
+  },
+  {
     "objectID": "slides/00-welcome.html#teaching-team-a-glamorous-assemblage",
     "href": "slides/00-welcome.html#teaching-team-a-glamorous-assemblage",
     "title": "Welcome to STA 199!",
