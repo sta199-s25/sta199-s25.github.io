@@ -103,7 +103,6 @@ How would you approach this task?
 -   Work through the application exercise in class, and render, commit, and push your edits by the end of class.
 :::
 
-
 ## `mutate()` with `if_else()` {.smaller .scrollable}
 
 ::: task
@@ -398,3 +397,7 @@ anti_join(x, y)
 ```
 :::
 :::
+
+## Summary
+
+![](images/07/07-dplyr_joins.svg){fig-align="center"}
