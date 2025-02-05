@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-<title>STA 199 Spring 2025 - Lab 3</title>
+<title>STA 199 Spring 2025 - AE 06: Sales taxes + data joining</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -94,8 +94,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
-<meta property="og:title" content="STA 199 Spring 2025 - Lab 3">
-<meta property="og:description" content="Homepage for STA 199 Introduction to Data Science at Duke University, Spring 2025.">
+<meta property="og:title" content="STA 199 Spring 2025 - AE 06: Sales taxes + data joining">
+<meta property="og:description" content="Suggested answers">
 <meta property="og:site_name" content="STA 199 Spring 2025">
 </head>
 <body class="nav-sidebar docked">
@@ -105,7 +105,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Lab 3</li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">AE 06: Sales taxes + data joining</li></ol></nav>
         <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -285,6 +285,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
  <span class="menu-text">Lab 2</span></a>
   </div>
 </li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lab/lab-3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Lab 3</span></a>
+  </div>
+</li>
       </ul>
 </li>
     </ul>
@@ -296,31 +302,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
 <li>
-<a href="#introduction" id="toc-introduction" class="nav-link active" data-scroll-target="#introduction">Introduction</a>
+<a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting started</a>
   <ul class="collapse">
-<li><a href="#learning-objectives" id="toc-learning-objectives" class="nav-link" data-scroll-target="#learning-objectives">Learning objectives</a></li>
-  <li><a href="#getting-started" id="toc-getting-started" class="nav-link" data-scroll-target="#getting-started">Getting started</a></li>
-  <li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
-  <li><a href="#guidelines" id="toc-guidelines" class="nav-link" data-scroll-target="#guidelines">Guidelines</a></li>
+<li><a href="#packages" id="toc-packages" class="nav-link" data-scroll-target="#packages">Packages</a></li>
+  <li><a href="#data" id="toc-data" class="nav-link" data-scroll-target="#data">Data</a></li>
   </ul>
 </li>
-  <li>
-<a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a>
-  <ul class="collapse">
-<li>
-<a href="#part-1" id="toc-part-1" class="nav-link" data-scroll-target="#part-1">Part 1</a>
-  <ul class="collapse">
-<li><a href="#question-1" id="toc-question-1" class="nav-link" data-scroll-target="#question-1">Question 1</a></li>
-  <li><a href="#question-2" id="toc-question-2" class="nav-link" data-scroll-target="#question-2">Question 2</a></li>
-  </ul>
-</li>
-  </ul>
-</li>
-  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/edit/main/lab/test.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div><div class="quarto-alternate-formats"><h2>Other Formats</h2><ul><li><a href="test.pdf"><i class="bi bi-file-pdf"></i>PDF</a></li></ul></div></nav>
+  <li><a href="#sales-tax-in-swing-states-if_else" id="toc-sales-tax-in-swing-states-if_else" class="nav-link" data-scroll-target="#sales-tax-in-swing-states-if_else">Sales tax in swing states: <code>if_else</code></a></li>
+  <li><a href="#sales-tax-in-coastal-states-case_when" id="toc-sales-tax-in-coastal-states-case_when" class="nav-link" data-scroll-target="#sales-tax-in-coastal-states-case_when">Sales tax in coastal states: <code>case_when</code></a></li>
+  <li><a href="#sales-tax-in-us-regions-joining" id="toc-sales-tax-in-us-regions-joining" class="nav-link" data-scroll-target="#sales-tax-in-us-regions-joining">Sales tax in US regions: joining</a></li>
+  <li><a href="#render-commit-and-push" id="toc-render-commit-and-push" class="nav-link" data-scroll-target="#render-commit-and-push">Render, commit, and push</a></li>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/edit/main/ae/ae-06-taxes-join.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
-<h1 class="title">Lab 3</h1>
+<h1 class="title">AE 06: Sales taxes + data joining</h1>
+<p class="subtitle lead">Suggested answers</p>
 </div>
 
 
@@ -334,66 +331,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   
 
 
-</header><section id="introduction" class="level1"><h1>Introduction</h1>
-<p>In this lab you’ll build the data wrangling and visualization skills you’ve developed so far and data tidying and joining to your repertoire.</p>
-<div class="callout callout-style-default callout-note callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Note
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>This lab assumes you’ve completed the labs so far and doesn’t repeat setup and overview content from those labs. If you have not yet done those, you should go back and review the previous labs before starting on this one.</p>
-</div>
-</div>
-<section id="learning-objectives" class="level2"><h2 class="anchored" data-anchor-id="learning-objectives">Learning objectives</h2>
-<p>By the end of the lab, you will…</p>
-<ul>
-<li>Be able to pivot/reshape data using <code>tidyr</code>
-</li>
-<li>Continue developing your data wrangling skills using <code>dplyr</code>
-</li>
-<li>Build on your mastery of data visualizations using <code>ggplot2</code>
-</li>
-<li>Get more experience with data science workflow using R, RStudio, Git, and GitHub</li>
-<li>Further your reproducible authoring skills with Quarto</li>
-<li>Improve your familiarity with version control using Git and GitHub</li>
-</ul></section><section id="getting-started" class="level2"><h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
-<p>Log in to RStudio, clone your <code>lab-3</code> repo from GitHub, open your <code>lab-3.qmd</code> document, and get started!</p>
-<div class="callout callout-style-default callout-tip callout-titled">
-<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Click here if you prefer to see step-by-step instructions
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-2" class="callout-2-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
-<section id="step-1-log-in-to-rstudio" class="level3"><h3 class="anchored" data-anchor-id="step-1-log-in-to-rstudio">Step 1: Log in to RStudio</h3>
-<ul>
-<li>Go to <a href="https://cmgr.oit.duke.edu/containers" class="uri">https://cmgr.oit.duke.edu/containers</a> and log in with your Duke NetID and Password.</li>
-<li>Click <code>STA198-199</code> under My reservations to log into your container. You should now see the RStudio environment.</li>
-</ul></section><section id="step-2-clone-the-repo-start-new-rstudio-project" class="level3"><h3 class="anchored" data-anchor-id="step-2-clone-the-repo-start-new-rstudio-project">Step 2: Clone the repo &amp; start new RStudio project</h3>
-<ul>
-<li><p>Go to the course organization at <a href="https://github.com/sta199-s25">github.com/sta199-s25</a> organization on GitHub. Click on the repo with the prefix <strong>lab-3</strong>. It contains the starter documents you need to complete the lab.</p></li>
-<li><p>Click on the green <strong>CODE</strong> button, select <strong>Use SSH</strong> (this might already be selected by default, and if it is, you’ll see the text <strong>Clone with SSH</strong>). Click on the clipboard icon to copy the repo URL.</p></li>
-<li><p>In RStudio, go to <em>File</em> ➛ <em>New Project</em> ➛<em>Version Control</em> ➛ <em>Git</em>.</p></li>
-<li><p>Copy and paste the URL of your assignment repo into the dialog box <em>Repository URL</em>. Again, please make sure to have <em>SSH</em> highlighted under <em>Clone</em> when you copy the address.</p></li>
-<li><p>Click <em>Create Project</em>, and the files from your GitHub repo will be displayed in the <em>Files</em> pane in RStudio.</p></li>
-<li><p>Click <em>lab-3.qmd</em> to open the template Quarto file. This is where you will write up your code and narrative for the lab.</p></li>
-</ul></section><section id="step-3-update-the-yaml" class="level3"><h3 class="anchored" data-anchor-id="step-3-update-the-yaml">Step 3: Update the YAML</h3>
-<p>In <code>lab-3.qmd</code>, update the <code>author</code> field to your name, render your document and examine the changes. Then, in the Git pane, click on <strong>Diff</strong> to view your changes, add a commit message (e.g., “Added author name”), and click <strong>Commit</strong>. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.</p>
-</section>
-</div>
-</div>
-</div>
-<div class="callout callout-style-default callout-important callout-titled">
+</header><div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -403,233 +341,229 @@ Important
 </div>
 </div>
 <div class="callout-body-container callout-body">
-<p>If you run into any issues with the first steps outlined above, flag a TA for help before proceeding.</p>
+<p>These are suggested answers. This document should be used as a reference only; it’s not designed to be an exhaustive key.</p>
 </div>
 </div>
-</section><section id="packages" class="level2"><h2 class="anchored" data-anchor-id="packages">Packages</h2>
-<p>In this lab we will work with the <strong>tidyverse</strong> package, which is a collection of packages for doing data analysis in a “tidy” way.</p>
+<section id="getting-started" class="level2"><h2 class="anchored" data-anchor-id="getting-started">Getting started</h2>
+<section id="packages" class="level3"><h3 class="anchored" data-anchor-id="packages">Packages</h3>
+<p>We’ll use the <strong>tidyverse</strong> package for this analysis.</p>
 <div class="cell">
 <div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section><section id="data" class="level3"><h3 class="anchored" data-anchor-id="data">Data</h3>
+<p>The data are available in the <code>data</code> folder:</p>
 <ul>
-<li>
-<strong>Run</strong> the code cell by clicking on the green triangle (play) button for the code cell labeled <code>load-packages</code>. This loads the package to make its features (the functions and datasets in it) be accessible from your <em>Console</em>.</li>
-<li>Then, <strong>render</strong> the document which loads this package to make its features (the functions and datasets in it) be available for other code cells in your Quarto document.</li>
-</ul></section><section id="guidelines" class="level2"><h2 class="anchored" data-anchor-id="guidelines">Guidelines</h2>
-<p>As we’ve discussed in lecture, your plots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.</p>
-<p>Additionally, code should follow the <a href="https://style.tidyverse.org/">tidyverse style</a>. Particularly,</p>
-<ul>
-<li><p>there should be spaces before and line breaks after each <code>+</code> when building a <code>ggplot</code>,</p></li>
-<li><p>there should also be spaces before and line breaks after each <code>|&gt;</code> in a data transformation pipeline,</p></li>
-<li><p>code should be properly indented,</p></li>
-<li><p>there should be spaces around <code>=</code> signs and spaces after commas.</p></li>
+<li><p><code>sales-taxes.csv</code></p></li>
+<li><p><code>us-regions.csv</code></p></li>
 </ul>
-<p>Furthermore, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.</p>
-<div class="callout callout-style-default callout-important callout-titled">
-<div class="callout-header d-flex align-content-center">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-Important
-</div>
-</div>
-<div class="callout-body-container callout-body">
-<p>Continuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to <strong>render, commit, and push</strong> your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.</p>
-</div>
-</div>
-</section></section><section id="questions" class="level1"><h1>Questions</h1>
-<section id="part-1" class="level2"><h2 class="anchored" data-anchor-id="part-1">Part 1</h2>
-<p>NEED TO UPDATE ALL THIS!</p>
-<p><strong>All about <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code>!</strong></p>
-<p>Use the following data frame for Question 1 and Question 2:</p>
 <div class="cell">
-<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://tibble.tidyverse.org/reference/tibble.html">tibble</a></span><span class="op">(</span></span>
-<span>  var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="fl">10</span>, <span class="fl">20</span>, <span class="fl">30</span>, <span class="fl">40</span>, <span class="fl">50</span>, <span class="fl">60</span>, <span class="fl">70</span>, <span class="fl">80</span>, <span class="fl">90</span>, <span class="fl">100</span>, <span class="fl">110</span>, <span class="fl">120</span><span class="op">)</span>,</span>
-<span>  var_2 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Pizza"</span>, <span class="st">"Burger"</span>, <span class="st">"Pizza"</span>, <span class="st">"Pizza"</span>, <span class="st">"Burger"</span>, <span class="st">"Burger"</span>,</span>
-<span>            <span class="st">"Burger"</span>, <span class="st">"Pizza"</span>, <span class="st">"Burger"</span>, <span class="st">"Pizza"</span>, <span class="st">"Pizza"</span>, <span class="st">"Burger"</span><span class="op">)</span>,</span>
-<span>  var_3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Apple"</span>, <span class="st">"Apple"</span>, <span class="st">"Pear"</span>, <span class="st">"Banana"</span>, <span class="st">"Pear"</span>, <span class="st">"Banana"</span>,</span>
-<span>            <span class="st">"Apple"</span>, <span class="st">"Apple"</span>, <span class="st">"Pear"</span>, <span class="st">"Pear"</span>, <span class="st">"Banana"</span>, <span class="st">"Banana"</span><span class="op">)</span></span>
-<span><span class="op">)</span></span>
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales_taxes</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/sales-taxes.csv"</span><span class="op">)</span></span>
+<span><span class="va">us_regions</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://readr.tidyverse.org/reference/read_delim.html">read_csv</a></span><span class="op">(</span><span class="st">"data/us-regions.csv"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>And let’s take a look at the data.</p>
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">sales_taxes</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 51
+Columns: 5
+$ state              &lt;chr&gt; "Alabama", "Alaska", "Arizona", "Arkansas", "Califo…
+$ state_tax_rate     &lt;dbl&gt; 0.0400, 0.0000, 0.0560, 0.0650, 0.0725, 0.0290, 0.0…
+$ avg_local_tax_rate &lt;dbl&gt; 0.0529, 0.0182, 0.0278, 0.0295, 0.0160, 0.0491, 0.0…
+$ combined_rate      &lt;dbl&gt; 0.0929, 0.0182, 0.0838, 0.0945, 0.0885, 0.0781, 0.0…
+$ max_local_tax_rate &lt;dbl&gt; 0.0750, 0.0785, 0.0530, 0.0613, 0.0475, 0.0830, 0.0…</code></pre>
+</div>
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="fu"><a href="https://pillar.r-lib.org/reference/glimpse.html">glimpse</a></span><span class="op">(</span><span class="va">us_regions</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 50
+Columns: 2
+$ state_name &lt;chr&gt; "Maine", "New Hampshire", "Vermont", "Massachusetts", "Rhod…
+$ region     &lt;chr&gt; "Northeast", "Northeast", "Northeast", "Northeast", "Northe…</code></pre>
+</div>
+</div>
+</section></section><section id="sales-tax-in-swing-states-if_else" class="level2"><h2 class="anchored" data-anchor-id="sales-tax-in-swing-states-if_else">Sales tax in swing states: <code>if_else</code>
+</h2>
+<p>Create new <code>swing_state</code> variable using <code>if_else</code>:</p>
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">list_of_swing_states</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Arizona"</span>, <span class="st">"Georgia"</span>, <span class="st">"Michigan"</span>, <span class="st">"Nevada"</span>, </span>
+<span>                          <span class="st">"North Carolina"</span>, <span class="st">"Pennsylvania"</span>, <span class="st">"Wisconsin"</span><span class="op">)</span></span>
 <span></span>
-<span><span class="va">df</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span><span class="va">sales_taxes</span> <span class="op">&lt;-</span> <span class="va">sales_taxes</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    swing_state <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">state</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">list_of_swing_states</span>,</span>
+<span>                          <span class="st">"Swing"</span>,</span>
+<span>                          <span class="st">"Non-swing"</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate</a></span><span class="op">(</span><span class="va">swing_state</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">sales_taxes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 12 × 3
-   var_1 var_2  var_3 
-   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; 
- 1    10 Pizza  Apple 
- 2    20 Burger Apple 
- 3    30 Pizza  Pear  
- 4    40 Pizza  Banana
- 5    50 Burger Pear  
- 6    60 Burger Banana
- 7    70 Burger Apple 
- 8    80 Pizza  Apple 
- 9    90 Burger Pear  
-10   100 Pizza  Pear  
-11   110 Pizza  Banana
-12   120 Burger Banana</code></pre>
+<pre><code># A tibble: 51 × 6
+   swing_state state       state_tax_rate avg_local_tax_rate combined_rate
+   &lt;chr&gt;       &lt;chr&gt;                &lt;dbl&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+ 1 Non-swing   Alabama             0.04               0.0529        0.0929
+ 2 Non-swing   Alaska              0                  0.0182        0.0182
+ 3 Swing       Arizona             0.056              0.0278        0.0838
+ 4 Non-swing   Arkansas            0.065              0.0295        0.0945
+ 5 Non-swing   California          0.0725             0.016         0.0885
+ 6 Non-swing   Colorado            0.029              0.0491        0.0781
+ 7 Non-swing   Connecticut         0.0635             0             0.0635
+ 8 Non-swing   Delaware            0                  0             0     
+ 9 Non-swing   Florida             0.06               0.01          0.07  
+10 Swing       Georgia             0.04               0.0338        0.0738
+# ℹ 41 more rows
+# ℹ 1 more variable: max_local_tax_rate &lt;dbl&gt;</code></pre>
 </div>
 </div>
-<section id="question-1" class="level3"><h3 class="anchored" data-anchor-id="question-1">Question 1</h3>
-<p>Grouping by a single variable.</p>
-<p>a. What does the following code chunk do? Run it, analyze the result, and articulate in words what <code><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange()</a></code> does.</p>
+<p>Summarize to find the mean sales tax in each type of state:</p>
 <div class="cell">
-<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange</a></span><span class="op">(</span><span class="va">var_2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 12 × 3
-   var_1 var_2  var_3 
-   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; 
- 1    20 Burger Apple 
- 2    50 Burger Pear  
- 3    60 Burger Banana
- 4    70 Burger Apple 
- 5    90 Burger Pear  
- 6   120 Burger Banana
- 7    10 Pizza  Apple 
- 8    30 Pizza  Pear  
- 9    40 Pizza  Banana
-10    80 Pizza  Apple 
-11   100 Pizza  Pear  
-12   110 Pizza  Banana</code></pre>
-</div>
-</div>
-<p>b. What does the following code chunk do? Run it, analyze the result, and articulate in words what <code><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by()</a></code> does. Also, comment on how it’s different from the <code><a href="https://dplyr.tidyverse.org/reference/arrange.html">arrange()</a></code> in part (a).</p>
-<div class="cell">
-<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 12 × 3
-# Groups:   var_2 [2]
-   var_1 var_2  var_3 
-   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt; 
- 1    10 Pizza  Apple 
- 2    20 Burger Apple 
- 3    30 Pizza  Pear  
- 4    40 Pizza  Banana
- 5    50 Burger Pear  
- 6    60 Burger Banana
- 7    70 Burger Apple 
- 8    80 Pizza  Apple 
- 9    90 Burger Pear  
-10   100 Pizza  Pear  
-11   110 Pizza  Banana
-12   120 Burger Banana</code></pre>
-</div>
-</div>
-<p>c. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does.</p>
-<div class="cell">
-<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales_taxes</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">swing_state</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_state_tax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">state_tax_rate</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 2
-  var_2  mean_var_1
-  &lt;chr&gt;       &lt;dbl&gt;
-1 Burger       68.3
-2 Pizza        61.7</code></pre>
+  swing_state mean_state_tax
+  &lt;chr&gt;                &lt;dbl&gt;
+1 Non-swing           0.0504
+2 Swing               0.0546</code></pre>
 </div>
 </div>
-<ol start="4" type="a">
-<li>Compare this behavior to the following code chunk. Run it, analyze the result, and articulate in words what the pipeline does, and how it’s behavior is different from part c.</li>
-</ol>
+</section><section id="sales-tax-in-coastal-states-case_when" class="level2"><h2 class="anchored" data-anchor-id="sales-tax-in-coastal-states-case_when">Sales tax in coastal states: <code>case_when</code>
+</h2>
+<p>Create new <code>coast</code> variable using <code>case_when</code>:</p>
 <div class="cell">
-<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">pacific_coast</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span><span class="st">"Alaska"</span>, <span class="st">"Washington"</span>, <span class="st">"Oregon"</span>, <span class="st">"California"</span>, <span class="st">"Hawaii"</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">atlantic_coast</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html">c</a></span><span class="op">(</span></span>
+<span>  <span class="st">"Connecticut"</span>, <span class="st">"Delaware"</span>, <span class="st">"Georgia"</span>, <span class="st">"Florida"</span>, <span class="st">"Maine"</span>, <span class="st">"Maryland"</span>, </span>
+<span>  <span class="st">"Massachusetts"</span>, <span class="st">"New Hampshire"</span>, <span class="st">"New Jersey"</span>, <span class="st">"New York"</span>, </span>
+<span>  <span class="st">"North Carolina"</span>, <span class="st">"Rhode Island"</span>, <span class="st">"South Carolina"</span>, <span class="st">"Virginia"</span></span>
+<span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">sales_taxes</span> <span class="op">&lt;-</span> <span class="va">sales_taxes</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    coast <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/case_when.html">case_when</a></span><span class="op">(</span></span>
+<span>      <span class="va">state</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">pacific_coast</span> <span class="op">~</span> <span class="st">"Pacific"</span>,</span>
+<span>      <span class="va">state</span> <span class="op"><a href="https://rdrr.io/r/base/match.html">%in%</a></span> <span class="va">atlantic_coast</span> <span class="op">~</span> <span class="st">"Atlantic"</span>,</span>
+<span>      .default <span class="op">=</span> <span class="st">"Neither"</span></span>
+<span>    <span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate</a></span><span class="op">(</span><span class="va">coast</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">sales_taxes</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 51 × 7
+   coast    swing_state state    state_tax_rate avg_local_tax_rate combined_rate
+   &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;             &lt;dbl&gt;              &lt;dbl&gt;         &lt;dbl&gt;
+ 1 Neither  Non-swing   Alabama          0.04               0.0529        0.0929
+ 2 Pacific  Non-swing   Alaska           0                  0.0182        0.0182
+ 3 Neither  Swing       Arizona          0.056              0.0278        0.0838
+ 4 Neither  Non-swing   Arkansas         0.065              0.0295        0.0945
+ 5 Pacific  Non-swing   Califor…         0.0725             0.016         0.0885
+ 6 Neither  Non-swing   Colorado         0.029              0.0491        0.0781
+ 7 Atlantic Non-swing   Connect…         0.0635             0             0.0635
+ 8 Atlantic Non-swing   Delaware         0                  0             0     
+ 9 Atlantic Non-swing   Florida          0.06               0.01          0.07  
+10 Atlantic Swing       Georgia          0.04               0.0338        0.0738
+# ℹ 41 more rows
+# ℹ 1 more variable: max_local_tax_rate &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>Summarize to find the mean sales tax in each type of state:</p>
+<div class="cell">
+<div class="sourceCode" id="cb13"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales_taxes</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">coast</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_state_tax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">state_tax_rate</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3 × 2
+  coast    mean_state_tax
+  &lt;chr&gt;             &lt;dbl&gt;
+1 Atlantic         0.0484
+2 Neither          0.0545
+3 Pacific          0.0355</code></pre>
+</div>
+</div>
+</section><section id="sales-tax-in-us-regions-joining" class="level2"><h2 class="anchored" data-anchor-id="sales-tax-in-us-regions-joining">Sales tax in US regions: joining</h2>
+<p>Join the sales tax data with region data and save the joined data frame as a new data frame, not overwriting either data frame that goes into the join.</p>
+<div class="cell">
+<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales_taxes_regions</span> <span class="op">&lt;-</span> <span class="va">sales_taxes</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate-joins.html">full_join</a></span><span class="op">(</span><span class="va">us_regions</span>, </span>
+<span>            by <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/join_by.html">join_by</a></span><span class="op">(</span><span class="va">state</span> <span class="op">==</span> <span class="va">state_name</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/relocate.html">relocate</a></span><span class="op">(</span><span class="va">region</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">sales_taxes_regions</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 51 × 8
+   region    coast    swing_state state       state_tax_rate avg_local_tax_rate
+   &lt;chr&gt;     &lt;chr&gt;    &lt;chr&gt;       &lt;chr&gt;                &lt;dbl&gt;              &lt;dbl&gt;
+ 1 South     Neither  Non-swing   Alabama             0.04               0.0529
+ 2 West      Pacific  Non-swing   Alaska              0                  0.0182
+ 3 West      Neither  Swing       Arizona             0.056              0.0278
+ 4 South     Neither  Non-swing   Arkansas            0.065              0.0295
+ 5 West      Pacific  Non-swing   California          0.0725             0.016 
+ 6 West      Neither  Non-swing   Colorado            0.029              0.0491
+ 7 Northeast Atlantic Non-swing   Connecticut         0.0635             0     
+ 8 South     Atlantic Non-swing   Delaware            0                  0     
+ 9 South     Atlantic Non-swing   Florida             0.06               0.01  
+10 South     Atlantic Swing       Georgia             0.04               0.0338
+# ℹ 41 more rows
+# ℹ 2 more variables: combined_rate &lt;dbl&gt;, max_local_tax_rate &lt;dbl&gt;</code></pre>
+</div>
+</div>
+<p>Calculate the average sales tax of states in each region. What is surprising in the output?</p>
+<div class="cell">
+<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales_taxes_regions</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">region</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_state_tax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">state_tax_rate</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 2
+  region    mean_state_tax
+  &lt;chr&gt;              &lt;dbl&gt;
+1 Midwest           0.0569
+2 Northeast         0.0530
+3 South             0.0523
+4 West              0.0416
+5 &lt;NA&gt;              0.06  </code></pre>
+</div>
+</div>
+<p>Identify the state with <code>NA</code> for region.</p>
+<div class="cell">
+<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales_taxes_regions</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html">filter</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/NA.html">is.na</a></span><span class="op">(</span><span class="va">region</span><span class="op">)</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">state</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
-  mean_var_1
-       &lt;dbl&gt;
-1         65</code></pre>
+  state               
+  &lt;chr&gt;               
+1 District of Columbia</code></pre>
 </div>
 </div>
-</section><section id="question-2" class="level3"><h3 class="anchored" data-anchor-id="question-2">Question 2</h3>
-<p>Grouping by two variables.</p>
-<p>a. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does. Then, comment on what the message says.</p>
+<p>Apply a fix for the <code>NA</code> in region, and calculate the mean sales taxes for regions again. Display the results in ascending order of mean sales tax.</p>
 <div class="cell">
-<div class="sourceCode" id="cb12"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span>, <span class="va">var_3</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>`summarise()` has grouped output by 'var_2'. You can override using the
-`.groups` argument.</code></pre>
-</div>
+<div class="sourceCode" id="cb21"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">sales_taxes_regions</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span></span>
+<span>    region <span class="op">=</span> <span class="fu"><a href="https://dplyr.tidyverse.org/reference/if_else.html">if_else</a></span><span class="op">(</span><span class="va">state</span> <span class="op">==</span> <span class="st">"District of Columbia"</span>, <span class="st">"Northeast"</span>, <span class="va">region</span><span class="op">)</span></span>
+<span>  <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">region</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_state_tax <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">state_tax_rate</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-# Groups:   var_2 [2]
-  var_2  var_3  mean_var_1
-  &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;
-1 Burger Apple          45
-2 Burger Banana         90
-3 Burger Pear           70
-4 Pizza  Apple          45
-5 Pizza  Banana         75
-6 Pizza  Pear           65</code></pre>
+<pre><code># A tibble: 4 × 2
+  region    mean_state_tax
+  &lt;chr&gt;              &lt;dbl&gt;
+1 Midwest           0.0569
+2 Northeast         0.0537
+3 South             0.0523
+4 West              0.0416</code></pre>
 </div>
 </div>
-<p>b. What does the following code chunk do? Run it, analyze the result, and articulate in words what the pipeline does, especially mentioning what the <code>.groups</code> argument does. How is the output different from the one in part (a)?</p>
-<div class="cell">
-<div class="sourceCode" id="cb15"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span>, <span class="va">var_3</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-  var_2  var_3  mean_var_1
-  &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;
-1 Burger Apple          45
-2 Burger Banana         90
-3 Burger Pear           70
-4 Pizza  Apple          45
-5 Pizza  Banana         75
-6 Pizza  Pear           65</code></pre>
-</div>
-</div>
-<p>c. What do the following pipelines do? Run both, analyze their results, and articulate in words what each pipeline does. How are the outputs of the two pipelines different?</p>
-<div class="cell">
-<div class="sourceCode" id="cb17"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span>, <span class="va">var_3</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/summarise.html">summarize</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span>, .groups <span class="op">=</span> <span class="st">"drop"</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 3
-  var_2  var_3  mean_var_1
-  &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;
-1 Burger Apple          45
-2 Burger Banana         90
-3 Burger Pear           70
-4 Pizza  Apple          45
-5 Pizza  Banana         75
-6 Pizza  Pear           65</code></pre>
-</div>
-<div class="sourceCode" id="cb19"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">df</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/group_by.html">group_by</a></span><span class="op">(</span><span class="va">var_2</span>, <span class="va">var_3</span><span class="op">)</span> <span class="op">|&gt;</span></span>
-<span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/mutate.html">mutate</a></span><span class="op">(</span>mean_var_1 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/mean.html">mean</a></span><span class="op">(</span><span class="va">var_1</span><span class="op">)</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 12 × 4
-# Groups:   var_2, var_3 [6]
-   var_1 var_2  var_3  mean_var_1
-   &lt;dbl&gt; &lt;chr&gt;  &lt;chr&gt;       &lt;dbl&gt;
- 1    10 Pizza  Apple          45
- 2    20 Burger Apple          45
- 3    30 Pizza  Pear           65
- 4    40 Pizza  Banana         75
- 5    50 Burger Pear           70
- 6    60 Burger Banana         90
- 7    70 Burger Apple          45
- 8    80 Pizza  Apple          45
- 9    90 Burger Pear           70
-10   100 Pizza  Pear           65
-11   110 Pizza  Banana         75
-12   120 Burger Banana         90</code></pre>
-</div>
-</div>
-<div class="render-commit-push">
-<p>Render, commit, and push your changes to GitHub with the commit message “Added answers for Questions 1 and 2”.</p>
-<p>Make sure to commit and push all changed files so that your Git pane is empty afterward.</p>
-</div>
+</section><section id="render-commit-and-push" class="level2"><h2 class="anchored" data-anchor-id="render-commit-and-push">Render, commit, and push</h2>
+<ol type="1">
+<li><p>Render your Quarto document.</p></li>
+<li><p>Go to the Git pane and check the box next to each file listed, i.e., stage your changes. Commit your staged changes using a simple and informative message.</p></li>
+<li><p>Click on push (the green arrow) to push your changes to your application exercise repo on GitHub.</p></li>
+<li><p>Go to your repo on GitHub and confirm that you can see the updated files. Once your updated files are in your repo on GitHub, you’re good to go!</p></li>
+</ol>
 
 
-</section></section></section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -1045,7 +979,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>   
     <div class="nav-footer-center">
       &nbsp;
-    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/edit/main/lab/test.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
+    <div class="toc-actions d-sm-block d-md-none"><ul><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/edit/main/ae/ae-06-taxes-join.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></div>
     <div class="nav-footer-right">
 <p>This page is built with <a href="https://quarto.org/">Quarto</a>.</p>
 </div>
