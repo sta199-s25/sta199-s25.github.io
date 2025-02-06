@@ -6,8 +6,6 @@ format: revealjs
 auto-stretch: false
 ---
 
-<!--# hello -->
-
 <!-- begin: ae definition -->
 
 ```{r}
@@ -21,14 +19,18 @@ todays_ae <- "ae-07-durham-climate-factors"
 
 ## While you wait... {.smaller}
 
-:::::: columns
+::: columns
 ::: {.column width="35%"}
-{{< qrcode https://forms.gle/J9Giy9sytk4KxVFo8 >}}
+{{< qrcode https://forms.gle/wgMtTHbAynjiX2bp6 >}}
 
-<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9frzLIsVXJdrKrWxetCXtffs8C2sGv-UNFD3egfRNUtA3Pw/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0x7gOZY04c9vzdyIdm-v_vCqL0oFaQI9-LWB8Dt3uf3TriQ/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">
+
+Loading…
+
+</iframe>
 :::
 
-:::: {.column width="65%"}
+::: {.column width="65%"}
 Prepare for today's application exercise: **`{r} todays_ae`**
 
 ::: appex
@@ -40,31 +42,10 @@ Prepare for today's application exercise: **`{r} todays_ae`**
 
 -   Wait till the you're prompted to work on the application exercise during class before editing the file.
 :::
-::::
-::::::
-
-## Lab 1 feedback {.smaller}
-
-::: incremental
--   Describing a distribution:
-    -   shape (modality and skewness)
-    -   center (with calculated value or estimated value or range)
-    -   spread (with calculated value or estimated value or range)
-    -   unusual observations (and, where possible, explanation for why they're unusual)
--   Describing a relationship:
-    -   direction (positive or negative)
-    -   form (linear or non-linear)
-    -   strength
-    -   unusual observations (and, where possible, explanation for why they're unusual)
+:::
 :::
 
-## Lab 1 commits
-
-![](images/08/lab-1-commits.png)
-
 ## Regrade request policy {.smaller}
-
-<https://sta199-f24.github.io/course-syllabus.html#regrade-requests>
 
 ::: incremental
 -   Considered for errors in grade calculation or if a correct answer was mistakenly marked as incorrect
@@ -137,8 +118,8 @@ survey |>
 
 ## Logical & character
 
-::::: columns
-::: column
+::: columns
+::: {.column width="49%"}
 **logical** - Boolean values `TRUE` and `FALSE`
 
 <br>
@@ -148,7 +129,7 @@ typeof(TRUE)
 ```
 :::
 
-::: {.column .fragment}
+::: {.column .fragment width="49%"}
 **character** - character strings
 
 <br> <br>
@@ -157,12 +138,12 @@ typeof(TRUE)
 typeof("First-year")
 ```
 :::
-:::::
+:::
 
 ## Double & integer
 
-::::: columns
-::: column
+::: columns
+::: {.column width="49%"}
 **double** - floating point numerical values (default numerical type)
 
 <br>
@@ -173,7 +154,7 @@ typeof(3)
 ```
 :::
 
-::: {.column .fragment}
+::: {.column .fragment width="49%"}
 **integer** - integer numerical values (indicated with an `L`)
 
 <br>
@@ -183,7 +164,7 @@ typeof(3L)
 typeof(1:3)
 ```
 :::
-:::::
+:::
 
 ## Concatenation {.smaller}
 
@@ -217,8 +198,8 @@ c(c("hi", "hello"), c("bye", "jello"))
 with intention...
 :::
 
-::::: columns
-::: column
+::: columns
+::: {.column width="49%"}
 ```{r}
 x <- 1:3
 x
@@ -226,14 +207,14 @@ typeof(x)
 ```
 :::
 
-::: {.column .fragment}
+::: {.column .fragment width="49%"}
 ```{r}
 y <- as.character(x)
 y
 typeof(y)
 ```
 :::
-:::::
+:::
 
 ## Converting between types
 
@@ -241,8 +222,8 @@ typeof(y)
 with intention...
 :::
 
-::::: columns
-::: column
+::: columns
+::: {.column width="49%"}
 ```{r}
 x <- c(TRUE, FALSE)
 x
@@ -250,14 +231,14 @@ typeof(x)
 ```
 :::
 
-::: {.column .fragment}
+::: {.column .fragment width="49%"}
 ```{r}
 y <- as.numeric(x)
 y
 typeof(y)
 ```
 :::
-:::::
+:::
 
 ## Converting between types
 
@@ -297,19 +278,19 @@ c(2L, "two")
 
 ## Explicit vs. implicit coercion
 
-::::: columns
-::: column
+::: columns
+::: {.column width="49%"}
 **Explicit coercion:**
 
 When you call a function like `as.logical()`, `as.numeric()`, `as.integer()`, `as.double()`, or `as.character()`.
 :::
 
-::: {.column .fragment}
+::: {.column .fragment width="49%"}
 **Implicit coercion:**
 
 Happens when you use a vector in a specific context that expects a certain type of vector.
 :::
-:::::
+:::
 
 # Data classes
 
@@ -336,7 +317,7 @@ class_years <- factor(
 class_years
 ```
 
-::::: columns
+::: columns
 ::: {.column .fragment}
 ```{r}
 typeof(class_years)
@@ -348,7 +329,7 @@ typeof(class_years)
 class(class_years)
 ```
 :::
-:::::
+:::
 
 ## More on factors
 
@@ -398,7 +379,7 @@ df <- data.frame(x = 1:2, y = 3:4)
 df
 ```
 
-::::: columns
+::: columns
 ::: column
 ```{r}
 typeof(df)
@@ -410,7 +391,7 @@ typeof(df)
 class(df)
 ```
 :::
-:::::
+:::
 
 ## Lists {.smaller}
 
