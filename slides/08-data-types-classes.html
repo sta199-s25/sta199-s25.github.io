@@ -422,7 +422,7 @@ John Zito
 (function() {
   var script = document.currentScript;
   var qrcode = script.previousElementSibling;
-  qrcode.qrcode = new QRCode(qrcode, {"height":128,"colorLight":"#ffffff","text":"https://forms.gle/wgMtTHbAynjiX2bp6","width":128,"colorDark":"#000000"});
+  qrcode.qrcode = new QRCode(qrcode, {"height":128,"text":"https://forms.gle/wgMtTHbAynjiX2bp6","colorLight":"#ffffff","colorDark":"#000000","width":128});
   script.remove();
 })();
 </script><iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf0x7gOZY04c9vzdyIdm-v_vCqL0oFaQI9-LWB8Dt3uf3TriQ/viewform?embedded=true" width="350" height="400" frameborder="0" marginheight="0" marginwidth="0">
@@ -462,20 +462,20 @@ John Zito
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 61 × 3
-   Timestamp     How many classes do you have on Tuesdays…¹ `What year are you?`
-   &lt;chr&gt;         &lt;chr&gt;                                      &lt;chr&gt;               
- 1 9/23/24 19:57 2                                          Sophomore           
- 2 9/23/24 19:58 3                                          First-year          
- 3 9/23/24 20:06 2                                          Sophomore           
- 4 9/23/24 20:09 2                                          Sophomore           
- 5 9/23/24 21:48 0                                          Senior              
- 6 9/24/24 9:44  2                                          First-year          
- 7 9/24/24 10:15 2                                          Senior              
- 8 9/24/24 10:50 2                                          Sophomore           
- 9 9/24/24 10:54 3                                          First-year          
-10 9/24/24 11:08 2                                          Senior              
-# ℹ 51 more rows
+<pre><code># A tibble: 209 × 3
+   Timestamp         How many classes do you have on Tues…¹ `What year are you?`
+   &lt;chr&gt;             &lt;chr&gt;                                  &lt;chr&gt;               
+ 1 2/6/2025 11:33:57 3                                      Sophomore           
+ 2 2/6/2025 11:37:39 3                                      First-year          
+ 3 2/6/2025 11:40:55 2                                      Senior              
+ 4 2/6/2025 11:42:05 3                                      First-year          
+ 5 2/6/2025 11:42:46 3                                      Senior              
+ 6 2/6/2025 11:43:28 3                                      Senior              
+ 7 2/6/2025 11:44:41 3                                      First-year          
+ 8 2/6/2025 11:44:49 3                                      First-year          
+ 9 2/6/2025 11:44:51 2                                      Sophomore           
+10 2/6/2025 11:44:51 3                                      Sophomore           
+# ℹ 199 more rows
 # ℹ abbreviated name: ¹​`How many classes do you have on Tuesdays?`</code></pre>
 </div>
 </div>
@@ -496,26 +496,84 @@ John Zito
 <div class="cell">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 61 × 3
-   Timestamp     tue_classes year      
-   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;     
- 1 9/23/24 19:57 2           Sophomore 
- 2 9/23/24 19:58 3           First-year
- 3 9/23/24 20:06 2           Sophomore 
- 4 9/23/24 20:09 2           Sophomore 
- 5 9/23/24 21:48 0           Senior    
- 6 9/24/24 9:44  2           First-year
- 7 9/24/24 10:15 2           Senior    
- 8 9/24/24 10:50 2           Sophomore 
- 9 9/24/24 10:54 3           First-year
-10 9/24/24 11:08 2           Senior    
-# ℹ 51 more rows</code></pre>
+<pre><code># A tibble: 209 × 3
+   Timestamp         tue_classes year      
+   &lt;chr&gt;             &lt;chr&gt;       &lt;chr&gt;     
+ 1 2/6/2025 11:33:57 3           Sophomore 
+ 2 2/6/2025 11:37:39 3           First-year
+ 3 2/6/2025 11:40:55 2           Senior    
+ 4 2/6/2025 11:42:05 3           First-year
+ 5 2/6/2025 11:42:46 3           Senior    
+ 6 2/6/2025 11:43:28 3           Senior    
+ 7 2/6/2025 11:44:41 3           First-year
+ 8 2/6/2025 11:44:49 3           First-year
+ 9 2/6/2025 11:44:51 2           Sophomore 
+10 2/6/2025 11:44:51 3           Sophomore 
+# ℹ 199 more rows</code></pre>
 </div>
 </div>
-</section><section id="lets-attempt-to-clean-it-up" class="slide level2 scrollable"><h2>Let’s (attempt to) clean it up…</h2>
+</section><section id="variable-types-1" class="slide level2"><h2>Variable types</h2>
+<div class="question">
+<p>Why isn’t the tue_classes column numeric?</p>
+</div>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>survey <span class="sc">|&gt;</span></span>
-<span id="cb6-2"><a></a>  ___</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb6-2"><a></a>  <span class="fu">count</span>(tue_classes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 13 × 2
+   tue_classes                  n
+   &lt;chr&gt;                    &lt;int&gt;
+ 1 1                           10
+ 2 2                           53
+ 3 2 -3                         1
+ 4 3                          104
+ 5 3 classes                    1
+ 6 4                           28
+ 7 5                            3
+ 8 Four                         1
+ 9 TWO MANY                     1
+10 Three                        2
+11 Two                          3
+12 Two plus a chemistry lab     1
+13 three                        1</code></pre>
+</div>
+</div>
+</section><section id="lets-clean-it-up" class="slide level2 scrollable"><h2>Let’s clean it up</h2>
+<p>It’s a huge pain in the rear:</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>survey <span class="ot">&lt;-</span> survey <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb8-3"><a></a>    <span class="at">tue_classes =</span> <span class="fu">case_when</span>(</span>
+<span id="cb8-4"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"2 -3"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
+<span id="cb8-5"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"3 classes"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
+<span id="cb8-6"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Four"</span> <span class="sc">~</span> <span class="st">"4"</span>,</span>
+<span id="cb8-7"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"TWO MANY"</span> <span class="sc">~</span> <span class="st">"2"</span>,</span>
+<span id="cb8-8"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Three"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
+<span id="cb8-9"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Two"</span> <span class="sc">~</span> <span class="st">"2"</span>,</span>
+<span id="cb8-10"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"Two plus a chemistry lab"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
+<span id="cb8-11"><a></a>      tue_classes <span class="sc">==</span> <span class="st">"three"</span> <span class="sc">~</span> <span class="st">"3"</span>,</span>
+<span id="cb8-12"><a></a>      <span class="at">.default =</span> tue_classes</span>
+<span id="cb8-13"><a></a>    ),</span>
+<span id="cb8-14"><a></a>    <span class="at">tue_classes =</span> <span class="fu">as.numeric</span>(tue_classes)</span>
+<span id="cb8-15"><a></a>  )</span>
+<span id="cb8-16"><a></a></span>
+<span id="cb8-17"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 209 × 3
+   Timestamp         tue_classes year      
+   &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;     
+ 1 2/6/2025 11:33:57           3 Sophomore 
+ 2 2/6/2025 11:37:39           3 First-year
+ 3 2/6/2025 11:40:55           2 Senior    
+ 4 2/6/2025 11:42:05           3 First-year
+ 5 2/6/2025 11:42:46           3 Senior    
+ 6 2/6/2025 11:43:28           3 Senior    
+ 7 2/6/2025 11:44:41           3 First-year
+ 8 2/6/2025 11:44:49           3 First-year
+ 9 2/6/2025 11:44:51           2 Sophomore 
+10 2/6/2025 11:44:51           3 Sophomore 
+# ℹ 199 more rows</code></pre>
+</div>
 </div>
 </section></section><section><section id="data-types-1" class="title-slide slide level1 center"><h1>Data types</h1>
 
@@ -532,7 +590,7 @@ John Zito
 <p><strong>logical</strong> - Boolean values <code>TRUE</code> and <code>FALSE</code></p>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">typeof</span>(<span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a><span class="fu">typeof</span>(<span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "logical"</code></pre>
 </div>
@@ -542,7 +600,7 @@ John Zito
 <p><strong>character</strong> - character strings</p>
 <p><br><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">typeof</span>(<span class="st">"First-year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">typeof</span>(<span class="st">"First-year"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
@@ -555,11 +613,11 @@ John Zito
 <p><strong>double</strong> - floating point numerical values (default numerical type)</p>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">typeof</span>(<span class="fl">2.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a><span class="fu">typeof</span>(<span class="fl">2.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "double"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="fu">typeof</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a><span class="fu">typeof</span>(<span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "double"</code></pre>
 </div>
@@ -569,11 +627,11 @@ John Zito
 <p><strong>integer</strong> - integer numerical values (indicated with an <code>L</code>)</p>
 <p><br></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a><span class="fu">typeof</span>(<span class="dv">3</span>L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">typeof</span>(<span class="dv">3</span>L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a><span class="fu">typeof</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">typeof</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer"</code></pre>
 </div>
@@ -586,7 +644,7 @@ John Zito
 <li>Numeric vector:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3</code></pre>
 </div>
@@ -596,7 +654,7 @@ John Zito
 <li>Character vector:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="fu">c</span>(<span class="st">"Hello"</span>, <span class="st">"World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">c</span>(<span class="st">"Hello"</span>, <span class="st">"World!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Hello"  "World!"</code></pre>
 </div>
@@ -607,7 +665,7 @@ John Zito
 <li>Vector made of vectors:</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a><span class="fu">c</span>(<span class="fu">c</span>(<span class="st">"hi"</span>, <span class="st">"hello"</span>), <span class="fu">c</span>(<span class="st">"bye"</span>, <span class="st">"jello"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a><span class="fu">c</span>(<span class="fu">c</span>(<span class="st">"hi"</span>, <span class="st">"hello"</span>), <span class="fu">c</span>(<span class="st">"bye"</span>, <span class="st">"jello"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "hi"    "hello" "bye"   "jello"</code></pre>
 </div>
@@ -620,12 +678,12 @@ John Zito
 <div class="columns">
 <div class="column" style="width:49%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
-<span id="cb25-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span></span>
+<span id="cb28-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 2 3</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer"</code></pre>
 </div>
@@ -633,12 +691,12 @@ John Zito
 </div>
 <div class="column fragment" style="width:49%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">as.character</span>(x)</span>
-<span id="cb29-2"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">as.character</span>(x)</span>
+<span id="cb32-2"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "1" "2" "3"</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">typeof</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a><span class="fu">typeof</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "character"</code></pre>
 </div>
@@ -652,12 +710,12 @@ John Zito
 <div class="columns">
 <div class="column" style="width:49%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb33-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
+<span id="cb36-2"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  TRUE FALSE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a><span class="fu">typeof</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "logical"</code></pre>
 </div>
@@ -665,12 +723,12 @@ John Zito
 </div>
 <div class="column fragment" style="width:49%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb37-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(x)</span>
-<span id="cb37-2"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(x)</span>
+<span id="cb40-2"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 0</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb39-1"><a></a><span class="fu">typeof</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a><span class="fu">typeof</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "double"</code></pre>
 </div>
@@ -682,7 +740,7 @@ John Zito
 <p>without intention…</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb41-1"><a></a><span class="fu">c</span>(<span class="dv">2</span>, <span class="st">"Just this one!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a></a><span class="fu">c</span>(<span class="dv">2</span>, <span class="st">"Just this one!"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2"              "Just this one!"</code></pre>
 </div>
@@ -695,14 +753,14 @@ John Zito
 <p>without intention…</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb43"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb43-1"><a></a><span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="dv">3</span>L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a></a><span class="fu">c</span>(<span class="cn">FALSE</span>, <span class="dv">3</span>L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0 3</code></pre>
 </div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb45"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a></a><span class="fu">c</span>(<span class="fl">1.2</span>, <span class="dv">3</span>L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a></a><span class="fu">c</span>(<span class="fl">1.2</span>, <span class="dv">3</span>L)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1.2 3.0</code></pre>
 </div>
@@ -710,7 +768,7 @@ John Zito
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb47"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a></a><span class="fu">c</span>(<span class="dv">2</span>L, <span class="st">"two"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a></a><span class="fu">c</span>(<span class="dv">2</span>L, <span class="st">"two"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2"   "two"</code></pre>
 </div>
@@ -746,12 +804,12 @@ John Zito
 </section><section id="factors" class="slide level2 smaller"><h2>Factors</h2>
 <p>R uses factors to handle categorical variables, variables that have a fixed and known set of possible values</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb49"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a></a>class_years <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
-<span id="cb49-2"><a></a>  <span class="fu">c</span>(</span>
-<span id="cb49-3"><a></a>    <span class="st">"First-year"</span>, <span class="st">"Sophomore"</span>, <span class="st">"Sophomore"</span>, <span class="st">"Senior"</span>, <span class="st">"Junior"</span></span>
-<span id="cb49-4"><a></a>    )</span>
-<span id="cb49-5"><a></a>  )</span>
-<span id="cb49-6"><a></a>class_years</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a></a>class_years <span class="ot">&lt;-</span> <span class="fu">factor</span>(</span>
+<span id="cb52-2"><a></a>  <span class="fu">c</span>(</span>
+<span id="cb52-3"><a></a>    <span class="st">"First-year"</span>, <span class="st">"Sophomore"</span>, <span class="st">"Sophomore"</span>, <span class="st">"Senior"</span>, <span class="st">"Junior"</span></span>
+<span id="cb52-4"><a></a>    )</span>
+<span id="cb52-5"><a></a>  )</span>
+<span id="cb52-6"><a></a>class_years</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] First-year Sophomore  Sophomore  Senior     Junior    
 Levels: First-year Junior Senior Sophomore</code></pre>
@@ -760,7 +818,7 @@ Levels: First-year Junior Senior Sophomore</code></pre>
 <div class="columns">
 <div class="column fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb51"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb51-1"><a></a><span class="fu">typeof</span>(class_years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a></a><span class="fu">typeof</span>(class_years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "integer"</code></pre>
 </div>
@@ -768,7 +826,7 @@ Levels: First-year Junior Senior Sophomore</code></pre>
 </div>
 <div class="column fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb53"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb53-1"><a></a><span class="fu">class</span>(class_years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a></a><span class="fu">class</span>(class_years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "factor"</code></pre>
 </div>
@@ -778,33 +836,33 @@ Levels: First-year Junior Senior Sophomore</code></pre>
 </section><section id="more-on-factors" class="slide level2"><h2>More on factors</h2>
 <p>We can think of factors like character (level labels) and an integer (level numbers) glued together</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb55"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb55-1"><a></a><span class="fu">glimpse</span>(class_years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a></a><span class="fu">glimpse</span>(class_years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code> Factor w/ 4 levels "First-year","Junior",..: 1 4 4 3 2</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb57"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb57-1"><a></a><span class="fu">as.integer</span>(class_years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a></a><span class="fu">as.integer</span>(class_years)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 4 4 3 2</code></pre>
 </div>
 </div>
 </section><section id="dates" class="slide level2"><h2>Dates</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb59"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb59-1"><a></a>today <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2024-09-24"</span>)</span>
-<span id="cb59-2"><a></a>today</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a></a>today <span class="ot">&lt;-</span> <span class="fu">as.Date</span>(<span class="st">"2024-09-24"</span>)</span>
+<span id="cb62-2"><a></a>today</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "2024-09-24"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb61"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb61-1"><a></a><span class="fu">typeof</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a></a><span class="fu">typeof</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "double"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb63"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb63-1"><a></a><span class="fu">class</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a></a><span class="fu">class</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Date"</code></pre>
 </div>
@@ -812,13 +870,13 @@ Levels: First-year Junior Senior Sophomore</code></pre>
 </section><section id="more-on-dates" class="slide level2"><h2>More on dates</h2>
 <p>We can think of dates like an integer (the number of days since the origin, 1 Jan 1970) and an integer (the origin) glued together</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb65"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb65-1"><a></a><span class="fu">as.integer</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a></a><span class="fu">as.integer</span>(today)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 19990</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a></a><span class="fu">as.integer</span>(today) <span class="sc">/</span> <span class="dv">365</span> <span class="co"># roughly 55 yrs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a></a><span class="fu">as.integer</span>(today) <span class="sc">/</span> <span class="dv">365</span> <span class="co"># roughly 55 yrs</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 54.76712</code></pre>
 </div>
@@ -826,8 +884,8 @@ Levels: First-year Junior Senior Sophomore</code></pre>
 </section><section id="data-frames" class="slide level2"><h2>Data frames</h2>
 <p>We can think of data frames like like vectors of equal length glued together</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">y =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>)</span>
-<span id="cb69-2"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">2</span>, <span class="at">y =</span> <span class="dv">3</span><span class="sc">:</span><span class="dv">4</span>)</span>
+<span id="cb72-2"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  x y
 1 1 3
@@ -837,14 +895,14 @@ Levels: First-year Junior Senior Sophomore</code></pre>
 <div class="columns">
 <div class="column">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a></a><span class="fu">typeof</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a></a><span class="fu">typeof</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "list"</code></pre>
 </div>
 </div>
 </div><div class="column">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a></a><span class="fu">class</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a></a><span class="fu">class</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "data.frame"</code></pre>
 </div>
@@ -854,12 +912,12 @@ Levels: First-year Junior Senior Sophomore</code></pre>
 </section><section id="lists" class="slide level2 smaller"><h2>Lists</h2>
 <p>Lists are a generic vector container; vectors of any type can go in them</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb75" data-code-line-numbers="|2|3|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
-<span id="cb75-2"><a></a>  <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
-<span id="cb75-3"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"hi"</span>, <span class="st">"hello"</span>, <span class="st">"jello"</span>),</span>
-<span id="cb75-4"><a></a>  <span class="at">z =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
-<span id="cb75-5"><a></a>)</span>
-<span id="cb75-6"><a></a>l</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb78" data-code-line-numbers="|2|3|4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb78-1"><a></a>l <span class="ot">&lt;-</span> <span class="fu">list</span>(</span>
+<span id="cb78-2"><a></a>  <span class="at">x =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>,</span>
+<span id="cb78-3"><a></a>  <span class="at">y =</span> <span class="fu">c</span>(<span class="st">"hi"</span>, <span class="st">"hello"</span>, <span class="st">"jello"</span>),</span>
+<span id="cb78-4"><a></a>  <span class="at">z =</span> <span class="fu">c</span>(<span class="cn">TRUE</span>, <span class="cn">FALSE</span>)</span>
+<span id="cb78-5"><a></a>)</span>
+<span id="cb78-6"><a></a>l</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>$x
 [1] 1 2 3 4
@@ -876,7 +934,7 @@ $z
 <li>A data frame is a special list containing vectors of equal length</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb77"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb77-1"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb80"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb80-1"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>  x y
 1 1 3
@@ -887,8 +945,8 @@ $z
 <li>When we use the <code>pull()</code> function, we extract a vector from the data frame</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb79"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb79-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb79-2"><a></a>  <span class="fu">pull</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb82"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb82-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb82-2"><a></a>  <span class="fu">pull</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 3 4</code></pre>
 </div>
@@ -897,39 +955,49 @@ $z
 
 </section><section id="read-data-in-as-character-strings" class="slide level2"><h2>Read data in as character strings</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb81"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb81-1"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a></a>survey</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 61 × 3
-   Timestamp     tue_classes year      
-   &lt;chr&gt;         &lt;chr&gt;       &lt;chr&gt;     
- 1 9/23/24 19:57 2           Sophomore 
- 2 9/23/24 19:58 3           First-year
- 3 9/23/24 20:06 2           Sophomore 
- 4 9/23/24 20:09 2           Sophomore 
- 5 9/23/24 21:48 0           Senior    
- 6 9/24/24 9:44  2           First-year
- 7 9/24/24 10:15 2           Senior    
- 8 9/24/24 10:50 2           Sophomore 
- 9 9/24/24 10:54 3           First-year
-10 9/24/24 11:08 2           Senior    
-# ℹ 51 more rows</code></pre>
+<pre><code># A tibble: 209 × 3
+   Timestamp         tue_classes year      
+   &lt;chr&gt;                   &lt;dbl&gt; &lt;chr&gt;     
+ 1 2/6/2025 11:33:57           3 Sophomore 
+ 2 2/6/2025 11:37:39           3 First-year
+ 3 2/6/2025 11:40:55           2 Senior    
+ 4 2/6/2025 11:42:05           3 First-year
+ 5 2/6/2025 11:42:46           3 Senior    
+ 6 2/6/2025 11:43:28           3 Senior    
+ 7 2/6/2025 11:44:41           3 First-year
+ 8 2/6/2025 11:44:49           3 First-year
+ 9 2/6/2025 11:44:51           2 Sophomore 
+10 2/6/2025 11:44:51           3 Sophomore 
+# ℹ 199 more rows</code></pre>
 </div>
 </div>
 </section><section id="but-coerce-when-plotting" class="slide level2"><h2>But coerce when plotting</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb83"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb83-1"><a></a><span class="fu">ggplot</span>(survey, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
-<span id="cb83-2"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb86"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb86-1"><a></a><span class="fu">ggplot</span>(survey, <span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
+<span id="cb86-2"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="08-data-types-classes_files/figure-revealjs/unnamed-chunk-39-1.png" style="width:100.0%"></p>
+<figure><p><img data-src="08-data-types-classes_files/figure-revealjs/unnamed-chunk-40-1.png" style="width:100.0%"></p>
 </figure>
 </div>
 </div>
 </div>
 </section><section id="use-forcats-to-reorder-levels" class="slide level2 scrollable"><h2>Use forcats to reorder levels</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb84"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb84-1"><a></a>survey <span class="sc">|&gt;</span></span>
-<span id="cb84-2"><a></a>  ___</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb87"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb87-1"><a></a>survey <span class="sc">|&gt;</span></span>
+<span id="cb87-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb87-3"><a></a>    <span class="at">year =</span> <span class="fu">fct_relevel</span>(year, <span class="st">"First-year"</span>, <span class="st">"Sophomore"</span>, <span class="st">"Junior"</span>, <span class="st">"Senior"</span>)</span>
+<span id="cb87-4"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb87-5"><a></a>  <span class="fu">ggplot</span>(<span class="at">mapping =</span> <span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
+<span id="cb87-6"><a></a>  <span class="fu">geom_bar</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure><p><img data-src="08-data-types-classes_files/figure-revealjs/unnamed-chunk-41-1.png" style="width:100.0%"></p>
+</figure>
+</div>
+</div>
 </div>
 </section><section id="a-peek-into-forcats" class="slide level2 smaller"><h2>A peek into forcats</h2>
 <p>Reordering levels by:</p>
