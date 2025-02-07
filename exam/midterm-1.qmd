@@ -1,0 +1,12 @@
+---
+title: "Extra Practice for Midterm 1"
+---
+
+Midterm 1 begins Thursday February 20. During our usual class meeting that day, you will sit for the in-class portion of the exam. Then you have from 1:00 PM Thursday Feb 20 to 8:30 AM Monday Feb 24 to complete the take-home portion of the exam. If you seek extra practice to prepare for Midterm 1, here are four things you can do:
+
+- **Correct old labs**: look back at old labs and fix anything you lost points on;
+- **Finish old AEs**: revisit old AEs and complete the tasks we didn't get to in lecture (solutions are posted);
+- **Watch "Code along" videos**: search the course schedule for the videos with "Code along" in the title and...code along! [This repo](https://github.com/sta199-s25/code-alongs) has the files;
+- **Work textbook problems**: we have invoked IMS Chs. 1, 4, 5, 6. There are exercises at the end of each chapter, and the back of the book includes solutions for the odd-numbered exercises.
+
+Beyond that, we have compiled below a set of practice problems that you can work. Solutions will be released on **Tuesday February 18 at 1:00 PM**. 
