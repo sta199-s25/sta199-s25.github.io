@@ -97,7 +97,6 @@ Starting with this lab, you are expected to pay attention to [code smell](https:
 
 ## Part 1 - Inflation in the US
 
-
 The OECD defines inflation as follows:
 
 > Inflation is a rise in the general level of prices of goods and services that households acquire for the purpose of consumption in an economy over a period of time.
@@ -106,8 +105,7 @@ The OECD defines inflation as follows:
 >
 > Source: [OECD CPI FAQ](https://www.oecd.org/sdd/prices-ppp/consumerpriceindices-frequentlyaskedquestionsfaqs.htm#1)
 
-CPI is broken down into 12 expenditures such as food, housing, health, etc.
-Your goal in this part is to create a time series plot of annual inflation for the US.
+CPI is broken down into 12 expenditures such as food, housing, health, etc. Your goal in this part is to create a time series plot of annual inflation for the US.
 
 The data you will need to create this visualization is spread across two files:
 
@@ -125,47 +123,29 @@ cpi_expenditures <- read_csv("data/cpi-expenditures.csv")
 
 ### Question 1
 
-a\.
-How many columns and how many rows does the `us_inflation` dataset have?
-What are the variables in it?
-Which years do these data span?
-Write a brief (1-2 sentences) narrative summarizing this information.
+a\. How many columns and how many rows does the `us_inflation` dataset have? What are the variables in it? Which years do these data span? Write a brief (1-2 sentences) narrative summarizing this information.
 
-b\.
-How many columns and how many rows does the `cpi_expenditures` dataset have?
-What are the variables in it?
-Write a brief (1-2 sentences) narrative summarizing this information.
+b\. How many columns and how many rows does the `cpi_expenditures` dataset have? What are the variables in it? Write a brief (1-2 sentences) narrative summarizing this information.
 
-c\.
-Create a new dataset by joining the `us_inflation` dataset with the `cpi_expenditure_id` dataset.
+c\. Create a new dataset by joining the `us_inflation` dataset with the `cpi_expenditure_id` dataset.
 
 -   Determine which type of join is the most appropriate one and use that.
 
--   Note that the two datasets don't have a variable with a common name, though they do have variables that contain common information but are named differently.
-    You will need to first figure out which variables those are, and then define the `by` argument and use the `join_by()` function to indicate these variables to join the datasets by.
+-   Note that the two datasets don't have a variable with a common name, though they do have variables that contain common information but are named differently. You will need to first figure out which variables those are, and then define the `by` argument and use the `join_by()` function to indicate these variables to join the datasets by.
 
 -   Use a short but informative name for the joined dataset, and do not overwrite either of the datasets that go into creating it.
 
-Then, find the number of rows and columns of the resulting dataset and report the names of its columns.
-Add a brief (1-2 sentences) narrative summarizing this information.
+Then, find the number of rows and columns of the resulting dataset and report the names of its columns. Add a brief (1-2 sentences) narrative summarizing this information.
 
 ### Question 2
 
-a\.
-Create a vector called `expenditures_of_interest` which contains the descriptions or IDs of CPI expenditures you want to visualize.
-Your `expenditures_of_interest` should consist of no more than five expenditures.
-If you're using descriptions, make sure that the spelling of your expenditures matches how they appear in the dataset.
-Then, in 1-2 sentences, state why you chose these expenditures.
+a\. Create a vector called `expenditures_of_interest` which contains the descriptions or IDs of CPI expenditures you want to visualize. Your `expenditures_of_interest` should consist of no more than five expenditures. If you're using descriptions, make sure that the spelling of your expenditures matches how they appear in the dataset. Then, in 1-2 sentences, state why you chose these expenditures.
 
-b\.
-In a single pipeline, filter your joined dataset to include only the `expenditures_of_interest` from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you're starting with.
-Use a short but informative name.
-Then, in a new pipeline, find the `distinct()` expenditures in the data frame you created.
+b\. In a single pipeline, filter your joined dataset to include only the `expenditures_of_interest` from part (a), and save the resulting data frame with a new name so you (1) can refer to this data frame later in your analysis and (2) do not overwrite the data frame you're starting with. Use a short but informative name. Then, in a new pipeline, find the `distinct()` expenditures in the data frame you created.
 
 ### Question 3
 
-Using your data frame from the previous question, create a plot of annual inflation vs. year for these expenditures.
-Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of inflation rates in the US over the last decade.
+Using your data frame from the previous question, create a plot of annual inflation vs. year for these expenditures. Then, in a few sentences, describe the patterns you observe in the plot, particularly focusing on anything you find surprising or not surprising, based on your knowledge (or lack thereof) of inflation rates in the US over the last decade.
 
 -   Data should be represented with points as well as lines connecting the points for each expenditure.
 -   Each expenditure should be represented by a different color line and different color and shape points.
@@ -215,17 +195,17 @@ b\. Update your plot from part (a) further, this time using different shaped poi
 
 ### Question 5
 
-Your task is to make your plot from Question 7b as ugly and as ineffective as possible. Like, seriously. I want something that is apocalyptically heinous, loathsome, and rotten. Change colors, axes, fonts, themes, or anything else you can think of. You can also search online for other themes, fonts, etc. that you want to tweak. The sky is truly the limit. I want Sauron, Voldemort, Cruella de Vil, Count Dracula, and Regina George all nodding in approval at how horrendous your plot is.
+Your task is to make your plot from Question 4b as ugly and as ineffective as possible. Like, seriously. I want something that is apocalyptically heinous, loathsome, and rotten. Change colors, axes, fonts, themes, or anything else you can think of. You can also search online for other themes, fonts, etc. that you want to tweak. The sky is truly the limit. I want Sauron, Voldemort, Cruella de Vil, Count Dracula, and Regina George all nodding in approval at how horrendous your plot is.
 
 You must make at least 5 updates to the plot, and your answer must include:
 
--   a list of the at least 5 updates you've made to your plot from Question 7b, and
+-   a list of the at least 5 updates you've made to your plot from Question 4b, and
 
 -   1-2 sentence explanation of why the plot you created is *ugly* (to you, at least) and ineffective.
 
 Did I mention that the plot should be bad? A prize will be awarded for the worst submission, so get crackin'!
 
-:::callout-tip
+::: callout-tip
 The tidyverse documentation on [themes](https://ggplot2.tidyverse.org/reference/theme.html) may give you ideas about how you can alter the various features of the plot. Furthermore, the solutions for AEs [5](https://sta199-s25.github.io/ae/ae-05-majors-tidy.html) and [7](https://sta199-s25.github.io/ae/ae-07-durham-climate-factors.html) demo some of the advanced layers you can add to tweak colors and positioning and so on.
 :::
 
@@ -363,13 +343,13 @@ datasaurus_dozen
 
 ### Question 10
 
-a. In a single pipeline, calculate the mean of `x`, mean of `y`, standard deviation of `x`, standard deviation of `y`, and the correlation between `x` and `y` for each level of the `dataset` variable. Then, in 1-2 sentences, comment on how these summary statistics compare across groups (datasets).
+a.  In a single pipeline, calculate the mean of `x`, mean of `y`, standard deviation of `x`, standard deviation of `y`, and the correlation between `x` and `y` for each level of the `dataset` variable. Then, in 1-2 sentences, comment on how these summary statistics compare across groups (datasets).
 
 ::: callout-tip
 There are 13 groups but `tibble`s only print out 10 rows by default. To display all rows, add `print(n = 13)` as the last step of your pipeline.
 :::
 
-b. Create a scatterplot of `y` versus `x` and color and facet it by `dataset`. Then, in 1-2 sentences, how these plots compare across groups (datasets). How does your response in this question compare to your response to the previous question and what does this say about using visualizations and summary statistics when getting to know a dataset?
+b.  Create a scatterplot of `y` versus `x` and color and facet it by `dataset`. Then, in 1-2 sentences, how these plots compare across groups (datasets). How does your response in this question compare to your response to the previous question and what does this say about using visualizations and summary statistics when getting to know a dataset?
 
 ::: callout-tip
 When you both color and facet by the same variable, you'll end up with a redundant legend. Turn off the legend by adding `show.legend = FALSE` to the geom creating the legend.
@@ -390,10 +370,7 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
   geom_point()
 ```
 
-Add the following code cell options, one at a time, and set each to `false` and then to `true`.
-After each value, render your document and observe its effect.
-Ultimately, choose the values that are the most appropriate for this code cell.
-Based on the behaviors you observe, describe what each code cell option does.
+Add the following code cell options, one at a time, and set each to `false` and then to `true`. After each value, render your document and observe its effect. Ultimately, choose the values that are the most appropriate for this code cell. Based on the behaviors you observe, describe what each code cell option does.
 
 -   `echo`
 
@@ -410,19 +387,13 @@ ggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
   geom_point()
 ```
 
-Add `fig-width` and `fig-asp` as code chunk options.
-Try setting `fig-width` to values between 1 and 10.
-Try setting `fig-asp` to values between 0.1 and 1.
-Re-render the document after each value and observe its effect.
-Ultimately, choose values that make the plot look visually pleasing in the rendered document.
-Based on the behavior you observe, describe what each chunk option does.
+Add `fig-width` and `fig-asp` as code chunk options. Try setting `fig-width` to values between 1 and 10. Try setting `fig-asp` to values between 0.1 and 1. Re-render the document after each value and observe its effect. Ultimately, choose values that make the plot look visually pleasing in the rendered document. Based on the behavior you observe, describe what each chunk option does.
 
 ::: callout-tip
 Now that you've had more practice with figure sizing in Quarto documents, review all of the plots you made in this lab and adjust their widths and aspect rations to improve how they look in your rendered document.
 :::
 
-b\.
-You have the following code cell, but look carefully, it’s not exactly the same!
+b\. You have the following code cell, but look carefully, it’s not exactly the same!
 
 ```{r}
 #| eval: false
@@ -430,16 +401,12 @@ gplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) +
   geom_point()
 ```
 
-Add `error` as a code chunk option and set it to `false` and then set it to `true`.
-After each value, render your document and observe its effect.
-Ultimately, choose the value that allows you to render your document without altering the code.
-Based on the behavior you observe, describe what this code chunk option does.
+Add `error` as a code chunk option and set it to `false` and then set it to `true`. After each value, render your document and observe its effect. Ultimately, choose the value that allows you to render your document without altering the code. Based on the behavior you observe, describe what this code chunk option does.
 
 ::: callout-tip
 Reading [the documentation](https://quarto.org/docs/reference/formats/pdf.html#execution) might also be helpful.
 :::
 
 ::: render-commit-push
-Render, commit, and push your work.
-Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.
+Render, commit, and push your work. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.
 :::
