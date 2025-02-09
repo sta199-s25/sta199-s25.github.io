@@ -379,7 +379,7 @@ When you both color and facet by the same variable, you'll end up with a redunda
 Render, commit, and push your changes. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.
 :::
 
-## Part 5 - All about Quarto
+## Part 6 - All about Quarto
 
 ### Question 11
 
