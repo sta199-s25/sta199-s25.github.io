@@ -127,7 +127,7 @@ a\. How many columns and how many rows does the `us_inflation` dataset have? Wha
 
 b\. How many columns and how many rows does the `cpi_expenditures` dataset have? What are the variables in it? Write a brief (1-2 sentences) narrative summarizing this information.
 
-c\. Create a new dataset by joining the `us_inflation` dataset with the `cpi_expenditure_id` dataset.
+c\. Create a new dataset by joining the `us_inflation` dataset with the `cpi_expenditures` dataset.
 
 -   Determine which type of join is the most appropriate one and use that.
 
