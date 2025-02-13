@@ -1,0 +1,34 @@
+---
+title: Midterm 1 Batch B
+subtitle: Suggested answers
+execute:
+  echo: false
+---
+
+1.  
+
+2.  c - It's a value higher than the median for hourly but lower than the mean for salaried.
+
+3.  b - There is more variability around the mean compared to the hourly distribution.
+
+4.  a, b, e - Pie charts and waffle charts are for visualizing distributions of categorical data only. Scatterplots are for visualizing the relationship between two numerical variables.
+
+5.  c - `mutate()` is used to create or modify a variable.
+
+6.  a - `"Poor", "Successful", "High", "Top"`
+
+7.  b - Option 2. The plot in Option 1 shows the number of employees with a given performance rating for each salary type while the plot in Option 2 gives the proportion of employees with a given performance rating for each salary type. In order to assess the relationship between these variables (e.g., how much more likely is a Top rating among Salaried vs. Hourly workers), we need the proportions, not the counts.
+
+8.  There may be some `NA`s in these two variables that are not visible in the plot.
+
+9.  The proportions under Hourly would go in the Hourly bar, and those under Salaried would go in the Salaried bar.
+
+10. c - `filter(salary_type != "Hourly" & performance_rating == "Poor")` - There are 5 observations for **"not Hourly"** **"and"** Poor.
+
+11. a - `arrange()` - The result is arranged in increasing order of `annual_salary`, which is the default for `arrange()`.
+
+12. c, d, e, f.
+
+13. 
+
+14. 

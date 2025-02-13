@@ -224,13 +224,6 @@ How many rows will the resulting data frame have?
 
 a.  4 \hspace{1cm} b. 5 \hspace{1cm} c. 6 \hspace{1cm} d. 7 \hspace{1cm} e. 8
 
-:::: {.content-hidden when-format="pdf"}
-::: callout-tip
-## KEY
-
-6 rows
-:::
-::::
 
 ### Question 5
 
@@ -245,18 +238,6 @@ c.  `entity`, `code`, `continent`
 d.  `entity`, `population`, `code`, `continent`
 
 e.  `country`, `entity`, `population`, `code`, `continent`
-
-:::: {.content-hidden when-format="pdf"}
-::: callout-tip
-## KEY
-
-`country`, `population`, `code`, `continent`
-
-**Grading note:** Partial credit for `entity` instead of `country`.
-:::
-::::
-
-{{< pagebreak >}}
 
 ## Duke Forest houses
 
@@ -288,8 +269,6 @@ duke_forest |>
 \vspace{1cm}
 
 *See next page for questions on this dataset.*
-
-{{< pagebreak >}}
 
 The pipeline below produces a data frame with a fewer number of rows than `duke_forest`.
 
@@ -325,16 +304,6 @@ Which of the following goes in blanks (1) and (2)?
 | d\. |  `|`  | `>=`  |
 | e\. |  `&`  | `!=`  |
 
-:::: {.content-hidden when-format="pdf"}
-::: callout-tip
-## KEY
-
-\(1\) - `&`
-
-\(2\) - `<`
-:::
-::::
-
 ### Question 7
 
 Which function or functions go into blank (3)? **Select all that apply.**
@@ -349,15 +318,6 @@ d.  `summarize()`
 
 e.  `slice()`
 
-:::: {.content-hidden when-format="pdf"}
-::: callout-tip
-## KEY
-
-`mutate()`
-:::
-::::
-
-{{< pagebreak >}}
 
 ## Law & Order
 
@@ -423,36 +383,6 @@ ggplot(law_and_order, aes(x = season, y = av_rating, shape = title)) +
   theme(legend.key.height = unit(1.25, "cm"))
 ```
 
-:::: {.content-hidden when-format="pdf"}
-::: callout-tip
-## KEY
-
-```{r}
-#| echo: false
-#| fig-asp: 0.35
-#| fig-width: 7
-
-ggplot(law_and_order, aes(x = season, y = av_rating, shape = title)) +
-  geom_line(linewidth = 0.3) +
-  geom_point(size = 3) +
-  scale_shape_manual(
-    values = c("Law & Order: SVU" = "triangle", 
-               "Law & Order: Criminal Intent" = "diamond", 
-               "Law & Order: True Crime" = "square", 
-               "Law & Order" = "asterisk", 
-               "Law & Order: LA" = "circle")
-  ) +
-  labs(
-    x = "Season",
-    y = "Average rating",
-    shape = "Series title"
-  ) +
-  theme(legend.key.height = unit(1.5, "cm"))
-```
-:::
-::::
-
-{{< pagebreak >}}
 
 ### Question 9
 
@@ -490,17 +420,6 @@ d.  The **standard deviation** of average ratings of Law & Order: SVU seasons (B
 
 e.  The **standard deviation** of average ratings of Law & Order: SVU seasons (Blank 2) is **between** the other two standard deviations.
 
-:::: {.content-hidden when-format="pdf"}
-::: callout-tip
-## KEY
-
--   The **mean** of average ratings (Blank 1) of Law & Order seasons is **lower** than the other two means.
-
--   The **standard deviation** of average ratings of Law & Order: SVU seasons (Blank 2) is **higher** than the other two standard deviations.
-:::
-::::
-
-{{< pagebreak >}}
 
 ## Romance and comedy
 
@@ -555,40 +474,6 @@ c.  Mean average ratings of romance shows is left skewed.
 d.  Mean average ratings of comedy shows is right skewed.
 e.  There are more romance shows than comedy shows.
 
-:::: {.content-hidden when-format="pdf"}
-::: callout-tip
-## KEY
-
--   Mean average ratings of comedy are unimodal.
-
--   Mean average ratings of romance shows is left skewed.
-
--   There are more romance shows than comedy shows.
-:::
-::::
-
-{{< pagebreak >}} \## "I'll be Bach"
-
-The following data frame, `composers`, contains information on the numbers of symphonies, operas, and concertos composed by two famous composers: Beethoven and Mozart.
-
-```{r}
-#| label: composers-tibble
-#| echo: false
-composers <- tibble(
-  composer = c("Beethoven", "Beethoven", "Beethoven", "Mozart", "Mozart", "Mozart"), 
-  genre = c("symphony", "opera", "concerto", "symphony", "opera", "concerto"), 
-  count = c(9, 1, 9, 41, 22, 37)
-)
-```
-
-**Aside:** Classical music historians might disagree on the precise counts, but these values are widely accepted counts.
-
-```{r}
-composers
-```
-
-\vfill
-
 ## Data
 
 The data for the next few questions come from the Internet Movie Database (IMDB). Specifically, the data are a random sample of movies released between 1980 and 2020.
@@ -626,7 +511,6 @@ The name of the data frame used for this analysis is `movies`, and it contains t
 
 The first thirty rows of the `movies` data frame are shown in @tbl-data, with variable types suppressed (since we'll ask about them later).
 
-{{< pagebreak >}}
 
 ```{r}
 #| echo: false
@@ -783,7 +667,6 @@ d.  Add a title, x and y-axis labels, and a caption.
 
 e.  Filter out all moves in genres other than Comedy, Drama, Action, and Horror before plotting.
 
-{{< pagebreak >}}
 
 ## Question 14
 
