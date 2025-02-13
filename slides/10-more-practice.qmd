@@ -1,0 +1,617 @@
+---
+title: "More practice"
+subtitle: "Lecture 10"
+date: "2025-02-13"
+format: revealjs
+auto-stretch: false
+---
+
+<!-- begin: ae definition -->
+
+```{r}
+#| include: false
+library(tidyverse)
+todays_ae <- "ae-08-age-gaps-sales-import"
+durham_climate <- read_csv("data/durham-climate.csv")
+```
+
+<!-- end: ae definition -->
+
+# Before we begin...
+
+## Midterm Exam 1 {.small}
+
+-   **In-class** (70%)
+
+    -   Thursday February 20 11:45 AM - 1:00 PM;
+    -   All multiple choice;
+    -   You should have gotten an email about room assignment;
+    -   8.5" x 11" cheat sheet.
+
+-   **Take-home** (30%)
+
+    -   Released Thursday February 20 at 1:00 PM;
+    -   Due Monday February 24 at 8:30 AM.
+    -   Basically a mini lab;
+    -   Open resource (citation policies apply);
+    -   **No collaboration.**
+
+See [slides from 2/11](https://sta199-s25.github.io/slides/09-importing-recoding-data.html#/that-pesky-midterm) for more details.
+
+## Code smell {.small}
+
+> One way to look at smells is with respect to principles and quality: "Smells are certain structures in the code that indicate violation of fundamental design principles and negatively impact design quality". Code smells are usually not bugs; they are not technically incorrect and do not prevent the program from functioning. Instead, they indicate weaknesses in design that may slow down development or increase the risk of bugs or failures in the future.
+
+![](images/10/spongebob-stink.gif){width="319" fig-align="center"} ![](images/10/horribly-ugly.gif){fig-align="center"} ![](images/10/look-at-me.gif){width="319" fig-align="center"}
+
+::: aside
+Source: [Code smell on Wikipedia](https://en.wikipedia.org/wiki/Code_smell)
+:::
+
+
+## Code style
+
+Follow the [Tidyverse style guide](https://style.tidyverse.org/):
+
+-   Spaces before and line breaks after each `+` when building a ggplot
+
+-   Spaces before and line breaks after each `|>` in a data transformation pipeline,
+
+-   Proper indentation
+
+-   Spaces around `=` signs and spaces after commas
+
+-   Lines should not span more than 80 characters, long lines should be broken up with each argument on its own line
+
+# FAQ
+
+## Quotes VS no quotes VS backticks
+
+. . .
+
+```{r}
+df <- tibble(
+  x = c(-2, -0.5, 0.5, 1, 2),
+  `2011` = c(-2, -0.5, 0.5, 1, 2)
+)
+df
+```
+
+## Quotes VS no quotes VS backticks {.scrollable}
+
+```{r}
+df <- tibble(
+  x = c(-2, -0.5, 0.5, 1, 2),
+  `2011` = c(-2, -0.5, 0.5, 1, 2)
+)
+```
+
+Referencing a column in a pipeline:
+
+::: columns
+::: {.column .fragment width="33%"}
+```{r}
+df |>
+  filter("x" > 0)
+```
+`"x"` means the literal character string.
+:::
+
+::: {.column .fragment width="31%"}
+```{r}
+df |>
+  filter(x > 0)
+```
+`x` means the column name in `df`.
+:::
+
+
+::: {.column .fragment width="33%"}
+```{r}
+df |>
+  filter(`x` > 0)
+```
+``` `x` ``` also means the column name in `df`.
+:::
+
+:::
+
+## Quotes VS no quotes VS backticks {.medium}
+
+```{r}
+df <- tibble(
+  x = c(-2, -0.5, 0.5, 1, 2),
+  `2011` = c(-2, -0.5, 0.5, 1, 2)
+)
+```
+
+Referencing a column in a pipeline:
+
+::: columns
+::: {.column .fragment width="33%"}
+```{r}
+df |>
+  filter("2011" > 0)
+```
+`"2011"` means the literal character string.
+:::
+
+::: {.column .fragment width="31%"}
+```{r}
+df |>
+  filter(2011 > 0)
+```
+`2011` means the literal number.
+:::
+
+::: {.column .fragment width="33%"}
+```{r}
+df |>
+  filter(`2011` > 0)
+```
+``` `2011` ``` means the column name in `df`.
+:::
+
+:::
+
+
+## Why `%in%` instead of `==`?
+
+. . .
+
+Consider adding a `season` column:
+
+```{r}
+durham_climate
+```
+
+## Why `%in%` instead of `==`? {.scrollable}
+
+Consider adding a `season` column:
+
+```{r}
+#| eval: false
+durham_climate |>
+  mutate(
+    season = if_else(
+      month ????? c("December", "January", "February"),
+      "Winter",
+      "Not Winter"
+    )
+  )
+```
+
+
+## Why `%in%` instead of `==`? {.scrollable}
+
+Consider adding a `season` column:
+
+```{r}
+#| code-line-numbers: "4"
+durham_climate |>
+  mutate(
+    season = if_else(
+      month %in% c("December", "January", "February"),
+      "Winter",
+      "Not Winter"
+    )
+  )
+```
+
+## Why `%in%` instead of `==`? {.scrollable}
+
+Consider adding a `season` column:
+
+```{r}
+#| code-line-numbers: "4"
+durham_climate |>
+  mutate(
+    season = if_else(
+      month == c("December", "January", "February"),
+      "Winter",
+      "Not Winter"
+    )
+  )
+```
+
+## Why `%in%` instead of `==`?
+
+```{r}
+"January" == c("December", "January", "February")
+
+"January" %in% c("December", "January", "February")
+```
+
+::: callout-note
+## Punchline
+Inside `if_else` or `case_when` your condition needs to result in a single value of TRUE or FALSE for each row. If it results in multiple values of TRUE/FALSE (a *vector* of TRUE/FALSE), you will not necessarily get an error or even a warning, but unexpected things could happen.
+:::
+
+# Four tasks for today
+
+## Task 1: Prettifying the plot from ae-07 {.scrollable}
+
+```{r}
+ggplot(
+  durham_climate, 
+  aes(x = month, y = avg_high_f, group = 1)
+  ) +
+  geom_line() +
+  geom_point(
+    shape = "circle filled", size = 4,
+    color = "black", fill = "white", stroke = 1
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  ) + 
+  theme_minimal()
+```
+
+## Things to change
+
+::: incremental 
+1. Reorder the months chronologically;
+2. Fill the circles with season-specific colors;
+3. Add a legend for these colors to the *top* of the plot;
+4. Make sure the legend is ordered chronologically by season.
+:::
+
+## 0. Why `group = 1`? {.scrollable}
+
+With it:
+
+```{r}
+#| code-line-numbers: "3"
+ggplot(
+  durham_climate, 
+  aes(x = month, y = avg_high_f, group = 1)
+  ) +
+  geom_line() +
+  geom_point(
+    shape = "circle filled", size = 4,
+    color = "black", fill = "white", stroke = 1
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  ) +
+  theme_minimal()
+```
+
+## 0. Why `group = 1`? {.scrollable}
+
+Without it (even though I have `geom_line`!):
+
+```{r}
+#| code-line-numbers: "3|5"
+ggplot(
+  durham_climate, 
+  aes(x = month, y = avg_high_f)
+  ) +
+  geom_line() +
+  geom_point(
+    shape = "circle filled", size = 4,
+    color = "black", fill = "white", stroke = 1
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  ) +
+  theme_minimal()
+```
+
+
+
+## 0. Why `group = 1`? {.scrollable}
+
+Don't need `group` for numerical vs numerical:
+
+```{r}
+#| code-line-numbers: "3"
+ggplot(
+  durham_climate, 
+  aes(x = avg_low_f, y = avg_high_f)
+  ) +
+  geom_line() +
+  geom_point(
+    shape = "circle filled", size = 4,
+    color = "black", fill = "white", stroke = 1
+  ) +
+  labs(
+    x = "Average low temperature (F)",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  ) +
+  theme_minimal()
+```
+## 0. Why `group = 1`? {.scrollable}
+
+Do need `group` for categorical vs numerical:
+
+```{r}
+#| code-line-numbers: "3"
+ggplot(
+  durham_climate, 
+  aes(x = month, y = avg_high_f, group = 1)
+  ) +
+  geom_line() +
+  geom_point(
+    shape = "circle filled", size = 4,
+    color = "black", fill = "white", stroke = 1
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  ) +
+  theme_minimal()
+```
+
+## 1. Reorder the months chronologically {.scrollable}
+
+```{r}
+#| code-line-numbers: "2-4"
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name)
+  ) |>
+  ggplot(
+    aes(x = month, y = avg_high_f, group = 1)
+  ) +
+  geom_line() +
+  geom_point(
+    shape = "circle filled", size = 4,
+    color = "black", fill = "white", stroke = 1
+  ) +
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  ) +
+  theme_minimal()
+```
+
+## 2. Fill the circles with season-specific colors {.scrollable}
+
+```{r}
+#| code-line-numbers: "4-8|16|20-27"
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name),
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    )
+  ) |>
+  ggplot(
+    aes(x = month, y = avg_high_f, group = 1)
+    ) +
+  geom_line() +
+  geom_point(
+    aes(fill = season),
+    shape = "circle filled", size = 4,
+    color = "black", stroke = 1
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Winter" = "lightskyblue1",
+      "Spring" = "chartreuse3",
+      "Summer" = "gold2",
+      "Fall" = "lightsalmon4"
+    )
+  ) + 
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  ) +
+  theme_minimal()
+```
+
+## 3. Add legend for season to *top* of plot {.scrollable}
+
+```{r}
+#| code-line-numbers: "34"
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name),
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    )
+  ) |>
+  ggplot(
+    aes(x = month, y = avg_high_f, group = 1)
+    ) +
+  geom_line() +
+  geom_point(
+    aes(fill = season),
+    shape = "circle filled", size = 4,
+    color = "black", stroke = 1
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Winter" = "lightskyblue1",
+      "Spring" = "chartreuse3",
+      "Summer" = "gold2",
+      "Fall" = "lightsalmon4"
+    )
+  ) + 
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  ) +
+  theme_minimal() + 
+  theme(legend.position = "top")
+```
+
+
+## 4. Order legend chronologically {.scrollable}
+
+```{r}
+#| code-line-numbers: "10"
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name),
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  ) |>
+  ggplot(
+    aes(x = month, y = avg_high_f, group = 1)
+    ) +
+  geom_line() +
+  geom_point(
+    aes(fill = season),
+    shape = "circle filled", size = 4,
+    color = "black", stroke = 1
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Winter" = "lightskyblue1",
+      "Spring" = "chartreuse3",
+      "Summer" = "gold2",
+      "Fall" = "lightsalmon4"
+    )
+  ) + 
+  labs(
+    x = "Month",
+    y = "Average high temperature (F)",
+    title = "Durham climate"
+  ) +
+  theme_minimal() + 
+  theme(legend.position = "top")
+```
+
+## Task 2: *pivot* to replicate this...
+
+```{r}
+#| echo: false 
+durham_climate |>
+  mutate(
+    month = fct_relevel(month, month.name),
+    season = case_when(
+      month %in% c("December", "January", "February") ~ "Winter",
+      month %in% c("March", "April", "May") ~ "Spring",
+      month %in% c("June", "July", "August") ~ "Summer",
+      month %in% c("September", "October", "November") ~ "Fall",
+    ),
+    season = fct_relevel(season, "Winter", "Spring", "Summer", "Fall")
+  ) |>
+  pivot_longer(
+    cols = c(avg_high_f, avg_low_f),
+    names_to = "temp_type",
+    names_prefix = "avg_",
+    values_to = "avg_temp_f"
+  ) |>
+  mutate(temp_type = str_remove(temp_type, "_f")) |>
+  ggplot(aes(x = month, y = avg_temp_f, group = temp_type, color = temp_type)) +
+  geom_line() +
+  geom_point(
+    aes(fill = season),
+    shape = "circle filled", size = 3, stroke = 1
+  ) +
+  scale_fill_manual(
+    values = c(
+      "Winter" = "lightskyblue1",
+      "Spring" = "chartreuse3",
+      "Summer" = "gold2",
+      "Fall" = "lightsalmon4"
+    )
+  ) +
+  scale_color_manual(
+    values = c(
+      "high" = "gray20",
+      "low" = "gray70"
+    )
+  ) +
+  labs(
+    x = "Month",
+    y = "Average temperature (F)",
+    title = "Durham climate",
+    fill = "Season",
+    color = "Type"
+  ) +
+  theme_minimal() +
+  theme(legend.position = "top")
+```
+
+Give it a shot in your `ae-07-durham-climate-factors` file. And don't worry about prettification. Just get the two lines correct.
+
+## Task 3: recoding and writing to file
+
+-   Read a CSV file
+
+-   Split it into subsets based on features of the data
+
+-   Write out subsets as CSV files
+
+Work on the first part in *`{r} paste0(todays_ae, ".qmd")`*.
+
+## Age gap in Hollywood relationships {.smaller}
+
+::: columns
+::: {.column width="25%"}
+::: question
+What is the story in this visualization?
+:::
+:::
+
+::: {.column width="75%"}
+![](images/09/hollywood-ages.jpeg){fig-align="center" width="600"}
+:::
+:::
+
+## Task 4: reading in from excel (yuck!)
+
+-   Using [**readr**](https://readr.tidyverse.org/):
+    -   Most commonly: `read_csv()`
+    -   Maybe also: `read_tsv()`, `read_delim()`, etc.
+
+. . .
+
+-   Using [**readxl**](https://readxl.tidyverse.org/): `read_excel()`
+
+. . .
+
+-   Using [**googlesheets4**](https://googlesheets4.tidyverse.org/): `read_sheet()` -- We haven't covered this in the videos, but might be useful for your projects
+
+
+## Reading Excel files
+
+-   Read an Excel file with non-tidy data
+
+-   Tidy it up!
+
+Work on the second part in *`{r} paste0(todays_ae, ".qmd")`*.
+
+## Sales data
+
+![](images/09/sales-excel.png)
+
+. . .
+
+::: question
+Are these data tidy? Why or why not?
+:::
+
+## Sales data
+
+::: question
+What "data moves" do we need to go from the original, non-tidy data to this, tidy one?
+:::
+
+![](images/09/sales-2.png){width="150"}
