@@ -1,6 +1,6 @@
 ---
-title: Midterm 1 Batch B
-subtitle: Questions
+title: Midterm 1 Practice Questions
+subtitle: Batch B
 ---
 
 ```{r}

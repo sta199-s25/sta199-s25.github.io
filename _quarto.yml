@@ -97,8 +97,8 @@ website:
         contents:
           - href: exam/midterm-1-batch-A.qmd
             text: Midterm 1 Batch A
-#          - href: exam/midterm-1-batch-B.qmd
-#            text: Midterm 1 Batch B
+          - href: exam/midterm-1-batch-B.qmd
+            text: Midterm 1 Batch B
 
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'

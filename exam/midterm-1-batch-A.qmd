@@ -1,6 +1,6 @@
 ---
-title: Midterm 1 Batch A
-subtitle: Questions
+title: Midterm 1 Practice Questions
+subtitle: Batch A
 execute:
   echo: false
 ---
