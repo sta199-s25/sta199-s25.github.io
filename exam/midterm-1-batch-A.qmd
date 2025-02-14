@@ -1,10 +1,6 @@
 ---
-title: Midterm 1 Batch A
-subtitle: Questions
-format:
-  html: default
-  pdf: 
-    linkcolor: "black"
+title: Midterm 1 Practice Questions
+subtitle: Batch A
 execute:
   echo: false
 ---
@@ -35,10 +31,6 @@ blizzard_salary <- blizzard_salary |>
   filter(!is.na(annual_salary)) |>
   select(percent_incr, salary_type, annual_salary, performance_rating)
 ```
-
-::: callout-note
-Suggested answers can be found [here](/exam-review/midterm-review-A.qmd), but resist the urge to peek before you go through it yourself.
-:::
 
 In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation. (Source: [Blizzard Workers Share Salaries in Revolt Over Pay](https://www.bloomberg.com/news/articles/2020-08-03/blizzard-workers-share-salaries-in-revolt-over-wage-disparities))
 
