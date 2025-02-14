@@ -3778,7 +3778,7 @@
     "href": "slides/09-importing-recoding-data.html#example-in-class-question-2",
     "title": "Importing and recoding data",
     "section": "Example in-class question",
-    "text": "Example in-class question\n\n\nWhich box plot is visualizing the same data as the histogram?\n\n\n\n`stat_bin()` using `bins = 30`. Pick better value with `binwidth`.\n\n\n\n\n\n\n\n\n\n\n\n\nWarning: The `x` argument of `as_tibble.matrix()` must have unique column names if\n`.name_repair` is omitted as of tibble 2.0.0.\nℹ Using compatibility `.name_repair`."
+    "text": "Example in-class question\n\n\nWhich box plot is visualizing the same data as the histogram?"
   },
   {
     "objectID": "slides/09-importing-recoding-data.html#what-should-i-put-on-my-cheat-sheet",
@@ -3834,7 +3834,7 @@
     "href": "slides/09-importing-recoding-data.html#from-last-time-data-collection",
     "title": "Importing and recoding data",
     "section": "From last time: data collection",
-    "text": "From last time: data collection\nI sent out my lil’ survey with Google Forms, downloaded the responses in a CSV, and read that sucker in:\n\n\n\n&lt;p&gt;Loading…&lt;/p&gt;\n\n\n\nsurvey &lt;- read_csv(\"data/survey-2025-02-06.csv\")\n\nRows: 209 Columns: 3\n── Column specification ────────────────────────────────────────────────────────\nDelimiter: \",\"\nchr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...\n\nℹ Use `spec()` to retrieve the full column specification for this data.\nℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.\n\nsurvey\n\n# A tibble: 209 × 3\n   Timestamp         How many classes do you have on Tues…¹ `What year are you?`\n   &lt;chr&gt;             &lt;chr&gt;                                  &lt;chr&gt;               \n 1 2/6/2025 11:33:57 3                                      Sophomore           \n 2 2/6/2025 11:37:39 3                                      First-year          \n 3 2/6/2025 11:40:55 2                                      Senior              \n 4 2/6/2025 11:42:05 3                                      First-year          \n 5 2/6/2025 11:42:46 3                                      Senior              \n 6 2/6/2025 11:43:28 3                                      Senior              \n 7 2/6/2025 11:44:41 3                                      First-year          \n 8 2/6/2025 11:44:49 3                                      First-year          \n 9 2/6/2025 11:44:51 2                                      Sophomore           \n10 2/6/2025 11:44:51 3                                      Sophomore           \n# ℹ 199 more rows\n# ℹ abbreviated name: ¹​`How many classes do you have on Tuesdays?`"
+    "text": "From last time: data collection\nI sent out my lil’ survey with Google Forms, downloaded the responses in a CSV, and read that sucker in:\n\n\n\n&lt;p&gt;Loading…&lt;/p&gt;\n\n\n\nsurvey &lt;- read_csv(\"data/survey-2025-02-06.csv\")\nsurvey\n\n# A tibble: 209 × 3\n   Timestamp         How many classes do you have on Tues…¹ `What year are you?`\n   &lt;chr&gt;             &lt;chr&gt;                                  &lt;chr&gt;               \n 1 2/6/2025 11:33:57 3                                      Sophomore           \n 2 2/6/2025 11:37:39 3                                      First-year          \n 3 2/6/2025 11:40:55 2                                      Senior              \n 4 2/6/2025 11:42:05 3                                      First-year          \n 5 2/6/2025 11:42:46 3                                      Senior              \n 6 2/6/2025 11:43:28 3                                      Senior              \n 7 2/6/2025 11:44:41 3                                      First-year          \n 8 2/6/2025 11:44:49 3                                      First-year          \n 9 2/6/2025 11:44:51 2                                      Sophomore           \n10 2/6/2025 11:44:51 3                                      Sophomore           \n# ℹ 199 more rows\n# ℹ abbreviated name: ¹​`How many classes do you have on Tuesdays?`"
   },
   {
     "objectID": "slides/09-importing-recoding-data.html#data-science-2",
@@ -3911,7 +3911,7 @@
     "href": "slides/09-importing-recoding-data.html#a-cautionary-tale-anscombes-quartet-2",
     "title": "Importing and recoding data",
     "section": "A cautionary tale: Anscombe’s quartet",
-    "text": "A cautionary tale: Anscombe’s quartet\n\nggplot(anscombe_tidy, aes(x, y)) +\n  geom_point() +\n  facet_wrap(~ set) +\n  geom_smooth(method = \"lm\", se = FALSE)\n\n`geom_smooth()` using formula = 'y ~ x'"
+    "text": "A cautionary tale: Anscombe’s quartet\n\nggplot(anscombe_tidy, aes(x, y)) +\n  geom_point() +\n  facet_wrap(~ set) +\n  geom_smooth(method = \"lm\", se = FALSE)"
   },
   {
     "objectID": "slides/09-importing-recoding-data.html#if-you-only-looked-at-summary-statistics",
