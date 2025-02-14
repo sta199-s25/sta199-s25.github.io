@@ -1,10 +1,6 @@
 ---
 title: Midterm 1 Batch A
 subtitle: Questions
-format:
-  html: default
-  pdf: 
-    linkcolor: "black"
 execute:
   echo: false
 ---

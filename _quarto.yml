@@ -93,7 +93,13 @@ website:
             text: Lab 3
           - href: lab/lab-4.qmd
             text: Lab 4
-            
+      - section: "Exam practice problems"
+        contents:
+          - href: exam/midterm-1-batch-A.qmd
+            text: Midterm 1 Batch A
+#          - href: exam/midterm-1-batch-B.qmd
+#            text: Midterm 1 Batch B
+
   page-footer:
     right: 'This page is built with [Quarto](https://quarto.org/).'
     left: "&copy; Copyright 2025 Mine Çetinkaya-Rundel, John Zito"
