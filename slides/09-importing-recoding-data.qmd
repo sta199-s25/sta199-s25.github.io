@@ -40,43 +40,42 @@ Successful completion means at least one commit + push by 2PM today.
 
 Worth 20% of your final grade; consists of two parts:
 
-- **In-class**: worth 70% of the Midterm 1 grade;
+-   **In-class**: worth 70% of the Midterm 1 grade;
 
-    - Thursday February 20 11:45 AM - 1:00 PM
+    -   Thursday February 20 11:45 AM - 1:00 PM
 
-- **Take-home**: worth 30% of the Midterm 1 grade.
+-   **Take-home**: worth 30% of the Midterm 1 grade.
 
-    - Released Thursday February 20 at 1:00 PM;
-    - Due Monday February 24 at 8:30 AM.
+    -   Released Thursday February 20 at 1:00 PM;
+    -   Due Monday February 24 at 8:30 AM.
 
-## In-class 
+## In-class
 
 ::: incremental
-- All multiple choice;
+-   All multiple choice;
 
-- You will take it in Bio Sciences 111 (this room) or Physics 128;
+-   You will take it in Bio Sciences 111 (this room) or Physics 128;
 
-- You get both sides of one 8.5" x 11" note sheet that you and only you created (written, typed, iPad, etc);
+-   You get both sides of one 8.5" x 11" note sheet that you and only you created (written, typed, iPad, etc);
 
-- If you do better on the final than you do on this, the final exam score will replace this.
+-   If you do better on the final than you do on this, the final exam score will replace this.
 :::
 
 . . .
 
 ::: callout-important
-If you have testing accommodations, make sure I get proper documentation from SDAO and 
-make appointments in the Testing Center by Friday. The appointment should overlap substantially with our class time if possible.
+If you have testing accommodations, make sure I get proper documentation from SDAO and make appointments in the Testing Center by Friday. The appointment should overlap substantially with our class time if possible.
 :::
 
 ## Example in-class question
 
 Which command will replace a pre-existing column in a data frame with a new and improved version of itself?
 
-a. `group_by`
-b. `summarize`
-c. `pivot_wider`
-d. `geom_replace`
-e. `mutate`
+a.  `group_by`
+b.  `summarize`
+c.  `pivot_wider`
+d.  `geom_replace`
+e.  `mutate`
 
 ## Example in-class question
 
@@ -97,7 +96,6 @@ df
 :::
 
 ::: {.column width="50%"}
-
 ```{r}
 #| eval: false 
 
@@ -108,15 +106,13 @@ df |>
 
 How many rows will this output have?
 
-a. 1
-b. 2
-c. 3
-d. 6
-e. 11
-
+a.  1
+b.  2
+c.  3
+d.  6
+e.  11
 :::
 :::
-
 
 ## Example in-class question {.scrollable}
 
@@ -126,9 +122,9 @@ Which box plot is visualizing the same data as the histogram?
 :::
 
 ::: {.column width="50%"}
-
 ```{r}
 #| echo: false
+#| warning: false
 set.seed(100)
 x <- c(rnorm(150), rnorm(350, mean = 2, sd = 0.5))
 df <- tibble(x = x)
@@ -143,6 +139,7 @@ ggplot(df, aes(x = x)) +
 ```{r}
 #| echo: false
 #| fig-asp: 0.33
+#| warning: false
 w <- rnorm(500)
 y <- c(pmax(rnorm(350, mean = -1), -2), rnorm(150, mean = 2, sd = 0.5))
 z <- x + 10
@@ -164,18 +161,17 @@ ggplot(X, aes(x = V2)) +
   labs(x = NULL, y = NULL)
 ```
 
-
 ## What should I put on my cheat sheet?
 
 . . .
 
-**Ask one of our undergrad TAs!** They took the class. I didn't.
+[**Ask one of our undergrad TAs!**](https://edstem.org/us/courses/70595/discussion/6137999) They took the class. I didn't.
 
 ::: incremental
-- description of common functions;
-- description of different visualizations: how to interpret, and what to use when;
-- doodles;
-- cute words of affirmation.
+-   description of common functions;
+-   description of different visualizations: how to interpret, and what to use when;
+-   doodles;
+-   cute words of affirmation.
 :::
 
 . . .
@@ -184,22 +180,22 @@ ggplot(X, aes(x = V2)) +
 Don't waste space on the details of any specific applications or datasets we've seen (penguins, Bechdel, gerrymandering, midwest, etc). Anything we want you to know about a particular application will be introduced from scratch within the exam.
 :::
 
-## Take-home 
+## Take-home
 
 ::: incremental
-- It will be just like a lab, only shorter;
-- Completely open-resource, but citation policies apply;
-- Absolutely no collaboration of any kind;
-- Seek help by posting *privately* on Ed;
-- Submit your final PDF to Gradescope in the usual way.
+-   It will be just like a lab, only shorter;
+-   Completely open-resource, but citation policies apply;
+-   Absolutely no collaboration of any kind;
+-   Seek help by posting *privately* on Ed;
+-   Submit your final PDF to Gradescope in the usual way.
 :::
 
 ## Reminder: conduct policies
 
 ::: incremental
-- Uncited use of outside resources or inappropriate collaboration will result in a zero and be referred to the conduct office;
-- If a conduct violation of any kind is discovered, your final letter grade in the course will be permanently reduced (A- down to B+, B+ down to B, etc);
-- If folks share solutions, all students involved will be penalized equally, the sharer the same as the recipient.
+-   Uncited use of outside resources or inappropriate collaboration will result in a zero and be referred to the conduct office;
+-   If a conduct violation of any kind is discovered, your final letter grade in the course will be permanently reduced (A- down to B+, B+ down to B, etc);
+-   If folks share solutions, all students involved will be penalized equally, the sharer the same as the recipient.
 :::
 
 . . .
@@ -210,15 +206,15 @@ Don't waste space on the details of any specific applications or datasets we've 
 These policies apply to everyone. I don't care who your parents are, or what medical schools you are applying to in the fall. Grow up and act right.
 :::
 
-
 ## Things you can do to study
+
 ::: incremental
-- **Practice problems**: released Thursday February 13;
-- **Attend lab**: review game on Monday February 17;
-- **Old labs**: correct parts where you lost points;
-- **Old AEs**: complete tasks we didn't get to and compare with key;
-- **Code along**: watch these videos specifically;
-- **Textbook**: odd-numbered exercises in the back of Chs. 1, 4, 5, 6.
+-   **Practice problems**: released Thursday February 13;
+-   **Attend lab**: review game on Monday February 17;
+-   **Old labs**: correct parts where you lost points;
+-   **Old AEs**: complete tasks we didn't get to and compare with key;
+-   **Code along**: watch these videos specifically;
+-   **Textbook**: odd-numbered exercises in the back of Chs. 1, 4, 5, 6.
 :::
 
 # Let's zoom out for a sec...
@@ -227,11 +223,11 @@ These policies apply to everyone. I don't care who your parents are, or what med
 
 Before Midterm 1...
 
-- **Data science**: the real-world *art* of transforming messy, imperfect, incomplete data into knowledge;
+-   **Data science**: the real-world *art* of transforming messy, imperfect, incomplete data into knowledge;
 
 After Midterm 1...
 
-- **Statistics**: the mathematical discipline of quantifying our uncertainty about that knowledge.
+-   **Statistics**: the mathematical discipline of quantifying our uncertainty about that knowledge.
 
 ## Data science {.medium}
 
@@ -240,10 +236,10 @@ After Midterm 1...
 ## Data science {.medium}
 
 ::: incremental
-1. **Collection**: we won't seriously study this!
+1.  **Collection**: we won't seriously study this!
 
-    - **for us**: data importing (`read_csv`), and webscraping (next time);
-    - **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
+    -   **for us**: data importing (`read_csv`), and webscraping (next time);
+    -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
 :::
 
 ## From last time: data collection
@@ -260,28 +256,24 @@ Loading…
 :::
 
 ::: {.column width="65%"}
-
 ```{r}
 survey <- read_csv("data/survey-2025-02-06.csv")
 survey
 ```
-
 :::
 :::
-
-
 
 ## Data science {.medium}
 
-1. **Collection**: we won't seriously study this!
+1.  **Collection**: we won't seriously study this!
 
-    - **for us**: data importing (`read_csv`), and webscraping (next time);
-    - **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
+    -   **for us**: data importing (`read_csv`), and webscraping (next time);
+    -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
 
 ::: incremental
-2. **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
+2.  **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
 
-    - **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
+    -   **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
 :::
 
 ## From last time: data preparation {.scrollable}
@@ -313,25 +305,25 @@ survey
 
 ## Data science {.medium}
 
-1. **Collection**: we won't seriously study this!
+1.  **Collection**: we won't seriously study this!
 
-    - **for us**: data importing (`read_csv`), and webscraping (next time);
-    - **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
+    -   **for us**: data importing (`read_csv`), and webscraping (next time);
+    -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
 
-2. **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
+2.  **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
 
-    - **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
+    -   **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
 
 ::: incremental
-3. **Analysis**: finally transform the data into *knowledge*...
+3.  **Analysis**: finally transform the data into *knowledge*...
 
-    - **pictures**: `ggplot`, `geom_*`, etc
-    - **numerical summaries**: `summarize`, `group_by`, `count`, `mean`, `median`, `sd`, `quantile`, `IQR`, `cor`, etc
+    -   **pictures**: `ggplot`, `geom_*`, etc
+    -   **numerical summaries**: `summarize`, `group_by`, `count`, `mean`, `median`, `sd`, `quantile`, `IQR`, `cor`, etc
 :::
 
 ## From last time: data analysis
 
-A human being can learn nothing from staring at this box: 
+A human being can learn nothing from staring at this box:
 
 ```{r}
 survey
@@ -345,6 +337,7 @@ Picture!
 ggplot(survey, aes(x = tue_classes, fill = year)) + 
   geom_bar(position = "dodge")
 ```
+
 ## From last time: data analysis
 
 Better picture?
@@ -367,22 +360,22 @@ survey |>
 
 ## Data science {.medium}
 
-1. **Collection**: we won't seriously study this!
+1.  **Collection**: we won't seriously study this!
 
-    - **for us**: data importing (`read_csv`), and webscraping (next time);
-    - **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
+    -   **for us**: data importing (`read_csv`), and webscraping (next time);
+    -   **but really**: domain-specific issues of measurement, survey design, experimental design, etc;
 
-2. **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
+2.  **Preparation**: cleaning, wrangling, and otherwise *tidying* the data so we can actually work with it.
 
-    - **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
+    -   **keywords**: `mutate`, `fct_relevel`, `pivot_*`, `*_join`
 
-3. **Analysis**: finally transform the data into *knowledge*...
+3.  **Analysis**: finally transform the data into *knowledge*...
 
-    - **pictures**: `ggplot`, `geom_*`, etc
-    - **numerical summaries**: `summarize`, `group_by`, `count`, `mean`, `median`, `sd`, `quantile`, `iqr`, `cor`, etc
-    
+    -   **pictures**: `ggplot`, `geom_*`, etc
+    -   **numerical summaries**: `summarize`, `group_by`, `count`, `mean`, `median`, `sd`, `quantile`, `iqr`, `cor`, etc
+
 . . .
-    
+
 The pictures and the summaries need to work together!
 
 ## A cautionary tale: Anscombe's quartet
@@ -400,6 +393,7 @@ anscombe_tidy <- anscombe |>
 ::: columns
 ::: {.column width="25%"}
 Dataset I
+
 ```{r}
 #| echo: false
 anscombe_tidy |>
@@ -410,6 +404,7 @@ anscombe_tidy |>
 
 ::: {.column width="25%"}
 Dataset II
+
 ```{r}
 #| echo: false
 anscombe_tidy |>
@@ -420,6 +415,7 @@ anscombe_tidy |>
 
 ::: {.column width="25%"}
 Dataset III
+
 ```{r}
 #| echo: false
 anscombe_tidy |>
@@ -430,6 +426,7 @@ anscombe_tidy |>
 
 ::: {.column width="25%"}
 Dataset IV
+
 ```{r}
 #| echo: false
 anscombe_tidy |>
@@ -478,20 +475,17 @@ No, not alcohol by volume...
 
 ::: columns
 ::: {.column width="20%"}
-
-::: incremental 
-- `A`lways!
-- `B`e!
-- `V`isualizing!
+::: incremental
+-   `A`lways!
+-   `B`e!
+-   `V`isualizing!
 :::
-
 :::
 
 ::: {.column .fragment width="70%"}
 ![](images/09/ggr.jpg){fig-align="right" width="80%"}
 :::
 :::
-
 
 # From last time
 
@@ -531,17 +525,17 @@ No, not alcohol by volume...
 
 ## Age gap in Hollywood relationships {.smaller}
 
-:::::: columns
-:::: {.column width="25%"}
+::: columns
+::: {.column width="25%"}
 ::: question
 What is the story in this visualization?
 :::
-::::
+:::
 
 ::: {.column width="75%"}
 ![](images/09/hollywood-ages.jpeg){fig-align="center" width="600"}
 :::
-::::::
+:::
 
 ## `{r} todays_ae` - Part 1 {.smaller}
 
@@ -568,8 +562,7 @@ What is the story in this visualization?
 . . .
 
 ::: question
-Are these data tidy?
-Why or why not?
+Are these data tidy? Why or why not?
 :::
 
 ## Sales data
