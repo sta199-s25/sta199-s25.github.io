@@ -9,10 +9,10 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
+<meta name="generator" content="quarto-1.5.57">
 <meta name="author" content="John Zito">
 <meta name="dcterms.date" content="2025-01-30">
-<title>STA 199 Spring 2025 - Tidying data</title>
+<title>STA 199 Spring 2025 – Tidying data</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -43,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -71,7 +71,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -85,7 +85,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; } /* Keyword */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -388,7 +388,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 Spring 2025 - Tidying data">
+<meta property="og:title" content="Tidying data – STA 199 Spring 2025">
 <meta property="og:description" content="Lecture 6">
 <meta property="og:site_name" content="STA 199 Spring 2025">
 </head>
@@ -446,8 +446,7 @@ John Zito
 <li>Materials will be posted afterward;</li>
 <li>We might do more if there is interest and Dav is available.</li>
 </ul>
-</div>
-<p><img data-src="images/05/dav_qr.png"></p>
+</div><p><img data-src="images/05/dav_qr.png"></p>
 </div>
 <p>:::</p>
 </section><section id="syllabus-clarifications" class="slide level2 medium"><h2>Syllabus clarifications</h2>
@@ -583,8 +582,7 @@ John Zito
 <div class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </section><section id="miscellany-assignment-2" class="slide level2"><h2>Miscellany: assignment</h2>
 <div class="question">
 <p>Suppose you run the following and <strong>then</strong> you inspect <code>df</code>, will the <code>x</code> variable have values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?</p>
@@ -619,8 +617,7 @@ John Zito
 5     5 c    </code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <div class="fragment">
 <blockquote>
 <p><strong>Do something and show me</strong></p>
@@ -640,8 +637,7 @@ John Zito
 <div class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</div>
-</div>
+</div></div>
 </section><section id="miscellany-assignment-4" class="slide level2"><h2>Miscellany: assignment</h2>
 <div class="question">
 <p>Suppose you run the following and <strong>then</strong> you inspect <code>df</code>, will the <code>x</code> variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?</p>
@@ -666,8 +662,7 @@ John Zito
 5    10 c    </code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <div class="fragment">
 <blockquote>
 <p><strong>Do something and save result</strong></p>
@@ -698,8 +693,7 @@ John Zito
 5    10 c    </code></pre>
 </div>
 </div>
-</div>
-<div class="column fragment" style="width:49%;">
+</div><div class="column fragment" style="width:49%;">
 <blockquote>
 <p><strong>Do something, save result, <em>not</em> overwriting original</strong></p>
 </blockquote>
@@ -722,8 +716,7 @@ John Zito
 5    10 c    </code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section><section id="miscellany-assignment-6" class="slide level2 smaller"><h2>Miscellany: assignment</h2>
 <div class="columns">
 <div class="column fragment" style="width:49%;">
@@ -748,8 +741,7 @@ John Zito
 3 c        4.5</code></pre>
 </div>
 </div>
-</div>
-<div class="column fragment" style="width:49%;">
+</div><div class="column fragment" style="width:49%;">
 <blockquote>
 <p><strong>Do something, save result, <em>not</em> overwriting original <em>when you shouldn’t</em></strong></p>
 </blockquote>
@@ -771,8 +763,7 @@ John Zito
 3 c        4.5</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section><section id="miscellany-assignment-7" class="slide level2 smaller"><h2>Miscellany: assignment</h2>
 <div class="columns">
 <div class="column fragment" style="width:49%;">
@@ -798,8 +789,7 @@ John Zito
 5     5 c         7</code></pre>
 </div>
 </div>
-</div>
-<div class="column fragment" style="width:49%;">
+</div><div class="column fragment" style="width:49%;">
 <blockquote>
 <p><strong>Do something, save result, overwriting original</strong><br><strong><em>column</em></strong></p>
 </blockquote>
@@ -822,8 +812,7 @@ John Zito
 5     7 c    </code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 </section></section><section><section id="data-tidying" class="title-slide slide level1 center"><h1>Data tidying</h1>
 
 </section><section id="tidy-data" class="slide level2"><h2>Tidy data</h2>
@@ -839,18 +828,8 @@ John Zito
 <p><img data-src="images/06/statsci-majors.png"></p>
 </section><section id="data" class="slide level2 smaller"><h2>Data</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>statsci <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/statsci.csv"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Rows: 4 Columns: 15
-── Column specification ────────────────────────────────────────────────────────
-Delimiter: ","
-chr  (1): degree
-dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
-
-ℹ Use `spec()` to retrieve the full column specification for this data.
-ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>statsci</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>statsci <span class="ot">&lt;-</span> <span class="fu">read_csv</span>(<span class="st">"data/statsci.csv"</span>)</span>
+<span id="cb27-2"><a></a>statsci</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 15
   degree   `2011` `2012` `2013` `2014` `2015` `2016` `2017` `2018` `2019` `2020`
@@ -871,8 +850,8 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
 </section><section id="the-goal" class="slide level2"><h2>The goal</h2>
 <p>We want to be able to write code that starts something like this:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a><span class="fu">ggplot</span>(statsci, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> n, <span class="at">color =</span> degree_type)) <span class="sc">+</span> </span>
-<span id="cb31-2"><a></a>  ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="fu">ggplot</span>(statsci, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> n, <span class="at">color =</span> degree_type)) <span class="sc">+</span> </span>
+<span id="cb29-2"><a></a>  ...</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>But the data are not in a format that will allow us to do that.</p>
 </section><section id="the-challenge" class="slide level2 smaller scrollable"><h2>The challenge</h2>
@@ -892,8 +871,7 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
 4 BS          5      9      4     13     10     17     24</code></pre>
 </div>
 </div>
-</div>
-<div class="column fragment" style="width:29%;">
+</div><div class="column fragment" style="width:29%;">
 <blockquote>
 <p>…to this?</p>
 </blockquote>
@@ -921,8 +899,7 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
 # ℹ 40 more rows</code></pre>
 </div>
 </div>
-</div>
-</div>
+</div></div>
 <div class="fragment">
 <p>With the command <code>pivot_longer()</code>!</p>
 </div>
@@ -931,12 +908,12 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
 <p>Pivot the <code>statsci</code> data frame <em>longer</em> such that each row represents a degree type / year combination and <code>year</code> and <code>n</code>umber of graduates for that year are columns in the data frame.</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>statsci <span class="sc">|&gt;</span></span>
-<span id="cb34-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb34-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
-<span id="cb34-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
-<span id="cb34-5"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span></span>
-<span id="cb34-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a>statsci <span class="sc">|&gt;</span></span>
+<span id="cb32-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb32-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
+<span id="cb32-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
+<span id="cb32-5"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span></span>
+<span id="cb32-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 56 × 3
    degree                    year      n
@@ -967,13 +944,13 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
 <p>Start over with pivoting, and this time also make sure <code>year</code> is a numerical variable in the resulting data frame.</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>statsci <span class="sc">|&gt;</span></span>
-<span id="cb36-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb36-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
-<span id="cb36-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
-<span id="cb36-5"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span>,</span>
-<span id="cb36-6"><a></a>    <span class="at">names_transform =</span> as.numeric,</span>
-<span id="cb36-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>statsci <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb34-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
+<span id="cb34-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
+<span id="cb34-5"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span>,</span>
+<span id="cb34-6"><a></a>    <span class="at">names_transform =</span> as.numeric,</span>
+<span id="cb34-7"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 56 × 3
    degree                     year     n
@@ -1004,14 +981,14 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
 <p>Add on to your pipeline that you started with pivoting and convert <code>NA</code>s in <code>n</code> to <code>0</code>s.</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>statsci <span class="sc">|&gt;</span></span>
-<span id="cb38-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb38-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
-<span id="cb38-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
-<span id="cb38-5"><a></a>    <span class="at">names_transform =</span> as.numeric,</span>
-<span id="cb38-6"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span></span>
-<span id="cb38-7"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb38-8"><a></a>  <span class="fu">mutate</span>(<span class="at">n =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(n), <span class="dv">0</span>, n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>statsci <span class="sc">|&gt;</span></span>
+<span id="cb36-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb36-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
+<span id="cb36-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
+<span id="cb36-5"><a></a>    <span class="at">names_transform =</span> as.numeric,</span>
+<span id="cb36-6"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span></span>
+<span id="cb36-7"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb36-8"><a></a>  <span class="fu">mutate</span>(<span class="at">n =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(n), <span class="dv">0</span>, n))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 56 × 3
    degree                     year     n
@@ -1034,19 +1011,19 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
 <p>In our plot the degree types are BS, BS2, AB, and AB2. This information is in our dataset, in the <code>degree</code> column, but this column also has additional characters we don’t need. Create a new column called <code>degree_type</code> with levels BS, BS2, AB, and AB2 (in this order) based on <code>degree</code>. Do this by adding on to your pipeline from earlier.</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>statsci <span class="sc">|&gt;</span></span>
-<span id="cb40-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb40-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
-<span id="cb40-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
-<span id="cb40-5"><a></a>    <span class="at">names_transform =</span> as.numeric,</span>
-<span id="cb40-6"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span></span>
-<span id="cb40-7"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb40-8"><a></a>  <span class="fu">mutate</span>(<span class="at">n =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(n), <span class="dv">0</span>, n)) <span class="sc">|&gt;</span></span>
-<span id="cb40-9"><a></a>  <span class="fu">separate</span>(degree, <span class="at">sep =</span> <span class="st">" </span><span class="sc">\\</span><span class="st">("</span>, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"major"</span>, <span class="st">"degree_type"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb40-10"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb40-11"><a></a>    <span class="at">degree_type =</span> <span class="fu">str_remove</span>(degree_type, <span class="st">"</span><span class="sc">\\</span><span class="st">)"</span>),</span>
-<span id="cb40-12"><a></a>    <span class="at">degree_type =</span> <span class="fu">fct_relevel</span>(degree_type, <span class="st">"BS"</span>, <span class="st">"BS2"</span>, <span class="st">"AB"</span>, <span class="st">"AB2"</span>)</span>
-<span id="cb40-13"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a></a>statsci <span class="sc">|&gt;</span></span>
+<span id="cb38-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb38-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
+<span id="cb38-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
+<span id="cb38-5"><a></a>    <span class="at">names_transform =</span> as.numeric,</span>
+<span id="cb38-6"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span></span>
+<span id="cb38-7"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb38-8"><a></a>  <span class="fu">mutate</span>(<span class="at">n =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(n), <span class="dv">0</span>, n)) <span class="sc">|&gt;</span></span>
+<span id="cb38-9"><a></a>  <span class="fu">separate</span>(degree, <span class="at">sep =</span> <span class="st">" </span><span class="sc">\\</span><span class="st">("</span>, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"major"</span>, <span class="st">"degree_type"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb38-10"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb38-11"><a></a>    <span class="at">degree_type =</span> <span class="fu">str_remove</span>(degree_type, <span class="st">"</span><span class="sc">\\</span><span class="st">)"</span>),</span>
+<span id="cb38-12"><a></a>    <span class="at">degree_type =</span> <span class="fu">fct_relevel</span>(degree_type, <span class="st">"BS"</span>, <span class="st">"BS2"</span>, <span class="st">"AB"</span>, <span class="st">"AB2"</span>)</span>
+<span id="cb38-13"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 56 × 4
    major               degree_type  year     n
@@ -1069,19 +1046,19 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
 <p>Now that you have your data pivoting and cleaning pipeline figured out, save the resulting data frame as <code>statsci_longer</code>.</p>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>statsci_longer <span class="ot">&lt;-</span> statsci <span class="sc">|&gt;</span></span>
-<span id="cb42-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb42-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
-<span id="cb42-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
-<span id="cb42-5"><a></a>    <span class="at">names_transform =</span> as.numeric,</span>
-<span id="cb42-6"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span></span>
-<span id="cb42-7"><a></a>  ) <span class="sc">|&gt;</span></span>
-<span id="cb42-8"><a></a>  <span class="fu">mutate</span>(<span class="at">n =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(n), <span class="dv">0</span>, n)) <span class="sc">|&gt;</span></span>
-<span id="cb42-9"><a></a>  <span class="fu">separate</span>(degree, <span class="at">sep =</span> <span class="st">" </span><span class="sc">\\</span><span class="st">("</span>, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"major"</span>, <span class="st">"degree_type"</span>)) <span class="sc">|&gt;</span></span>
-<span id="cb42-10"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb42-11"><a></a>    <span class="at">degree_type =</span> <span class="fu">str_remove</span>(degree_type, <span class="st">"</span><span class="sc">\\</span><span class="st">)"</span>),</span>
-<span id="cb42-12"><a></a>    <span class="at">degree_type =</span> <span class="fu">fct_relevel</span>(degree_type, <span class="st">"BS"</span>, <span class="st">"BS2"</span>, <span class="st">"AB"</span>, <span class="st">"AB2"</span>)</span>
-<span id="cb42-13"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a></a>statsci_longer <span class="ot">&lt;-</span> statsci <span class="sc">|&gt;</span></span>
+<span id="cb40-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb40-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>degree,</span>
+<span id="cb40-4"><a></a>    <span class="at">names_to =</span> <span class="st">"year"</span>,</span>
+<span id="cb40-5"><a></a>    <span class="at">names_transform =</span> as.numeric,</span>
+<span id="cb40-6"><a></a>    <span class="at">values_to =</span> <span class="st">"n"</span></span>
+<span id="cb40-7"><a></a>  ) <span class="sc">|&gt;</span></span>
+<span id="cb40-8"><a></a>  <span class="fu">mutate</span>(<span class="at">n =</span> <span class="fu">if_else</span>(<span class="fu">is.na</span>(n), <span class="dv">0</span>, n)) <span class="sc">|&gt;</span></span>
+<span id="cb40-9"><a></a>  <span class="fu">separate</span>(degree, <span class="at">sep =</span> <span class="st">" </span><span class="sc">\\</span><span class="st">("</span>, <span class="at">into =</span> <span class="fu">c</span>(<span class="st">"major"</span>, <span class="st">"degree_type"</span>)) <span class="sc">|&gt;</span></span>
+<span id="cb40-10"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb40-11"><a></a>    <span class="at">degree_type =</span> <span class="fu">str_remove</span>(degree_type, <span class="st">"</span><span class="sc">\\</span><span class="st">)"</span>),</span>
+<span id="cb40-12"><a></a>    <span class="at">degree_type =</span> <span class="fu">fct_relevel</span>(degree_type, <span class="st">"BS"</span>, <span class="st">"BS2"</span>, <span class="st">"AB"</span>, <span class="st">"AB2"</span>)</span>
+<span id="cb40-13"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section><section id="ae-05-majors-tidy" class="slide level2"><h2>ae-05-majors-tidy</h2>
 <div class="appex">
@@ -1301,6 +1278,41 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
           RevealZoom
         ]
       });
+    </script><script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        // dispatch for htmlwidgets
+        function fireSlideEnter() {
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+        }
+
+        function fireSlideChanged(previousSlide, currentSlide) {
+          fireSlideEnter();
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1333,18 +1345,7 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
         }
         return false;
       }
-      const clipboard = new window.ClipboardJS('.code-copy-button', {
-        text: function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-        }
-      });
-      clipboard.on('success', function(e) {
+      const onCopySuccess = function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1376,7 +1377,29 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
         }, 1000);
         // clear code selection
         e.clearSelection();
+      }
+      const getTextToCopy = function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+      }
+      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+        text: getTextToCopy
       });
+      clipboard.on('success', onCopySuccess);
+      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+        // For code content inside modals, clipBoardJS needs to be initialized with a container option
+        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+          text: getTextToCopy,
+          container: window.document.getElementById('quarto-embedded-source-code-modal')
+        });
+        clipboardModal.on('success', onCopySuccess);
+      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/sta199-s25\.github\.io\/");
@@ -1384,7 +1407,7 @@ dbl (14): 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, ...
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
