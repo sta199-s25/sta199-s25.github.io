@@ -93,7 +93,7 @@ website:
             text: Lab 3
           - href: lab/lab-4.qmd
             text: Lab 4
-      - section: "Exam practice problems"
+      - section: "Exam practice"
         contents:
           - href: exam/midterm-1-batch-A.qmd
             text: Midterm 1 Batch A
