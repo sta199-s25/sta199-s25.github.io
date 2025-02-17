@@ -1,0 +1,42 @@
+---
+title: "Kahoot How-to"
+---
+
+You should not need to make a Kahoot account to complete any of this, but if you do, I posted my login credentials on slack.
+
+- **Midterm 1**: [https://create.kahoot.it/share/sta-199-midterm-1-review/57954244-aef7-48b7-bc98-2f44202340fd](https://create.kahoot.it/share/sta-199-midterm-1-review/57954244-aef7-48b7-bc98-2f44202340fd)
+
+# 1. Click the link and select "Host live"
+
+
+Click the link and you'll see something like this, where you can quickly skim through the questions and answers:
+
+![](images/kahoot_start.png){width="60%"}
+
+When you're ready to go, click "**Host live**" and you will arrive at this screen:
+
+![](images/kahoot_launch.png){width="60%"}
+
+# 2. Randomizing questions/answers
+
+Go to the settings:
+
+![](images/kahoot_settings.png){width="60%"}
+
+You must please randomize both the question and answer order.
+
+![](images/kahoot_randomize.png){width="60%"}
+
+# 3. Team Mode
+
+This is an option that you can choose to use or not depending on attendance and the personality of your section:
+
+![](images/kahoot_team_1.png){width="60%"}
+
+![](images/kahoot_team.png){width="60%"}
+
+If you go this route, it would be good to have the lab helper write down the teams, because it may contain useful information for assigning the project groups. But this is not super important.
+
+# 4. Launch the game and play
+
+The music is apparently part of the charm here, so make sure you've got that cranked to 11. Otherwise, you're an MC and the game basically takes care of itself. You can either play it straight and discuss at the end, or you can stop in between questions and discuss the ones that folks found challenging.
