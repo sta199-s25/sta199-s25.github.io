@@ -475,7 +475,7 @@ c.  Mean average ratings of romance shows is left skewed.
 d.  Mean average ratings of comedy shows is right skewed.
 e.  There are more romance shows than comedy shows.
 
-## Data
+## IMDB
 
 The data for the next few questions come from the Internet Movie Database (IMDB). Specifically, the data are a random sample of movies released between 1980 and 2020.
 
