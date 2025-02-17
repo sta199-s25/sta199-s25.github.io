@@ -9,10 +9,10 @@
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.5.57">
+<meta name="generator" content="quarto-1.4.555">
 <meta name="author" content="John Zito">
 <meta name="dcterms.date" content="2025-02-10">
-<title>STA 199 Spring 2025 – Lab 4</title>
+<title>STA 199 Spring 2025 - Lab 4</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -43,7 +43,7 @@
     }
     @media print {
     pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
     }
     pre.numberSource code
       { counter-reset: source-line 0; }
@@ -71,7 +71,7 @@
     code span.at { color: #657422; } /* Attribute */
     code span.bn { color: #ad0000; } /* BaseN */
     code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.cf { color: #003b4f; } /* ControlFlow */
     code span.ch { color: #20794d; } /* Char */
     code span.cn { color: #8f5902; } /* Constant */
     code span.co { color: #5e5e5e; } /* Comment */
@@ -85,7 +85,7 @@
     code span.fu { color: #4758ab; } /* Function */
     code span.im { color: #00769e; } /* Import */
     code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.kw { color: #003b4f; } /* Keyword */
     code span.op { color: #5e5e5e; } /* Operator */
     code span.ot { color: #003b4f; } /* Other */
     code span.pp { color: #ad0000; } /* Preprocessor */
@@ -388,7 +388,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="Lab 4 – STA 199 Spring 2025">
+<meta property="og:title" content="STA 199 Spring 2025 - Lab 4">
 <meta property="og:site_name" content="STA 199 Spring 2025">
 </head>
 <body class="quarto-light">
@@ -493,16 +493,30 @@ John Zito
 <code>summarize()</code>: creates a new data frame – returns one for for each combination of grouping variables. If there is no grouping it will have a single row summarizing all observations</li>
 </ul></section><section id="example-set-up" class="slide level2 smaller"><h2>Example: Set up</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(knitr)</span>
-<span id="cb1-3"><a></a></span>
-<span id="cb1-4"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb1-5"><a></a>  <span class="at">col_1 =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"B"</span>),</span>
-<span id="cb1-6"><a></a>  <span class="at">col_2 =</span> <span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"X"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>),</span>
-<span id="cb1-7"><a></a>  <span class="at">col_3 =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb1-8"><a></a>)</span>
-<span id="cb1-9"><a></a></span>
-<span id="cb1-10"><a></a>df <span class="co">#this is used to display the data frame</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──
+✔ dplyr     1.1.4     ✔ readr     2.1.5
+✔ forcats   1.0.0     ✔ stringr   1.5.1
+✔ ggplot2   3.5.1     ✔ tibble    3.2.1
+✔ lubridate 1.9.3     ✔ tidyr     1.3.1
+✔ purrr     1.0.2     
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()
+ℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb2-2"><a></a><span class="fu">library</span>(knitr)</span>
+<span id="cb2-3"><a></a></span>
+<span id="cb2-4"><a></a>df <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb2-5"><a></a>  <span class="at">col_1 =</span> <span class="fu">c</span>(<span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"A"</span>, <span class="st">"B"</span>, <span class="st">"B"</span>),</span>
+<span id="cb2-6"><a></a>  <span class="at">col_2 =</span> <span class="fu">c</span>(<span class="st">"X"</span>, <span class="st">"Y"</span>, <span class="st">"X"</span>, <span class="st">"X"</span>, <span class="st">"Y"</span>),</span>
+<span id="cb2-7"><a></a>  <span class="at">col_3 =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb2-8"><a></a>)</span>
+<span id="cb2-9"><a></a></span>
+<span id="cb2-10"><a></a>df <span class="co">#this is used to display the data frame</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
   col_1 col_2 col_3
@@ -517,21 +531,21 @@ John Zito
 <div class="fragment">
 <p>What would be the result of the following code? # rows? # cols? column/variable names?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb3-2"><a></a>  <span class="fu">mutate</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a></span>
-<span id="cb3-5"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb3-6"><a></a>  <span class="fu">summarize</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb4-2"><a></a>  <span class="fu">mutate</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a></span>
+<span id="cb4-5"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb4-6"><a></a>  <span class="fu">summarize</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes"><p>HAVE THE STUDENTS GUESS how many rows, columns, what the variable names will be?</p>
 <p>mutate: number of rows does not change, number of columns increases by 1 (<code>med_col_3</code>). Could have also introduced more new variables within the mutate function using commas,</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb4-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb4-3"><a></a>    <span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3),</span>
-<span id="cb4-4"><a></a>    <span class="at">mean_col_3 =</span> <span class="fu">mean</span>(col_3)</span>
-<span id="cb4-5"><a></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb5-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb5-3"><a></a>    <span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3),</span>
+<span id="cb5-4"><a></a>    <span class="at">mean_col_3 =</span> <span class="fu">mean</span>(col_3)</span>
+<span id="cb5-5"><a></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>summarize: there is only 1 row and 1 col! (this is a much different data frame than df!). Could have had more columns/variables if added more variables within summarize function using commas. [same as above, just replace mutate with summarize]</p>
 <p>assignment: have the students guess</p>
@@ -550,8 +564,8 @@ John Zito
 </section><section id="example-no-groups" class="slide level2 smaller"><h2>Example: no groups</h2>
 <p><code>mutate()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb5-2"><a></a>  <span class="fu">mutate</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb6-2"><a></a>  <span class="fu">mutate</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 4
   col_1 col_2 col_3 med_col_3
@@ -566,8 +580,8 @@ John Zito
 <div class="fragment">
 <p><code>summarize()</code></p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb7-2"><a></a>  <span class="fu">summarize</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb8-2"><a></a>  <span class="fu">summarize</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 1 × 1
   med_col_3
@@ -579,7 +593,7 @@ John Zito
 <div class="fragment">
 <p>We did not assign any new or existing data frames (e.g., no <code>??? &lt;-</code>). In particular, we did not write over <code>df</code> (i.e., no <code>df &lt;-</code>), so what will be the result of the following code?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes"><p>mutate: there was no column named <code>med_col_3</code>, so a new column was created</p>
 <p>summarize: there is no grouping, so there is one output summarizing so the median is computed over all of the original rows of the data (five rows in this example)</p>
@@ -601,7 +615,7 @@ John Zito
 <li>It’s the same as when it was originally assigned. It has not been overwritten!</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a></a>df </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>df </span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 5 × 3
   col_1 col_2 col_3
@@ -625,25 +639,25 @@ John Zito
 </section><section id="example-with-groups" class="slide level2 smaller"><h2>Example: with groups</h2>
 <p>What if there is grouping?</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="co"># group by 1 variable</span></span>
-<span id="cb12-2"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb12-3"><a></a>  <span class="fu">group_by</span>(col_1) <span class="sc">|&gt;</span></span>
-<span id="cb12-4"><a></a>  <span class="fu">mutate</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span>
-<span id="cb12-5"><a></a></span>
-<span id="cb12-6"><a></a></span>
-<span id="cb12-7"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb12-8"><a></a>  <span class="fu">group_by</span>(col_1) <span class="sc">|&gt;</span></span>
-<span id="cb12-9"><a></a>  <span class="fu">summarize</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span>
-<span id="cb12-10"><a></a></span>
-<span id="cb12-11"><a></a><span class="co"># group by 2 variables</span></span>
-<span id="cb12-12"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb12-13"><a></a>  <span class="fu">group_by</span>(col_1, col_2) <span class="sc">|&gt;</span></span>
-<span id="cb12-14"><a></a>  <span class="fu">mutate</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span>
-<span id="cb12-15"><a></a></span>
-<span id="cb12-16"><a></a></span>
-<span id="cb12-17"><a></a>df <span class="sc">|&gt;</span></span>
-<span id="cb12-18"><a></a>  <span class="fu">group_by</span>(col_1, col_2) <span class="sc">|&gt;</span></span>
-<span id="cb12-19"><a></a>  <span class="fu">summarize</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a><span class="co"># group by 1 variable</span></span>
+<span id="cb13-2"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb13-3"><a></a>  <span class="fu">group_by</span>(col_1) <span class="sc">|&gt;</span></span>
+<span id="cb13-4"><a></a>  <span class="fu">mutate</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span>
+<span id="cb13-5"><a></a></span>
+<span id="cb13-6"><a></a></span>
+<span id="cb13-7"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb13-8"><a></a>  <span class="fu">group_by</span>(col_1) <span class="sc">|&gt;</span></span>
+<span id="cb13-9"><a></a>  <span class="fu">summarize</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span>
+<span id="cb13-10"><a></a></span>
+<span id="cb13-11"><a></a><span class="co"># group by 2 variables</span></span>
+<span id="cb13-12"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb13-13"><a></a>  <span class="fu">group_by</span>(col_1, col_2) <span class="sc">|&gt;</span></span>
+<span id="cb13-14"><a></a>  <span class="fu">mutate</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span>
+<span id="cb13-15"><a></a></span>
+<span id="cb13-16"><a></a></span>
+<span id="cb13-17"><a></a>df <span class="sc">|&gt;</span></span>
+<span id="cb13-18"><a></a>  <span class="fu">group_by</span>(col_1, col_2) <span class="sc">|&gt;</span></span>
+<span id="cb13-19"><a></a>  <span class="fu">summarize</span>(<span class="at">med_col_3 =</span> <span class="fu">median</span>(col_3))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <p>If you aren’t sure, try it out and see what happens (e.g., use data frame from Lab 3, Part 1).</p>
@@ -774,16 +788,17 @@ John Zito
 </table>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 </div>
 <div class="fragment">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>df_longer <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
-<span id="cb13-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
-<span id="cb13-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>ppl,</span>
-<span id="cb13-4"><a></a>    <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
-<span id="cb13-5"><a></a>    <span class="at">values_to =</span> <span class="st">"hours"</span></span>
-<span id="cb13-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>df_longer <span class="ot">&lt;-</span> df <span class="sc">|&gt;</span></span>
+<span id="cb14-2"><a></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb14-3"><a></a>    <span class="at">cols =</span> <span class="sc">-</span>ppl,</span>
+<span id="cb14-4"><a></a>    <span class="at">names_to =</span> <span class="st">"day"</span>,</span>
+<span id="cb14-5"><a></a>    <span class="at">values_to =</span> <span class="st">"hours"</span></span>
+<span id="cb14-6"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes"><p><code>pivot_longer()</code> or <code>pivot_wider()</code>? Have the students vote. <code>pivot_longer()</code>!</p>
 <p>What should the arguments be? (Go through the argument discussion first, then reveal the result toward the end – giving them enough time to look at it for visual learners)</p>
@@ -827,12 +842,12 @@ John Zito
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb14-2"><a></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
-<span id="cb14-3"><a></a>  <span class="at">value_x =</span> <span class="fu">c</span>(<span class="st">"x1"</span>, <span class="st">"x2"</span>, <span class="st">"x3"</span>)</span>
-<span id="cb14-4"><a></a>  )</span>
-<span id="cb14-5"><a></a></span>
-<span id="cb14-6"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a></a>x <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb15-2"><a></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb15-3"><a></a>  <span class="at">value_x =</span> <span class="fu">c</span>(<span class="st">"x1"</span>, <span class="st">"x2"</span>, <span class="st">"x3"</span>)</span>
+<span id="cb15-4"><a></a>  )</span>
+<span id="cb15-5"><a></a></span>
+<span id="cb15-6"><a></a>x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
      id value_x
@@ -844,12 +859,12 @@ John Zito
 </div>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
-<span id="cb16-2"><a></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>),</span>
-<span id="cb16-3"><a></a>  <span class="at">value_y =</span> <span class="fu">c</span>(<span class="st">"y1"</span>, <span class="st">"y2"</span>, <span class="st">"y4"</span>)</span>
-<span id="cb16-4"><a></a>  )</span>
-<span id="cb16-5"><a></a></span>
-<span id="cb16-6"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a></a>y <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb17-2"><a></a>  <span class="at">id =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">4</span>),</span>
+<span id="cb17-3"><a></a>  <span class="at">value_y =</span> <span class="fu">c</span>(<span class="st">"y1"</span>, <span class="st">"y2"</span>, <span class="st">"y4"</span>)</span>
+<span id="cb17-4"><a></a>  )</span>
+<span id="cb17-5"><a></a></span>
+<span id="cb17-6"><a></a>y</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 2
      id value_y
@@ -859,14 +874,18 @@ John Zito
 3     4 y4     </code></pre>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 </section><section id="left_join" class="slide level2"><h2><code>left_join()</code></h2>
 <div class="columns">
 <div class="column" style="width:50%;">
 <p><img data-src="images/07/left-join.gif"></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a></a><span class="fu">left_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a><span class="fu">left_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(id)`</code></pre>
+</div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
      id value_x value_y
@@ -876,7 +895,8 @@ John Zito
 3     3 x3      &lt;NA&gt;   </code></pre>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 <p>Keep all rows from left data frame.</p>
 </section><section id="right_join" class="slide level2"><h2><code>right_join()</code></h2>
 <div class="columns">
@@ -884,7 +904,10 @@ John Zito
 <p><img data-src="images/07/right-join.gif"></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a></a><span class="fu">right_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">right_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(id)`</code></pre>
+</div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 3
      id value_x value_y
@@ -894,7 +917,8 @@ John Zito
 3     4 &lt;NA&gt;    y4     </code></pre>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 <p>&nbsp; Keep all rows from right data frame.</p>
 </section><section id="full_join" class="slide level2"><h2><code>full_join()</code></h2>
 <div class="columns">
@@ -902,7 +926,10 @@ John Zito
 <p><img data-src="images/07/full-join.gif"></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a></a><span class="fu">full_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a><span class="fu">full_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(id)`</code></pre>
+</div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 4 × 3
      id value_x value_y
@@ -913,7 +940,8 @@ John Zito
 4     4 &lt;NA&gt;    y4     </code></pre>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 <p>&nbsp;</p>
 <p>Keep all rows from both data frames.</p>
 </section><section id="inner_join" class="slide level2"><h2><code>inner_join()</code></h2>
@@ -922,7 +950,10 @@ John Zito
 <p><img data-src="images/07/inner-join.gif"></p>
 </div><div class="column" style="width:50%;">
 <div class="cell">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a></a><span class="fu">inner_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a><span class="fu">inner_join</span>(x, y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Joining with `by = join_by(id)`</code></pre>
+</div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 2 × 3
      id value_x value_y
@@ -931,7 +962,8 @@ John Zito
 2     2 x2      y2     </code></pre>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 <p>&nbsp;</p>
 <p>Keep all rows that exist in both data frames.</p>
 </section><section id="example-_join-more-info" class="slide level2 smaller"><h2>Example: <code>*_join()</code> more info</h2>
@@ -939,8 +971,8 @@ John Zito
 <li>We could also use <code>*_join()</code> within a pipeline.</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a></a>x <span class="sc">|&gt;</span></span>
-<span id="cb26-2"><a></a>  <span class="fu">left_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>x <span class="sc">|&gt;</span></span>
+<span id="cb31-2"><a></a>  <span class="fu">left_join</span>(y)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ul>
 <li>Which data frame is on the left and which is on the right? <code>x</code> or <code>y</code>?</li>
@@ -955,11 +987,11 @@ John Zito
 <li>In this example <code>x</code> has 2 variables: <code>id</code> and <code>value_x</code> and y has 2 variables: <code>id</code> and <code>value_x</code>, so there was only one common variable between <code>x</code> and <code>y</code> – <code>id</code>. We could have been more explicit and used the following code</li>
 </ul>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a><span class="fu">left_join</span>(x, y, <span class="at">by =</span> <span class="fu">join_by</span>(id))</span>
-<span id="cb27-2"><a></a></span>
-<span id="cb27-3"><a></a><span class="co"># or alternatively</span></span>
-<span id="cb27-4"><a></a></span>
-<span id="cb27-5"><a></a><span class="fu">left_join</span>(x, y, <span class="at">by =</span> <span class="fu">join_by</span>(id <span class="sc">==</span> id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a></a><span class="fu">left_join</span>(x, y, <span class="at">by =</span> <span class="fu">join_by</span>(id))</span>
+<span id="cb32-2"><a></a></span>
+<span id="cb32-3"><a></a><span class="co"># or alternatively</span></span>
+<span id="cb32-4"><a></a></span>
+<span id="cb32-5"><a></a><span class="fu">left_join</span>(x, y, <span class="at">by =</span> <span class="fu">join_by</span>(id <span class="sc">==</span> id))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <aside class="notes"><p>The first option is useful when there are multiple matching columns [and by default <code>*_join()</code> will use all variables in common across <code>x</code> and <code>y</code>] but perhaps only one of interest (e.g., <code>student_ids</code> and <code>email_address</code> – the same student could have multiple email addresses but you want each student to be one row/observation, so you would use <code>by = join_by(student_ids)</code>).</p>
 <p>The second option is used when the variables do not share the same variable name but are referring to the same information, e.g., <code>id == student_id</code>.</p>
@@ -998,7 +1030,7 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="lab-4_files/figure-revealjs/unnamed-chunk-21-1.png" width="960"></p>
+<figure><p><img data-src="lab-4_files/figure-html/unnamed-chunk-21-1.png" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1007,21 +1039,33 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="lab-4_files/figure-revealjs/unnamed-chunk-22-1.png" width="960"></p>
+<figure><p><img data-src="lab-4_files/figure-html/unnamed-chunk-22-1.png" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 </div>
 </section><section id="factor-example" class="slide level2 smaller"><h2>Factor example</h2>
+<div class="cell">
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 209 Columns: 3
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (3): Timestamp, How many classes do you have on Tuesdays?, What year are...
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
 <p>Recall from Thursday’s lecture</p>
 <div class="columns">
 <div class="column" style="width:50%;">
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="lab-4_files/figure-revealjs/unnamed-chunk-24-1.png" width="960"></p>
+<figure><p><img data-src="lab-4_files/figure-html/unnamed-chunk-24-1.png" width="672"></p>
 </figure>
 </div>
 </div>
@@ -1030,24 +1074,25 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="lab-4_files/figure-revealjs/unnamed-chunk-25-1.png" width="960"></p>
+<figure><p><img data-src="lab-4_files/figure-html/unnamed-chunk-25-1.png" width="672"></p>
 </figure>
 </div>
 </div>
 </div>
-</div></div>
+</div>
+</div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>survey <span class="sc">|&gt;</span></span>
-<span id="cb28-2"><a></a>  <span class="fu">mutate</span>(</span>
-<span id="cb28-3"><a></a>    <span class="at">year =</span> <span class="fu">fct_relevel</span>(year, <span class="st">"First-year"</span>, <span class="st">"Sophomore"</span>, <span class="st">"Junior"</span>, <span class="st">"Senior"</span>)</span>
-<span id="cb28-4"><a></a>    ) <span class="sc">|&gt;</span></span>
-<span id="cb28-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
-<span id="cb28-6"><a></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
-<span id="cb28-7"><a></a>  <span class="fu">labs</span>(</span>
-<span id="cb28-8"><a></a>    <span class="at">title =</span> <span class="st">"Number of students by year"</span>,</span>
-<span id="cb28-9"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
-<span id="cb28-10"><a></a>    <span class="at">y =</span> <span class="st">"Count"</span></span>
-<span id="cb28-11"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a></a>survey <span class="sc">|&gt;</span></span>
+<span id="cb34-2"><a></a>  <span class="fu">mutate</span>(</span>
+<span id="cb34-3"><a></a>    <span class="at">year =</span> <span class="fu">fct_relevel</span>(year, <span class="st">"First-year"</span>, <span class="st">"Sophomore"</span>, <span class="st">"Junior"</span>, <span class="st">"Senior"</span>)</span>
+<span id="cb34-4"><a></a>    ) <span class="sc">|&gt;</span></span>
+<span id="cb34-5"><a></a>  <span class="fu">ggplot</span>(<span class="fu">aes</span>(<span class="at">x =</span> year)) <span class="sc">+</span></span>
+<span id="cb34-6"><a></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span> </span>
+<span id="cb34-7"><a></a>  <span class="fu">labs</span>(</span>
+<span id="cb34-8"><a></a>    <span class="at">title =</span> <span class="st">"Number of students by year"</span>,</span>
+<span id="cb34-9"><a></a>    <span class="at">x =</span> <span class="st">"Year"</span>,</span>
+<span id="cb34-10"><a></a>    <span class="at">y =</span> <span class="st">"Count"</span></span>
+<span id="cb34-11"><a></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <div class="fragment">
 <div class="question">
@@ -1285,41 +1330,6 @@ John Zito
           RevealZoom
         ]
       });
-    </script><script>
-      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
-      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
-      // slide changes (different for each slide format).
-      (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
-          const event = window.document.createEvent("Event");
-          event.initEvent("slideenter", true, true);
-          window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
-
-          // dispatch for shiny
-          if (window.jQuery) {
-            if (previousSlide) {
-              window.jQuery(previousSlide).trigger("hidden");
-            }
-            if (currentSlide) {
-              window.jQuery(currentSlide).trigger("shown");
-            }
-          }
-        }
-
-        // hookup for slidy
-        if (window.w3c_slidy) {
-          window.w3c_slidy.add_observer(function (slide_num) {
-            // slide_num starts at position 1
-            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
-          });
-        }
-
-      })();
     </script><script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {
@@ -1352,7 +1362,18 @@ John Zito
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -1384,29 +1405,7 @@ John Zito
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/sta199-s25\.github\.io\/");
@@ -1414,7 +1413,7 @@ John Zito
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
