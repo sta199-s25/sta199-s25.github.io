@@ -556,7 +556,7 @@ options(
 ```
 :::
 
-## Question 11
+### Question 11
 
 The `name` and `runtime` variables are shown below, with the variable types suppressed.
 
@@ -598,7 +598,7 @@ e.  Logical
 
 \vspace{2cm}
 
-## Question 12
+### Question 12
 
 The code below summarizes the data in a certain way.
 
@@ -619,7 +619,7 @@ d.  Results in a character vector.
 
 e.  The result shows there are 435 movies released in the United States.
 
-## Question 13
+### Question 13
 
 Suppose you want a visualization that shows the number of movies in the sample in each `genre`. Your first attempt is as follows.
 
@@ -664,7 +664,7 @@ d.  Add a title, x and y-axis labels, and a caption.
 
 e.  Filter out all moves in genres other than Comedy, Drama, Action, and Horror before plotting.
 
-## Question 14
+### Question 14
 
 Which of the following is [**TRUE**]{.underline} about the code and its result? **Select all that are true.**
 
