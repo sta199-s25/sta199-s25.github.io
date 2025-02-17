@@ -3,6 +3,12 @@ title: Midterm 1 Practice Questions
 subtitle: Batch B
 ---
 
+::: {.callout-tip collapse="true"}
+## Solutions
+
+See [here](https://sta199-s25.github.io/exam/midterm-1-batch-B-solns.html).
+:::
+
 ```{r}
 #| include: false
 library(tidyverse)
@@ -226,11 +232,11 @@ population |>
 
 How many rows will the resulting data frame have?
 
-a. 4 
-b. 5 
-c. 6 
-d. 7 
-e. 8
+a.  4
+b.  5
+c.  6
+d.  7
+e.  8
 
 ### Question 5
 
@@ -490,7 +496,7 @@ The name of the data frame used for this analysis is `movies`, and it contains t
 \setcounter{table}{0}
 
 | Variable          | Description                                                             |
-|----------------------|--------------------------------------------------|
+|-----------------------|-------------------------------------------------|
 | `name`            | name of the movie                                                       |
 | `rating`          | rating of the movie (R, PG, etc.)                                       |
 | `genre`           | main genre of the movie.                                                |

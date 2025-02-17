@@ -1,5 +1,5 @@
 ---
-title: Midterm 1 Batch B
+title: Midterm 1 Practice Questions B
 subtitle: Suggested answers
 execute:
   echo: false

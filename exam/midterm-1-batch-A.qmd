@@ -5,6 +5,13 @@ execute:
   echo: false
 ---
 
+::: {.callout-tip collapse="true"}
+## Solutions
+
+See [here](https://sta199-s25.github.io/exam/midterm-1-batch-A-solns.html).
+:::
+
+
 ```{r}
 #| label: load-packages
 #| message: false
