@@ -1,8 +1,8 @@
 {
-  "hash": "71b385bf581653d525fb868ffcb9f74e",
+  "hash": "349c0a0be6c6c02605ab3ef902be5d04",
   "result": {
     "engine": "knitr",
-    "markdown": "---\ntitle: Midterm 1 Batch B\nsubtitle: Suggested answers\nexecute:\n  echo: false\n---\n\n\n\n1.  d\n\n2.  a, d\n\n3.  a, d\n\n4.  c\n\n5.  b\n\n6.  a\n\n7.  b\n\n8.  \n\n\n\n    ::: {.cell}\n    ::: {.cell-output-display}\n    ![](midterm-1-batch-B-solns_files/figure-html/unnamed-chunk-1-1.png){width=672}\n    :::\n    :::\n\n\n\n9.  a, d\n\n10. b, c, e\n\n11. a\n\n12. a, c, e\n\n13. a, b, c, d\n\n14. a, d\n",
+    "markdown": "---\ntitle: Midterm 1 Practice Questions B\nsubtitle: Suggested answers\nexecute:\n  echo: false\n---\n\n\n1.  d\n\n2.  a, d\n\n3.  a, d\n\n4.  c\n\n5.  b\n\n6.  a\n\n7.  b\n\n8.  \n\n\n    ::: {.cell}\n    ::: {.cell-output-display}\n    ![](midterm-1-batch-B-solns_files/figure-html/unnamed-chunk-1-1.png){width=672}\n    :::\n    :::\n\n\n9.  a, d\n\n10. b, c, e\n\n11. a\n\n12. a, c, e\n\n13. a, b, c, d\n\n14. a, d\n",
     "supporting": [
       "midterm-1-batch-B-solns_files"
     ],
