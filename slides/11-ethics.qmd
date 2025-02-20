@@ -546,10 +546,10 @@ predict_race(voter.file = me, surname.only = TRUE)
 
 The cash bail system was retained:
 
-| Choice    | Votes | Percent | 
-| -------- | ------- | ------- |
-| Yes  | 7,232,380    | 43.59%  |
-| **No** | **9,358,226**     |  56.41% |
+| Choice | Votes         | Percent |
+|--------|---------------|---------|
+| Yes    | 7,232,380     | 43.59%  |
+| **No** | **9,358,226** | 56.41%  |
 
 ::: incremental
 -   reasonable people can debate if this outcome is good or bad;
@@ -559,8 +559,7 @@ The cash bail system was retained:
 
 ## Another algorithmic decision...
 
-![](images/11/lending.png)
-Armies of stats PhDs go to work on these models. They have no training in the ethics of what they're doing.
+![](images/11/lending.png) Armies of stats PhDs go to work on these models. They have no training in the ethics of what they're doing.
 
 ## A success story?
 
@@ -568,10 +567,7 @@ Armies of stats PhDs go to work on these models. They have no training in the et
 
 `Data` + `Model` to predict timing of menstrual cycle:
 
-![](images/11/flo.png){width="24%"}
-![](images/11/clue.png){width="24%"}
-![](images/11/per_calendar.png){width="24%"}
-![](images/11/stardust.png){width="24%"}
+![](images/11/flo.png){width="24%"} ![](images/11/clue.png){width="24%"} ![](images/11/per_calendar.png){width="24%"} ![](images/11/stardust.png){width="24%"}
 
 . . .
 
@@ -581,8 +577,7 @@ A perfect microcosm of the themes of our course, and maybe one of the real trium
 
 ...but what if you learned they were selling your data?
 
-
-# Privacy (aka [the reason Tony Soprano ripped the GPS out of this Escalade](https://youtu.be/_FGmSqB6Jfo?feature=shared)
+# Data privacy (aka the reason Tony Soprano ripped the GPS out of this Escalade)
 
 ## Data privacy
 
@@ -594,13 +589,13 @@ A perfect microcosm of the themes of our course, and maybe one of the real trium
 
 -   More importantly, decisions are made by law enforcement, financial institutions, and governments based on data that directly affect the lives of people.
 
-## Privacy of your data 
+## Privacy of your data
 
 ::: question
 What pieces of data have you left on the internet today? Think through everything you've logged into, clicked on, checked in, either actively or automatically, that might be tracking you. Do you know where that data is stored? Who it can be accessed by? Whether it's shared with others?
 :::
 
-## Sharing your data 
+## Sharing your data
 
 ::: question
 What are you OK with sharing?
@@ -701,10 +696,9 @@ Augmenting doctors' diagnostic capacity so that they make fewer mistakes, treat 
 
 ![](images/11/nobel.png)
 
-- AlphaFold2: "predicting 3D
-structures [of proteins] ($y$) directly from the primary amino acid sequence ($x$)."
+-   AlphaFold2: "predicting 3D structures \[of proteins\] ($y$) directly from the primary amino acid sequence ($x$)."
 
-- "researchers can now better understand antibiotic resistance and create images of enzymes that can decompose plastic."
+-   "researchers can now better understand antibiotic resistance and create images of enzymes that can decompose plastic."
 
 # Further reading
 
