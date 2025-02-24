@@ -8,11 +8,11 @@
 <link href="../site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.5.57">
+  <meta name="generator" content="quarto-1.4.555">
 
   <meta name="author" content="John Zito">
   <meta name="dcterms.date" content="2025-02-23">
-  <title>STA 199 Spring 2025 – STA 199 Final Project</title>
+  <title>STA 199 Spring 2025 - STA 199 Final Project</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -323,7 +323,7 @@
       margin-right: 0; 
     }
   </style>
-<meta property="og:title" content="STA 199 Final Project – STA 199 Spring 2025">
+<meta property="og:title" content="STA 199 Spring 2025 - STA 199 Final Project">
 <meta property="og:site_name" content="STA 199 Spring 2025">
 </head>
 <body class="quarto-light">
@@ -348,12 +348,67 @@ John Zito
 </section>
 <section id="final-project" class="slide level2">
 <h2>Final Project</h2>
+<div>
+<ul>
+<li class="fragment">Teams of 4 - 5 pick a dataset and compose an original analysis using the course tools;</li>
+<li class="fragment">Final product:
+<ul>
+<li class="fragment">written report in Quarto;</li>
+<li class="fragment">five minute video presentation;</li>
+</ul></li>
+<li class="fragment">20% of final course grade</li>
+</ul>
+</div>
 </section>
-<section id="intermediate-deadlines" class="slide level2">
+<section id="intermediate-deadlines" class="slide level2 scrollable medium">
 <h2>Intermediate deadlines</h2>
+<div>
+<ul>
+<li class="fragment"><p><strong>Milestone 1</strong>: meet your teams</p>
+<ul>
+<li class="fragment">today!</li>
+</ul></li>
+<li class="fragment"><p><strong>Milestone 2</strong>: propose two candidate datasets to work with</p>
+<ul>
+<li class="fragment">Fri Mar 07: proposal due</li>
+<li class="fragment">Mon Mar 24: TA returns feedback</li>
+</ul></li>
+<li class="fragment"><p><strong>Milestone 3</strong>: demonstrate progress</p>
+<ul>
+<li class="fragment">Fri Apr 04</li>
+</ul></li>
+<li class="fragment"><p><strong>Milestone 4</strong>: give peer review feedback to other teams</p>
+<ul>
+<li class="fragment">Mon Apr 14 in lab</li>
+</ul></li>
+<li class="fragment"><p><strong>Milestone 5</strong>: submit final report and video</p>
+<ul>
+<li class="fragment">Wednesday April 23</li>
+</ul></li>
+</ul>
+</div>
 </section>
-<section id="peer-evaluations" class="slide level2">
-<h2>Peer evaluations</h2>
+<section id="along-the-way-peer-evaluation-of-teammates" class="slide level2">
+<h2>Along the way: peer evaluation of teammates</h2>
+<ul>
+<li>Peer eval 1: Fri Feb 28 @ 5PM</li>
+<li>Peer eval 2: Fri Mar 21 @ 5PM</li>
+<li>Peer eval 3: Fri Apr 11 @ 5PM</li>
+<li>Peer eval 4: Mon Apr 28 @ 5PM</li>
+</ul>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Note</strong></p>
+</div>
+<div class="callout-content">
+<p>Be on the look out for emails from <strong>TEAMMATES</strong>.</p>
+</div>
+</div>
+</div>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -605,7 +660,18 @@ John Zito
         }
         return false;
       }
-      const onCopySuccess = function(e) {
+      const clipboard = new window.ClipboardJS('.code-copy-button', {
+        text: function(trigger) {
+          const codeEl = trigger.previousElementSibling.cloneNode(true);
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+      });
+      clipboard.on('success', function(e) {
         // button target
         const button = e.trigger;
         // don't keep focus
@@ -637,29 +703,7 @@ John Zito
         }, 1000);
         // clear code selection
         e.clearSelection();
-      }
-      const getTextToCopy = function(trigger) {
-          const codeEl = trigger.previousElementSibling.cloneNode(true);
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
-            }
-          }
-          return codeEl.innerText;
-      }
-      const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
-        text: getTextToCopy
       });
-      clipboard.on('success', onCopySuccess);
-      if (window.document.getElementById('quarto-embedded-source-code-modal')) {
-        // For code content inside modals, clipBoardJS needs to be initialized with a container option
-        // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
-        const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
-          text: getTextToCopy,
-          container: window.document.getElementById('quarto-embedded-source-code-modal')
-        });
-        clipboardModal.on('success', onCopySuccess);
-      }
         var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
         var mailtoRegex = new RegExp(/^mailto:/);
           var filterRegex = new RegExp("https:\/\/sta199-s25\.github\.io\/");
@@ -667,7 +711,7 @@ John Zito
             return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
         }
         // Inspect non-navigation links and adorn them if external
-     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+     	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
         for (var i=0; i<links.length; i++) {
           const link = links[i];
           if (!isInternal(link.href)) {
