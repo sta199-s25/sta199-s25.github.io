@@ -7,7 +7,45 @@ auto-stretch: false
 
 ## Final Project
 
+::: incremental
+- Teams of 4 - 5 pick a dataset and compose an original analysis using the course tools;
+- Final product:
+  - written report in Quarto;
+  - five minute video presentation;
+:::
 
-## Intermediate deadlines
+## Intermediate deadlines {.scrollable .medium}
 
-## Peer evaluations
+::: incremental
+- **Milestone 1**: meet your teams
+
+    - today!
+    
+- **Milestone 2**: propose two candidate datasets to work with
+
+    - Fri Mar 07: proposal due
+    - Mon Mar 24: TA returns feedback
+
+- **Milestone 3**: demonstrate progress
+
+    - Fri Apr 04
+
+- **Milestone 4**: give peer review feedback to another team
+
+    - Mon Apr 14 in lab
+
+- **Milestone 5**: submit final report and video
+
+    - Wednesday April 23
+:::
+
+## Along the way: peer evaluation of teammates
+
+- Peer eval 1: Fri Feb 28 @ 5PM
+- Peer eval 2: Fri Mar 21 @ 5PM
+- Peer eval 3: Fri Apr 11 @ 5PM
+- Peer eval 4: Mon Apr 28 @ 5PM
+
+::: callout-note
+Be on the look out for emails from **TEAMMATES**.
+:::
