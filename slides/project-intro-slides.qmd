@@ -1,0 +1,13 @@
+---
+title: "STA 199 Final Project"
+date: "2025-02-23"
+format: revealjs
+auto-stretch: false
+---
+
+## Final Project
+
+
+## Intermediate deadlines
+
+## Peer evaluations
