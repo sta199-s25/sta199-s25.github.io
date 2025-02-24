@@ -6,8 +6,7 @@ execute:
   echo: false
 ---
 
-During the peer feedback process, you will be provided read-only access to your partner team's GitHub repo.
-You will provide your feedback in the form of GitHub issues to your partner team's GitHub repo.
+During the peer feedback process, you will be provided read-only access to your partner team's GitHub repo. You will provide your feedback in the form of GitHub issues to your partner team's GitHub repo.
 
 # Goals
 
@@ -19,11 +18,9 @@ The goals of this milestone are as follows:
 
 # Instructions
 
-Review two other teams' projects.
-As a team you should spend \~30 minutes on each team's project.
+Review two other teams' projects. As a team you should spend \~30 minutes on each team's project.
 
--   Find the names of the teams whose projects you're reviewing below.
-    You should already have access to this team's repo.
+-   Find the names of the teams whose projects you're reviewing below. You should already have access to this team's repo.
 
 -   Each team member should go to the repo of the team you're reviewing.
 
@@ -37,8 +34,7 @@ As a team you should spend \~30 minutes on each team's project.
 
     -   All team members discuss the project based on the prompts on the issue template and one team member records the feedback and submits the issue.
 
--   To open an issue in the repo you're reviewing, click on New issue, and click on Get started for the Peer review issue.
-    Fill out this issue, answering the following questions:
+-   To open an issue in the repo you're reviewing, click on New issue, and click on Get started for the Peer review issue. Fill out this issue, answering the following questions:
 
     -   Peer review by: \[NAME OF TEAM DOING THE REVIEW\]
 
@@ -46,18 +42,15 @@ As a team you should spend \~30 minutes on each team's project.
 
     -   Describe the goal of the project.
 
-    -   Describe the data used or collected, if any.
-        If the proposal does not include the use of a specific dataset, comment on whether the project would be strengthened by the inclusion of a dataset.
+    -   Describe the data used or collected, if any. If the proposal does not include the use of a specific dataset, comment on whether the project would be strengthened by the inclusion of a dataset.
 
     -   Describe the approaches, tools, and methods that will be used.
 
-    -   Provide constructive feedback on how the team might be able to improve their project.
-        Make sure your feedback includes at least one comment on the statistical reasoning aspect of the project, but do feel free to comment on aspects beyond the reasoning as well.
+    -   Provide constructive feedback on how the team might be able to improve their project. Make sure your feedback includes at least one comment on the statistical reasoning aspect of the project, but do feel free to comment on aspects beyond the reasoning as well.
 
     -   What aspect of this project are you most interested in and would like to see highlighted in the presentation?
 
-    -   Were you able to reproduce the project by clicking on Render Website once you cloned it?
-        Were there any issues with reproducibility?
+    -   Were you able to reproduce the project by clicking on Render Website once you cloned it? Were there any issues with reproducibility?
 
     -   Provide constructive feedback on any issues with file and/or code organization.
 
@@ -69,6 +62,7 @@ As a team you should spend \~30 minutes on each team's project.
 
 ```{r}
 #| message: false
+#| eval: false
 library(tidyverse)
 library(gt)
 library(googlesheets4)
@@ -96,6 +90,7 @@ make_pairing_table <- function(df) {
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 1))
 make_pairing_table(teams)
 ```
@@ -104,6 +99,7 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 2))
 make_pairing_table(teams)
 ```
@@ -112,6 +108,7 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 3))
 make_pairing_table(teams)
 ```
@@ -120,6 +117,7 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 4))
 make_pairing_table(teams)
 ```
@@ -128,6 +126,7 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 5))
 make_pairing_table(teams)
 ```
@@ -136,6 +135,7 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 6))
 make_pairing_table(teams)
 ```
@@ -144,6 +144,7 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 7))
 make_pairing_table(teams)
 ```
@@ -152,6 +153,7 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 8))
 make_pairing_table(teams)
 ```
@@ -160,6 +162,7 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 9))
 make_pairing_table(teams)
 ```
@@ -168,18 +171,17 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
+#| eval: false
 teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 10))
 make_pairing_table(teams)
 ```
 :::
 
-
 # Grading
 
 Peer reviews will be graded on the extent to which it comprehensively and constructively addresses the components of the reviewee's team's report.
 
-Only the team members participating in the review during the lab session are eligible for points for the peer review.
-If you're unable to make it to lab in person, you should arrange to virtually connect with your team during your lab session.
+Only the team members participating in the review during the lab session are eligible for points for the peer review. If you're unable to make it to lab in person, you should arrange to virtually connect with your team during your lab session.
 
 -   0 points: No peer review
 
@@ -190,7 +192,5 @@ If you're unable to make it to lab in person, you should arrange to virtually co
 -   5 points: Peer review is constructive, actionable, and sufficiently thorough
 
 ::: callout-note
-The feedback issue will come from one team member on GitHub since you can't collectively edit an issue.
-However it must represent the opinions of the entire team.
-It is not a single team member's responsibility to provide feedback, they're just the record keeper for the team.
+The feedback issue will come from one team member on GitHub since you can't collectively edit an issue. However it must represent the opinions of the entire team. It is not a single team member's responsibility to provide feedback, they're just the record keeper for the team.
 :::
