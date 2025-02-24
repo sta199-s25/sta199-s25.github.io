@@ -5,16 +5,16 @@ format: revealjs
 auto-stretch: false
 ---
 
-## Final Project
+## Final Project {.large}
 
 ::: incremental
 - Teams of 4 - 5 pick a dataset and compose an original analysis using the course tools;
 - Final product:
   - written report in Quarto;
-  - five minute video presentation;
+  - five minute video presentation.
 :::
 
-## Intermediate deadlines {.scrollable .medium}
+## Intermediate graded deadlines {.scrollable .smaller}
 
 ::: incremental
 - **Milestone 1**: meet your teams
@@ -30,7 +30,7 @@ auto-stretch: false
 
     - Fri Apr 04
 
-- **Milestone 4**: give peer review feedback to another team
+- **Milestone 4**: give peer review feedback to other teams
 
     - Mon Apr 14 in lab
 
@@ -38,6 +38,10 @@ auto-stretch: false
 
     - Wednesday April 23
 :::
+
+. . .
+
+**20% of the final course grade altogether.**
 
 ## Along the way: peer evaluation of teammates
 
