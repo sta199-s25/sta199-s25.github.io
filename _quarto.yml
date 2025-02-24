@@ -99,7 +99,8 @@ website:
             text: Midterm 1 Batch A
           - href: exam/midterm-1-batch-B.qmd
             text: Midterm 1 Batch B
-      - section: "Exam practice"
+      - section: "Project"
+        contents:
           - href: project/description.qmd
             text: Description
           - href: project/1-working-collaboratively.qmd
