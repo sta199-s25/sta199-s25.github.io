@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
-
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.555">
-
+<meta name="generator" content="quarto-1.5.57">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
-
-
-<title>STA 199 Spring 2025 - Working collaboratively</title>
+<title>Working collaboratively – STA 199 Spring 2025</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,8 +17,41 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
-
 
 <script src="../site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="../site_libs/clipboard/clipboard.min.js"></script>
@@ -37,8 +67,7 @@ ul.task-list li input[type="checkbox"] {
 <link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
-<script id="quarto-search-options" type="application/json">{
+<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light"><script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
   "collapse-after": 3,
@@ -65,83 +94,73 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-
-
-<meta property="og:title" content="STA 199 Spring 2025 - Working collaboratively">
+<meta property="og:title" content="Working collaboratively – STA 199 Spring 2025">
 <meta property="og:description" content="Milestone 1">
 <meta property="og:site_name" content="STA 199 Spring 2025">
 </head>
-
 <body class="nav-sidebar docked">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <header id="quarto-header" class="headroom fixed-top"><nav class="quarto-secondary-nav"><div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Working collaboratively</li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+        <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+      <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
         <i class="bi bi-search"></i>
       </button>
     </div>
-  </nav>
-</header>
-<!-- content -->
-<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
+  </nav></header><!-- content --><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-    <div class="pt-lg-2 mt-2 text-center sidebar-header">
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto"><div class="pt-lg-2 mt-2 text-center sidebar-header">
       <a href="../index.html" class="sidebar-logo-link">
-      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none">
-      </a>
+      <img src="../img/logo.png" alt="" class="sidebar-logo py-0 d-lg-inline d-none"></a>
       <div class="sidebar-tools-main tools-wide">
     <a href="https://github.com/sta199-s25" title="GitHub organization" class="quarto-navigation-tool px-1" aria-label="GitHub organization"><i class="bi bi-github"></i></a>
     <a href="https://cmgr.oit.duke.edu/containers" title="RStudio containers" class="quarto-navigation-tool px-1" aria-label="RStudio containers"><i class="bi bi-code-square"></i></a>
     <a href="https://duke.hosted.panopto.com/Panopto/Pages/Sessions/List.aspx?folderID=74a0ba52-f70b-4868-8324-b260017e1689" title="Class recordings" class="quarto-navigation-tool px-1" aria-label="Class recordings"><i class="bi bi-camera-reels-fill"></i></a>
     <div class="dropdown">
-      <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
+      <a href="" title="Support" id="quarto-navigation-tool-dropdown-0" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Support"><i class="bi bi-life-preserver"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-0">
-          <li>
+<li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://docs.google.com/spreadsheets/d/1Bft17R-KHqjK3LlK8aRUEQCGmtnFaH0BgVX830SysOE/edit?usp=sharing">
-              <i class="bi bi-bi-person-raised-hand pe-1"></i>
+              <i class="bi bi-person-raised-hand pe-1"></i>
             Office hours
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://edstem.org/us/courses/70595/discussion">
-              <i class="bi bi-bi-people-fill pe-1"></i>
+              <i class="bi bi-people-fill pe-1"></i>
             Ed Discussion
             </a>
           </li>
       </ul>
-    </div>
+</div>
     <div class="dropdown">
-      <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
+      <a href="" title="Canvas" id="quarto-navigation-tool-dropdown-1" class="quarto-navigation-tool dropdown-toggle px-1" data-bs-toggle="dropdown" aria-expanded="false" role="link" aria-label="Canvas"><i class="bi bi-file-check-fill"></i></a>
       <ul class="dropdown-menu" aria-labelledby="quarto-navigation-tool-dropdown-1">
-          <li>
+<li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/50057/announcements">
-              <i class="bi bi-bi-megaphone-fill pe-1"></i>
+              <i class="bi bi-megaphone-fill pe-1"></i>
             Announcements
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/50057/external_tools/181">
-              <i class="bi bi-bi-file-arrow-up-fill pe-1"></i>
+              <i class="bi bi-file-arrow-up-fill pe-1"></i>
             Gradescope
             </a>
           </li>
           <li>
             <a class="dropdown-item sidebar-tools-main-item" href="https://canvas.duke.edu/courses/50057/gradebook">
-              <i class="bi bi-bi-alphabet-uppercase pe-1"></i>
+              <i class="bi bi-alphabet-uppercase pe-1"></i>
             Gradebook
             </a>
           </li>
       </ul>
-    </div>
+</div>
 </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -151,16 +170,16 @@ ul.task-list li input[type="checkbox"] {
         </div>
     <div class="sidebar-menu-container"> 
     <ul class="list-unstyled mt-1">
-        <li class="sidebar-item sidebar-item-section">
+<li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false">
  <span class="menu-text">Syllabus</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../syllabus/syllabus_overview.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Overview</span></a>
@@ -209,17 +228,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
  <span class="menu-text">Computing</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../computing/coding-access.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Access</span></a>
@@ -238,17 +257,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false">
  <span class="menu-text">Labs</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../lab/lab-0.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Lab 0</span></a>
@@ -279,17 +298,17 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false">
  <span class="menu-text">Exam practice</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">  
-          <li class="sidebar-item">
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth1 ">
+<li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../exam/midterm-1-batch-A.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Midterm 1 Batch A</span></a>
@@ -302,38 +321,37 @@ ul.task-list li input[type="checkbox"] {
   </div>
 </li>
       </ul>
-  </li>
+</li>
     </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
+</div>
+</nav><div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
+        <nav id="TOC" role="doc-toc" class="toc-active"><h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#goals" id="toc-goals" class="nav-link active" data-scroll-target="#goals">Goals</a></li>
+<li><a href="#goals" id="toc-goals" class="nav-link active" data-scroll-target="#goals">Goals</a></li>
+  <li><a href="#teams" id="toc-teams" class="nav-link" data-scroll-target="#teams">Teams</a></li>
   <li><a href="#team-name" id="toc-team-name" class="nav-link" data-scroll-target="#team-name">Team name</a></li>
-  <li><a href="#merge-conflicts" id="toc-merge-conflicts" class="nav-link" data-scroll-target="#merge-conflicts">Merge conflicts</a>
+  <li>
+<a href="#merge-conflicts" id="toc-merge-conflicts" class="nav-link" data-scroll-target="#merge-conflicts">Merge conflicts</a>
   <ul class="collapse">
-  <li><a href="#activity" id="toc-activity" class="nav-link" data-scroll-target="#activity">Activity</a>
+<li>
+<a href="#activity" id="toc-activity" class="nav-link" data-scroll-target="#activity">Activity</a>
   <ul class="collapse">
-  <li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
+<li><a href="#setup" id="toc-setup" class="nav-link" data-scroll-target="#setup">Setup</a></li>
   <li><a href="#lets-cause-a-merge-conflict" id="toc-lets-cause-a-merge-conflict" class="nav-link" data-scroll-target="#lets-cause-a-merge-conflict">Let’s cause a merge conflict!</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#tips-for-collaborating-via-github" id="toc-tips-for-collaborating-via-github" class="nav-link" data-scroll-target="#tips-for-collaborating-via-github">Tips for collaborating via GitHub</a></li>
-  </ul></li>
+  </ul>
+</li>
   <li><a href="#team-contract" id="toc-team-contract" class="nav-link" data-scroll-target="#team-contract">Team contract</a></li>
   <li><a href="#grading" id="toc-grading" class="nav-link" data-scroll-target="#grading">Grading</a></li>
-  </ul>
-<div class="toc-actions"><ul><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/edit/main/project/1-working-collaboratively.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
+  </ul><div class="toc-actions"><ul><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/edit/main/project/1-working-collaboratively.qmd" class="toc-action"><i class="bi bi-github"></i>Edit this page</a></li><li><a href="https://github.com/sta199-s25/sta199-s25.github.io/issues/new" class="toc-action"><i class="bi empty"></i>Report an issue</a></li></ul></div></nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block default"><div class="quarto-title">
 <h1 class="title">Working collaboratively</h1>
 <p class="subtitle lead">Milestone 1</p>
   <div class="quarto-categories">
@@ -352,10 +370,7 @@ ul.task-list li input[type="checkbox"] {
   
 
 
-</header>
-
-
-<div class="callout callout-style-default callout-important callout-titled">
+</header><div class="callout callout-style-default callout-important callout-titled">
 <div class="callout-header d-flex align-content-center">
 <div class="callout-icon-container">
 <i class="callout-icon"></i>
@@ -384,22 +399,5927 @@ Note
 <p>The word “conflict” has a negative connotation. And, indeed, merge conflicts can be frustrating. But they serve to make sure no team member inadvertently writes another team member’s work. All changes that are in “conflict” with each other need to get resolved explicitly, with a commit message, which helps avoid haphazard overwriting.</p>
 </div>
 </div>
-<section id="goals" class="level1">
-<h1>Goals</h1>
+<section id="goals" class="level1"><h1>Goals</h1>
 <p>The goals of this milestone are as follows:</p>
 <ul>
 <li>Pick a team name</li>
 <li>Collaborate on GitHub with your teammates and resolve merge conflicts when they inevitably occur</li>
 <li>Discuss and write up your team contract</li>
 <li>Start thinking about your project proposal</li>
+</ul></section><section id="teams" class="level1"><h1>Teams</h1>
+<div class="cell">
+<div class="sourceCode" id="cb1"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://tidyverse.tidyverse.org">tidyverse</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://gt.rstudio.com">gt</a></span><span class="op">)</span></span>
+<span><span class="kw"><a href="https://rdrr.io/r/base/library.html">library</a></span><span class="op">(</span><span class="va"><a href="https://googlesheets4.tidyverse.org">googlesheets4</a></span><span class="op">)</span></span>
+<span><span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/gs4_deauth.html">gs4_deauth</a></span><span class="op">(</span><span class="op">)</span></span>
+<span></span>
+<span><span class="va">make_pairing_table</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">df</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">df</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://dplyr.tidyverse.org/reference/select.html">select</a></span><span class="op">(</span><span class="va">name</span>, <span class="va">team</span><span class="op">)</span>  <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://gt.rstudio.com/reference/gt.html">gt</a></span><span class="op">(</span><span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://gt.rstudio.com/reference/fmt_markdown.html">fmt_markdown</a></span><span class="op">(</span></span>
+<span>      columns <span class="op">=</span> <span class="fu"><a href="https://tidyselect.r-lib.org/reference/everything.html">everything</a></span><span class="op">(</span><span class="op">)</span> </span>
+<span>    <span class="op">)</span> <span class="op">|&gt;</span></span>
+<span>    <span class="fu"><a href="https://gt.rstudio.com/reference/cols_label.html">cols_label</a></span><span class="op">(</span></span>
+<span>      name <span class="op">=</span> <span class="st">"Name"</span>,</span>
+<span>      team <span class="op">=</span> <span class="st">"Team"</span>,</span>
+<span>    <span class="op">)</span></span>
+<span><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="tabset-margin-container"></div><div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist">
+<li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true" aria-current="page">L1 - 8:30 am</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">L2 - 10:05 am</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-3-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-3" role="tab" aria-controls="tabset-1-3" aria-selected="false">L3 - 10:05 am</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-4-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-4" role="tab" aria-controls="tabset-1-4" aria-selected="false">L4 - 11:45 am</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-5-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-5" role="tab" aria-controls="tabset-1-5" aria-selected="false">L5 - 11:45 am</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-6-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-6" role="tab" aria-controls="tabset-1-6" aria-selected="false">L6 - 1:25 pm</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-7-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-7" role="tab" aria-controls="tabset-1-7" aria-selected="false">L7 - 1:25 pm</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-8-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-8" role="tab" aria-controls="tabset-1-8" aria-selected="false">L8 - 3:05 pm</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-9-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-9" role="tab" aria-controls="tabset-1-9" aria-selected="false">L9 - 3:05 pm</a></li>
+<li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-10-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-10" role="tab" aria-controls="tabset-1-10" aria-selected="false">L10 - 4:40 pm</a></li>
 </ul>
-</section>
-<section id="team-name" class="level1">
-<h1>Team name</h1>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<div class="cell">
+<div class="sourceCode" id="cb2"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">1</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="inzsdauezy" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#inzsdauezy table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#inzsdauezy thead, #inzsdauezy tbody, #inzsdauezy tfoot, #inzsdauezy tr, #inzsdauezy td, #inzsdauezy th {
+  border-style: none;
+}
+
+#inzsdauezy p {
+  margin: 0;
+  padding: 0;
+}
+
+#inzsdauezy .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#inzsdauezy .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#inzsdauezy .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#inzsdauezy .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#inzsdauezy .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#inzsdauezy .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#inzsdauezy .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#inzsdauezy .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#inzsdauezy .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#inzsdauezy .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#inzsdauezy .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#inzsdauezy .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#inzsdauezy .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#inzsdauezy .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#inzsdauezy .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#inzsdauezy .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#inzsdauezy .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#inzsdauezy .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#inzsdauezy .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#inzsdauezy .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#inzsdauezy .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#inzsdauezy .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#inzsdauezy .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#inzsdauezy .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#inzsdauezy .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#inzsdauezy .gt_left {
+  text-align: left;
+}
+
+#inzsdauezy .gt_center {
+  text-align: center;
+}
+
+#inzsdauezy .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#inzsdauezy .gt_font_normal {
+  font-weight: normal;
+}
+
+#inzsdauezy .gt_font_bold {
+  font-weight: bold;
+}
+
+#inzsdauezy .gt_font_italic {
+  font-style: italic;
+}
+
+#inzsdauezy .gt_super {
+  font-size: 65%;
+}
+
+#inzsdauezy .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#inzsdauezy .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#inzsdauezy .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#inzsdauezy .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#inzsdauezy .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#inzsdauezy .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#inzsdauezy .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#inzsdauezy .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#inzsdauezy div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Alex Brady</td>
+<td class="gt_row gt_left" headers="team">1_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Daphne Gomez</td>
+<td class="gt_row gt_left" headers="team">1_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Isabel Lehrman</td>
+<td class="gt_row gt_left" headers="team">1_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Julian Orrego</td>
+<td class="gt_row gt_left" headers="team">1_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Ashi Jain</td>
+<td class="gt_row gt_left" headers="team">1_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Gabrielle Douglas</td>
+<td class="gt_row gt_left" headers="team">1_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Meghna Bukkapatnam</td>
+<td class="gt_row gt_left" headers="team">1_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Paola Abad</td>
+<td class="gt_row gt_left" headers="team">1_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Alex Naper</td>
+<td class="gt_row gt_left" headers="team">1_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Chuying Huo</td>
+<td class="gt_row gt_left" headers="team">1_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Lauren Vandivier</td>
+<td class="gt_row gt_left" headers="team">1_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Vincent Fowler</td>
+<td class="gt_row gt_left" headers="team">1_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Chloe Miccolis</td>
+<td class="gt_row gt_left" headers="team">1_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Emily Walsh</td>
+<td class="gt_row gt_left" headers="team">1_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Sahil Choudhri</td>
+<td class="gt_row gt_left" headers="team">1_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Sahith Kudaravalli</td>
+<td class="gt_row gt_left" headers="team">1_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Alex Precourt</td>
+<td class="gt_row gt_left" headers="team">1_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Connor Barritt</td>
+<td class="gt_row gt_left" headers="team">1_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Krisha Patel</td>
+<td class="gt_row gt_left" headers="team">1_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Siddarth Rama</td>
+<td class="gt_row gt_left" headers="team">1_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Teal Uahwatanasakul</td>
+<td class="gt_row gt_left" headers="team">1_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Alexa Mohajer</td>
+<td class="gt_row gt_left" headers="team">1_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Jill Roberts</td>
+<td class="gt_row gt_left" headers="team">1_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Naomi Holtzman</td>
+<td class="gt_row gt_left" headers="team">1_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Sophia Fratta</td>
+<td class="gt_row gt_left" headers="team">1_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Katherine Li</td>
+<td class="gt_row gt_left" headers="team">1_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Larkin Woodard</td>
+<td class="gt_row gt_left" headers="team">1_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Myra Han</td>
+<td class="gt_row gt_left" headers="team">1_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Supta Das</td>
+<td class="gt_row gt_left" headers="team">1_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Tsvetelina Milkova</td>
+<td class="gt_row gt_left" headers="team">1_G</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<div class="cell">
+<div class="sourceCode" id="cb3"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">2</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="sygtfizvuh" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sygtfizvuh table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sygtfizvuh thead, #sygtfizvuh tbody, #sygtfizvuh tfoot, #sygtfizvuh tr, #sygtfizvuh td, #sygtfizvuh th {
+  border-style: none;
+}
+
+#sygtfizvuh p {
+  margin: 0;
+  padding: 0;
+}
+
+#sygtfizvuh .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#sygtfizvuh .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#sygtfizvuh .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#sygtfizvuh .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#sygtfizvuh .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#sygtfizvuh .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#sygtfizvuh .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#sygtfizvuh .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#sygtfizvuh .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#sygtfizvuh .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#sygtfizvuh .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sygtfizvuh .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#sygtfizvuh .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#sygtfizvuh .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#sygtfizvuh .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sygtfizvuh .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#sygtfizvuh .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#sygtfizvuh .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#sygtfizvuh .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sygtfizvuh .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#sygtfizvuh .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sygtfizvuh .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#sygtfizvuh .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sygtfizvuh .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sygtfizvuh .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sygtfizvuh .gt_left {
+  text-align: left;
+}
+
+#sygtfizvuh .gt_center {
+  text-align: center;
+}
+
+#sygtfizvuh .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#sygtfizvuh .gt_font_normal {
+  font-weight: normal;
+}
+
+#sygtfizvuh .gt_font_bold {
+  font-weight: bold;
+}
+
+#sygtfizvuh .gt_font_italic {
+  font-style: italic;
+}
+
+#sygtfizvuh .gt_super {
+  font-size: 65%;
+}
+
+#sygtfizvuh .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#sygtfizvuh .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#sygtfizvuh .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#sygtfizvuh .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#sygtfizvuh .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#sygtfizvuh .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#sygtfizvuh .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#sygtfizvuh .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#sygtfizvuh div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Campbell Raney</td>
+<td class="gt_row gt_left" headers="team">2_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Lauren Blake</td>
+<td class="gt_row gt_left" headers="team">2_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Lucy Herrick</td>
+<td class="gt_row gt_left" headers="team">2_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Sahng-Won Lee</td>
+<td class="gt_row gt_left" headers="team">2_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Bianca Dominguez</td>
+<td class="gt_row gt_left" headers="team">2_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Jayden Kim</td>
+<td class="gt_row gt_left" headers="team">2_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Maddie Goldner</td>
+<td class="gt_row gt_left" headers="team">2_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Sam Karsch</td>
+<td class="gt_row gt_left" headers="team">2_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Cat Gamard</td>
+<td class="gt_row gt_left" headers="team">2_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Gabriela Zanforlin Mautner</td>
+<td class="gt_row gt_left" headers="team">2_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Isabella Antonio</td>
+<td class="gt_row gt_left" headers="team">2_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Katie Brandler</td>
+<td class="gt_row gt_left" headers="team">2_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Devin Mulcrone</td>
+<td class="gt_row gt_left" headers="team">2_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Elle Piper</td>
+<td class="gt_row gt_left" headers="team">2_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Gemma Undercofler</td>
+<td class="gt_row gt_left" headers="team">2_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Reagan Henderlite</td>
+<td class="gt_row gt_left" headers="team">2_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Julia Simon</td>
+<td class="gt_row gt_left" headers="team">2_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Nadine Fanous</td>
+<td class="gt_row gt_left" headers="team">2_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Neha Jatla</td>
+<td class="gt_row gt_left" headers="team">2_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Olivia Ares</td>
+<td class="gt_row gt_left" headers="team">2_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Alexis Golart</td>
+<td class="gt_row gt_left" headers="team">2_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ashley Wilson</td>
+<td class="gt_row gt_left" headers="team">2_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Lhamo Dixey</td>
+<td class="gt_row gt_left" headers="team">2_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Mia Taubenblat</td>
+<td class="gt_row gt_left" headers="team">2_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Rizban Worota</td>
+<td class="gt_row gt_left" headers="team">2_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Gabrielle Nicoleau</td>
+<td class="gt_row gt_left" headers="team">2_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Martina Yu</td>
+<td class="gt_row gt_left" headers="team">2_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Melina Marjani</td>
+<td class="gt_row gt_left" headers="team">2_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Oyinkansola Oduba</td>
+<td class="gt_row gt_left" headers="team">2_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Tanya Wan</td>
+<td class="gt_row gt_left" headers="team">2_G</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-3" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-3-tab">
+<div class="cell">
+<div class="sourceCode" id="cb4"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">3</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="sqqzpgfxcl" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#sqqzpgfxcl table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#sqqzpgfxcl thead, #sqqzpgfxcl tbody, #sqqzpgfxcl tfoot, #sqqzpgfxcl tr, #sqqzpgfxcl td, #sqqzpgfxcl th {
+  border-style: none;
+}
+
+#sqqzpgfxcl p {
+  margin: 0;
+  padding: 0;
+}
+
+#sqqzpgfxcl .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#sqqzpgfxcl .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#sqqzpgfxcl .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#sqqzpgfxcl .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#sqqzpgfxcl .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#sqqzpgfxcl .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#sqqzpgfxcl .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#sqqzpgfxcl .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#sqqzpgfxcl .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#sqqzpgfxcl .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#sqqzpgfxcl .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#sqqzpgfxcl .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#sqqzpgfxcl .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#sqqzpgfxcl .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#sqqzpgfxcl .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sqqzpgfxcl .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#sqqzpgfxcl .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#sqqzpgfxcl .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#sqqzpgfxcl .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sqqzpgfxcl .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#sqqzpgfxcl .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sqqzpgfxcl .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#sqqzpgfxcl .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sqqzpgfxcl .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#sqqzpgfxcl .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#sqqzpgfxcl .gt_left {
+  text-align: left;
+}
+
+#sqqzpgfxcl .gt_center {
+  text-align: center;
+}
+
+#sqqzpgfxcl .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#sqqzpgfxcl .gt_font_normal {
+  font-weight: normal;
+}
+
+#sqqzpgfxcl .gt_font_bold {
+  font-weight: bold;
+}
+
+#sqqzpgfxcl .gt_font_italic {
+  font-style: italic;
+}
+
+#sqqzpgfxcl .gt_super {
+  font-size: 65%;
+}
+
+#sqqzpgfxcl .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#sqqzpgfxcl .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#sqqzpgfxcl .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#sqqzpgfxcl .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#sqqzpgfxcl .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#sqqzpgfxcl .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#sqqzpgfxcl .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#sqqzpgfxcl .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#sqqzpgfxcl div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Ava Strohmeyer</td>
+<td class="gt_row gt_left" headers="team">3_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Esther Park</td>
+<td class="gt_row gt_left" headers="team">3_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Fiona Xiao</td>
+<td class="gt_row gt_left" headers="team">3_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Katie Maddock</td>
+<td class="gt_row gt_left" headers="team">3_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Zijian Li</td>
+<td class="gt_row gt_left" headers="team">3_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Jack Yi</td>
+<td class="gt_row gt_left" headers="team">3_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Margaret Berei</td>
+<td class="gt_row gt_left" headers="team">3_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Runzi Ma</td>
+<td class="gt_row gt_left" headers="team">3_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Ryan Hamner</td>
+<td class="gt_row gt_left" headers="team">3_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Owen Platt</td>
+<td class="gt_row gt_left" headers="team">3_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Rebecca Fan</td>
+<td class="gt_row gt_left" headers="team">3_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Reed Schoenfeld</td>
+<td class="gt_row gt_left" headers="team">3_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Saira Nagda</td>
+<td class="gt_row gt_left" headers="team">3_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Jessica Alvarez</td>
+<td class="gt_row gt_left" headers="team">3_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Khang Huynh</td>
+<td class="gt_row gt_left" headers="team">3_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Yeddailin Gonzalez</td>
+<td class="gt_row gt_left" headers="team">3_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Zach Powery</td>
+<td class="gt_row gt_left" headers="team">3_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Dhruv Rungta</td>
+<td class="gt_row gt_left" headers="team">3_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Divya Subramanian</td>
+<td class="gt_row gt_left" headers="team">3_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Issac Jung</td>
+<td class="gt_row gt_left" headers="team">3_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Kellan Hepditch</td>
+<td class="gt_row gt_left" headers="team">3_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Nyteeh Camara</td>
+<td class="gt_row gt_left" headers="team">3_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Beren Berber</td>
+<td class="gt_row gt_left" headers="team">3_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Holly Wilcox</td>
+<td class="gt_row gt_left" headers="team">3_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Muskaan Amin</td>
+<td class="gt_row gt_left" headers="team">3_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Shlok Banshal</td>
+<td class="gt_row gt_left" headers="team">3_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Bria Maddox</td>
+<td class="gt_row gt_left" headers="team">3_H</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Dadou Sabrina Thea Ikirezi</td>
+<td class="gt_row gt_left" headers="team">3_H</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Elle Commerce</td>
+<td class="gt_row gt_left" headers="team">3_H</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Sabina DiPietro</td>
+<td class="gt_row gt_left" headers="team">3_H</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Charlie Chen</td>
+<td class="gt_row gt_left" headers="team">3_I</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Elizabeth Farmer</td>
+<td class="gt_row gt_left" headers="team">3_I</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Keith Buenrostro Brown</td>
+<td class="gt_row gt_left" headers="team">3_I</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Patricia Perez Utra</td>
+<td class="gt_row gt_left" headers="team">3_I</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Yinuo Tong</td>
+<td class="gt_row gt_left" headers="team">3_I</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Isabella Lopez</td>
+<td class="gt_row gt_left" headers="team">3_J</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Jayden Neidell</td>
+<td class="gt_row gt_left" headers="team">3_J</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Rani Teddy</td>
+<td class="gt_row gt_left" headers="team">3_J</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Shreya Karumuri</td>
+<td class="gt_row gt_left" headers="team">3_J</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-4" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-4-tab">
+<div class="cell">
+<div class="sourceCode" id="cb5"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">4</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="gfaqovfpxp" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gfaqovfpxp table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gfaqovfpxp thead, #gfaqovfpxp tbody, #gfaqovfpxp tfoot, #gfaqovfpxp tr, #gfaqovfpxp td, #gfaqovfpxp th {
+  border-style: none;
+}
+
+#gfaqovfpxp p {
+  margin: 0;
+  padding: 0;
+}
+
+#gfaqovfpxp .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#gfaqovfpxp .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gfaqovfpxp .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gfaqovfpxp .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gfaqovfpxp .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gfaqovfpxp .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gfaqovfpxp .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gfaqovfpxp .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gfaqovfpxp .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#gfaqovfpxp .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#gfaqovfpxp .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gfaqovfpxp .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gfaqovfpxp .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gfaqovfpxp .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gfaqovfpxp .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gfaqovfpxp .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gfaqovfpxp .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gfaqovfpxp .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#gfaqovfpxp .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gfaqovfpxp .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gfaqovfpxp .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gfaqovfpxp .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gfaqovfpxp .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gfaqovfpxp .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gfaqovfpxp .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gfaqovfpxp .gt_left {
+  text-align: left;
+}
+
+#gfaqovfpxp .gt_center {
+  text-align: center;
+}
+
+#gfaqovfpxp .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gfaqovfpxp .gt_font_normal {
+  font-weight: normal;
+}
+
+#gfaqovfpxp .gt_font_bold {
+  font-weight: bold;
+}
+
+#gfaqovfpxp .gt_font_italic {
+  font-style: italic;
+}
+
+#gfaqovfpxp .gt_super {
+  font-size: 65%;
+}
+
+#gfaqovfpxp .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#gfaqovfpxp .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gfaqovfpxp .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gfaqovfpxp .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gfaqovfpxp .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gfaqovfpxp .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gfaqovfpxp .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#gfaqovfpxp .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#gfaqovfpxp div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Ezequiel Baltierra</td>
+<td class="gt_row gt_left" headers="team">4_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Gema Granado</td>
+<td class="gt_row gt_left" headers="team">4_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Julia Zheng</td>
+<td class="gt_row gt_left" headers="team">4_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Nidhi Kolluri</td>
+<td class="gt_row gt_left" headers="team">4_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Selin Bildirici</td>
+<td class="gt_row gt_left" headers="team">4_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Allison Lulov</td>
+<td class="gt_row gt_left" headers="team">4_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Cole Bonawitz</td>
+<td class="gt_row gt_left" headers="team">4_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Fiona Loughran</td>
+<td class="gt_row gt_left" headers="team">4_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Richard Zhou</td>
+<td class="gt_row gt_left" headers="team">4_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">kenzy paul</td>
+<td class="gt_row gt_left" headers="team">4_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Akash Mishra</td>
+<td class="gt_row gt_left" headers="team">4_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ava Betanco-Born</td>
+<td class="gt_row gt_left" headers="team">4_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Christian Linen</td>
+<td class="gt_row gt_left" headers="team">4_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Jack McMahon</td>
+<td class="gt_row gt_left" headers="team">4_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Aisha Ovando Fernandez</td>
+<td class="gt_row gt_left" headers="team">4_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Jessica Brown</td>
+<td class="gt_row gt_left" headers="team">4_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">McKenna Adams</td>
+<td class="gt_row gt_left" headers="team">4_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Micah Rodman</td>
+<td class="gt_row gt_left" headers="team">4_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Hana Hafeez</td>
+<td class="gt_row gt_left" headers="team">4_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Hanna Lavi</td>
+<td class="gt_row gt_left" headers="team">4_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Luisa Mantilla</td>
+<td class="gt_row gt_left" headers="team">4_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Thea Lapham</td>
+<td class="gt_row gt_left" headers="team">4_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Avi Wagner</td>
+<td class="gt_row gt_left" headers="team">4_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Hao Li</td>
+<td class="gt_row gt_left" headers="team">4_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Sophia Shen</td>
+<td class="gt_row gt_left" headers="team">4_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Vanessa Lin</td>
+<td class="gt_row gt_left" headers="team">4_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Alyssa Guardado</td>
+<td class="gt_row gt_left" headers="team">4_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ananya Kamath</td>
+<td class="gt_row gt_left" headers="team">4_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Aubrey Behling</td>
+<td class="gt_row gt_left" headers="team">4_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Isha Saravanan</td>
+<td class="gt_row gt_left" headers="team">4_G</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-5" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-5-tab">
+<div class="cell">
+<div class="sourceCode" id="cb6"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">5</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="trbikjzugo" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#trbikjzugo table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#trbikjzugo thead, #trbikjzugo tbody, #trbikjzugo tfoot, #trbikjzugo tr, #trbikjzugo td, #trbikjzugo th {
+  border-style: none;
+}
+
+#trbikjzugo p {
+  margin: 0;
+  padding: 0;
+}
+
+#trbikjzugo .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#trbikjzugo .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#trbikjzugo .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#trbikjzugo .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#trbikjzugo .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#trbikjzugo .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#trbikjzugo .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#trbikjzugo .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#trbikjzugo .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#trbikjzugo .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#trbikjzugo .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#trbikjzugo .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#trbikjzugo .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#trbikjzugo .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#trbikjzugo .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#trbikjzugo .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#trbikjzugo .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#trbikjzugo .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#trbikjzugo .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#trbikjzugo .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#trbikjzugo .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#trbikjzugo .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#trbikjzugo .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#trbikjzugo .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#trbikjzugo .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#trbikjzugo .gt_left {
+  text-align: left;
+}
+
+#trbikjzugo .gt_center {
+  text-align: center;
+}
+
+#trbikjzugo .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#trbikjzugo .gt_font_normal {
+  font-weight: normal;
+}
+
+#trbikjzugo .gt_font_bold {
+  font-weight: bold;
+}
+
+#trbikjzugo .gt_font_italic {
+  font-style: italic;
+}
+
+#trbikjzugo .gt_super {
+  font-size: 65%;
+}
+
+#trbikjzugo .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#trbikjzugo .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#trbikjzugo .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#trbikjzugo .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#trbikjzugo .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#trbikjzugo .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#trbikjzugo .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#trbikjzugo .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#trbikjzugo div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Adrian Schmeichler Martinez</td>
+<td class="gt_row gt_left" headers="team">5_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Bruce Cao</td>
+<td class="gt_row gt_left" headers="team">5_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Jules Gates</td>
+<td class="gt_row gt_left" headers="team">5_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Olivia Prusky</td>
+<td class="gt_row gt_left" headers="team">5_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Tyler Drangula</td>
+<td class="gt_row gt_left" headers="team">5_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Angel Sajous</td>
+<td class="gt_row gt_left" headers="team">5_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Fiza Khan</td>
+<td class="gt_row gt_left" headers="team">5_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Meera Khare</td>
+<td class="gt_row gt_left" headers="team">5_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Shwe Win</td>
+<td class="gt_row gt_left" headers="team">5_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Kate Westlake</td>
+<td class="gt_row gt_left" headers="team">5_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Mia Wells</td>
+<td class="gt_row gt_left" headers="team">5_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Nathan Vail</td>
+<td class="gt_row gt_left" headers="team">5_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Nathaniel George</td>
+<td class="gt_row gt_left" headers="team">5_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Samantha Lefkowitz</td>
+<td class="gt_row gt_left" headers="team">5_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Kiki Henry</td>
+<td class="gt_row gt_left" headers="team">5_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Sidd Amirneni</td>
+<td class="gt_row gt_left" headers="team">5_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Swarajh Mehta</td>
+<td class="gt_row gt_left" headers="team">5_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Vanessa Dare</td>
+<td class="gt_row gt_left" headers="team">5_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Andrew Li</td>
+<td class="gt_row gt_left" headers="team">5_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Cabot Boling</td>
+<td class="gt_row gt_left" headers="team">5_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Rhea Chelar</td>
+<td class="gt_row gt_left" headers="team">5_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Sam Bodensteiner</td>
+<td class="gt_row gt_left" headers="team">5_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Aadesh Anchaliya</td>
+<td class="gt_row gt_left" headers="team">5_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Isabel Ottensoser</td>
+<td class="gt_row gt_left" headers="team">5_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Nathan Gaviser</td>
+<td class="gt_row gt_left" headers="team">5_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Stella Stojanov</td>
+<td class="gt_row gt_left" headers="team">5_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Alyssa Yang</td>
+<td class="gt_row gt_left" headers="team">5_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Emerson Wiseman</td>
+<td class="gt_row gt_left" headers="team">5_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Lily Samuels</td>
+<td class="gt_row gt_left" headers="team">5_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Sandy Wu</td>
+<td class="gt_row gt_left" headers="team">5_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Hyeonsu An</td>
+<td class="gt_row gt_left" headers="team">5_H</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">JP Gasparian</td>
+<td class="gt_row gt_left" headers="team">5_H</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Lauren Keaney</td>
+<td class="gt_row gt_left" headers="team">5_H</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Vicky Gorman</td>
+<td class="gt_row gt_left" headers="team">5_H</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Ellie Armstrong</td>
+<td class="gt_row gt_left" headers="team">5_I</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Emma Chua</td>
+<td class="gt_row gt_left" headers="team">5_I</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Nikki Caparrelli</td>
+<td class="gt_row gt_left" headers="team">5_I</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Stephanie Sensel</td>
+<td class="gt_row gt_left" headers="team">5_I</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-6" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-6-tab">
+<div class="cell">
+<div class="sourceCode" id="cb7"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">6</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="gdcrtnjima" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#gdcrtnjima table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#gdcrtnjima thead, #gdcrtnjima tbody, #gdcrtnjima tfoot, #gdcrtnjima tr, #gdcrtnjima td, #gdcrtnjima th {
+  border-style: none;
+}
+
+#gdcrtnjima p {
+  margin: 0;
+  padding: 0;
+}
+
+#gdcrtnjima .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#gdcrtnjima .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#gdcrtnjima .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#gdcrtnjima .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#gdcrtnjima .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#gdcrtnjima .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#gdcrtnjima .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#gdcrtnjima .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#gdcrtnjima .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#gdcrtnjima .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#gdcrtnjima .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#gdcrtnjima .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#gdcrtnjima .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#gdcrtnjima .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#gdcrtnjima .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdcrtnjima .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#gdcrtnjima .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#gdcrtnjima .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#gdcrtnjima .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdcrtnjima .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#gdcrtnjima .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdcrtnjima .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#gdcrtnjima .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdcrtnjima .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#gdcrtnjima .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#gdcrtnjima .gt_left {
+  text-align: left;
+}
+
+#gdcrtnjima .gt_center {
+  text-align: center;
+}
+
+#gdcrtnjima .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#gdcrtnjima .gt_font_normal {
+  font-weight: normal;
+}
+
+#gdcrtnjima .gt_font_bold {
+  font-weight: bold;
+}
+
+#gdcrtnjima .gt_font_italic {
+  font-style: italic;
+}
+
+#gdcrtnjima .gt_super {
+  font-size: 65%;
+}
+
+#gdcrtnjima .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#gdcrtnjima .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#gdcrtnjima .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#gdcrtnjima .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#gdcrtnjima .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#gdcrtnjima .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#gdcrtnjima .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#gdcrtnjima .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#gdcrtnjima div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_center" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body"></tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-7" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-7-tab">
+<div class="cell">
+<div class="sourceCode" id="cb8"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">7</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="hdvgjxjdjw" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#hdvgjxjdjw table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#hdvgjxjdjw thead, #hdvgjxjdjw tbody, #hdvgjxjdjw tfoot, #hdvgjxjdjw tr, #hdvgjxjdjw td, #hdvgjxjdjw th {
+  border-style: none;
+}
+
+#hdvgjxjdjw p {
+  margin: 0;
+  padding: 0;
+}
+
+#hdvgjxjdjw .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#hdvgjxjdjw .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#hdvgjxjdjw .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#hdvgjxjdjw .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#hdvgjxjdjw .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#hdvgjxjdjw .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#hdvgjxjdjw .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#hdvgjxjdjw .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#hdvgjxjdjw .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#hdvgjxjdjw .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#hdvgjxjdjw .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#hdvgjxjdjw .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#hdvgjxjdjw .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#hdvgjxjdjw .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#hdvgjxjdjw .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hdvgjxjdjw .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#hdvgjxjdjw .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#hdvgjxjdjw .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#hdvgjxjdjw .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hdvgjxjdjw .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#hdvgjxjdjw .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hdvgjxjdjw .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#hdvgjxjdjw .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hdvgjxjdjw .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#hdvgjxjdjw .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#hdvgjxjdjw .gt_left {
+  text-align: left;
+}
+
+#hdvgjxjdjw .gt_center {
+  text-align: center;
+}
+
+#hdvgjxjdjw .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#hdvgjxjdjw .gt_font_normal {
+  font-weight: normal;
+}
+
+#hdvgjxjdjw .gt_font_bold {
+  font-weight: bold;
+}
+
+#hdvgjxjdjw .gt_font_italic {
+  font-style: italic;
+}
+
+#hdvgjxjdjw .gt_super {
+  font-size: 65%;
+}
+
+#hdvgjxjdjw .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#hdvgjxjdjw .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#hdvgjxjdjw .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#hdvgjxjdjw .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#hdvgjxjdjw .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#hdvgjxjdjw .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#hdvgjxjdjw .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#hdvgjxjdjw .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#hdvgjxjdjw div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Breanna Garner</td>
+<td class="gt_row gt_left" headers="team">7_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Dylan Patterson</td>
+<td class="gt_row gt_left" headers="team">7_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Kyra Kozey</td>
+<td class="gt_row gt_left" headers="team">7_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Rafael Mautner</td>
+<td class="gt_row gt_left" headers="team">7_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Sharon Zlatnik</td>
+<td class="gt_row gt_left" headers="team">7_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Abbie Lambert</td>
+<td class="gt_row gt_left" headers="team">7_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Alexxandra Hoffmann</td>
+<td class="gt_row gt_left" headers="team">7_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Caroline Felker</td>
+<td class="gt_row gt_left" headers="team">7_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Youngwon Yoon</td>
+<td class="gt_row gt_left" headers="team">7_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ashley Park</td>
+<td class="gt_row gt_left" headers="team">7_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Harrison Walley</td>
+<td class="gt_row gt_left" headers="team">7_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ivan Herrera</td>
+<td class="gt_row gt_left" headers="team">7_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Sophie Brynes</td>
+<td class="gt_row gt_left" headers="team">7_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Carmen Pastrana</td>
+<td class="gt_row gt_left" headers="team">7_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Michael Baravarian</td>
+<td class="gt_row gt_left" headers="team">7_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Riley Palmer</td>
+<td class="gt_row gt_left" headers="team">7_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Tim Le</td>
+<td class="gt_row gt_left" headers="team">7_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Brielle Widelo</td>
+<td class="gt_row gt_left" headers="team">7_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Dan Jellinek</td>
+<td class="gt_row gt_left" headers="team">7_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Kevin Edmonds</td>
+<td class="gt_row gt_left" headers="team">7_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Mackenzie Sheehy</td>
+<td class="gt_row gt_left" headers="team">7_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Mia DePaolo</td>
+<td class="gt_row gt_left" headers="team">7_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Abby Perry</td>
+<td class="gt_row gt_left" headers="team">7_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Dylan Kessler</td>
+<td class="gt_row gt_left" headers="team">7_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Sofia Mukamal</td>
+<td class="gt_row gt_left" headers="team">7_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Will Mayo</td>
+<td class="gt_row gt_left" headers="team">7_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Bomin Kim</td>
+<td class="gt_row gt_left" headers="team">7_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Emma Pophal</td>
+<td class="gt_row gt_left" headers="team">7_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Phillips Moore</td>
+<td class="gt_row gt_left" headers="team">7_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Selin Kumru</td>
+<td class="gt_row gt_left" headers="team">7_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Alexis Ashley</td>
+<td class="gt_row gt_left" headers="team">7_H</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Anya Deng</td>
+<td class="gt_row gt_left" headers="team">7_H</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Celia Lawlor</td>
+<td class="gt_row gt_left" headers="team">7_H</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Jessica Lawal</td>
+<td class="gt_row gt_left" headers="team">7_H</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Avery Braithwaite</td>
+<td class="gt_row gt_left" headers="team">7_I</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Brooke Li</td>
+<td class="gt_row gt_left" headers="team">7_I</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Chelsea Nguyen</td>
+<td class="gt_row gt_left" headers="team">7_I</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Gabriella Lozano</td>
+<td class="gt_row gt_left" headers="team">7_I</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Sanjana Kalagara</td>
+<td class="gt_row gt_left" headers="team">7_I</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-8" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-8-tab">
+<div class="cell">
+<div class="sourceCode" id="cb9"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">8</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="xkupdutfha" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#xkupdutfha table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#xkupdutfha thead, #xkupdutfha tbody, #xkupdutfha tfoot, #xkupdutfha tr, #xkupdutfha td, #xkupdutfha th {
+  border-style: none;
+}
+
+#xkupdutfha p {
+  margin: 0;
+  padding: 0;
+}
+
+#xkupdutfha .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#xkupdutfha .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#xkupdutfha .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#xkupdutfha .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#xkupdutfha .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#xkupdutfha .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#xkupdutfha .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#xkupdutfha .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#xkupdutfha .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#xkupdutfha .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#xkupdutfha .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#xkupdutfha .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#xkupdutfha .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#xkupdutfha .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#xkupdutfha .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xkupdutfha .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#xkupdutfha .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#xkupdutfha .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#xkupdutfha .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xkupdutfha .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#xkupdutfha .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xkupdutfha .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#xkupdutfha .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xkupdutfha .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#xkupdutfha .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#xkupdutfha .gt_left {
+  text-align: left;
+}
+
+#xkupdutfha .gt_center {
+  text-align: center;
+}
+
+#xkupdutfha .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#xkupdutfha .gt_font_normal {
+  font-weight: normal;
+}
+
+#xkupdutfha .gt_font_bold {
+  font-weight: bold;
+}
+
+#xkupdutfha .gt_font_italic {
+  font-style: italic;
+}
+
+#xkupdutfha .gt_super {
+  font-size: 65%;
+}
+
+#xkupdutfha .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#xkupdutfha .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#xkupdutfha .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#xkupdutfha .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#xkupdutfha .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#xkupdutfha .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#xkupdutfha .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#xkupdutfha .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#xkupdutfha div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Clement Liu</td>
+<td class="gt_row gt_left" headers="team">8_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Elly Ronald</td>
+<td class="gt_row gt_left" headers="team">8_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Luciana Wei</td>
+<td class="gt_row gt_left" headers="team">8_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Renzo Larrea</td>
+<td class="gt_row gt_left" headers="team">8_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Ana Ramirez</td>
+<td class="gt_row gt_left" headers="team">8_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Angela Chen</td>
+<td class="gt_row gt_left" headers="team">8_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Ashley Gutierrez-Torres</td>
+<td class="gt_row gt_left" headers="team">8_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Mia Rothschild</td>
+<td class="gt_row gt_left" headers="team">8_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Michael Shirin-Stroh</td>
+<td class="gt_row gt_left" headers="team">8_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Anna Karius</td>
+<td class="gt_row gt_left" headers="team">8_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Aria Dwoskin</td>
+<td class="gt_row gt_left" headers="team">8_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Christina Liu</td>
+<td class="gt_row gt_left" headers="team">8_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Trisha Iyer</td>
+<td class="gt_row gt_left" headers="team">8_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ben Wu</td>
+<td class="gt_row gt_left" headers="team">8_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">James Li</td>
+<td class="gt_row gt_left" headers="team">8_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Lucy Glynn</td>
+<td class="gt_row gt_left" headers="team">8_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Maya Hoteit</td>
+<td class="gt_row gt_left" headers="team">8_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ben Kahne</td>
+<td class="gt_row gt_left" headers="team">8_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Clare Lee</td>
+<td class="gt_row gt_left" headers="team">8_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Marissa Rodriguez</td>
+<td class="gt_row gt_left" headers="team">8_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Michael Li</td>
+<td class="gt_row gt_left" headers="team">8_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Eliza Sirovich</td>
+<td class="gt_row gt_left" headers="team">8_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Maddie Tsang</td>
+<td class="gt_row gt_left" headers="team">8_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Mayah Ding</td>
+<td class="gt_row gt_left" headers="team">8_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Rylee Lent</td>
+<td class="gt_row gt_left" headers="team">8_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Akshara Krishna</td>
+<td class="gt_row gt_left" headers="team">8_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Leena Rotondo</td>
+<td class="gt_row gt_left" headers="team">8_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Nawra Roya</td>
+<td class="gt_row gt_left" headers="team">8_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Seung Hyun Jin</td>
+<td class="gt_row gt_left" headers="team">8_G</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-9" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-9-tab">
+<div class="cell">
+<div class="sourceCode" id="cb10"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">9</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="czbcqbnldq" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#czbcqbnldq table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#czbcqbnldq thead, #czbcqbnldq tbody, #czbcqbnldq tfoot, #czbcqbnldq tr, #czbcqbnldq td, #czbcqbnldq th {
+  border-style: none;
+}
+
+#czbcqbnldq p {
+  margin: 0;
+  padding: 0;
+}
+
+#czbcqbnldq .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#czbcqbnldq .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#czbcqbnldq .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#czbcqbnldq .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#czbcqbnldq .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#czbcqbnldq .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#czbcqbnldq .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#czbcqbnldq .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#czbcqbnldq .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#czbcqbnldq .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#czbcqbnldq .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#czbcqbnldq .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#czbcqbnldq .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#czbcqbnldq .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#czbcqbnldq .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czbcqbnldq .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#czbcqbnldq .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#czbcqbnldq .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#czbcqbnldq .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czbcqbnldq .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#czbcqbnldq .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czbcqbnldq .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#czbcqbnldq .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czbcqbnldq .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#czbcqbnldq .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#czbcqbnldq .gt_left {
+  text-align: left;
+}
+
+#czbcqbnldq .gt_center {
+  text-align: center;
+}
+
+#czbcqbnldq .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#czbcqbnldq .gt_font_normal {
+  font-weight: normal;
+}
+
+#czbcqbnldq .gt_font_bold {
+  font-weight: bold;
+}
+
+#czbcqbnldq .gt_font_italic {
+  font-style: italic;
+}
+
+#czbcqbnldq .gt_super {
+  font-size: 65%;
+}
+
+#czbcqbnldq .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#czbcqbnldq .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#czbcqbnldq .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#czbcqbnldq .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#czbcqbnldq .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#czbcqbnldq .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#czbcqbnldq .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#czbcqbnldq .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#czbcqbnldq div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Anurag Anugu</td>
+<td class="gt_row gt_left" headers="team">9_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Govind Gurnani</td>
+<td class="gt_row gt_left" headers="team">9_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Millie Mak</td>
+<td class="gt_row gt_left" headers="team">9_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Samantha Cohen</td>
+<td class="gt_row gt_left" headers="team">9_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Leidi Salcedo-Urena</td>
+<td class="gt_row gt_left" headers="team">9_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Luna Abadia</td>
+<td class="gt_row gt_left" headers="team">9_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Mia Paz</td>
+<td class="gt_row gt_left" headers="team">9_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Owen Thomas</td>
+<td class="gt_row gt_left" headers="team">9_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Ryan Zaaiett</td>
+<td class="gt_row gt_left" headers="team">9_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Alexandra Himmel</td>
+<td class="gt_row gt_left" headers="team">9_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">John Dong</td>
+<td class="gt_row gt_left" headers="team">9_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Trevor Darr</td>
+<td class="gt_row gt_left" headers="team">9_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Victoria Pulliam</td>
+<td class="gt_row gt_left" headers="team">9_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Alisha Mittal</td>
+<td class="gt_row gt_left" headers="team">9_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Isabella Fauber</td>
+<td class="gt_row gt_left" headers="team">9_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Lauren Ingram</td>
+<td class="gt_row gt_left" headers="team">9_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Sarah Pusser</td>
+<td class="gt_row gt_left" headers="team">9_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Zishen Li</td>
+<td class="gt_row gt_left" headers="team">9_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Aditi Ramesh Iyer</td>
+<td class="gt_row gt_left" headers="team">9_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ishaan Narsinghani</td>
+<td class="gt_row gt_left" headers="team">9_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Jaden Riera</td>
+<td class="gt_row gt_left" headers="team">9_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Sophie Pentz</td>
+<td class="gt_row gt_left" headers="team">9_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Julia Williams</td>
+<td class="gt_row gt_left" headers="team">9_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Raymond Adams</td>
+<td class="gt_row gt_left" headers="team">9_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Sarah Fong</td>
+<td class="gt_row gt_left" headers="team">9_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Suraj Chatoth</td>
+<td class="gt_row gt_left" headers="team">9_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Aditya Baliga</td>
+<td class="gt_row gt_left" headers="team">9_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Jay Shin</td>
+<td class="gt_row gt_left" headers="team">9_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Leah Yu</td>
+<td class="gt_row gt_left" headers="team">9_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Maria Hernandez San Vicente</td>
+<td class="gt_row gt_left" headers="team">9_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Nya Williams</td>
+<td class="gt_row gt_left" headers="team">9_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Clark Raustiala</td>
+<td class="gt_row gt_left" headers="team">9_H</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Eric Chen</td>
+<td class="gt_row gt_left" headers="team">9_H</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Gigi Enrico</td>
+<td class="gt_row gt_left" headers="team">9_H</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Taylor Williams</td>
+<td class="gt_row gt_left" headers="team">9_H</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Aissah Pierre Louis</td>
+<td class="gt_row gt_left" headers="team">9_I</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Avery Hamlin</td>
+<td class="gt_row gt_left" headers="team">9_I</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Javan Mayrand</td>
+<td class="gt_row gt_left" headers="team">9_I</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Steven Duan</td>
+<td class="gt_row gt_left" headers="team">9_I</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div id="tabset-1-10" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-10-tab">
+<div class="cell">
+<div class="sourceCode" id="cb11"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">teams</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://googlesheets4.tidyverse.org/reference/range_read.html">read_sheet</a></span><span class="op">(</span><span class="st">"https://docs.google.com/spreadsheets/d/1tywYFySYTGFynqNm1R-ZXYFdypdRCC6QAbrn23PdBjk/edit?usp=sharing"</span>, sheet <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/paste.html">paste0</a></span><span class="op">(</span><span class="st">"lab-"</span>, <span class="fl">10</span><span class="op">)</span><span class="op">)</span></span>
+<span><span class="fu">make_pairing_table</span><span class="op">(</span><span class="va">teams</span><span class="op">)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div id="miszprjuax" style="padding-left:0px;padding-right:0px;padding-top:10px;padding-bottom:10px;overflow-x:auto;overflow-y:auto;width:auto;height:auto;">
+<style>#miszprjuax table {
+  font-family: system-ui, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#miszprjuax thead, #miszprjuax tbody, #miszprjuax tfoot, #miszprjuax tr, #miszprjuax td, #miszprjuax th {
+  border-style: none;
+}
+
+#miszprjuax p {
+  margin: 0;
+  padding: 0;
+}
+
+#miszprjuax .gt_table {
+  display: table;
+  border-collapse: collapse;
+  line-height: normal;
+  margin-left: auto;
+  margin-right: auto;
+  color: #333333;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  background-color: #FFFFFF;
+  width: auto;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #A8A8A8;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #A8A8A8;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+}
+
+#miszprjuax .gt_caption {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+#miszprjuax .gt_title {
+  color: #333333;
+  font-size: 125%;
+  font-weight: initial;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-color: #FFFFFF;
+  border-bottom-width: 0;
+}
+
+#miszprjuax .gt_subtitle {
+  color: #333333;
+  font-size: 85%;
+  font-weight: initial;
+  padding-top: 3px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-color: #FFFFFF;
+  border-top-width: 0;
+}
+
+#miszprjuax .gt_heading {
+  background-color: #FFFFFF;
+  text-align: center;
+  border-bottom-color: #FFFFFF;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#miszprjuax .gt_bottom_border {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#miszprjuax .gt_col_headings {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+}
+
+#miszprjuax .gt_col_heading {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 6px;
+  padding-left: 5px;
+  padding-right: 5px;
+  overflow-x: hidden;
+}
+
+#miszprjuax .gt_column_spanner_outer {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: normal;
+  text-transform: inherit;
+  padding-top: 0;
+  padding-bottom: 0;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#miszprjuax .gt_column_spanner_outer:first-child {
+  padding-left: 0;
+}
+
+#miszprjuax .gt_column_spanner_outer:last-child {
+  padding-right: 0;
+}
+
+#miszprjuax .gt_column_spanner {
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: bottom;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  overflow-x: hidden;
+  display: inline-block;
+  width: 100%;
+}
+
+#miszprjuax .gt_spanner_row {
+  border-bottom-style: hidden;
+}
+
+#miszprjuax .gt_group_heading {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  text-align: left;
+}
+
+#miszprjuax .gt_empty_group_heading {
+  padding: 0.5px;
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  vertical-align: middle;
+}
+
+#miszprjuax .gt_from_md > :first-child {
+  margin-top: 0;
+}
+
+#miszprjuax .gt_from_md > :last-child {
+  margin-bottom: 0;
+}
+
+#miszprjuax .gt_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  margin: 10px;
+  border-top-style: solid;
+  border-top-width: 1px;
+  border-top-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 1px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 1px;
+  border-right-color: #D3D3D3;
+  vertical-align: middle;
+  overflow-x: hidden;
+}
+
+#miszprjuax .gt_stub {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#miszprjuax .gt_stub_row_group {
+  color: #333333;
+  background-color: #FFFFFF;
+  font-size: 100%;
+  font-weight: initial;
+  text-transform: inherit;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: top;
+}
+
+#miszprjuax .gt_row_group_first td {
+  border-top-width: 2px;
+}
+
+#miszprjuax .gt_row_group_first th {
+  border-top-width: 2px;
+}
+
+#miszprjuax .gt_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#miszprjuax .gt_first_summary_row {
+  border-top-style: solid;
+  border-top-color: #D3D3D3;
+}
+
+#miszprjuax .gt_first_summary_row.thick {
+  border-top-width: 2px;
+}
+
+#miszprjuax .gt_last_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#miszprjuax .gt_grand_summary_row {
+  color: #333333;
+  background-color: #FFFFFF;
+  text-transform: inherit;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#miszprjuax .gt_first_grand_summary_row {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-top-style: double;
+  border-top-width: 6px;
+  border-top-color: #D3D3D3;
+}
+
+#miszprjuax .gt_last_grand_summary_row_top {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-bottom-style: double;
+  border-bottom-width: 6px;
+  border-bottom-color: #D3D3D3;
+}
+
+#miszprjuax .gt_striped {
+  background-color: rgba(128, 128, 128, 0.05);
+}
+
+#miszprjuax .gt_table_body {
+  border-top-style: solid;
+  border-top-width: 2px;
+  border-top-color: #D3D3D3;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+}
+
+#miszprjuax .gt_footnotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#miszprjuax .gt_footnote {
+  margin: 0px;
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#miszprjuax .gt_sourcenotes {
+  color: #333333;
+  background-color: #FFFFFF;
+  border-bottom-style: none;
+  border-bottom-width: 2px;
+  border-bottom-color: #D3D3D3;
+  border-left-style: none;
+  border-left-width: 2px;
+  border-left-color: #D3D3D3;
+  border-right-style: none;
+  border-right-width: 2px;
+  border-right-color: #D3D3D3;
+}
+
+#miszprjuax .gt_sourcenote {
+  font-size: 90%;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+#miszprjuax .gt_left {
+  text-align: left;
+}
+
+#miszprjuax .gt_center {
+  text-align: center;
+}
+
+#miszprjuax .gt_right {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+}
+
+#miszprjuax .gt_font_normal {
+  font-weight: normal;
+}
+
+#miszprjuax .gt_font_bold {
+  font-weight: bold;
+}
+
+#miszprjuax .gt_font_italic {
+  font-style: italic;
+}
+
+#miszprjuax .gt_super {
+  font-size: 65%;
+}
+
+#miszprjuax .gt_footnote_marks {
+  font-size: 75%;
+  vertical-align: 0.4em;
+  position: initial;
+}
+
+#miszprjuax .gt_asterisk {
+  font-size: 100%;
+  vertical-align: 0;
+}
+
+#miszprjuax .gt_indent_1 {
+  text-indent: 5px;
+}
+
+#miszprjuax .gt_indent_2 {
+  text-indent: 10px;
+}
+
+#miszprjuax .gt_indent_3 {
+  text-indent: 15px;
+}
+
+#miszprjuax .gt_indent_4 {
+  text-indent: 20px;
+}
+
+#miszprjuax .gt_indent_5 {
+  text-indent: 25px;
+}
+
+#miszprjuax .katex-display {
+  display: inline-flex !important;
+  margin-bottom: 0.75em !important;
+}
+
+#miszprjuax div.Reactable > div.rt-table > div.rt-thead > div.rt-tr.rt-tr-group-header > div.rt-th-group:after {
+  height: 0px !important;
+}
+</style>
+<table class="gt_table caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-quarto-disable-processing="false" data-quarto-bootstrap="false">
+<thead><tr class="header gt_col_headings">
+<th id="name" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Name</th>
+<th id="team" class="gt_col_heading gt_columns_bottom_border gt_left" data-quarto-table-cell-role="th" scope="col">Team</th>
+</tr></thead>
+<tbody class="gt_table_body">
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Aidan Shen</td>
+<td class="gt_row gt_left" headers="team">10_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Anthony Metayer</td>
+<td class="gt_row gt_left" headers="team">10_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Ella Kirksey</td>
+<td class="gt_row gt_left" headers="team">10_A</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Maddie Weiler</td>
+<td class="gt_row gt_left" headers="team">10_A</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Christopher Tarro</td>
+<td class="gt_row gt_left" headers="team">10_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Morgan Thompson</td>
+<td class="gt_row gt_left" headers="team">10_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Thomas Hines</td>
+<td class="gt_row gt_left" headers="team">10_B</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Zeynep Kosebalaban</td>
+<td class="gt_row gt_left" headers="team">10_B</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Darren Li</td>
+<td class="gt_row gt_left" headers="team">10_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ella Andonov</td>
+<td class="gt_row gt_left" headers="team">10_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Emma Xiong</td>
+<td class="gt_row gt_left" headers="team">10_C</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Leigh Wooster</td>
+<td class="gt_row gt_left" headers="team">10_C</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Cielo Medina</td>
+<td class="gt_row gt_left" headers="team">10_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Drew Frank</td>
+<td class="gt_row gt_left" headers="team">10_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Julia Ecker</td>
+<td class="gt_row gt_left" headers="team">10_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Owen Ebner</td>
+<td class="gt_row gt_left" headers="team">10_D</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Zoe Foose</td>
+<td class="gt_row gt_left" headers="team">10_D</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Ashley Chaionn</td>
+<td class="gt_row gt_left" headers="team">10_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Daelyn Edge</td>
+<td class="gt_row gt_left" headers="team">10_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Jennifer Hu</td>
+<td class="gt_row gt_left" headers="team">10_E</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Nayeli Reyes Rivera</td>
+<td class="gt_row gt_left" headers="team">10_E</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Aissatou Diallo</td>
+<td class="gt_row gt_left" headers="team">10_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Aretha Gao</td>
+<td class="gt_row gt_left" headers="team">10_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Connor Leathe</td>
+<td class="gt_row gt_left" headers="team">10_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Henry Belin</td>
+<td class="gt_row gt_left" headers="team">10_F</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Samuel Kodish</td>
+<td class="gt_row gt_left" headers="team">10_F</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Christiana Haynes</td>
+<td class="gt_row gt_left" headers="team">10_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Major Richmond</td>
+<td class="gt_row gt_left" headers="team">10_G</td>
+</tr>
+<tr class="odd">
+<td class="gt_row gt_left" headers="name">Thomas Billings</td>
+<td class="gt_row gt_left" headers="team">10_G</td>
+</tr>
+<tr class="even">
+<td class="gt_row gt_left" headers="name">Veronika Fragoso</td>
+<td class="gt_row gt_left" headers="team">10_G</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section><section id="team-name" class="level1"><h1>Team name</h1>
 <p>Pick a team name. It can be straightforward, or it can be cheeky, but it must be <a href="https://www.merriam-webster.com/dictionary/SFW">SFW</a>. Let your TA know your team name asap. Once everyone’s team names are in, your project repos will be created (give your TA a couple of minutes), and then you can continue with the rest of your task.</p>
-</section>
-<section id="merge-conflicts" class="level1">
-<h1>Merge conflicts</h1>
+</section><section id="merge-conflicts" class="level1"><h1>Merge conflicts</h1>
 <p>When you and your teammates work on the lines of code within a document and both try to push your changes, you will run into issues. Merge conflicts happen when you merge branches that have competing changes, and Git needs your help to decide which changes to incorporate in the final merge.</p>
 <p>Our first task today is to walk you through a merge conflict! First, a bit of Git review:</p>
 <ul>
@@ -424,26 +6344,18 @@ See also [ggplot2 documentation](https://ggplot2.tidyverse.org/)
 <p>And at the bottom you see <code>some1alpha2numeric3string4</code> (well, it probably looks more like <code>28e7b2ceb39972085a0860892062810fb812a08f</code>).</p>
 <p>This is the <strong>hash</strong> (a unique identifier) of the render your collaborator made with the conflicting change.</p>
 <p>Your job is to <em>reconcile</em> the changes: edit the file so that it incorporates the best of both versions and delete the <code>&lt;&lt;&lt;</code>, <code>===</code>, and <code>&gt;&gt;&gt;</code> lines. Then you can stage and render the result.</p>
-<section id="activity" class="level2">
-<h2 class="anchored" data-anchor-id="activity">Activity</h2>
-<section id="setup" class="level3">
-<h3 class="anchored" data-anchor-id="setup">Setup</h3>
+<section id="activity" class="level2"><h2 class="anchored" data-anchor-id="activity">Activity</h2>
+<section id="setup" class="level3"><h3 class="anchored" data-anchor-id="setup">Setup</h3>
 <ul>
 <li>Clone the <code>project</code> repo and open the <code>about.qmd</code> file.</li>
 <li>Assign the numbers 1, 2, 3, 4, and 5 to each of the team members. If your team has fewer than 5 people, some people will need to have multiple numbers.</li>
-</ul>
-</section>
-<section id="lets-cause-a-merge-conflict" class="level3">
-<h3 class="anchored" data-anchor-id="lets-cause-a-merge-conflict">Let’s cause a merge conflict!</h3>
+</ul></section><section id="lets-cause-a-merge-conflict" class="level3"><h3 class="anchored" data-anchor-id="lets-cause-a-merge-conflict">Let’s cause a merge conflict!</h3>
 <p>Our goal is to see two different types of merges: first we’ll see a type of merge that git can’t figure out on its own how to do on its own (a <strong>merge conflict</strong>) and requires human intervention, then another type of where that git can figure out how to do without human intervention.</p>
 <p>Doing this will require some tight choreography, so pay attention!</p>
 <p>Take turns in completing the exercise, only one member at a time. <strong>Others should just watch, not doing anything on their own projects (this includes not even pulling changes!)</strong> until they are instructed to. If you feel like you won’t be able to resist the urge to touch your computer when it’s not your turn, we recommend putting your hands in your pockets or sitting on them!</p>
-<section id="before-starting" class="level4">
-<h4 class="anchored" data-anchor-id="before-starting">Before starting</h4>
+<section id="before-starting" class="level4"><h4 class="anchored" data-anchor-id="before-starting">Before starting</h4>
 <p>Everyone should have the repo cloned and know which role number(s) they are.</p>
-</section>
-<section id="role-1" class="level4">
-<h4 class="anchored" data-anchor-id="role-1">Role 1</h4>
+</section><section id="role-1" class="level4"><h4 class="anchored" data-anchor-id="role-1">Role 1</h4>
 <ul>
 <li>Go to <code>about.qmd</code> in your project repo. Change the <code>[team name]</code> to your actual team name.</li>
 <li>Render the project by clicking on Render in the Build tab, commit (all changed files), and push.</li>
@@ -461,9 +6373,7 @@ Important
 <p>Make sure the previous role has finished before moving on to the next step.</p>
 </div>
 </div>
-</section>
-<section id="role-2" class="level4">
-<h4 class="anchored" data-anchor-id="role-2">Role 2</h4>
+</section><section id="role-2" class="level4"><h4 class="anchored" data-anchor-id="role-2">Role 2</h4>
 <ul>
 <li><p>Change the team name to some other word.</p></li>
 <li><p>Render the project by clicking on Render in the Build tab, commit (all changed files), and push. You should get an error.</p></li>
@@ -486,9 +6396,7 @@ Important
 <p>Make sure the previous role has finished before moving on to the next step.</p>
 </div>
 </div>
-</section>
-<section id="role-3" class="level4">
-<h4 class="anchored" data-anchor-id="role-3">Role 3</h4>
+</section><section id="role-3" class="level4"><h4 class="anchored" data-anchor-id="role-3">Role 3</h4>
 <ul>
 <li>Change the name of the first team member.</li>
 <li>Render the project by clicking on Render in the Build tab, commit, and push. You should get an error.</li>
@@ -508,9 +6416,7 @@ Important
 <p>Make sure the previous role has finished before moving on to the next step.</p>
 </div>
 </div>
-</section>
-<section id="role-4" class="level4">
-<h4 class="anchored" data-anchor-id="role-4">Role 4</h4>
+</section><section id="role-4" class="level4"><h4 class="anchored" data-anchor-id="role-4">Role 4</h4>
 <ul>
 <li>Change the name of the first team member to something other than what the previous team member did.</li>
 <li>Render the project by clicking on Render in the Build tab, commit, and push. You should get an error.</li>
@@ -529,44 +6435,26 @@ Important
 <p>Make sure the previous role has finished before moving on to the next step.</p>
 </div>
 </div>
-</section>
-<section id="role-5" class="level4">
-<h4 class="anchored" data-anchor-id="role-5">Role 5</h4>
+</section><section id="role-5" class="level4"><h4 class="anchored" data-anchor-id="role-5">Role 5</h4>
 <ul>
 <li>Change the name of the rest of the team members and add descriptions for each person with the help of your team members. Role 5 should be the only one typing; the others should help verbally.</li>
 <li>Render the project by clicking on Render in the Build tab and commit. Discuss as a team what you expect to happen when you hit push. Should there be a merge conflict error or not?</li>
 <li>If there is a merge conflict, fix it. If not, push your changes.</li>
-</ul>
-</section>
-<section id="everyone" class="level4">
-<h4 class="anchored" data-anchor-id="everyone">Everyone</h4>
+</ul></section><section id="everyone" class="level4"><h4 class="anchored" data-anchor-id="everyone">Everyone</h4>
 <p>Pull, and observe the changes in your project.</p>
-</section>
-</section>
-</section>
-<section id="tips-for-collaborating-via-github" class="level2">
-<h2 class="anchored" data-anchor-id="tips-for-collaborating-via-github">Tips for collaborating via GitHub</h2>
+</section></section></section><section id="tips-for-collaborating-via-github" class="level2"><h2 class="anchored" data-anchor-id="tips-for-collaborating-via-github">Tips for collaborating via GitHub</h2>
 <ul>
 <li><strong>Always pull first before you start working.</strong></li>
 <li>Resolve a merge conflict (render and push) <em>before</em> continuing your work. Never do new work while resolving a merge conflict.</li>
 <li>Render, commit, and push often to minimize merge conflicts and/or to make merge conflicts easier to resolve.</li>
 <li>If you find yourself in a situation that is difficult to resolve, ask questions ASAP. Don’t let it linger and get bigger.</li>
-</ul>
-</section>
-</section>
-<section id="team-contract" class="level1">
-<h1>Team contract</h1>
+</ul></section></section><section id="team-contract" class="level1"><h1>Team contract</h1>
 <p>Go to your project repository and open <code>contract.qmd</code>. As the instructions suggest, pick a teammate to be the scribe. Discuss the prompts and write up your answers. Once done, click <em>Render</em> in the build tab, commit, and push.</p>
-</section>
-<section id="grading" class="level1">
-<h1>Grading</h1>
+</section><section id="grading" class="level1"><h1>Grading</h1>
 <p>We will evaluate the first milestone of your project based on your participation in this activity. Each team member who participates in the activity in person during the lab session will earn 5 points towards their project.</p>
 
 
-</section>
-
-</main> <!-- /main -->
-<script id="quarto-html-after-body" type="application/javascript">
+</section></main><!-- /main --><script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
     const mode = bsSheetEl.getAttribute("data-mode");
@@ -601,18 +6489,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -644,7 +6521,29 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp("https:\/\/sta199-s25\.github\.io\/");
@@ -652,7 +6551,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -976,8 +6875,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
-<footer class="footer">
-  <div class="nav-footer">
+<footer class="footer"><div class="nav-footer">
     <div class="nav-footer-left">
 <p>© Copyright 2025 Mine Çetinkaya-Rundel, John Zito</p>
 </div>   
@@ -989,8 +6887,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </div>
   </div>
 </footer>
-
-
 
 
 </body></html>
