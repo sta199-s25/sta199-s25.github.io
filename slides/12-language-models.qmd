@@ -1,0 +1,150 @@
+---
+title: "The language of models"
+subtitle: "Lecture 12"
+date: "2025-02-27"
+format: revealjs
+auto-stretch: false
+---
+
+```{r}
+#| echo: false 
+#| message: false
+library(tidyverse)
+library(tidymodels)
+library(readxl)
+library(janitor)
+library(palmerpenguins)
+library(datasauRus)
+library(ggplot2)
+library(jpeg)
+```
+
+# You people are cute...
+
+## We can dream
+
+![](images/12/sta199-cute-1.png){fig-align="center"}
+
+## Anyone want to argue?
+
+![](images/12/sta199-cute-2.png){fig-align="center"}
+
+## Nailed it
+
+![](images/12/sta199-cute-3.png){fig-align="center"}
+
+## Work on the ears please
+
+![](images/12/sta199-cute-4.png){fig-align="center"}
+
+## Staaahp
+
+![](images/12/sta199-cute-5.png){fig-align="center"}
+
+## No
+
+![](images/12/sta199-cute-6.png){fig-align="center"}
+
+# ...and also ugly
+
+## Third place {.scrollable}
+
+```{r}
+ggplot(mtcars, aes(x = wt, y = mpg, shape = factor(vs), color = factor(vs))) +
+  geom_point(size = 10, stroke = 5, alpha = 0.5) + 
+  geom_smooth(size = 5) +
+  labs(
+    x = "WEIGHT (1000 LBS)!!!IN OUNCES!!!?;)))",
+    y = "MPG?????? (MeTeRs pER gALLoN)!",
+    title = "~~~Weight vs MPG vs Engine Type of CARS!!!!><%&#!~~~",
+    shape = "ugly engine type :(",
+    color = "Engine Thingy"
+  ) +
+  scale_shape_manual(
+    values = c(0, 15),  
+    labels = c("V-SHAPED?!", "STRAIGHT??!!")
+  ) +
+  scale_color_manual(
+    values = c("hotpink", "limegreen"),
+    labels = c("HONK HONK", "BEEP BEEP")
+  ) +
+    annotate("text", x = 3, y = 25, label = "VROOOOOOOMM!!!M!!!!!!!!!!!!!!", 
+             color = "red", size = 10, angle = 34) +
+  theme(
+       legend.position = "bottom",
+       legend.background = element_rect(fill = "yellow", color = "red"))
+```
+
+## Second place {.scrollable}
+
+```{r}
+#| warning: false
+#| message: false
+new_mtcars <- mtcars |>
+  mutate(
+    am = as.character(am),
+    vs = as.character(vs)
+  )
+ggplot(new_mtcars, aes(x = wt,
+                       y = mpg,
+                       shape = vs,
+                       linewidth = 69,
+                       label = "i love john zito"
+                       )
+  ) +
+  xlim(-1.1231, 5.384781472) +
+  ylim(-5.128312, 49.172836) +
+  geom_point(color = "green3") +
+  geom_line(color = "pink3") +
+  geom_area(color = "brown4") +
+  geom_quantile(linewidth = 2, color = "yellow4") +
+  geom_text(
+    size = new_mtcars$wt,
+    angle = new_mtcars$disp,
+    color = new_mtcars$hp
+  ) +
+  labs(
+    x = "Weight (1000 lbs)",
+    y = "Miles / gallon",
+  ) +
+  theme_void()
+```
+
+## First place {.scrollable}
+
+```{r}
+#| fig.width: 20
+#| fig.asp: 0.75
+img <- readJPEG("images/12/images.jpeg")
+
+fixed_mtcars <- mtcars |>
+  mutate(
+    am = factor(am, labels = c("Automatic", "Manual")),
+    am = fct_relevel(am, "Manual", "Automatic"),
+    vs = factor(vs, labels = c("V-shaped", "Straight")),
+    signs_m = ifelse(vs == "V-shaped", "■ ■ ■", "■ ■ ■")
+  )
+
+ggplot(fixed_mtcars, aes(x = wt, y = mpg, color = am)) +
+  annotation_raster(img, xmin = -Inf, xmax = Inf, ymin = -Inf, ymax = Inf) +
+  geom_text(aes(label = signs_m), size = 15) +
+  labs(
+    title = "1v1 car weight and fuel efficiency
+    for various smurfmobiles",
+    x = "Weight (in mushroom houses)",
+    y = "Gallons (milk)",
+    color = "Transmission"
+  ) +
+  scale_color_manual(
+    values = c("Automatic" = "blue", "Manual" = "blue")
+  )  +
+  theme(
+    legend.position = "top",
+    plot.background = element_rect(fill = "transparent", color = NA),
+    text = element_text(size = 50, color = "blue")
+  )
+
+```
+
+
+
