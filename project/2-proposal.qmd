@@ -47,22 +47,20 @@ If you set your hearts on a dataset that has fewer observations or variables tha
 
 ## Resources for datasets
 
-You can find data wherever you like, but here are some recommendations to get you started.
-You shouldn't feel constrained to datasets that are already in a tidy format, you can start with data that needs cleaning and tidying, scrape data off the web, or collect your own data.
+You can find data wherever you like, but here are some recommendations to get you started. You shouldn't feel constrained to datasets that are already in a tidy format, you can start with data that needs cleaning and tidying, scrape data off the web, or collect your own data.
 
 -   [UNICEF Data](https://data.unicef.org/)
--   [Youth Risk Behavior Surveillance System (YRBSS)](https://chronicdata.cdc.gov/Youth-Risk-Behaviors/DASH-Youth-Risk-Behavior-Surveillance-System-YRBSS/q6p7-56au)
 -   [Google Dataset Search](https://datasetsearch.research.google.com/)
 -   [Data is Plural](https://docs.google.com/spreadsheets/d/1wZhPLMCHKJvwOkP4juclhjFgqIY8fQFMemwKL2c64vk/edit#gid=0)
 -   [Election Studies](https://electionstudies.org//)
--   [US Census Data](https://www.census.gov/data.html)
+-   [US Census Data](https://www.census.gov/data/datasets.html)
 -   [World Bank Data](https://datacatalog.worldbank.org/home)
--   [CDC](https://www.cdc.gov/datastatistics/)
+-   [CDC](https://data.cdc.gov/)
 -   [European Statistics](https://ec.europa.eu/eurostat/)
--   [CORGIS: The Collection of Really ](https://think.cs.vt.edu/corgis/csv/)[Great](https://corgis-edu.github.io/corgis/csv/)[, Interesting, Situated Datasets](https://think.cs.vt.edu/corgis/csv/)
+-   [CORGIS: The Collection of Really Great, Interesting, Situated Datasets](https://corgis-edu.github.io/corgis/)
 -   [General Social Survey](https://gss.norc.org/)
 -   [Harvard Dataverse](https://dataverse.harvard.edu/)
--   [International Monetary Fund](https://data.imf.org/?sk=388DFA60-1D26-4ADE-B505-A05A558D9A42&sId=1479329328660)
+-   [International Monetary Fund](https://data.imf.org/?sk=388dfa60-1d26-4ade-b505-a05a558d9a42) [See "Popular Datasets"]
 -   [IPUMS survey data from around the world](https://ipums.org/)
 -   [Los Angeles Open Data](https://data.lacity.org/browse)
 -   [NHS Scotland Open Data](https://www.opendata.nhs.scot/)
@@ -83,7 +81,6 @@ You shouldn't feel constrained to datasets that are already in a tidy format, yo
 -   [Data.gov](https://www.data.gov/)
 -   [Awesome public datasets](https://github.com/awesomedata/awesome-public-datasets)
 -   [Durham Open Data Portal](https://live-durhamnc.opendata.arcgis.com/)
--   [Edinburgh Open Data](https://edinburghopendata.info/)
 -   [FiveThirtyEight](https://data.fivethirtyeight.com/)
 
 # Components
@@ -104,8 +101,7 @@ For each data set:
 
 ## Research question
 
-Your research question should contain at least three variables, and should be a mix of categorical and quantitative variables.
-When writing a research question, please think about the following:
+Your research question should contain at least three variables, and should be a mix of categorical and quantitative variables. When writing a research question, please think about the following:
 
 -   What is your target population?
 
@@ -115,16 +111,13 @@ When writing a research question, please think about the following:
 
 For each data set, include the following:
 
--   A well formulated research question.
-    (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
+-   A well formulated research question. (You may include more than one research question if you want to receive feedback on different ideas for your project. However, one per data set is required.)
 
 -   Statement on why this question is important.
 
 -   A description of the research topic along with a concise statement of your hypotheses on this topic.
 
--   Identify the types of variables in your research question.
-    Categorical?
-    Quantitative?
+-   Identify the types of variables in your research question. Categorical? Quantitative?
 
 ## Glimpse of data
 
@@ -149,14 +142,11 @@ For each data set, add a data dictionary to the `README.md` file in the `data` f
 
 Each of the first four components will be graded as follows:
 
--   **Meets expectations (full credit)**: All required elements are completed and are accurate.
-    The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.
+-   **Meets expectations (full credit)**: All required elements are completed and are accurate. The narrative is written clearly, all tables and visualizations are nicely formatted, and the work would be presentable in a professional setting.
 
--   **Close to expectations (half credit)**: There are some elements missing and/or inaccurate.
-    There are some issues with formatting.
+-   **Close to expectations (half credit)**: There are some elements missing and/or inaccurate. There are some issues with formatting.
 
--   **Does not meet expectations (no credit)**: Major elements missing.
-    Work is not neatly formatted and would not be presentable in a professional setting.
+-   **Does not meet expectations (no credit)**: Major elements missing. Work is not neatly formatted and would not be presentable in a professional setting.
 
 Additionally, the workflow component will be graded based on:
 
@@ -169,5 +159,4 @@ Additionally, the workflow component will be graded based on:
 Each team member must contribute, with commits, to the project proposal in order to be eligible for full credit for workflow and formatting.
 :::
 
-It is critical to check feedback on your project proposal.
-Even if you earn full credit, it may not mean that your proposal is perfect.
+It is critical to check feedback on your project proposal. Even if you earn full credit, it may not mean that your proposal is perfect.
