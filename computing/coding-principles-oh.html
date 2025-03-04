@@ -957,7 +957,7 @@ $ category             &lt;chr&gt; "AAR", "LHR", "AAR", "ALU", "AAR", "AAR", "LA
 <div class="cell">
 <div class="sourceCode" id="cb55"><pre class="downlit sourceCode r code-with-copy"><code class="sourceCode R"><span><span class="va">another_place</span> <span class="op">&lt;-</span> <span class="va">Timbuktu</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-error">
-<pre><code>Error: object 'Timbuktu' not found</code></pre>
+<pre><code>Error in eval(expr, envir, enclos): object 'Timbuktu' not found</code></pre>
 </div>
 </div>
 <p>In this case, since Timbuktu is not wrapped in quotation marks, R is looking for a pre-existing object - a variable or a function - called <code>Timbuktu</code>. Since no such object exists, R throws an error, and will refuse to compile your document (unless you force it to).</p>
