@@ -212,35 +212,6 @@ tidy(movies_fit)
 -   Residuals and $X$ values are uncorrelated
 :::
 
-## Interpreting the slope {.smaller}
-
-::: panel-tabset
-## Question
-
-::: poll
-The slope of the model for predicting audience score from critics score is 0.519. Which of the following is the best interpretation of this value?
-:::
-
-::: columns
-::: {.column width="80%"}
-a.  For every one point increase in the critics score, the audience score goes up by 0.519 points, on average.
-b.  For every one point increase in the critics score, we expect the audience score to be higher by 0.519 points, on average.
-c.  For every one point increase in the critics score, the audience score goes up by 0.519 points.
-d.  For every one point increase in the audience score, the critics score goes up by 0.519 points, on average.
-:::
-
-::: {.column width="20%"}
-![](images/13/slido-qr-2024-10-24.png)
-:::
-:::
-
-## Submit
-
-<iframe src="https://app.sli.do/event/q455FV1ibTPoNGQBoMNMFJ" height="100%" width="100%" frameBorder="0" style="min-height: 500px;" allow="clipboard-write" title="Slido">
-
-</iframe>
-:::
-
 ## Interpreting slope & intercept
 
 $$\widehat{\text{audience}} = 32.3 + 0.519 \times \text{critics}$$
