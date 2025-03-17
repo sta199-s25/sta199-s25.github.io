@@ -1991,7 +1991,7 @@
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\nlab 0\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\nslides 00\n\n\n\n1\nMon, Jan 13\n\nLab 1\nlab 1\n\n\n\n\nTue, Jan 14\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\nMeet the Toolkit\nslides 01\n\n\n\n\nThu, Jan 16\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\nData Vizualization\nslides 02\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\nData Transformation\n\nslides 03 ae 02\n\n\n\n\n\nWed, Jan 22\n\n\n\nLab 1 @ 11:59 PM\n\n\n\nThu, Jan 23\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\nData Exploration 1\n\nslides 04 ae 03\n\n\n\n\n3\nMon, Jan 27\n📗 r4ds - chp 4\n\nLab 2\nlab 2\n\n\n\n\nTue, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\nData Exploration 2\n\nslides 05 ae 04\n\n\n\n\n\nThu, Jan 30\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\nTidying data\n\nslides 06 ae 05\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\nlab 3\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\nJoining data\n\nslides 07 ae 06\n\n\n\n\n\nThu, Feb 6\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\nData types and classes\n\nslides 08 ae 07\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nlab 4 slides\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\nImporting and recoding data\nslides 09\n\n\n\n\nThu, Feb 13\n\nMore practice\n\nslides 10 ae 08\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\nData science ethics\nslides 11\n\n\n\n\nThu, Feb 20\n\nSnow Day - No Class\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nslides project milestone 1\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nBatch A of practice problems Batch B of practice problems Kahoot\n\nMidterm 1\n\n\n\n\n\nThu, Feb 27\n🎥 The language of models  📘 ims - chp 7.1\n\nThe language of models\n\nslides 12ae 9\n\n\n\n\n\nFri, Feb 28\n\n\n\nPeer evaluation 1 due by 5:00 pm\n\n\n8\nMon, Mar 3\n\nMilestone 2\nproject milestone 2\n\n\n\n\nTue, Mar 4\n🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\nSimple linear regression\n\nslides 13 ae 10\n\n\n\n\n\nThu, Mar 6\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\nMultiple linear regression 1\n\nslides 14 ae 11\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\n\n\n\n\nTue, Mar 18\n📘 ims - chp 8.3-8.5\n\nMultiple linear regression 2\n\n\n\n\n\nThu, Mar 20\n🎥 Logistic regression\n\nModel selection\n\n\n\n\n\nFri, Mar 21\n\n\n\nPeer evaluation 2 due by 5:00 pm\n\n\n11\nMon, Mar 24\n\nLab 6\n\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n📘 ims - chp 9\n\nLogistic regression 1\n\n\n\n\n\nThu, Mar 27\n🎥 Prediction and overfitting\n\nLogistic regression 2\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n\nIntervals\n\n\n\n\n\nThu, Apr 3\n\nIntervals/Testing\n\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nTesting\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n\nFri, Apr 11\n\n\n\nPeer evaluation 3 due by 5:00 pm\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nInference Overview\n\n\n\n\n\nThu, Apr 17\n\nCommunication, Quarto\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nMon, Apr 28\n\nfinals week - no lab\n\nPeer evaluation 4 due by 5:00 pm\n\n\n\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\nlab 0\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\nslides 00\n\n\n\n1\nMon, Jan 13\n\nLab 1\nlab 1\n\n\n\n\nTue, Jan 14\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\nMeet the Toolkit\nslides 01\n\n\n\n\nThu, Jan 16\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\nData Vizualization\nslides 02\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\nData Transformation\n\nslides 03 ae 02\n\n\n\n\n\nWed, Jan 22\n\n\n\nLab 1 @ 11:59 PM\n\n\n\nThu, Jan 23\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\nData Exploration 1\n\nslides 04 ae 03\n\n\n\n\n3\nMon, Jan 27\n📗 r4ds - chp 4\n\nLab 2\nlab 2\n\n\n\n\nTue, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\nData Exploration 2\n\nslides 05 ae 04\n\n\n\n\n\nThu, Jan 30\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\nTidying data\n\nslides 06 ae 05\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\nlab 3\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\nJoining data\n\nslides 07 ae 06\n\n\n\n\n\nThu, Feb 6\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\nData types and classes\n\nslides 08 ae 07\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nlab 4 slides\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\nImporting and recoding data\nslides 09\n\n\n\n\nThu, Feb 13\n\nMore practice\n\nslides 10 ae 08\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\nData science ethics\nslides 11\n\n\n\n\nThu, Feb 20\n\nSnow Day - No Class\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nslides project milestone 1\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nBatch A of practice problems Batch B of practice problems Kahoot\n\nMidterm 1\n\n\n\n\n\nThu, Feb 27\n🎥 The language of models  📘 ims - chp 7.1\n\nThe language of models\n\nslides 12ae 9\n\n\n\n\n\nFri, Feb 28\n\n\n\nPeer evaluation 1 due by 5:00 pm\n\n\n8\nMon, Mar 3\n\nMilestone 2\nproject milestone 2\n\n\n\n\nTue, Mar 4\n🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\nSimple linear regression\n\nslides 13 ae 10\n\n\n\n\n\nThu, Mar 6\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\nMultiple linear regression 1\n\nslides 14 ae 11\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\nslides lab 5\n\n\n\n\n\nTue, Mar 18\n📘 ims - chp 8.3-8.5\n\nMultiple linear regression 2\n\n\n\n\n\nThu, Mar 20\n🎥 Logistic regression\n\nModel selection\n\n\n\n\n\nFri, Mar 21\n\n\n\nPeer evaluation 2 due by 5:00 pm\n\n\n11\nMon, Mar 24\n\nLab 6\n\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n📘 ims - chp 9\n\nLogistic regression 1\n\n\n\n\n\nThu, Mar 27\n🎥 Prediction and overfitting\n\nLogistic regression 2\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n\nIntervals\n\n\n\n\n\nThu, Apr 3\n\nIntervals/Testing\n\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nTesting\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n\nFri, Apr 11\n\n\n\nPeer evaluation 3 due by 5:00 pm\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nInference Overview\n\n\n\n\n\nThu, Apr 17\n\nCommunication, Quarto\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nMon, Apr 28\n\nfinals week - no lab\n\nPeer evaluation 4 due by 5:00 pm\n\n\n\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
@@ -2934,112 +2934,176 @@
     "href": "lab/lab-5.html",
     "title": "Lab 5",
     "section": "",
-    "text": "In this lab you’ll start your practice of statistical modeling. You’ll fit models, interpret model output, and make decisions about your data and research question based on the model results.\n\n\n\n\n\n\nNote\n\n\n\nThis lab assumes you’ve completed the labs so far and doesn’t repeat setup and overview content from those labs. If you haven’t done those yet, you should review the previous labs before starting on this one.\n\n\n\nBy the end of the lab, you will…\n\nFit linear regression models and interpret model coefficients in context of the data and research question;\nTransform data using a log-transformation for a better model fit.\n\nAnd, as usual, you will also…\n\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub\n\nLog in to RStudio, clone your lab-5 repo from GitHub, open your lab-5.qmd document, and get started!\n\n\n\n\n\n\nClick here if you prefer to see step-by-step instructions\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\nGo to the course organization at github.com/sta199-s25 organization on GitHub. Click on the repo with the prefix lab-5. It contains the starter documents you need to complete the lab.\nClick on the green CODE button and select Use SSH. This might already be selected by default; if it is, you’ll see the text Clone with SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-5.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\nIn lab-5.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.\n\n\n\nIn this lab, we will work with the\n\n\ntidyverse package for doing data analysis in a “tidy” way;\n\ntidymodels package for modeling in a “tidy” way.\n\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\n\n\nRun the code cell by clicking on the green triangle (play) button for the code cell labeled load-packages. This loads the package so that its features (the functions and datasets in it) are accessible from your Console.\nThen, render the document that loads this package to make its features (the functions and datasets in it) available for other code cells in your Quarto document.\n\nAs we’ve discussed in lecture, your plots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.\nAdditionally, code should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nFurthermore, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.\n\n\n\n\n\n\nImportant\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nYou are also expected to pay attention to code smell in addition to code style and readability. You should review and improve your code to avoid redundant steps (e.g., grouping, ungrouping, and grouping again by the same variable in a pipeline), using inconsistent syntax (e.g., ! to say “not” in one place and - in another place), etc."
+    "text": "In this lab you’ll start your practice of statistical modeling. You’ll fit models, interpret model output, and make decisions about your data and research question based on the model results.\n\n\n\n\n\n\nNote\n\n\n\nThis lab assumes you’ve completed the labs so far and doesn’t repeat setup and overview content from those labs. If you haven’t done those yet, you should review the previous labs before starting on this one.\n\n\n\nBy the end of the lab, you will…\n\nFit linear regression models and interpret model coefficients in context of the data and research question;\nTransform data using a log-transformation for a better model fit.\n\nAnd, as usual, you will also…\n\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub\n\nLog in to RStudio, clone your lab-5 repo from GitHub, open your lab-5.qmd document, and get started!\n\n\n\n\n\n\nClick here if you prefer to see step-by-step instructions\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\nGo to the course organization at github.com/sta199-s25 organization on GitHub. Click on the repo with the prefix lab-5. It contains the starter documents you need to complete the lab.\nClick on the green CODE button and select Use SSH. This might already be selected by default; if it is, you’ll see the text Clone with SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-5.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\nIn lab-5.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.\n\n\n\nIn this lab, we will work with the\n\n\ntidyverse package for doing data analysis in a “tidy” way;\n\ntidymodels package for modeling in a “tidy” way.\n\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\n\n\nRun the code cell by clicking on the green triangle (play) button for the code cell labeled load-packages. This loads the package so that its features (the functions and datasets in it) are accessible from your Console.\nThen, render the document that loads this package to make its features (the functions and datasets in it) available for other code cells in your Quarto document.\n\nAs we’ve discussed in lecture, your plots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.\nAdditionally, code should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nFurthermore, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.\n\n\n\n\n\n\nImportant\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nYou are also expected to pay attention to code smell in addition to code style and readability. You should review and improve your code to avoid redundant steps (e.g., grouping, ungrouping, and grouping again by the same variable in a pipeline), using inconsistent syntax (e.g., ! to say “not” in one place and - in another place), etc.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#learning-objectives",
     "href": "lab/lab-5.html#learning-objectives",
     "title": "Lab 5",
     "section": "",
-    "text": "By the end of the lab, you will…\n\nFit linear regression models and interpret model coefficients in context of the data and research question;\nTransform data using a log-transformation for a better model fit.\n\nAnd, as usual, you will also…\n\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub"
+    "text": "By the end of the lab, you will…\n\nFit linear regression models and interpret model coefficients in context of the data and research question;\nTransform data using a log-transformation for a better model fit.\n\nAnd, as usual, you will also…\n\nGet more experience with data science workflow using R, RStudio, Git, and GitHub\nFurther your reproducible authoring skills with Quarto\nImprove your familiarity with version control using Git and GitHub",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#getting-started",
     "href": "lab/lab-5.html#getting-started",
     "title": "Lab 5",
     "section": "",
-    "text": "Log in to RStudio, clone your lab-5 repo from GitHub, open your lab-5.qmd document, and get started!\n\n\n\n\n\n\nClick here if you prefer to see step-by-step instructions\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\nGo to the course organization at github.com/sta199-s25 organization on GitHub. Click on the repo with the prefix lab-5. It contains the starter documents you need to complete the lab.\nClick on the green CODE button and select Use SSH. This might already be selected by default; if it is, you’ll see the text Clone with SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-5.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\nIn lab-5.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding."
+    "text": "Log in to RStudio, clone your lab-5 repo from GitHub, open your lab-5.qmd document, and get started!\n\n\n\n\n\n\nClick here if you prefer to see step-by-step instructions\n\n\n\n\n\n\n\nGo to https://cmgr.oit.duke.edu/containers and log in with your Duke NetID and Password.\nClick STA198-199 under My reservations to log into your container. You should now see the RStudio environment.\n\n\nGo to the course organization at github.com/sta199-s25 organization on GitHub. Click on the repo with the prefix lab-5. It contains the starter documents you need to complete the lab.\nClick on the green CODE button and select Use SSH. This might already be selected by default; if it is, you’ll see the text Clone with SSH. Click on the clipboard icon to copy the repo URL.\nIn RStudio, go to File ➛ New Project ➛Version Control ➛ Git.\nCopy and paste the URL of your assignment repo into the dialog box Repository URL. Again, please make sure to have SSH highlighted under Clone when you copy the address.\nClick Create Project, and the files from your GitHub repo will be displayed in the Files pane in RStudio.\nClick lab-5.qmd to open the template Quarto file. This is where you will write up your code and narrative for the lab.\n\nIn lab-5.qmd, update the author field to your name, render your document and examine the changes. Then, in the Git pane, click on Diff to view your changes, add a commit message (e.g., “Added author name”), and click Commit. Then, push the changes to your GitHub repository, and in your browser confirm that these changes have indeed propagated to your repository.\n\n\n\n\n\n\n\n\n\n\nImportant\n\n\n\nIf you run into any issues with the first steps outlined above, flag a TA for help before proceeding.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#packages",
     "href": "lab/lab-5.html#packages",
     "title": "Lab 5",
     "section": "",
-    "text": "In this lab, we will work with the\n\n\ntidyverse package for doing data analysis in a “tidy” way;\n\ntidymodels package for modeling in a “tidy” way.\n\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\n\n\nRun the code cell by clicking on the green triangle (play) button for the code cell labeled load-packages. This loads the package so that its features (the functions and datasets in it) are accessible from your Console.\nThen, render the document that loads this package to make its features (the functions and datasets in it) available for other code cells in your Quarto document."
+    "text": "In this lab, we will work with the\n\n\ntidyverse package for doing data analysis in a “tidy” way;\n\ntidymodels package for modeling in a “tidy” way.\n\n\nlibrary(tidyverse)\nlibrary(tidymodels)\n\n\n\nRun the code cell by clicking on the green triangle (play) button for the code cell labeled load-packages. This loads the package so that its features (the functions and datasets in it) are accessible from your Console.\nThen, render the document that loads this package to make its features (the functions and datasets in it) available for other code cells in your Quarto document.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#guidelines",
     "href": "lab/lab-5.html#guidelines",
     "title": "Lab 5",
     "section": "",
-    "text": "As we’ve discussed in lecture, your plots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.\nAdditionally, code should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nFurthermore, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.\n\n\n\n\n\n\nImportant\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nYou are also expected to pay attention to code smell in addition to code style and readability. You should review and improve your code to avoid redundant steps (e.g., grouping, ungrouping, and grouping again by the same variable in a pipeline), using inconsistent syntax (e.g., ! to say “not” in one place and - in another place), etc."
+    "text": "As we’ve discussed in lecture, your plots should include an informative title, axes and legends should have human-readable labels, and careful consideration should be given to aesthetic choices.\nAdditionally, code should follow the tidyverse style. Particularly,\n\nthere should be spaces before and line breaks after each + when building a ggplot,\nthere should also be spaces before and line breaks after each |&gt; in a data transformation pipeline,\ncode should be properly indented,\nthere should be spaces around = signs and spaces after commas.\n\nFurthermore, all code should be visible in the PDF output, i.e., should not run off the page on the PDF. Long lines that run off the page should be split across multiple lines with line breaks.\n\n\n\n\n\n\nImportant\n\n\n\nContinuing to develop a sound workflow for reproducible data analysis is important as you complete the lab and other assignments in this course. There will be periodic reminders in this assignment to remind you to render, commit, and push your changes to GitHub. You should have at least 3 commits with meaningful commit messages by the end of the assignment.\n\n\n\n\n\n\n\n\nImportant\n\n\n\nYou are also expected to pay attention to code smell in addition to code style and readability. You should review and improve your code to avoid redundant steps (e.g., grouping, ungrouping, and grouping again by the same variable in a pipeline), using inconsistent syntax (e.g., ! to say “not” in one place and - in another place), etc.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-0",
     "href": "lab/lab-5.html#question-0",
     "title": "Lab 5",
     "section": "Question 0",
-    "text": "Question 0\nAcquire some domain knowledge! As we know, it’s never a good idea to blunder into a data analysis without some subject-matter expertise, so here is some suggested reading:\n\nThe original Card and Krueger paper is here. Their bottom line was “[w]e find no indication that the rise in the minimum wage reduced employment,” which runs counter to the usual ECON 101 story. People have been arguing about this ever since;\n\nThis recent survey article attempts to summarize the state of the literature on (dis?)employment effects of the minimum wage;\nThe award citation for Card’s Nobel has useful summaries: popular, advanced.\n\nWe are not grading this, and we’ll never know if you did it or not, but you should definitely go exploring if this area interests you. Furthermore, while you may not do the reading we are suggesting here, you should definitely do a little outside reading in the domain relevant to your final project."
+    "text": "Question 0\nAcquire some domain knowledge! As we know, it’s never a good idea to blunder into a data analysis without some subject-matter expertise, so here is some suggested reading:\n\nThe original Card and Krueger paper is here. Their bottom line was “[w]e find no indication that the rise in the minimum wage reduced employment,” which runs counter to the usual ECON 101 story. People have been arguing about this ever since;\n\nThis recent survey article attempts to summarize the state of the literature on (dis?)employment effects of the minimum wage;\nThe award citation for Card’s Nobel has useful summaries: popular, advanced.\n\nWe are not grading this, and we’ll never know if you did it or not, but you should definitely go exploring if this area interests you. Furthermore, while you may not do the reading we are suggesting here, you should definitely do a little outside reading in the domain relevant to your final project.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-1",
     "href": "lab/lab-5.html#question-1",
     "title": "Lab 5",
     "section": "Question 1",
-    "text": "Question 1\n\nRelevel the state and time variables so that \"PA\" and \"before\" are the baselines, respectively.\nHow many restaurants were sampled in each state?\nCompute the median wage and the median employment in each state before and after the policy change.\nCreate a faceted density plot displaying wage according to both state and time. We want two panels stacked vertically, one for each time period (before and after the policy change). Within each panel, we want two densities, one for each state. Comment on any patterns you notice.\nCreate a faceted density plot displaying fte according to both state and time (similar to part d). Comment on any patterns you notice."
+    "text": "Question 1\n\nRelevel the state and time variables so that \"PA\" and \"before\" are the baselines, respectively.\nHow many restaurants were sampled in each state?\nCompute the median wage and the median employment in each state before and after the policy change.\nCreate a faceted density plot displaying wage according to both state and time. We want two panels stacked vertically, one for each time period (before and after the policy change). Within each panel, we want two densities, one for each state. Comment on any patterns you notice.\nCreate a faceted density plot displaying fte according to both state and time (similar to part d). Comment on any patterns you notice.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-2",
     "href": "lab/lab-5.html#question-2",
     "title": "Lab 5",
     "section": "Question 2",
-    "text": "Question 2\n\nUse pivot_wider to create a new data frame card_krueger_wide that has six columns: id, state, wage_before, wage_after, fte_before, and fte_after.\nModify card_krueger_wide by discarding any rows that have a missing value in any of the four columns wage_before, wage_after, fte_before, and fte_after.\nAdd a new variable emp_diff to card_krueger_wide which measures the change in fte after the new law took effect.\nAdd a new variable gap to card_krueger_wide which is constructed in the following way:\n\n\n\ngap equals zero for stores in Pennsylvania;\n\ngap equals zero for stores in New Jersey whose starting wage before the policy change was already higher than the new minimum;\n\ngap equals \\((5.05 - \\text{wage}_{\\text{before}})/\\text{wage}_{\\text{before}}\\) for all other stores in New Jersey.\n\nCard and Krueger introduced gap as an alternative measure of the impact of the minimum wage at each store. In their words:\n\n\\(\\text{GAP}_i\\) is the proportional increase in wages at store \\(i\\) necessary to meet the new minimum rate. Variation in GAP, reflects both the New Jersey-Pennsylvania contrast and differences within New Jersey based on reported starting wages in wave 1. Indeed, the value of GAP, is a strong predictor of the actual proportional wage change between waves 1 and 2 (\\(R^2=0.75\\)), and conditional on GAP, there is no difference in wage behavior between stores in New Jersey and Pennsylvania"
+    "text": "Question 2\n\nUse pivot_wider to create a new data frame card_krueger_wide that has six columns: id, state, wage_before, wage_after, fte_before, and fte_after.\nModify card_krueger_wide by discarding any rows that have a missing value in any of the four columns wage_before, wage_after, fte_before, and fte_after.\nAdd a new variable emp_diff to card_krueger_wide which measures the change in fte after the new law took effect.\nAdd a new variable gap to card_krueger_wide which is constructed in the following way:\n\n\n\ngap equals zero for stores in Pennsylvania;\n\ngap equals zero for stores in New Jersey whose starting wage before the policy change was already higher than the new minimum;\n\ngap equals \\((5.05 - \\text{wage}_{\\text{before}})/\\text{wage}_{\\text{before}}\\) for all other stores in New Jersey.\n\nCard and Krueger introduced gap as an alternative measure of the impact of the minimum wage at each store. In their words:\n\n\\(\\text{GAP}_i\\) is the proportional increase in wages at store \\(i\\) necessary to meet the new minimum rate. Variation in GAP, reflects both the New Jersey-Pennsylvania contrast and differences within New Jersey based on reported starting wages in wave 1. Indeed, the value of GAP, is a strong predictor of the actual proportional wage change between waves 1 and 2 (\\(R^2=0.75\\)), and conditional on GAP, there is no difference in wage behavior between stores in New Jersey and Pennsylvania",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-3",
     "href": "lab/lab-5.html#question-3",
     "title": "Lab 5",
     "section": "Question 3",
-    "text": "Question 3\n\nCreate side-by-side boxplots of emp_diff for each state.\nFit a linear model that predicts emp_diff from state and save the model object. Then, provide the tidy summary output.\nWrite the estimated least squares regression line below using proper notation.\nInterpret the intercept in the context of the data and the research question. Is the intercept meaningful in this context? Why or why not?\nInterpret the slope in the context of the data and the research question."
+    "text": "Question 3\n\nCreate side-by-side boxplots of emp_diff for each state.\nFit a linear model that predicts emp_diff from state and save the model object. Then, provide the tidy summary output.\nWrite the estimated least squares regression line below using proper notation.\nInterpret the intercept in the context of the data and the research question. Is the intercept meaningful in this context? Why or why not?\nInterpret the slope in the context of the data and the research question.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-4",
     "href": "lab/lab-5.html#question-4",
     "title": "Lab 5",
     "section": "Question 4",
-    "text": "Question 4\n\nCreate a scatter plot of gap versus emp_diff.\nFit a linear model that predicts emp_diff from gap and save the model object. Then, provide the tidy summary output.\nWrite the estimated least squares regression line below using proper notation.\nInterpret the intercept in the context of the data and the research question. Is the intercept meaningful in this context? Why or why not?\nInterpret the slope in the context of the data and the research question."
+    "text": "Question 4\n\nCreate a scatter plot of gap versus emp_diff.\nFit a linear model that predicts emp_diff from gap and save the model object. Then, provide the tidy summary output.\nWrite the estimated least squares regression line below using proper notation.\nInterpret the intercept in the context of the data and the research question. Is the intercept meaningful in this context? Why or why not?\nInterpret the slope in the context of the data and the research question.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-5",
     "href": "lab/lab-5.html#question-5",
     "title": "Lab 5",
     "section": "Question 5",
-    "text": "Question 5\nCard and Krueger tried to argue that, even though their data were observational, they had nevertheless identified a clean natural experiment that permitted them to ascribe a causal interpretation to the results of their regression analysis. Do you agree? Do you see any potential dangers with this approach? Write a paragraph or two discussing. Note that we are only grading this on a good faith completion effort, but again, if this area interests you, take the opportunity to do some of the reading under Question 0, and then try to write something interesting."
+    "text": "Question 5\nCard and Krueger tried to argue that, even though their data were observational, they had nevertheless identified a clean natural experiment that permitted them to ascribe a causal interpretation to the results of their regression analysis. Do you agree? Do you see any potential dangers with this approach? Write a paragraph or two discussing. Note that we are only grading this on a good faith completion effort, but again, if this area interests you, take the opportunity to do some of the reading under Question 0, and then try to write something interesting.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-6",
     "href": "lab/lab-5.html#question-6",
     "title": "Lab 5",
     "section": "Question 6",
-    "text": "Question 6\nLet’s start by reading in the parasites data and examining the relationship between divergence_time and parsim.\n\nLoad the data and save the data frame as parasites.\nBased on the goals of the analysis, what is the response variable?\nVisualize the relationship between the two variables.\nUse the visualization to describe the relationship between the two variables."
+    "text": "Question 6\nLet’s start by reading in the parasites data and examining the relationship between divergence_time and parsim.\n\nLoad the data and save the data frame as parasites.\nBased on the goals of the analysis, what is the response variable?\nVisualize the relationship between the two variables.\nUse the visualization to describe the relationship between the two variables.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-7",
     "href": "lab/lab-5.html#question-7",
     "title": "Lab 5",
     "section": "Question 7",
-    "text": "Question 7\nNext, model this relationship.\n\nFit the model and write the estimated regression equation.\nInterpret the slope and the intercept in the context of the data.\nRecreate the visualization from Question 4, this time adding a regression line to the visualization.\nWhat do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?"
+    "text": "Question 7\nNext, model this relationship.\n\nFit the model and write the estimated regression equation.\nInterpret the slope and the intercept in the context of the data.\nRecreate the visualization from Question 4, this time adding a regression line to the visualization.\nWhat do you notice about the prediction (regression) line that may be strange, particularly for very large divergence times?",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-8",
     "href": "lab/lab-5.html#question-8",
     "title": "Lab 5",
     "section": "Question 8",
-    "text": "Question 8\nSince parsim takes values between 0 and 1, we want to transform this variable so that it can range between (−∞,+∞). This will be better suited for fitting a regression model (and interpreting predicted values!)\n\n\nUsing mutate, create a new variable transformed_parsim that is calculated as log(parsim/(1-parsim)). Add this variable to your data frame.\n\n\n\n\n\n\nNote\n\n\n\nlog() in R represents the nautral log.\n\n\n\nThen, visualize the relationship between divergence_time and transformed_parsim. Add a regression line to your visualization.\nWrite a 1-2 sentence description of what you observe in the visualization."
+    "text": "Question 8\nSince parsim takes values between 0 and 1, we want to transform this variable so that it can range between (−∞,+∞). This will be better suited for fitting a regression model (and interpreting predicted values!)\n\n\nUsing mutate, create a new variable transformed_parsim that is calculated as log(parsim/(1-parsim)). Add this variable to your data frame.\n\n\n\n\n\n\nNote\n\n\n\nlog() in R represents the nautral log.\n\n\n\nThen, visualize the relationship between divergence_time and transformed_parsim. Add a regression line to your visualization.\nWrite a 1-2 sentence description of what you observe in the visualization.",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-9",
     "href": "lab/lab-5.html#question-9",
     "title": "Lab 5",
     "section": "Question 9",
-    "text": "Question 9\nWhich variable is the strongest individual predictor of parasite similarity between species?\nTo answer this question, begin by fitting a linear regression model to each pair of variables. Do not report the model outputs in a tidy format but save each one as dt_model, dist_model, BM_model, and prec_model, respectively.\n\ndivergence_time and transformed_parsim\ndistance and transformed_parsim\nBMdiff and transformed_parsim\nprecdiff and transformed_parsim\n\n\nReport the slopes for each of these models. Use proper notation.\nTo answer the question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?"
+    "text": "Question 9\nWhich variable is the strongest individual predictor of parasite similarity between species?\nTo answer this question, begin by fitting a linear regression model to each pair of variables. Do not report the model outputs in a tidy format but save each one as dt_model, dist_model, BM_model, and prec_model, respectively.\n\ndivergence_time and transformed_parsim\ndistance and transformed_parsim\nBMdiff and transformed_parsim\nprecdiff and transformed_parsim\n\n\nReport the slopes for each of these models. Use proper notation.\nTo answer the question of interest, would it be useful to compare the slopes in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "lab/lab-5.html#question-10",
     "href": "lab/lab-5.html#question-10",
     "title": "Lab 5",
     "section": "Question 10",
-    "text": "Question 10\nNow, what if we calculated \\(R^2\\) to help answer our question? To compare the explanatory power of each individual predictor, we will look at \\(R^2\\) between the models. \\(R^2\\) is a measure of how much of the variability in the response variable is explained by the model.\nAs you may have guessed from the name \\(R^2\\) can be calculated by squaring the correlation when we have a simple linear regression model. The correlation r takes values -1 to 1, therefore, \\(R^2\\) takes values 0 to 1. Intuitively, if r=1 or −1, then \\(R^2\\)=1, indicating the model is a perfect fit for the data. If r≈0 then \\(R^2\\)≈0, indicating the model is a very bad fit for the data.\nYou can calculate \\(R^2\\) using the glance function. For example, you can calculate \\(R^2\\) for dt_model using the code glance(dt_model)$r.squared.\n\nCalculate and report \\(R^2\\) for each model fit in the previous exercise.\nTo answer our question of interest, would it be useful to compare the \\(R^2\\) in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?"
+    "text": "Question 10\nNow, what if we calculated \\(R^2\\) to help answer our question? To compare the explanatory power of each individual predictor, we will look at \\(R^2\\) between the models. \\(R^2\\) is a measure of how much of the variability in the response variable is explained by the model.\nAs you may have guessed from the name \\(R^2\\) can be calculated by squaring the correlation when we have a simple linear regression model. The correlation r takes values -1 to 1, therefore, \\(R^2\\) takes values 0 to 1. Intuitively, if r=1 or −1, then \\(R^2\\)=1, indicating the model is a perfect fit for the data. If r≈0 then \\(R^2\\)≈0, indicating the model is a very bad fit for the data.\nYou can calculate \\(R^2\\) using the glance function. For example, you can calculate \\(R^2\\) for dt_model using the code glance(dt_model)$r.squared.\n\nCalculate and report \\(R^2\\) for each model fit in the previous exercise.\nTo answer our question of interest, would it be useful to compare the \\(R^2\\) in each model to choose the variable that is the strongest predictor of parasite similarity? Why or why not?",
+    "crumbs": [
+      "Labs",
+      "Lab 5"
+    ]
   },
   {
     "objectID": "slides/05-exploring-data-2.html#while-you-wait",
@@ -4734,6 +4798,62 @@
     "title": "STA 199 Final Project",
     "section": "Along the way: peer evaluation of teammates",
     "text": "Along the way: peer evaluation of teammates\n\nPeer eval 1: Fri Feb 28 @ 5PM\nPeer eval 2: Fri Mar 21 @ 5PM\nPeer eval 3: Fri Apr 11 @ 5PM\nPeer eval 4: Mon Apr 28 @ 5PM\n\n\n\n\n\n\n\nNote\n\n\nBe on the look out for emails from TEAMMATES."
+  },
+  {
+    "objectID": "slides/lab-5.html#question-how-do-we-concisely-summarize-the-association-between-two-variables",
+    "href": "slides/lab-5.html#question-how-do-we-concisely-summarize-the-association-between-two-variables",
+    "title": "Recap: simple linear regression",
+    "section": "Question: how do we concisely summarize the association between two variables?",
+    "text": "Question: how do we concisely summarize the association between two variables?"
+  },
+  {
+    "objectID": "slides/lab-5.html#answer-simple-linear-regression",
+    "href": "slides/lab-5.html#answer-simple-linear-regression",
+    "title": "Recap: simple linear regression",
+    "section": "Answer: simple linear regression!",
+    "text": "Answer: simple linear regression!"
+  },
+  {
+    "objectID": "slides/lab-5.html#answer-simple-linear-regression-1",
+    "href": "slides/lab-5.html#answer-simple-linear-regression-1",
+    "title": "Recap: simple linear regression",
+    "section": "Answer: simple linear regression!",
+    "text": "Answer: simple linear regression!\n\nmpg_wt_fit &lt;- linear_reg() |&gt;\n  fit(mpg ~ wt, data = mtcars)\n\ntidy(mpg_wt_fit)\n\n# A tibble: 2 × 5\n  term        estimate std.error statistic  p.value\n  &lt;chr&gt;          &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)    37.3      1.88      19.9  8.24e-19\n2 wt             -5.34     0.559     -9.56 1.29e-10\n\n\n\\[\n\\widehat{mpg}=37.3 - 5.34\\times weight.\n\\]\nInterpretations\n\nWe predict that a car weighing zero pounds will have 37.28 MPG on average (makes no sense);\nWe predict that a 1000 pound increase in weight in associated with a 5.34 decrease in MGP, on average."
+  },
+  {
+    "objectID": "slides/lab-5.html#why-do-we-care-prediction",
+    "href": "slides/lab-5.html#why-do-we-care-prediction",
+    "title": "Recap: simple linear regression",
+    "section": "Why do we care? Prediction!",
+    "text": "Why do we care? Prediction!"
+  },
+  {
+    "objectID": "slides/lab-5.html#why-do-we-care-prediction-1",
+    "href": "slides/lab-5.html#why-do-we-care-prediction-1",
+    "title": "Recap: simple linear regression",
+    "section": "Why do we care? Prediction!",
+    "text": "Why do we care? Prediction!\nYou can use the fitted model to generate predictions for yet-to-be-observed subjects:\n\nnew_car &lt;- tibble(\n  wt = 3.5\n)\n\npredict(mpg_wt_fit, new_data = new_car)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1  18.6"
+  },
+  {
+    "objectID": "slides/lab-5.html#does-increasing-the-minimum-wage-decrease-employment",
+    "href": "slides/lab-5.html#does-increasing-the-minimum-wage-decrease-employment",
+    "title": "Recap: simple linear regression",
+    "section": "Does increasing the minimum wage decrease employment?",
+    "text": "Does increasing the minimum wage decrease employment?\n\nThis is a hotly debated question in economics and public policy;\nECON 101 logic says that it might: if you make something more expensive (employing people), people do less of it.\nWhat do the actual data say?"
+  },
+  {
+    "objectID": "slides/lab-5.html#classic-study-card-and-krueger-1994-aer",
+    "href": "slides/lab-5.html#classic-study-card-and-krueger-1994-aer",
+    "title": "Recap: simple linear regression",
+    "section": "Classic study: Card and Krueger (1994 AER)",
+    "text": "Classic study: Card and Krueger (1994 AER)\n\nIn 1992, NJ raised minimum wage. PA did not;\nFast-food restaurants along the NJ/PA border are probably very similar. Maybe the only difference is the change in wage policy;\nSo PA is like control and NJ is like the treatment;\nIf we compare employment before and after the policy change, maybe we can give the observed differences a causal interpretation. The increase in minimum wage caused employment to go up, down, or stay the same;\nThis is called a natural experiment. It’s a kind of observational study where you get very lucky and “nature” does the experimental control for you."
+  },
+  {
+    "objectID": "slides/lab-5.html#classic-study-card-and-krueger-1994-aer-1",
+    "href": "slides/lab-5.html#classic-study-card-and-krueger-1994-aer-1",
+    "title": "Recap: simple linear regression",
+    "section": "Classic study: Card and Krueger (1994 AER)",
+    "text": "Classic study: Card and Krueger (1994 AER)"
   },
   {
     "objectID": "slides/07-joining-data.html#while-you-wait",
