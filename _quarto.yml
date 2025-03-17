@@ -93,6 +93,8 @@ website:
             text: Lab 3
           - href: lab/lab-4.qmd
             text: Lab 4
+          - href: lab/lab-5.qmd
+            text: Lab 5
       - section: "Exam practice"
         contents:
           - href: exam/midterm-1-batch-A.qmd
