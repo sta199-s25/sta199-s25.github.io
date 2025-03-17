@@ -1,0 +1,128 @@
+---
+title: "Recap: simple linear regression"
+subtitle: "Lab 5"
+date: "2025-03-17"
+format: revealjs
+auto-stretch: false
+---
+
+ 
+# Simple linear regression
+
+## Question: how do we concisely summarize the association between two variables? {.scrollable}
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(tidymodels)
+```
+
+```{r}
+#| echo: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1,000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  ) +
+  coord_cartesian(xlim = c(1.5, 5.5), ylim = c(10, 35))
+
+base
+```
+
+## Answer: simple linear regression! {.scrollable}
+
+```{r}
+#| echo: false
+#| message: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1,000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  ) +
+  geom_smooth(method = "lm") +
+  coord_cartesian(xlim = c(1.5, 5.5), ylim = c(10, 35))
+
+base
+```
+
+## Answer: simple linear regression! {.scrollable}
+
+```{r}
+mpg_wt_fit <- linear_reg() |>
+  fit(mpg ~ wt, data = mtcars)
+
+tidy(mpg_wt_fit)
+```
+
+$$
+\widehat{mpg}=37.3 - 5.34\times weight.
+$$
+
+**Interpretations**
+
+- We predict that a car weighing zero pounds will have 37.28 MPG on average (makes no sense);
+- We predict that a 1000 pound increase in weight in associated with a 5.34 decrease in MGP, on average.
+
+## Why do we care? Prediction!
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", se = FALSE, color = "darkgray", linetype = "dashed") +
+  annotate(
+    "segment",
+    x = 3.5, xend = 3.5, y = -Inf, yend = 18.5,
+    color = "#FE5D26"
+  ) +
+  annotate(
+    "segment",
+    x = -Inf, xend = 3.5, y = 18.5, yend = 18.5,
+    color = "#FE5D26"
+  )
+```
+
+## Why do we care? Prediction!
+
+You can use the fitted model to generate predictions for yet-to-be-observed subjects:
+
+```{r}
+new_car <- tibble(
+  wt = 3.5
+)
+
+predict(mpg_wt_fit, new_data = new_car)
+```
+
+# Part 1 of today's lab...
+
+## Does increasing the minimum wage decrease employment? {.scrollable}
+
+- This is a hotly debated question in economics and public policy;
+
+- ECON 101 logic says that it might: if you make something more expensive (employing people), people do less of it.
+
+- **What do the actual data say?**
+
+## Classic study: Card and Krueger (1994 AER) {.scrollable}
+
+- In 1992, NJ raised minimum wage. PA did not;
+
+- Fast-food restaurants along the NJ/PA border are probably very similar. Maybe the only difference is the change in wage policy;
+
+- So PA is like *control* and NJ is like the *treatment*;
+
+- If we compare employment before and after the policy change, maybe we can give the observed differences a **causal** interpretation. The increase in minimum wage caused employment to go up, down, or stay the same;
+
+- This is called a **natural experiment**. It's a kind of observational study where you get *very* lucky and "nature" does the experimental control for you.
+
+## Classic study: Card and Krueger (1994 AER) {.scrollable}
+
+![](images/labs/card-krueger.jpg)
