@@ -661,12 +661,30 @@ John Zito
 \end{aligned}
 \]</span></p>
 </div>
+</section><section id="prediction" class="slide level2"><h2>Prediction</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb9-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">200</span>,</span>
+<span id="cb9-3"><a></a>  <span class="at">island =</span> <span class="st">"Torgersen"</span></span>
+<span id="cb9-4"><a></a>)</span>
+<span id="cb9-5"><a></a></span>
+<span id="cb9-6"><a></a><span class="fu">predict</span>(bm_fl_island_int_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  .pred
+  &lt;dbl&gt;
+1 3980.</code></pre>
+</div>
+</div>
+<p><span class="math display">\[
+\widehat{body~mass} = (-5464 + 3218) + (48.5-17.4) \times 200.
+\]</span></p>
 </section><section id="multiple-numerical-predictors" class="slide level2 scrollable"><h2>Multiple numerical predictors</h2>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a>bm_fl_bl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
-<span id="cb9-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins)</span>
-<span id="cb9-3"><a></a></span>
-<span id="cb9-4"><a></a><span class="fu">tidy</span>(bm_fl_bl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a>bm_fl_bl_fit <span class="ot">&lt;-</span> <span class="fu">linear_reg</span>() <span class="sc">|&gt;</span></span>
+<span id="cb11-2"><a></a>  <span class="fu">fit</span>(body_mass_g <span class="sc">~</span> flipper_length_mm <span class="sc">+</span> bill_length_mm, <span class="at">data =</span> penguins)</span>
+<span id="cb11-3"><a></a></span>
+<span id="cb11-4"><a></a><span class="fu">tidy</span>(bm_fl_bl_fit)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code># A tibble: 3 × 5
   term              estimate std.error statistic  p.value
@@ -691,12 +709,30 @@ John Zito
 </ul>
 </div>
 </div>
+</section><section id="prediction-1" class="slide level2"><h2>Prediction</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a></a>new_penguin <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb13-2"><a></a>  <span class="at">flipper_length_mm =</span> <span class="dv">200</span>,</span>
+<span id="cb13-3"><a></a>  <span class="at">bill_length_mm =</span> <span class="dv">45</span></span>
+<span id="cb13-4"><a></a>)</span>
+<span id="cb13-5"><a></a></span>
+<span id="cb13-6"><a></a><span class="fu">predict</span>(bm_fl_bl_fit, <span class="at">new_data =</span> new_penguin)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 1
+  .pred
+  &lt;dbl&gt;
+1 4164.</code></pre>
+</div>
+</div>
+<p><span class="math display">\[
+\widehat{body~mass}=-5736+48.1\times 200+6\times 45
+\]</span></p>
 </section><section id="picture-its-not-pretty" class="slide level2"><h2>Picture? It’s not pretty…</h2>
 <p>2 predictors + 1 response = 3 dimensions. Ick!</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="15-linear-model-multiple-predictors-II_files/figure-revealjs/unnamed-chunk-13-1.png" width="960"></p>
+<figure><p><img data-src="15-linear-model-multiple-predictors-II_files/figure-revealjs/unnamed-chunk-15-1.png" width="960"></p>
 </figure>
 </div>
 </div>
@@ -706,7 +742,7 @@ John Zito
 <div class="cell">
 <div class="cell-output-display">
 <div>
-<figure><p><img data-src="15-linear-model-multiple-predictors-II_files/figure-revealjs/unnamed-chunk-14-1.png" width="960"></p>
+<figure><p><img data-src="15-linear-model-multiple-predictors-II_files/figure-revealjs/unnamed-chunk-16-1.png" width="960"></p>
 </figure>
 </div>
 </div>

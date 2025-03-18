@@ -3484,11 +3484,25 @@
     "text": "Where do the three lines come from?\n\\[\n\\begin{aligned}\n\\small\\widehat{body~mass} = -5464 &+ 48.5 \\times flipper~length \\\\\n&+ 3551 \\times Dream \\\\\n&+ 3218 \\times Torgersen \\\\\n&- 19.4 \\times flipper~length*Dream \\\\\n&- 17.4 \\times flipper~length*Torgersen\n\\end{aligned}\n\\]\n\nIf penguin is from Biscoe, Dream = 0 and Torgersen = 0:\n\n\n\\[\n\\begin{aligned}\n\\widehat{body~mass} = -5464 &+ 48.5 \\times flipper~length\n\\end{aligned}\n\\]\n\n\nIf penguin is from Dream, Dream = 1 and Torgersen = 0:\n\n\n\\[\n\\begin{aligned}\n\\widehat{body~mass} &= (-5464 + 3551) + (48.5-19.4) \\times flipper~length\\\\\n&=-1913+29.1\\times flipper~length.\n\\end{aligned}\n\\]"
   },
   {
+    "objectID": "slides/15-linear-model-multiple-predictors-II.html#prediction",
+    "href": "slides/15-linear-model-multiple-predictors-II.html#prediction",
+    "title": "Linear regression with a multiple predictors II",
+    "section": "Prediction",
+    "text": "Prediction\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 200,\n  island = \"Torgersen\"\n)\n\npredict(bm_fl_island_int_fit, new_data = new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 3980.\n\n\n\\[\n\\widehat{body~mass} = (-5464 + 3218) + (48.5-17.4) \\times 200.\n\\]"
+  },
+  {
     "objectID": "slides/15-linear-model-multiple-predictors-II.html#multiple-numerical-predictors",
     "href": "slides/15-linear-model-multiple-predictors-II.html#multiple-numerical-predictors",
     "title": "Linear regression with a multiple predictors II",
     "section": "Multiple numerical predictors",
     "text": "Multiple numerical predictors\n\nbm_fl_bl_fit &lt;- linear_reg() |&gt;\n  fit(body_mass_g ~ flipper_length_mm + bill_length_mm, data = penguins)\n\ntidy(bm_fl_bl_fit)\n\n# A tibble: 3 × 5\n  term              estimate std.error statistic  p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)       -5737.      308.      -18.6  7.80e-54\n2 flipper_length_mm    48.1       2.01     23.9  7.56e-75\n3 bill_length_mm        6.05      5.18      1.17 2.44e- 1\n\n\n\n\\[\n\\small\\widehat{body~mass}=-5736+48.1\\times flipper~length+6\\times bill~length\n\\]\n\n\nInterpretations:\n\n\nWe predict that the body mass of a penguin with zero flipper length and zero bill length will be -5736 grams, on average (makes no sense);\nHolding all other variables constant, for every additional millimeter in flipper length, we expect the body mass of penguins to be higher, on average, by 48.1 grams.\nHolding all other variables constant, for every additional millimeter in bill length, we expect the body mass of penguins to be higher, on average, by 6 grams."
+  },
+  {
+    "objectID": "slides/15-linear-model-multiple-predictors-II.html#prediction-1",
+    "href": "slides/15-linear-model-multiple-predictors-II.html#prediction-1",
+    "title": "Linear regression with a multiple predictors II",
+    "section": "Prediction",
+    "text": "Prediction\n\nnew_penguin &lt;- tibble(\n  flipper_length_mm = 200,\n  bill_length_mm = 45\n)\n\npredict(bm_fl_bl_fit, new_data = new_penguin)\n\n# A tibble: 1 × 1\n  .pred\n  &lt;dbl&gt;\n1 4164.\n\n\n\\[\n\\widehat{body~mass}=-5736+48.1\\times 200+6\\times 45\n\\]"
   },
   {
     "objectID": "slides/15-linear-model-multiple-predictors-II.html#picture-its-not-pretty",
