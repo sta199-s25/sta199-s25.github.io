@@ -340,6 +340,21 @@ $$
 \end{aligned}
 $$
 
+## Prediction
+
+```{r}
+new_penguin <- tibble(
+  flipper_length_mm = 200,
+  island = "Torgersen"
+)
+
+predict(bm_fl_island_int_fit, new_data = new_penguin)
+```
+
+$$
+\widehat{body~mass} = (-5464 + 3218) + (48.5-17.4) \times 200.
+$$
+
 ## Multiple numerical predictors {.scrollable}
 
 ```{r}
@@ -365,6 +380,20 @@ $$
 - Holding all other variables constant, for every additional millimeter in bill length, we expect the body mass of penguins to be higher, on average, by 6 grams.
 :::
 
+## Prediction
+
+```{r}
+new_penguin <- tibble(
+  flipper_length_mm = 200,
+  bill_length_mm = 45
+)
+
+predict(bm_fl_bl_fit, new_data = new_penguin)
+```
+
+$$
+\widehat{body~mass}=-5736+48.1\times 200+6\times 45
+$$
 
 ## Picture? It's not pretty...
 
