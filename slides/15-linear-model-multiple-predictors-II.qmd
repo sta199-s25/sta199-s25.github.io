@@ -1,0 +1,414 @@
+---
+title: "Linear regression with a multiple predictors II"
+subtitle: "Lecture 15"
+date: "2025-03-18"
+format: revealjs
+auto-stretch: false
+---
+
+# Quick announcements
+
+## While you wait... 
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(tidymodels)
+library(palmerpenguins)
+library(scatterplot3d)
+
+todays_ae <- "ae-12-modeling-loans"
+```
+
+::: appex
+-   Go to your `ae` project in RStudio.
+
+-   Make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+
+-   Click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
+
+-   Wait till the you're prompted to work on the application exercise during class before editing the file.
+:::
+
+## Mid-semester evaluation
+
+Please complete this ungraded, anonymous Canvas quiz before Wednesday night:
+
+[https://canvas.duke.edu/courses/50057/quizzes/30407](https://canvas.duke.edu/courses/50057/quizzes/30407)
+
+
+## SSMU Bookbagging GBM Saturday March 22! {.scrollable}
+
+::: columns
+::: {.column width="50%"}
+![](images/15/flyer_image_upload_4627193_SSMUGBMMarchFlyer_317134538.png){fig-align="center"}
+:::
+
+::: {.column width="50%"}
+
+Grab free food and chat with upperclass students about...
+
+- course registration
+- the stats major
+- DataFest
+- volunteering
+:::
+:::
+
+## Project clarifications
+
+- **Next Monday**: your TA returns proposal feedback to you;
+
+- **Until then**: project repos are locked (can't push or pull);
+
+- If you missed milestone 1, we'll replace that score with your final peer eval score (so pull your weight!);
+
+- We will drop one of the first three peer evals;
+
+- If your group does not have plans to meet every week...make them!
+
+
+# Recap: simple linear regression
+
+## Question: how do we concisely summarize the association between two variables? {.scrollable}
+
+```{r}
+#| echo: false
+library(tidyverse)
+library(tidymodels)
+```
+
+```{r}
+#| echo: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1,000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  ) +
+  coord_cartesian(xlim = c(1.5, 5.5), ylim = c(10, 35))
+
+base
+```
+
+## Answer: simple linear regression! {.scrollable}
+
+```{r}
+#| echo: false
+#| message: false
+
+base <- ggplot(mtcars, aes(x = wt, y = mpg)) +
+  geom_point() +
+  labs(
+    x = "Weight (1,000 lbs)",
+    y = "Miles per gallon (MPG)",
+    title = "MPG vs. weights of cars"
+  ) +
+  geom_smooth(method = "lm") +
+  coord_cartesian(xlim = c(1.5, 5.5), ylim = c(10, 35))
+
+base
+```
+
+## Answer: simple linear regression! {.scrollable}
+
+```{r}
+mpg_wt_fit <- linear_reg() |>
+  fit(mpg ~ wt, data = mtcars)
+
+tidy(mpg_wt_fit)
+```
+
+$$
+\widehat{mpg}=37.3 - 5.34\times weight.
+$$
+
+**Interpretations**
+
+-   We predict that a car weighing zero pounds will have 37.28 MPG on average (makes no sense);
+-   We predict that a 1000 pound increase in weight in associated with a 5.34 decrease in MGP, on average.
+
+## Why do we care? Prediction!
+
+```{r}
+#| echo: false
+#| message: false
+
+base +
+  geom_smooth(method = "lm", se = FALSE, color = "darkgray", linetype = "dashed") +
+  annotate(
+    "segment",
+    x = 4.5, xend = 4.5, y = -Inf, yend = 13.235	,
+    color = "#FE5D26"
+  ) +
+  annotate(
+    "segment",
+    x = -Inf, xend = 4.5, y = 13.235	, yend = 13.235	,
+    color = "#FE5D26"
+  )
+```
+
+## Why do we care? Prediction!
+
+You can use the fitted model to generate predictions for yet-to-be-observed subjects:
+
+```{r}
+new_car <- tibble(
+  wt = 4.5
+)
+
+predict(mpg_wt_fit, new_data = new_car)
+```
+
+# Before break: multiple linear regression
+
+## Simple linear regression for those darn penguins
+
+```{r}
+#| echo: false
+ggplot(
+  penguins, 
+  aes(x = flipper_length_mm, y = body_mass_g)
+  ) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm") + 
+  labs(
+    x = "Flipper length (mm)",
+    y = "Body mass (grams)"
+  )
+```
+
+## How do we predict using more than one predictor?
+
+Both of these models use `flipper_length_mm` *and* `island` to predict `body_mass_g`:
+
+
+```{r}
+#| label: additive-interaction-viz
+#| layout-ncol: 2
+#| echo: false
+#| fig-asp: 1
+
+# Plot A
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+bm_fl_island_aug <- augment(bm_fl_island_fit, new_data = penguins)
+ggplot(
+  bm_fl_island_aug, 
+  aes(x = flipper_length_mm, y = body_mass_g, color = island)
+  ) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(aes(y = .pred), method = "lm") +
+  labs(title = "Plot A - Additive model") +
+  theme(legend.position = "bottom")
+
+# Plot B
+ggplot(
+  penguins, 
+  aes(x = flipper_length_mm, y = body_mass_g, color = island)
+  ) +
+  geom_point(alpha = 0.5) +
+  geom_smooth(method = "lm") +
+  labs(title = "Plot B - Interaction model") +
+  theme(legend.position = "bottom")
+```
+
+## The additive model: parallel lines, one for each island
+
+```{r}
+bm_fl_island_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + island, data = penguins)
+
+tidy(bm_fl_island_fit)
+```
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4625 &+ 44.5 \times flipper~length \\
+&- 262 \times Dream \\
+&- 185 \times Torgersen
+\end{aligned}
+$$
+
+## Where do the three lines come from? {.scrollable}
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4625 &+ 44.5 \times flipper~length \\
+&- 262 \times Dream \\
+&- 185 \times Torgersen
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Biscoe, Dream = 0 and Torgersen = 0:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4625 &+ 44.5 \times flipper~length
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Dream, Dream = 1 and Torgersen = 0:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4887 &+ 44.5 \times flipper~length
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Torgersen, Dream = 0 and Torgersen = 1:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -4810 &+ 44.5 \times flipper~length
+\end{aligned}
+$$
+
+. . .
+
+Either way, same slope, so the lines are parallel.
+
+## The interaction model: different lines for each island {.medium .scrollable}
+
+```{r}
+bm_fl_island_int_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm * island, data = penguins)
+
+tidy(bm_fl_island_int_fit) |> select(term, estimate)
+```
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -5464 &+ 48.5 \times flipper~length \\
+&+ 3551 \times Dream \\
+&+ 3218 \times Torgersen \\
+&- 19.4 \times flipper~length*Dream \\
+&- 17.4 \times flipper~length*Torgersen
+\end{aligned}
+$$
+
+## Where do the three lines come from? {.medium .scrollable}
+
+$$
+\begin{aligned}
+\small\widehat{body~mass} = -5464 &+ 48.5 \times flipper~length \\
+&+ 3551 \times Dream \\
+&+ 3218 \times Torgersen \\
+&- 19.4 \times flipper~length*Dream \\
+&- 17.4 \times flipper~length*Torgersen
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Biscoe, Dream = 0 and Torgersen = 0:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} = -5464 &+ 48.5 \times flipper~length
+\end{aligned}
+$$
+
+. . .
+
+If penguin is from Dream, Dream = 1 and Torgersen = 0:
+
+. . .
+
+$$
+\begin{aligned}
+\widehat{body~mass} &= (-5464 + 3551) + (48.5-19.4) \times flipper~length\\
+&=-1913+29.1\times flipper~length.
+\end{aligned}
+$$
+
+## Multiple numerical predictors {.scrollable}
+
+```{r}
+bm_fl_bl_fit <- linear_reg() |>
+  fit(body_mass_g ~ flipper_length_mm + bill_length_mm, data = penguins)
+
+tidy(bm_fl_bl_fit)
+```
+
+. . .
+
+$$
+\small\widehat{body~mass}=-5736+48.1\times flipper~length+6\times bill~length
+$$
+
+. . .
+
+**Interpretations**: 
+
+::: incremental
+- We predict that the body mass of a penguin with *zero* flipper length and *zero* bill length will be -5736 grams, on average (**makes no sense**);
+- Holding all other variables constant, for every additional millimeter in flipper length, we expect the body mass of penguins to be higher, on average, by 48.1 grams.
+- Holding all other variables constant, for every additional millimeter in bill length, we expect the body mass of penguins to be higher, on average, by 6 grams.
+:::
+
+
+## Picture? It's not pretty...
+
+2 predictors + 1 response = 3 dimensions. Ick!
+
+```{r}
+#| echo: false
+scatterplot3d(
+  penguins[,c("bill_length_mm", "flipper_length_mm", "body_mass_g")],
+  pch = 19, 
+  color = "blue",
+  xlab = "Bill length (mm)", 
+  ylab = "Flipper length (mm)", 
+  zlab = "Body mass (grams)"
+) 
+```
+
+## Picture? It's not pretty...
+
+Instead of a line of best fit, it's a *plane* of best fit. Double ick!
+
+```{r}
+#| echo: false
+plot3vars <- scatterplot3d(
+  penguins[,c("bill_length_mm", "flipper_length_mm", "body_mass_g")],
+  pch = 19, 
+  color = "blue",
+  xlab = "Bill length (mm)", 
+  ylab = "Flipper length (mm)", 
+  zlab = "Body mass (grams)"
+) 
+
+model <- lm(body_mass_g ~ bill_length_mm + flipper_length_mm, data = penguins)
+plot3vars$plane3d(model, col = "darkred")
+```
+
+## `{r} todays_ae`
+
+::: appex
+-   Go to your ae project in RStudio.
+
+-   If you haven't yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+
+-   If you haven't yet done so, click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
+
+-   Work through the application exercise in class, and render, commit, and push your edits.
+:::
