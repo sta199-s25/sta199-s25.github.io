@@ -1,5 +1,7 @@
 project:
   type: website
+  resources:
+    - slides/16-model-selection.pdf
 
 website:
   page-navigation: true
