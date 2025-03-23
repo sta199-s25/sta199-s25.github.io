@@ -252,6 +252,7 @@ glance(rate_util_fit)$adj.r.squared
 This code adds a new column to `loans` called `nonsense` that is totally bogus. It's just random numbers (from the normal distribution, hence `rnorm`) that have nothing to do with anything in the dataset:
 
 ```{r}
+set.seed(8675309)
 loans <- loans |>
   mutate(
     nonsense = rnorm(nrow(loans))
