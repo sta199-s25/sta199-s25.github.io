@@ -157,7 +157,7 @@ b.  **Model fitting and interpretation:**
 
 ## Question 5
 
-*Prediction:** Use the model to predict the life expectancy of a country in Asia where the average GDP per capita is \$70,000. Do this two ways:
+**Prediction:** Use the model to predict the life expectancy of a country in Asia where the average GDP per capita is \$70,000. Do this two ways:
 
 a. using R functions for regression prediction;
 
