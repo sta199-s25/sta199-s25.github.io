@@ -154,16 +154,15 @@ b.  **Model fitting and interpretation:**
 
     -   Interpret the *slope* of the model, making sure that your interpretation is in the units of the original data (not on log scale).
 
-
 ## Question 5
 
 **Prediction:** Use the model to predict the life expectancy of a country in Asia where the average GDP per capita is \$70,000. Do this two ways:
 
-a. using R functions for regression prediction;
+a.  using R functions for regression prediction;
 
-b. manually by plugging numbers into your fitted equation and using R like an overgrown calculator;
+b.  manually by plugging numbers into your fitted equation and using R like an overgrown calculator;
 
-c. Make sure you get the same numbers in both cases.
+c.  Make sure you get the same numbers in both cases.
 
 # Part 2 - Do you even lift?
 
@@ -292,27 +291,6 @@ Next, let's turn our attention to **dead lifting** records. Recreate the plot be
 ::: callout-note
 You will need to create a couple of new columns. One to classify age appropriately and one to convert `best3deadlift_kg` to the plotted units (lbs). Notice that there are no negative deadlift values on the x-axis.
 :::
-
-```{r}
-#| label: deadlift-age-sex-plot
-#| fig-width: 6
-#| fig-asp: 0.8
-#| echo: false
-ipf |>
-  mutate(Age = ifelse(age < 40, "Under 40", "40 or older")) |>
-  filter(!is.na(Age)) |>
-  filter(best3deadlift_kg > 0 ) |>
-  mutate(best3deadlift_lbs = best3deadlift_kg * 2.20462) |>
-  ggplot(aes(x = best3deadlift_lbs, fill = sex, color = sex))  +
-  geom_density(alpha = 0.5) +
-  facet_wrap(~ Age, ncol = 1) +
-  labs(
-    title = "Distribution of best deadlift in lbs by age grouping and sex", 
-    y = "Density", 
-    x = "Best deadlift (lbs)",
-    color = "Sex", fill = "Sex"
-  )
-```
 
 ## Question 9
 
