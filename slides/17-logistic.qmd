@@ -18,6 +18,7 @@ library(openintro)
 library(fivethirtyeight)
 library(palmerpenguins)
 library(MASS)
+hp_spam <- read_csv("data/hp-spam.csv")
 todays_ae <- "ae-13-spam-filter"
 ```
 
@@ -235,6 +236,7 @@ plot(x, y, pch = 19, cex = 0.5, ylim = c(-0.25, 1.25), cex.lab = 1.5,
      xlab = "x")
 ```
 
+
 ## Straight line of best fit is a little silly
 
 ```{r}
@@ -254,6 +256,7 @@ Instead of modeling $y$ directly, we model the probability that $y=1$:
 ```{r}
 #| message: false
 #| echo: false
+#| fig-asp: 0.4
 par(mar = c(5, 5, 0.5, 0.5))
 plot(x, y, pch = 19, cex = 0.5, ylim = c(-0.25, 1.25), cex.lab = 1.5,
      ylab = "Prob(y = 1)",
@@ -308,6 +311,29 @@ This is called the *logistic regression* model.
 
 -   The log odds $\log(p / (1 - p))$ is a number between $-\infty$ and $\infty$, which is suitable for the linear model.
 
+## Probability to odds
+
+```{r}
+#| echo: false
+#| fig-asp: 0.6
+
+curve(x/(1 - x), from = 0, to = 1, n = 500,
+      xlab = "p", ylab = "p / (1 - p)",
+      lwd = 2, col = "red", bty = "n")
+```
+
+## Odds to log odds
+
+```{r}
+#| echo: false
+#| fig-asp: 0.6
+
+curve(log(x), from = 0, to = 10, n = 1000,
+      lwd = 2, col = "red", xaxt = "n", bty = "n",
+      xlab = "p / (1 - p)", ylab = "log[p / (1 - p)]")
+axis(1, pos = 0)
+```
+
 ## Logistic regression
 
 $$
@@ -332,7 +358,124 @@ $$
 b_0+b_1x.
 $$
 
+## Today's data {.smaller}
+
+```{r}
+email |> dplyr::select(c(spam, dollar, viagra, winner, password, exclaim_mess)) |> glimpse()
+```
+
+## Fitting a logistic model
+
+```{r}
+logistic_fit <- logistic_reg() |>
+  fit(spam ~ exclaim_mess, data = email)
+
+tidy(logistic_fit)
+```
+
+Fitted equation for the log-odds:
+
+$$
+\log\left(\frac{\hat{p}}{1-\hat{p}}\right)
+=
+-2.27
+-
+0.000272\times exclaim~mess
+$$
+
+## Interpreting the intercept
+
+If `exclaim_mess = 0`, then 
+
+$$
+\hat{p}=\widehat{P(y=1)}=\frac{e^{-2.27}}{1+e^{-2.27}}\approx 0.09.
+$$
+
+So, an email with no exclamation marks has a 9% chance of being spam.
+
+## Interpreting the slope is tricky {.scrollable}
+
+Recall:
+
+$$
+\log\left(\frac{\widehat{p}}{1-\widehat{p}}\right)
+=
+b_0+b_1x.
+$$
+
+. . .
+
+Alternatively:
+
+$$
+\frac{\widehat{p}}{1-\widehat{p}}
+=
+e^{b_0+b_1x}
+=
+\color{blue}{e^{b_0}e^{b_1x}}
+.
+$$
+
+. . .
+
+If we increase $x$ by one unit, we have:
+
+$$
+\frac{\widehat{p}}{1-\widehat{p}}
+=
+e^{b_0}e^{b_1(x+1)}
+=
+e^{b_0}e^{b_1x+b_1}
+=
+{\color{blue}{e^{b_0}e^{b_1x}}}{\color{red}{e^{b_1}}}
+.
+$$
+
+. . .
+
+A one unit increase in $x$ is associated with a change in odds by a factor of $e^{b_1}$. Gross!
+
+## Back to the example...
+
+$$
+\log\left(\frac{\hat{p}}{1-\hat{p}}\right)
+=
+-2.27
+-
+0.000272\times exclaim~mess
+$$
+
+If we add one exclamation mark to the model, we predict the odds of an email being spam to be **lower** by a factor of $e^{-0.000272}\approx 0.9998$ on average.
+
+(So it doesn't actually matter too much.)
+
 ## Logistic regression -\> classification?
+
+## Step 0: fit the model {.smaller}
+
+Select a number $0 < p^* < 1$:
+
+```{r}
+#| label: step-0
+#| message: false
+#| echo: false
+threshold <- 0.7
+cutoff <- (log(threshold / (1 - threshold)) - fit$coefficients[1]) / fit$coefficients[2]
+par(mar = c(5, 10, 0.5, 0.5))
+plot(x, y, pch = 19, cex = 0.5, ylim = c(-0.25, 1.25), cex.lab = 1.5,
+     #xlim = c(1.2 * min(x), 1.2 * max(x)),
+     ylab = "",
+     xlab = "")
+lines(seq_x, y_vals, col = "red", lwd = 3)
+points(x, y, pch = 19, cex = 0.75)
+mtext("Prob(y = 1)", side = 2, line = 8, at = 0.5, cex = 2)
+mtext("x", side = 1, line = 4, at = 0, cex = 2)
+#mtext(paste("p* =", threshold), side = 2, line = 1, las = 2, at = threshold, cex = 1.5)
+#segments(1.2 * min(x), threshold, cutoff, threshold, lty = 2, lwd = 2)
+```
+
+-   if $\text{Prob}(y=1)\leq p^*$, then predict $\widehat{y}=0$;
+-   if $\text{Prob}(y=1)> p^*$, then predict $\widehat{y}=1$.
 
 ## Step 1: pick a threshold {.smaller}
 
@@ -342,7 +485,7 @@ Select a number $0 < p^* < 1$:
 #| label: step-1
 #| message: false
 #| echo: false
-threshold <- 0.85
+
 cutoff <- (log(threshold / (1 - threshold)) - fit$coefficients[1]) / fit$coefficients[2]
 par(mar = c(5, 10, 0.5, 0.5))
 plot(x, y, pch = 19, cex = 0.5, ylim = c(-0.25, 1.25), cex.lab = 1.5,
@@ -368,7 +511,7 @@ Solve for the x-value that matches the threshold:
 #| label: step-2
 #| message: false
 #| echo: false
-threshold <- 0.85
+
 cutoff <- (log(threshold / (1 - threshold)) - fit$coefficients[1]) / fit$coefficients[2]
 par(mar = c(5, 10, 0.5, 0.5))
 plot(x, y, pch = 19, cex = 0.5, ylim = c(-0.25, 1.25), cex.lab = 1.5,
@@ -397,7 +540,7 @@ Which side of the boundary are they on?
 #| label: step-3
 #| message: false
 #| echo: false
-threshold <- 0.85
+
 cutoff <- (log(threshold / (1 - threshold)) - fit$coefficients[1]) / fit$coefficients[2]
 par(mar = c(5, 10, 0.5, 0.5))
 plot(x, y, pch = 19, cex = 0.5, ylim = c(-0.25, 1.25), cex.lab = 1.5,
@@ -454,6 +597,39 @@ text(1, 0.5, expression(hat(y)~" = 1"), col = "blue", cex = 2)
 -   if $x_{\text{new}} \leq x^\star$, then $\text{Prob}(y=1)\leq p^*$, so predict $\widehat{y}=0$ for the new person;
 -   if $x_{\text{new}} > x^\star$, then $\text{Prob}(y=1)> p^*$, so predict $\widehat{y}=1$ for the new person.
 
+## Let's change the threshold {.smaller}
+
+A new person shows up with $x_{\text{new}}$.
+Which side of the boundary are they on?
+
+```{r}
+#| label: higher-threshold
+#| message: false
+#| echo: false
+threshold <- 0.9
+cutoff <- (log(threshold / (1 - threshold)) - fit$coefficients[1]) / fit$coefficients[2]
+par(mar = c(5, 10, 0.5, 0.5))
+plot(x, y, pch = 19, cex = 0.5, ylim = c(-0.25, 1.25), cex.lab = 1.5,
+     #xlim = c(1.2 * min(x), 1.2 * max(x)),
+     ylab = "",
+     xlab = "")
+lines(seq_x, y_vals, col = "red", lwd = 3)
+points(x, y, pch = 19, cex = 0.75)
+mtext("Prob(y = 1)", side = 2, line = 8, at = 0.5, cex = 2)
+mtext("x", side = 1, line = 4, at = 0, cex = 2)
+mtext(paste("p* =", threshold), side = 2, line = 1, las = 2, at = threshold, cex = 1.5)
+segments(1.2 * min(x), threshold, cutoff, threshold, lty = 2, lwd = 2)
+abline(v = cutoff, lty = 2, lwd = 2)
+mtext("x*", side = 1, line = 1, at = cutoff, cex = 2)
+polygon(c(-20, cutoff, cutoff, -20), c(-1, -1, 2, 2), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
+polygon(c(cutoff, 20, 20, cutoff), c(-1, -1, 2, 2), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
+text(-1, 0.5, expression(hat(y)~" = 0"), col = "orange", cex = 2)
+text(1, 0.5, expression(hat(y)~" = 1"), col = "blue", cex = 2)
+```
+
+-   if $x_{\text{new}} \leq x^\star$, then $\text{Prob}(y=1)\leq p^*$, so predict $\widehat{y}=0$ for the new person;
+-   if $x_{\text{new}} > x^\star$, then $\text{Prob}(y=1)> p^*$, so predict $\widehat{y}=1$ for the new person.
+
 ## Nothing special about one predictor... {.smaller}
 
 Two numerical predictors and one binary response:
@@ -463,8 +639,8 @@ Two numerical predictors and one binary response:
 #| echo: false
 set.seed(20)
 n <- 20
-cloud1 <- mvrnorm(n, c(-0.5, -0.5), matrix(c(1, 0.5, 0.5, 1), 2, 2))
-cloud2 <- mvrnorm(n, c(0.5, 0.5), matrix(c(1, -0.5, -0.5, 1), 2, 2))
+cloud1 <- mvrnorm(n, c(-0.5, -0.5) + 4, matrix(c(1, 0.5, 0.5, 1), 2, 2))
+cloud2 <- mvrnorm(n, c(0.5, 0.5) + 4, matrix(c(1, -0.5, -0.5, 1), 2, 2))
 X <- rbind(cloud1, cloud2)
 y <- c(rep(0, n), rep(1, n))
 par(mar = c(5, 5, 0.5, 0.5))
@@ -473,8 +649,8 @@ plot(X,
      col = c(rep("orange", n), rep("blue", n)),
      xlab = expression(x[1]),
      ylab = expression(x[2]),
-     xlim = c(-4, 4),
-     ylim = c(-4, 4),
+     xlim = c(-4, 4) + 4,
+     ylim = c(-4, 4) + 4,
      cex.lab = 2)
 legend("bottomright", c("y = 0", "y = 1"), pch = 19, col = c("orange", "blue"), bty = "n", cex = 2)
 ```
@@ -517,7 +693,7 @@ p_thresh <- 0.5
 bd_incpt <- (log(p_thresh / (1 - p_thresh)) - b0) / b2
 bd_slp <- -b1 / b2
 
-x_for_poly <- seq(-5, 5, length.out = 500)
+x_for_poly <- seq(0, 10, length.out = 500)
 y_for_poly <- bd_incpt + bd_slp * x_for_poly
 
 par(mar = c(4, 5, 0.5, 0.5))
@@ -526,23 +702,179 @@ plot(X,
      col = c(rep("orange", n), rep("blue", n)),
      xlab = expression(x[1]),
      ylab = expression(x[2]),
-     xlim = c(-4, 4),
-     ylim = c(-4, 4),
+     xlim = c(-4, 4) + 4,
+     ylim = c(-4, 4) + 4,
      cex.lab = 2)
 abline(a = bd_incpt, b = bd_slp, lty = 2, lwd = 3)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(5, 500)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
-polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(-5, 500)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 500)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(0, 500)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
 legend("left", expression(hat(y)~" = 0"), text.col = "orange", bty = "n", cex = 2)
 legend("right", expression(hat(y)~" = 1"), text.col = "blue", bty = "n", cex = 2)
 points(X, pch = 19, 
      col = c(rep("orange", n), rep("blue", n)))
+legend("topright", "p* = 0.5", cex = 2, bty = "n")
 ```
 
 -   if new $(x_1,\,x_2)$ below, $\text{Prob}(y=1)\leq p^*$. Predict $\widehat{y}=0$ for the new person;
 -   if new $(x_1,\,x_2)$ above, $\text{Prob}(y=1)> p^*$. Predict $\widehat{y}=1$ for the new person.
 
-## How do you pick the threshold?
+## Decision boundary, again {.smaller}
 
+It's linear!
+Consider two numerical predictors:
+
+```{r}
+#| message: false
+#| echo: false
+fit <- glm(y ~ X, family = binomial)
+
+b0 <- fit$coefficients[1]
+b1 <- fit$coefficients[2]
+b2 <- fit$coefficients[3]
+
+p_thresh <- 0.15
+
+# compute intercept and slope of decision boundary
+bd_incpt <- (log(p_thresh / (1 - p_thresh)) - b0) / b2
+bd_slp <- -b1 / b2
+
+x_for_poly <- seq(0, 10, length.out = 500)
+y_for_poly <- bd_incpt + bd_slp * x_for_poly
+
+par(mar = c(4, 5, 0.5, 0.5))
+plot(X, 
+     pch = 19, 
+     col = c(rep("orange", n), rep("blue", n)),
+     xlab = expression(x[1]),
+     ylab = expression(x[2]),
+     xlim = c(-4, 4) + 4,
+     ylim = c(-4, 4) + 4,
+     cex.lab = 2)
+abline(a = bd_incpt, b = bd_slp, lty = 2, lwd = 3)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 500)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(0, 500)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
+legend("left", expression(hat(y)~" = 0"), text.col = "orange", bty = "n", cex = 2)
+legend("right", expression(hat(y)~" = 1"), text.col = "blue", bty = "n", cex = 2)
+points(X, pch = 19, 
+     col = c(rep("orange", n), rep("blue", n)))
+legend("topright", "p* = 0.15", cex = 2, bty = "n")
+```
+
+-   if new $(x_1,\,x_2)$ below, $\text{Prob}(y=1)\leq p^*$. Predict $\widehat{y}=0$ for the new person;
+-   if new $(x_1,\,x_2)$ above, $\text{Prob}(y=1)> p^*$. Predict $\widehat{y}=1$ for the new person.
+
+
+## Decision boundary, again {.smaller}
+
+It's linear!
+Consider two numerical predictors:
+
+```{r}
+#| message: false
+#| echo: false
+fit <- glm(y ~ X, family = binomial)
+
+b0 <- fit$coefficients[1]
+b1 <- fit$coefficients[2]
+b2 <- fit$coefficients[3]
+
+p_thresh <- 0.9
+
+# compute intercept and slope of decision boundary
+bd_incpt <- (log(p_thresh / (1 - p_thresh)) - b0) / b2
+bd_slp <- -b1 / b2
+
+x_for_poly <- seq(0, 10, length.out = 500)
+y_for_poly <- bd_incpt + bd_slp * x_for_poly
+
+par(mar = c(4, 5, 0.5, 0.5))
+plot(X, 
+     pch = 19, 
+     col = c(rep("orange", n), rep("blue", n)),
+     xlab = expression(x[1]),
+     ylab = expression(x[2]),
+     xlim = c(-4, 4) + 4,
+     ylim = c(-4, 4) + 4,
+     cex.lab = 2)
+abline(a = bd_incpt, b = bd_slp, lty = 2, lwd = 3)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 500)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(0, 500)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
+legend("left", expression(hat(y)~" = 0"), text.col = "orange", bty = "n", cex = 2)
+legend("right", expression(hat(y)~" = 1"), text.col = "blue", bty = "n", cex = 2)
+points(X, pch = 19, 
+     col = c(rep("orange", n), rep("blue", n)))
+legend("topright", "p* = 0.9", cex = 2, bty = "n")
+```
+
+-   if new $(x_1,\,x_2)$ below, $\text{Prob}(y=1)\leq p^*$. Predict $\widehat{y}=0$ for the new person;
+-   if new $(x_1,\,x_2)$ above, $\text{Prob}(y=1)> p^*$. Predict $\widehat{y}=1$ for the new person.
+
+## Note: the classifier isn't perfect {.medium}
+
+```{r}
+#| message: false
+#| echo: false
+#| fig-asp: 0.45
+
+fit <- glm(y ~ X, family = binomial)
+
+b0 <- fit$coefficients[1]
+b1 <- fit$coefficients[2]
+b2 <- fit$coefficients[3]
+
+p_thresh <- 0.5
+
+# compute intercept and slope of decision boundary
+bd_incpt <- (log(p_thresh / (1 - p_thresh)) - b0) / b2
+bd_slp <- -b1 / b2
+
+x_for_poly <- seq(0, 10, length.out = 500)
+y_for_poly <- bd_incpt + bd_slp * x_for_poly
+
+par(mar = c(4, 5, 0.5, 0.5))
+plot(X, 
+     pch = 19, 
+     col = c(rep("orange", n), rep("blue", n)),
+     xlab = expression(x[1]),
+     ylab = expression(x[2]),
+     xlim = c(-4, 4) + 4,
+     ylim = c(-4, 4) + 4,
+     cex.lab = 2)
+abline(a = bd_incpt, b = bd_slp, lty = 2, lwd = 3)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(10, 500)), col = rgb(0, 0, 1, alpha = 0.2), border = NA)
+polygon(c(x_for_poly, rev(x_for_poly)), c(y_for_poly, rep(0, 500)), col = rgb(1, .5, 0, alpha = 0.2), border = NA)
+legend("left", expression(hat(y)~" = 0"), text.col = "orange", bty = "n", cex = 2)
+legend("right", expression(hat(y)~" = 1"), text.col = "blue", bty = "n", cex = 2)
+points(X, pch = 19, 
+     col = c(rep("orange", n), rep("blue", n)))
+legend("topright", "p* = 0.5", cex = 2, bty = "n")
+```
+
+- There are blue points in the orange region: spam (1) emails misclassified as legit (0);
+- There are orange points in the blue region: legit (0) emails misclassified as spam (1).
+
+## How do you pick the threshold? {.smaller}
+
+To balance out the two kinds of errors:
+
+![](images/17/confusion-matrix.png)
+
+- High threshold >> Hard to classify as 1 >> FP less likely; FN more likely
+- Low threshold >> Easy to classify as 1 >> FP more likely; FN less likely
+
+## Silly examples
+
+- Set p* = 0
+
+  - Classify every email as spam (1);
+  - No false negatives, but *a lot* of false positives;
+
+- Set p* = 1
+
+  - Classify every email as legit (0);
+  - No false positives, but *a lot* of false negatives.
+
+You pick a threshold in between to strike a balance. The exact number depends on context.
 
 ## `{r} todays_ae`
 
