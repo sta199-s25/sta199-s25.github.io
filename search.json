@@ -664,6 +664,293 @@
     "text": "ae-10-modeling-penguins\n\n\nGo to your ae project in RStudio.\nIf you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file: ae-10-modeling-penguins.qmd.\nWork through the application exercise in class, and render, commit, and push your edits."
   },
   {
+    "objectID": "slides/17-logistic.html#while-you-wait",
+    "href": "slides/17-logistic.html#while-you-wait",
+    "title": "Logistic regression",
+    "section": "While you wait…",
+    "text": "While you wait…\n\n\nGo to your ae project in RStudio.\nMake sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nClick Pull to get today’s application exercise file: ae-13-spam-filter.qmd.\nWait till the you’re prompted to work on the application exercise during class before editing the file."
+  },
+  {
+    "objectID": "slides/17-logistic.html#thus-far",
+    "href": "slides/17-logistic.html#thus-far",
+    "title": "Logistic regression",
+    "section": "Thus far…",
+    "text": "Thus far…\nWe have been studying regression:\n\nWhat combinations of data types have we seen?\nWhat did the picture look like?"
+  },
+  {
+    "objectID": "slides/17-logistic.html#recap-simple-linear-regression",
+    "href": "slides/17-logistic.html#recap-simple-linear-regression",
+    "title": "Logistic regression",
+    "section": "Recap: simple linear regression",
+    "text": "Recap: simple linear regression\nNumerical response and one numerical predictor:"
+  },
+  {
+    "objectID": "slides/17-logistic.html#recap-simple-linear-regression-1",
+    "href": "slides/17-logistic.html#recap-simple-linear-regression-1",
+    "title": "Logistic regression",
+    "section": "Recap: simple linear regression",
+    "text": "Recap: simple linear regression\nNumerical response and one categorical predictor (two levels):"
+  },
+  {
+    "objectID": "slides/17-logistic.html#recap-multiple-linear-regression",
+    "href": "slides/17-logistic.html#recap-multiple-linear-regression",
+    "title": "Logistic regression",
+    "section": "Recap: multiple linear regression",
+    "text": "Recap: multiple linear regression\nNumerical response; numerical and categorical predictors:"
+  },
+  {
+    "objectID": "slides/17-logistic.html#today-a-binary-response",
+    "href": "slides/17-logistic.html#today-a-binary-response",
+    "title": "Logistic regression",
+    "section": "Today: a binary response",
+    "text": "Today: a binary response\n\\[\ny =\n\\begin{cases}\n1 & &&\\text{eg. Yes, Win, True, Heads, Success}\\\\\n0 & &&\\text{eg. No, Lose, False, Tails, Failure}.\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "slides/17-logistic.html#who-cares",
+    "href": "slides/17-logistic.html#who-cares",
+    "title": "Logistic regression",
+    "section": "Who cares?",
+    "text": "Who cares?\nIf we can model the relationship between predictors (\\(x\\)) and a binary response (\\(y\\)), we can use the model to do a special kind of prediction called classification."
+  },
+  {
+    "objectID": "slides/17-logistic.html#example-is-the-e-mail-spam-or-not",
+    "href": "slides/17-logistic.html#example-is-the-e-mail-spam-or-not",
+    "title": "Logistic regression",
+    "section": "Example: is the e-mail spam or not?",
+    "text": "Example: is the e-mail spam or not?\n\\[\n\\mathbf{x}: \\text{word and character counts in an e-mail.}\n\\]\n\n\n\n\n\\[\ny\n=\n\\begin{cases}\n1 & \\text{it's spam}\\\\\n0 & \\text{it's legit}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "slides/17-logistic.html#example-is-it-cancer-or-not",
+    "href": "slides/17-logistic.html#example-is-it-cancer-or-not",
+    "title": "Logistic regression",
+    "section": "Example: is it cancer or not?",
+    "text": "Example: is it cancer or not?\n\\[\n\\mathbf{x}: \\text{features in a medical image.}\n\\]\n\n\n\n\n\\[\ny\n=\n\\begin{cases}\n1 & \\text{it's cancer}\\\\\n0 & \\text{it's healthy}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "slides/17-logistic.html#example-will-they-default",
+    "href": "slides/17-logistic.html#example-will-they-default",
+    "title": "Logistic regression",
+    "section": "Example: will they default?",
+    "text": "Example: will they default?\n\\[\n\\mathbf{x}: \\text{financial and demographic info about a loan applicant.}\n\\]\n\n\n\n\n\\[\ny\n=\n\\begin{cases}\n1 & \\text{applicant is at risk of defaulting on loan}\\\\\n0 & \\text{applicant is safe}\n\\end{cases}\n\\]"
+  },
+  {
+    "objectID": "slides/17-logistic.html#how-do-we-model-this-type-of-data",
+    "href": "slides/17-logistic.html#how-do-we-model-this-type-of-data",
+    "title": "Logistic regression",
+    "section": "How do we model this type of data?",
+    "text": "How do we model this type of data?"
+  },
+  {
+    "objectID": "slides/17-logistic.html#straight-line-of-best-fit-is-a-little-silly",
+    "href": "slides/17-logistic.html#straight-line-of-best-fit-is-a-little-silly",
+    "title": "Logistic regression",
+    "section": "Straight line of best fit is a little silly",
+    "text": "Straight line of best fit is a little silly"
+  },
+  {
+    "objectID": "slides/17-logistic.html#instead-s-curve-of-best-fit",
+    "href": "slides/17-logistic.html#instead-s-curve-of-best-fit",
+    "title": "Logistic regression",
+    "section": "Instead: S-curve of best fit",
+    "text": "Instead: S-curve of best fit\nInstead of modeling \\(y\\) directly, we model the probability that \\(y=1\\):\n\n\n\n\n\n\n\n\n\n“Given new email, what’s the probability that it’s spam?’’\n“Given new image, what’s the probability that it’s cancer?’’\n“Given new loan application, what’s the probability that they default?’’"
+  },
+  {
+    "objectID": "slides/17-logistic.html#why-dont-we-model-y-directly",
+    "href": "slides/17-logistic.html#why-dont-we-model-y-directly",
+    "title": "Logistic regression",
+    "section": "Why don’t we model y directly?",
+    "text": "Why don’t we model y directly?\n\n\nRecall regression with a numerical response:\n\nOur models do not output guarantees for \\(y\\), they output predictions that describe behavior on average;\n\n\n\nSimilar when modeling a binary response:\n\nOur models cannot directly guarantee that \\(y\\) will be zero or one. The correct analog to “on average” for a 0/1 response is “what’s the probability?”"
+  },
+  {
+    "objectID": "slides/17-logistic.html#so-what-is-this-s-curve-anyway",
+    "href": "slides/17-logistic.html#so-what-is-this-s-curve-anyway",
+    "title": "Logistic regression",
+    "section": "So, what is this S-curve, anyway?",
+    "text": "So, what is this S-curve, anyway?\nIt’s the logistic function:\n\\[\n\\text{Prob}(y = 1)\n=\n\\frac{e^{\\beta_0+\\beta_1x}}{1+e^{\\beta_0+\\beta_1x}}.\n\\]\nIf you set \\(p = \\text{Prob}(y = 1)\\) and do some algebra, you get the simple linear model for the log-odds:\n\\[\n\\log\\left(\\frac{p}{1-p}\\right)\n=\n\\beta_0+\\beta_1x.\n\\]\nThis is called the logistic regression model."
+  },
+  {
+    "objectID": "slides/17-logistic.html#log-odds",
+    "href": "slides/17-logistic.html#log-odds",
+    "title": "Logistic regression",
+    "section": "Log-odds?",
+    "text": "Log-odds?\n\n\\(p = \\text{Prob}(y = 1)\\) is a probability. A number between 0 and 1;\n\\(p / (1 - p)\\) is the odds. A number between 0 and \\(\\infty\\);\n\n\n“The odds of this lecture going well are 10 to 1.”\n\n\nThe log odds \\(\\log(p / (1 - p))\\) is a number between \\(-\\infty\\) and \\(\\infty\\), which is suitable for the linear model."
+  },
+  {
+    "objectID": "slides/17-logistic.html#probability-to-odds",
+    "href": "slides/17-logistic.html#probability-to-odds",
+    "title": "Logistic regression",
+    "section": "Probability to odds",
+    "text": "Probability to odds"
+  },
+  {
+    "objectID": "slides/17-logistic.html#odds-to-log-odds",
+    "href": "slides/17-logistic.html#odds-to-log-odds",
+    "title": "Logistic regression",
+    "section": "Odds to log odds",
+    "text": "Odds to log odds"
+  },
+  {
+    "objectID": "slides/17-logistic.html#logistic-regression",
+    "href": "slides/17-logistic.html#logistic-regression",
+    "title": "Logistic regression",
+    "section": "Logistic regression",
+    "text": "Logistic regression\n\\[\n\\log\\left(\\frac{p}{1-p}\\right)\n=\n\\beta_0+\\beta_1x.\n\\]\n\nThe logit function \\(\\log(p / (1-p))\\) is an example of a link function that transforms the linear model to have an appropriate range;\nThis is an example of a generalized linear model;"
+  },
+  {
+    "objectID": "slides/17-logistic.html#estimation",
+    "href": "slides/17-logistic.html#estimation",
+    "title": "Logistic regression",
+    "section": "Estimation",
+    "text": "Estimation\n\nWe estimate the parameters \\(\\beta_0,\\,\\beta_1\\) using maximum likelihood (don’t worry about it) to get the “best fitting” S-curve;\nThe fitted model is\n\n\\[\n\\log\\left(\\frac{\\widehat{p}}{1-\\widehat{p}}\\right)\n=\nb_0+b_1x.\n\\]"
+  },
+  {
+    "objectID": "slides/17-logistic.html#todays-data",
+    "href": "slides/17-logistic.html#todays-data",
+    "title": "Logistic regression",
+    "section": "Today’s data",
+    "text": "Today’s data\n\nemail |&gt; dplyr::select(c(spam, dollar, viagra, winner, password, exclaim_mess)) |&gt; glimpse()\n\nRows: 3,921\nColumns: 6\n$ spam         &lt;fct&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ dollar       &lt;dbl&gt; 0, 0, 4, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 2, 0, 5, 0, 0, …\n$ viagra       &lt;dbl&gt; 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, …\n$ winner       &lt;fct&gt; no, no, no, no, no, no, no, no, no, no, no, no, no, no, n…\n$ password     &lt;dbl&gt; 0, 0, 0, 0, 2, 2, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, …\n$ exclaim_mess &lt;dbl&gt; 0, 1, 6, 48, 1, 1, 1, 18, 1, 0, 2, 1, 0, 10, 4, 10, 20, 0…"
+  },
+  {
+    "objectID": "slides/17-logistic.html#fitting-a-logistic-model",
+    "href": "slides/17-logistic.html#fitting-a-logistic-model",
+    "title": "Logistic regression",
+    "section": "Fitting a logistic model",
+    "text": "Fitting a logistic model\n\nlogistic_fit &lt;- logistic_reg() |&gt;\n  fit(spam ~ exclaim_mess, data = email)\n\ntidy(logistic_fit)\n\n# A tibble: 2 × 5\n  term          estimate std.error statistic p.value\n  &lt;chr&gt;            &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)  -2.27      0.0553     -41.1     0    \n2 exclaim_mess  0.000272  0.000949     0.287   0.774\n\n\nFitted equation for the log-odds:\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\n-2.27\n-\n0.000272\\times exclaim~mess\n\\]"
+  },
+  {
+    "objectID": "slides/17-logistic.html#interpreting-the-intercept",
+    "href": "slides/17-logistic.html#interpreting-the-intercept",
+    "title": "Logistic regression",
+    "section": "Interpreting the intercept",
+    "text": "Interpreting the intercept\nIf exclaim_mess = 0, then\n\\[\n\\hat{p}=\\widehat{P(y=1)}=\\frac{e^{-2.27}}{1+e^{-2.27}}\\approx 0.09.\n\\]\nSo, an email with no exclamation marks has a 9% chance of being spam."
+  },
+  {
+    "objectID": "slides/17-logistic.html#interpreting-the-slope-is-tricky",
+    "href": "slides/17-logistic.html#interpreting-the-slope-is-tricky",
+    "title": "Logistic regression",
+    "section": "Interpreting the slope is tricky",
+    "text": "Interpreting the slope is tricky\nRecall:\n\\[\n\\log\\left(\\frac{\\widehat{p}}{1-\\widehat{p}}\\right)\n=\nb_0+b_1x.\n\\]\n\nAlternatively:\n\\[\n\\frac{\\widehat{p}}{1-\\widehat{p}}\n=\ne^{b_0+b_1x}\n=\n\\color{blue}{e^{b_0}e^{b_1x}}\n.\n\\]\n\n\nIf we increase \\(x\\) by one unit, we have:\n\\[\n\\frac{\\widehat{p}}{1-\\widehat{p}}\n=\ne^{b_0}e^{b_1(x+1)}\n=\ne^{b_0}e^{b_1x+b_1}\n=\n{\\color{blue}{e^{b_0}e^{b_1x}}}{\\color{red}{e^{b_1}}}\n.\n\\]\n\n\nA one unit increase in \\(x\\) is associated with a change in odds by a factor of \\(e^{b_1}\\). Gross!"
+  },
+  {
+    "objectID": "slides/17-logistic.html#back-to-the-example",
+    "href": "slides/17-logistic.html#back-to-the-example",
+    "title": "Logistic regression",
+    "section": "Back to the example…",
+    "text": "Back to the example…\n\\[\n\\log\\left(\\frac{\\hat{p}}{1-\\hat{p}}\\right)\n=\n-2.27\n-\n0.000272\\times exclaim~mess\n\\]\nIf we add one exclamation mark to the model, we predict the odds of an email being spam to be lower by a factor of \\(e^{-0.000272}\\approx 0.9998\\) on average.\n(So it doesn’t actually matter too much.)"
+  },
+  {
+    "objectID": "slides/17-logistic.html#logistic-regression---classification",
+    "href": "slides/17-logistic.html#logistic-regression---classification",
+    "title": "Logistic regression",
+    "section": "Logistic regression -> classification?",
+    "text": "Logistic regression -&gt; classification?"
+  },
+  {
+    "objectID": "slides/17-logistic.html#step-0-fit-the-model",
+    "href": "slides/17-logistic.html#step-0-fit-the-model",
+    "title": "Logistic regression",
+    "section": "Step 0: fit the model",
+    "text": "Step 0: fit the model\nSelect a number \\(0 &lt; p^* &lt; 1\\):\n\n\n\n\n\n\n\n\n\nif \\(\\text{Prob}(y=1)\\leq p^*\\), then predict \\(\\widehat{y}=0\\);\nif \\(\\text{Prob}(y=1)&gt; p^*\\), then predict \\(\\widehat{y}=1\\)."
+  },
+  {
+    "objectID": "slides/17-logistic.html#step-1-pick-a-threshold",
+    "href": "slides/17-logistic.html#step-1-pick-a-threshold",
+    "title": "Logistic regression",
+    "section": "Step 1: pick a threshold",
+    "text": "Step 1: pick a threshold\nSelect a number \\(0 &lt; p^* &lt; 1\\):\n\n\n\n\n\n\n\n\n\nif \\(\\text{Prob}(y=1)\\leq p^*\\), then predict \\(\\widehat{y}=0\\);\nif \\(\\text{Prob}(y=1)&gt; p^*\\), then predict \\(\\widehat{y}=1\\)."
+  },
+  {
+    "objectID": "slides/17-logistic.html#step-2-find-the-decision-boundary",
+    "href": "slides/17-logistic.html#step-2-find-the-decision-boundary",
+    "title": "Logistic regression",
+    "section": "Step 2: find the “decision boundary”",
+    "text": "Step 2: find the “decision boundary”\nSolve for the x-value that matches the threshold:\n\n\n\n\n\n\n\n\n\nif \\(\\text{Prob}(y=1)\\leq p^*\\), then predict \\(\\widehat{y}=0\\);\nif \\(\\text{Prob}(y=1)&gt; p^*\\), then predict \\(\\widehat{y}=1\\)."
+  },
+  {
+    "objectID": "slides/17-logistic.html#step-3-classify-a-new-arrival",
+    "href": "slides/17-logistic.html#step-3-classify-a-new-arrival",
+    "title": "Logistic regression",
+    "section": "Step 3: classify a new arrival",
+    "text": "Step 3: classify a new arrival\nA new person shows up with \\(x_{\\text{new}}\\). Which side of the boundary are they on?\n\n\n\n\n\n\n\n\n\nif \\(x_{\\text{new}} \\leq x^\\star\\), then \\(\\text{Prob}(y=1)\\leq p^*\\), so predict \\(\\widehat{y}=0\\) for the new person;\nif \\(x_{\\text{new}} &gt; x^\\star\\), then \\(\\text{Prob}(y=1)&gt; p^*\\), so predict \\(\\widehat{y}=1\\) for the new person."
+  },
+  {
+    "objectID": "slides/17-logistic.html#lets-change-the-threshold",
+    "href": "slides/17-logistic.html#lets-change-the-threshold",
+    "title": "Logistic regression",
+    "section": "Let’s change the threshold",
+    "text": "Let’s change the threshold\nA new person shows up with \\(x_{\\text{new}}\\). Which side of the boundary are they on?\n\n\n\n\n\n\n\n\n\nif \\(x_{\\text{new}} \\leq x^\\star\\), then \\(\\text{Prob}(y=1)\\leq p^*\\), so predict \\(\\widehat{y}=0\\) for the new person;\nif \\(x_{\\text{new}} &gt; x^\\star\\), then \\(\\text{Prob}(y=1)&gt; p^*\\), so predict \\(\\widehat{y}=1\\) for the new person."
+  },
+  {
+    "objectID": "slides/17-logistic.html#lets-change-the-threshold-1",
+    "href": "slides/17-logistic.html#lets-change-the-threshold-1",
+    "title": "Logistic regression",
+    "section": "Let’s change the threshold",
+    "text": "Let’s change the threshold\nA new person shows up with \\(x_{\\text{new}}\\). Which side of the boundary are they on?\n\n\n\n\n\n\n\n\n\nif \\(x_{\\text{new}} \\leq x^\\star\\), then \\(\\text{Prob}(y=1)\\leq p^*\\), so predict \\(\\widehat{y}=0\\) for the new person;\nif \\(x_{\\text{new}} &gt; x^\\star\\), then \\(\\text{Prob}(y=1)&gt; p^*\\), so predict \\(\\widehat{y}=1\\) for the new person."
+  },
+  {
+    "objectID": "slides/17-logistic.html#nothing-special-about-one-predictor",
+    "href": "slides/17-logistic.html#nothing-special-about-one-predictor",
+    "title": "Logistic regression",
+    "section": "Nothing special about one predictor…",
+    "text": "Nothing special about one predictor…\nTwo numerical predictors and one binary response:"
+  },
+  {
+    "objectID": "slides/17-logistic.html#multiple-logistic-regression",
+    "href": "slides/17-logistic.html#multiple-logistic-regression",
+    "title": "Logistic regression",
+    "section": "“Multiple” logistic regression",
+    "text": "“Multiple” logistic regression\nOn the probability scale:\n\\[\n\\text{Prob}(y = 1)\n=\n\\frac{e^{\\beta_0+\\beta_1x_1+\\beta_2x_2+...+\\beta_mx_m}}{1+e^{\\beta_0+\\beta_1x_1+\\beta_2x_2+...+\\beta_mx_m}}.\n\\]\nFor the log-odds, a multiple linear regression:\n\\[\n\\log\\left(\\frac{p}{1-p}\\right)\n=\n\\beta_0+\\beta_1x_1+\\beta_2x_2+...+\\beta_mx_m.\n\\]"
+  },
+  {
+    "objectID": "slides/17-logistic.html#decision-boundary-again",
+    "href": "slides/17-logistic.html#decision-boundary-again",
+    "title": "Logistic regression",
+    "section": "Decision boundary, again",
+    "text": "Decision boundary, again\nIt’s linear! Consider two numerical predictors:\n\n\n\n\n\n\n\n\n\nif new \\((x_1,\\,x_2)\\) below, \\(\\text{Prob}(y=1)\\leq p^*\\). Predict \\(\\widehat{y}=0\\) for the new person;\nif new \\((x_1,\\,x_2)\\) above, \\(\\text{Prob}(y=1)&gt; p^*\\). Predict \\(\\widehat{y}=1\\) for the new person."
+  },
+  {
+    "objectID": "slides/17-logistic.html#decision-boundary-again-1",
+    "href": "slides/17-logistic.html#decision-boundary-again-1",
+    "title": "Logistic regression",
+    "section": "Decision boundary, again",
+    "text": "Decision boundary, again\nIt’s linear! Consider two numerical predictors:\n\n\n\n\n\n\n\n\n\nif new \\((x_1,\\,x_2)\\) below, \\(\\text{Prob}(y=1)\\leq p^*\\). Predict \\(\\widehat{y}=0\\) for the new person;\nif new \\((x_1,\\,x_2)\\) above, \\(\\text{Prob}(y=1)&gt; p^*\\). Predict \\(\\widehat{y}=1\\) for the new person."
+  },
+  {
+    "objectID": "slides/17-logistic.html#decision-boundary-again-2",
+    "href": "slides/17-logistic.html#decision-boundary-again-2",
+    "title": "Logistic regression",
+    "section": "Decision boundary, again",
+    "text": "Decision boundary, again\nIt’s linear! Consider two numerical predictors:\n\n\n\n\n\n\n\n\n\nif new \\((x_1,\\,x_2)\\) below, \\(\\text{Prob}(y=1)\\leq p^*\\). Predict \\(\\widehat{y}=0\\) for the new person;\nif new \\((x_1,\\,x_2)\\) above, \\(\\text{Prob}(y=1)&gt; p^*\\). Predict \\(\\widehat{y}=1\\) for the new person."
+  },
+  {
+    "objectID": "slides/17-logistic.html#note-the-classifier-isnt-perfect",
+    "href": "slides/17-logistic.html#note-the-classifier-isnt-perfect",
+    "title": "Logistic regression",
+    "section": "Note: the classifier isn’t perfect",
+    "text": "Note: the classifier isn’t perfect\n\n\n\n\n\n\n\n\n\nThere are blue points in the orange region: spam (1) emails misclassified as legit (0);\nThere are orange points in the blue region: legit (0) emails misclassified as spam (1)."
+  },
+  {
+    "objectID": "slides/17-logistic.html#how-do-you-pick-the-threshold",
+    "href": "slides/17-logistic.html#how-do-you-pick-the-threshold",
+    "title": "Logistic regression",
+    "section": "How do you pick the threshold?",
+    "text": "How do you pick the threshold?\nTo balance out the two kinds of errors:\n\n\nHigh threshold &gt;&gt; Hard to classify as 1 &gt;&gt; FP less likely; FN more likely\nLow threshold &gt;&gt; Easy to classify as 1 &gt;&gt; FP more likely; FN less likely"
+  },
+  {
+    "objectID": "slides/17-logistic.html#silly-examples",
+    "href": "slides/17-logistic.html#silly-examples",
+    "title": "Logistic regression",
+    "section": "Silly examples",
+    "text": "Silly examples\n\n\nSet p* = 0\n\nClassify every email as spam (1);\nNo false negatives, but a lot of false positives;\n\n\n\nSet p* = 1\n\nClassify every email as legit (0);\nNo false positives, but a lot of false negatives.\n\n\n\nYou pick a threshold in between to strike a balance. The exact number depends on context."
+  },
+  {
+    "objectID": "slides/17-logistic.html#ae-13-spam-filter",
+    "href": "slides/17-logistic.html#ae-13-spam-filter",
+    "title": "Logistic regression",
+    "section": "ae-13-spam-filter",
+    "text": "ae-13-spam-filter\n\n\nGo to your ae project in RStudio.\nIf you haven’t yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nIf you haven’t yet done so, click Pull to get today’s application exercise file: ae-13-spam-filter.qmd.\nWork through the application exercise in class, and render, commit, and push your edits."
+  },
+  {
     "objectID": "slides/lab-4.html#while-you-wait-get-your-repo-ready",
     "href": "slides/lab-4.html#while-you-wait-get-your-repo-ready",
     "title": "Lab 4",
@@ -3554,7 +3841,7 @@
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\nlab 0\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\nslides 00\n\n\n\n1\nMon, Jan 13\n\nLab 1\nlab 1\n\n\n\n\nTue, Jan 14\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\nMeet the Toolkit\nslides 01\n\n\n\n\nThu, Jan 16\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\nData Vizualization\nslides 02\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\nData Transformation\n\nslides 03 ae 02\n\n\n\n\n\nWed, Jan 22\n\n\n\nLab 1 @ 11:59 PM\n\n\n\nThu, Jan 23\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\nData Exploration 1\n\nslides 04 ae 03\n\n\n\n\n3\nMon, Jan 27\n📗 r4ds - chp 4\n\nLab 2\nlab 2\n\n\n\n\nTue, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\nData Exploration 2\n\nslides 05 ae 04\n\n\n\n\n\nThu, Jan 30\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\nTidying data\n\nslides 06 ae 05\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\nlab 3\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\nJoining data\n\nslides 07 ae 06\n\n\n\n\n\nThu, Feb 6\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\nData types and classes\n\nslides 08 ae 07\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nlab 4 slides\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\nImporting and recoding data\nslides 09\n\n\n\n\nThu, Feb 13\n\nMore practice\n\nslides 10 ae 08\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\nData science ethics\nslides 11\n\n\n\n\nThu, Feb 20\n\nSnow Day - No Class\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nslides project milestone 1\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nBatch A of practice problems Batch B of practice problems Kahoot\n\nMidterm 1\n\n\n\n\n\nThu, Feb 27\n🎥 The language of models  📘 ims - chp 7.1\n\nThe language of models\n\nslides 12ae 9\n\n\n\n\n\nFri, Feb 28\n\n\n\nPeer evaluation 1 due by 5:00 pm\n\n\n8\nMon, Mar 3\n\nMilestone 2\nproject milestone 2\n\n\n\n\nTue, Mar 4\n🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\nSimple linear regression\n\nslides 13 ae 10\n\n\n\n\n\nThu, Mar 6\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\nMultiple linear regression 1\n\nslides 14 ae 11\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\nslides lab 5\n\n\n\n\n\nTue, Mar 18\n📘 ims - chp 8.3-8.5\n\nMultiple linear regression 2\nslides 15\n\n\n\n\nThu, Mar 20\n🎥 Logistic regression\n\nModel selection\n\nslides 16 ae 12\n\n\n\n\n\nFri, Mar 21\n\n\n\nPeer evaluation 2 due by 5:00 pm\n\n\n11\nMon, Mar 24\n\nLab 6\nlab 6\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n📘 ims - chp 9\n\nLogistic regression 1\n\n\n\n\n\nThu, Mar 27\n🎥 Prediction and overfitting\n\nLogistic regression 2\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n\nIntervals\n\n\n\n\n\nThu, Apr 3\n\nIntervals/Testing\n\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nTesting\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n\nFri, Apr 11\n\n\n\nPeer evaluation 3 due by 5:00 pm\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nInference Overview\n\n\n\n\n\nThu, Apr 17\n\nCommunication, Quarto\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nMon, Apr 28\n\nfinals week - no lab\n\nPeer evaluation 4 due by 5:00 pm\n\n\n\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\nlab 0\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\nslides 00\n\n\n\n1\nMon, Jan 13\n\nLab 1\nlab 1\n\n\n\n\nTue, Jan 14\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\nMeet the Toolkit\nslides 01\n\n\n\n\nThu, Jan 16\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\nData Vizualization\nslides 02\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\nData Transformation\n\nslides 03 ae 02\n\n\n\n\n\nWed, Jan 22\n\n\n\nLab 1 @ 11:59 PM\n\n\n\nThu, Jan 23\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\nData Exploration 1\n\nslides 04 ae 03\n\n\n\n\n3\nMon, Jan 27\n📗 r4ds - chp 4\n\nLab 2\nlab 2\n\n\n\n\nTue, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\nData Exploration 2\n\nslides 05 ae 04\n\n\n\n\n\nThu, Jan 30\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\nTidying data\n\nslides 06 ae 05\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\nlab 3\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\nJoining data\n\nslides 07 ae 06\n\n\n\n\n\nThu, Feb 6\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\nData types and classes\n\nslides 08 ae 07\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nlab 4 slides\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\nImporting and recoding data\nslides 09\n\n\n\n\nThu, Feb 13\n\nMore practice\n\nslides 10 ae 08\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\nData science ethics\nslides 11\n\n\n\n\nThu, Feb 20\n\nSnow Day - No Class\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nslides project milestone 1\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nBatch A of practice problems Batch B of practice problems Kahoot\n\nMidterm 1\n\n\n\n\n\nThu, Feb 27\n🎥 The language of models  📘 ims - chp 7.1\n\nThe language of models\n\nslides 12ae 9\n\n\n\n\n\nFri, Feb 28\n\n\n\nPeer evaluation 1 due by 5:00 pm\n\n\n8\nMon, Mar 3\n\nMilestone 2\nproject milestone 2\n\n\n\n\nTue, Mar 4\n🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\nSimple linear regression\n\nslides 13 ae 10\n\n\n\n\n\nThu, Mar 6\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\nMultiple linear regression 1\n\nslides 14 ae 11\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\nslides lab 5\n\n\n\n\n\nTue, Mar 18\n📘 ims - chp 8.3-8.5\n\nMultiple linear regression 2\nslides 15\n\n\n\n\nThu, Mar 20\n🎥 Logistic regression\n\nModel selection\n\nslides 16 ae 12\n\n\n\n\n\nFri, Mar 21\n\n\n\nPeer evaluation 2 due by 5:00 pm\n\n\n11\nMon, Mar 24\n\nLab 6\nlab 6\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n📘 ims - chp 9\n\nLogistic regression 1\n\nslides 17  ae 13\n\n\n\n\nThu, Mar 27\n🎥 Prediction and overfitting\n\nLogistic regression 2\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n\nIntervals\n\n\n\n\n\nThu, Apr 3\n\nIntervals/Testing\n\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nTesting\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n\nFri, Apr 11\n\n\n\nPeer evaluation 3 due by 5:00 pm\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nInference Overview\n\n\n\n\n\nThu, Apr 17\n\nCommunication, Quarto\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nMon, Apr 28\n\nfinals week - no lab\n\nPeer evaluation 4 due by 5:00 pm\n\n\n\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
