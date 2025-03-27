@@ -6,7 +6,7 @@ format: revealjs
 auto-stretch: false
 ---
 
-## While you wait... 
+## While you wait...
 
 ```{r}
 #| label: load-packages
@@ -38,7 +38,6 @@ fit <- glm(y ~ x, family = binomial)
 seq_x = seq(1.2 * min(x), 1.2 * max(x), length.out = 500)
 y_vals <- 1 / (1 + exp(-(fit$coefficients[1] + fit$coefficients[2] * seq_x)))
 ```
-
 
 ::: appex
 -   Go to your `ae` project in RStudio.
@@ -236,7 +235,6 @@ plot(x, y, pch = 19, cex = 0.5, ylim = c(-0.25, 1.25), cex.lab = 1.5,
      xlab = "x")
 ```
 
-
 ## Straight line of best fit is a little silly
 
 ```{r}
@@ -301,13 +299,11 @@ This is called the *logistic regression* model.
 
 ## Log-odds?
 
--   $p = \text{Prob}(y = 1)$ is a probability.
-    A number between 0 and 1;
+-   $p = \text{Prob}(y = 1)$ is a probability. A number between 0 and 1;
 
--   $p / (1 - p)$ is the odds.
-    A number between 0 and $\infty$;
+-   $p / (1 - p)$ is the odds. A number between 0 and $\infty$;
 
- > "The odds of this lecture going well are 10 to 1."
+> "The odds of this lecture going well are 10 to 1."
 
 -   The log odds $\log(p / (1 - p))$ is a number between $-\infty$ and $\infty$, which is suitable for the linear model.
 
@@ -379,13 +375,13 @@ $$
 \log\left(\frac{\hat{p}}{1-\hat{p}}\right)
 =
 -2.27
--
++
 0.000272\times exclaim~mess
 $$
 
 ## Interpreting the intercept
 
-If `exclaim_mess = 0`, then 
+If `exclaim_mess = 0`, then
 
 $$
 \hat{p}=\widehat{P(y=1)}=\frac{e^{-2.27}}{1+e^{-2.27}}\approx 0.09.
@@ -441,13 +437,11 @@ $$
 \log\left(\frac{\hat{p}}{1-\hat{p}}\right)
 =
 -2.27
--
++
 0.000272\times exclaim~mess
 $$
 
-If we add one exclamation mark to the model, we predict the odds of an email being spam to be **lower** by a factor of $e^{-0.000272}\approx 0.9998$ on average.
-
-(So it doesn't actually matter too much.)
+If we add one exclamation mark to the model, we predict the odds of an email being spam to be **lower** by a factor of $e^{0.000272}\approx 1.000272$ on average.
 
 ## Logistic regression -\> classification?
 
@@ -533,8 +527,7 @@ mtext("x*", side = 1, line = 1, at = cutoff, cex = 2)
 
 ## Step 3: classify a new arrival {.smaller}
 
-A new person shows up with $x_{\text{new}}$.
-Which side of the boundary are they on?
+A new person shows up with $x_{\text{new}}$. Which side of the boundary are they on?
 
 ```{r}
 #| label: step-3
@@ -566,8 +559,7 @@ text(1, 0.5, expression(hat(y)~" = 1"), col = "blue", cex = 2)
 
 ## Let's change the threshold {.smaller}
 
-A new person shows up with $x_{\text{new}}$.
-Which side of the boundary are they on?
+A new person shows up with $x_{\text{new}}$. Which side of the boundary are they on?
 
 ```{r}
 #| label: lower-threshold
@@ -599,8 +591,7 @@ text(1, 0.5, expression(hat(y)~" = 1"), col = "blue", cex = 2)
 
 ## Let's change the threshold {.smaller}
 
-A new person shows up with $x_{\text{new}}$.
-Which side of the boundary are they on?
+A new person shows up with $x_{\text{new}}$. Which side of the boundary are they on?
 
 ```{r}
 #| label: higher-threshold
@@ -675,8 +666,7 @@ $$
 
 ## Decision boundary, again {.smaller}
 
-It's linear!
-Consider two numerical predictors:
+It's linear! Consider two numerical predictors:
 
 ```{r}
 #| message: false
@@ -720,8 +710,7 @@ legend("topright", "p* = 0.5", cex = 2, bty = "n")
 
 ## Decision boundary, again {.smaller}
 
-It's linear!
-Consider two numerical predictors:
+It's linear! Consider two numerical predictors:
 
 ```{r}
 #| message: false
@@ -763,11 +752,9 @@ legend("topright", "p* = 0.15", cex = 2, bty = "n")
 -   if new $(x_1,\,x_2)$ below, $\text{Prob}(y=1)\leq p^*$. Predict $\widehat{y}=0$ for the new person;
 -   if new $(x_1,\,x_2)$ above, $\text{Prob}(y=1)> p^*$. Predict $\widehat{y}=1$ for the new person.
 
-
 ## Decision boundary, again {.smaller}
 
-It's linear!
-Consider two numerical predictors:
+It's linear! Consider two numerical predictors:
 
 ```{r}
 #| message: false
@@ -850,8 +837,8 @@ points(X, pch = 19,
 legend("topright", "p* = 0.5", cex = 2, bty = "n")
 ```
 
-- There are blue points in the orange region: spam (1) emails misclassified as legit (0);
-- There are orange points in the blue region: legit (0) emails misclassified as spam (1).
+-   There are blue points in the orange region: spam (1) emails misclassified as legit (0);
+-   There are orange points in the blue region: legit (0) emails misclassified as spam (1).
 
 ## How do you pick the threshold? {.smaller}
 
@@ -859,20 +846,20 @@ To balance out the two kinds of errors:
 
 ![](images/17/confusion-matrix.png)
 
-- High threshold >> Hard to classify as 1 >> FP less likely; FN more likely
-- Low threshold >> Easy to classify as 1 >> FP more likely; FN less likely
+-   High threshold \>\> Hard to classify as 1 \>\> FP less likely; FN more likely
+-   Low threshold \>\> Easy to classify as 1 \>\> FP more likely; FN less likely
 
 ## Silly examples
 
-- Set p* = 0
+-   Set p\* = 0
 
-  - Classify every email as spam (1);
-  - No false negatives, but *a lot* of false positives;
+    -   Classify every email as spam (1);
+    -   No false negatives, but *a lot* of false positives;
 
-- Set p* = 1
+-   Set p\* = 1
 
-  - Classify every email as legit (0);
-  - No false positives, but *a lot* of false negatives.
+    -   Classify every email as legit (0);
+    -   No false positives, but *a lot* of false negatives.
 
 You pick a threshold in between to strike a balance. The exact number depends on context.
 
