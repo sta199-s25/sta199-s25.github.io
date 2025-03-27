@@ -1,0 +1,625 @@
+---
+title: "Model selection for logistic regression"
+subtitle: "Lecture 18"
+date: "2025-3-27"
+format: revealjs
+auto-stretch: false
+---
+
+## While you wait...
+
+```{r}
+#| label: load-packages
+#| message: false
+#| echo: false
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+library(forested)
+email <- openintro::email
+todays_ae <- "ae-14-forest-classification"
+
+```
+
+::: appex
+-   Go to your `ae` project in RStudio.
+
+-   Make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+
+-   Click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*.
+
+-   Wait till the you're prompted to work on the application exercise during class before editing the file.
+:::
+
+## Last time: regression with a binary response
+
+```{r}
+#| echo: false
+ggplot(email, aes(x = exclaim_mess, y = as.numeric(spam) - 1)) + 
+  geom_point() + 
+  labs(
+    x = "# of exclamation marks in email",
+    y = "e-mail type"
+  ) +
+  scale_y_continuous(breaks = c(0, 1),
+                   labels = c("legit (0)", "spam (1)"))
+```
+
+## New model: logistic regression
+
+S-curve for the probability of success:
+
+$$
+\hat{p}
+=
+\frac{e^{b_0+b_1x}}{1+e^{b_0+b_1x}}.
+$$
+
+Linear model for the log-odds:
+
+$$
+\log\left(\frac{\hat{p}}{1-\hat{p}}\right)
+=
+b_0+b_1x.
+$$
+
+These are equivalent.
+
+## R syntax is mostly unchanged
+
+```{r}
+#| echo: false
+email <- email |>
+  mutate(
+    spam = fct_relevel(spam, "1", "0")
+  )
+```
+
+```{r}
+simple_logistic_fit <- logistic_reg() |>
+  fit(spam ~ exclaim_mess, data = email)
+
+tidy(simple_logistic_fit)
+```
+
+Fitted equation for the log-odds:
+
+$$
+\log\left(\frac{\hat{p}}{1-\hat{p}}\right)
+=
+-2.27
++
+0.000272\times exclaim~mess
+$$
+
+Interpretations are strange and delicate.
+
+## Here's an alternative model
+
+```{r}
+full_logistic_fit <- logistic_reg() |>
+  fit(spam ~ ., data = email)
+
+tidy(full_logistic_fit)
+```
+
+## Classification error
+
+There are two kinds of mistakes:
+
+![](images/17/confusion-matrix.png)
+
+We want to avoid both, but there's a trade-off.
+
+## Jargon: False negative and positive
+
+-   **False negative rate** is the *proportion* of actual positives that were classified as negatives.
+
+-   **False positive rate** is the *proportion* of actual negatives that were classified as positives.
+
+::: callout-tip
+We want these to be low!
+:::
+
+## Jargon: Sensitivity
+
+**Sensitivity** is the *proportion* of actual positives that were correctly classified as positive.
+
+-   Also known as **true positive rate** and **recall**
+
+-   Sensitivity = 1 − False negative rate
+
+-   Useful when false negatives are more "expensive" than false positives
+
+::: callout-tip
+We want this to be high!
+:::
+
+## Jargon: Specificity
+
+**Specificity** is the *proportion* of actual negatives that were correctly classified as negative
+
+-   Also known as **true negative rate**
+
+-   Specificity = 1 − False positive rate
+
+::: callout-tip
+We want this to be high!
+:::
+
+## The augment function
+
+The `augment` function takes a data frame and "augments" it by adding three new columns on the left that describe the model predictions for each row:
+
+- `.pred_class`: model prediction ($\hat{y}$) based on a 50% threshold;
+- `.pred_0`: model estimate of $P(y=0)$;
+- `.pred_1`: model estimate of $P(y=1) = 1 - P(y = 0)$.
+
+## The augment function
+
+The `augment` function takes a data frame and "augments" it by adding three new columns on the left that describe the model predictions for each row:
+
+```{r}
+log_aug_full <- augment(full_logistic_fit, email)
+log_aug_full
+```
+
+## Calculating the error rates
+
+```{r}
+log_aug_full |>
+  count(spam, .pred_class) 
+```
+
+## Calculating the error rates
+
+```{r}
+log_aug_full |>
+  count(spam, .pred_class) |>
+  group_by(spam)
+```
+
+## Calculating the error rates
+
+```{r}
+log_aug_full |>
+  count(spam, .pred_class) |>
+  group_by(spam) |>
+  mutate(p = n / sum(n))
+```
+
+## Calculating the error rates
+
+```{r}
+log_aug_full |>
+  count(spam, .pred_class) |>
+  group_by(spam) |>
+  mutate(
+    p = n / sum(n),
+    decision = case_when(
+      spam == "0" & .pred_class == "0" ~ "True negative",
+      spam == "0" & .pred_class == "1" ~ "False positive",
+      spam == "1" & .pred_class == "0" ~ "False negative",
+      spam == "1" & .pred_class == "1" ~ "True positive"
+    ))
+```
+
+## But wait!
+
+If we change the classification threshold, we change the classifications, and we change the error rates:
+
+```{r}
+#| code-line-numbers: 2-4
+log_aug_full |>
+  mutate(
+    .pred_class = if_else(.pred_1 <= 0.25, 0, 1)
+  ) |>
+  count(spam, .pred_class) |>
+  group_by(spam) |>
+  mutate(p = n / sum(n))
+```
+
+## Classification threshold: 0.00
+
+```{r}
+#| code-line-numbers: 2-4
+log_aug_full |>
+  mutate(
+    .pred_class = if_else(.pred_1 <= 0.00, 0, 1)
+  ) |>
+  count(spam, .pred_class) |>
+  group_by(spam) |>
+  mutate(p = n / sum(n))
+```
+
+## Classification threshold: 0.25
+
+```{r}
+#| code-line-numbers: 2-4
+log_aug_full |>
+  mutate(
+    .pred_class = if_else(.pred_1 <= 0.25, 0, 1)
+  ) |>
+  count(spam, .pred_class) |>
+  group_by(spam) |>
+  mutate(p = n / sum(n))
+```
+
+## Classification threshold: 0.5
+
+```{r}
+#| code-line-numbers: 2-4
+log_aug_full |>
+  mutate(
+    .pred_class = if_else(.pred_1 <= 0.50, 0, 1)
+  ) |>
+  count(spam, .pred_class) |>
+  group_by(spam) |>
+  mutate(p = n / sum(n))
+```
+
+## Classification threshold: 0.75
+
+```{r}
+#| code-line-numbers: 2-4
+log_aug_full |>
+  mutate(
+    .pred_class = if_else(.pred_1 <= 0.75, 0, 1)
+  ) |>
+  count(spam, .pred_class) |>
+  group_by(spam) |>
+  mutate(p = n / sum(n))
+```
+
+## Classification threshold: 1.00
+
+```{r}
+#| code-line-numbers: 2-4
+log_aug_full |>
+  mutate(
+    .pred_class = if_else(.pred_1 <= 1.00, 0, 1)
+  ) |>
+  count(spam, .pred_class) |>
+  group_by(spam) |>
+  mutate(p = n / sum(n))
+```
+
+## Let's plot these error rates
+
+```{r}
+#| echo: false
+err_rates <- tibble(
+  th = c(0, 0.25, 0.5, 0.75, 1.0),
+  `1 - specificity` = c(1.0, 0.08, 0.0092, 0.0028, 0.0),
+  sensitivity = c(1.0, 0.531, 0.185, 0.076, 0.0)
+)
+ggplot(err_rates, aes(x = `1 - specificity`, y = sensitivity, color = "red")) + 
+  geom_point() +
+  geom_abline(lty = 3) +
+    coord_equal() + 
+  labs(
+    x = "False positive rate = 1 - specificity",
+    y = "True positive rate (sensitivity)"
+  ) + 
+  theme(legend.position="none")
+```
+
+## ROC curve {.medium}
+
+If we repeat this process for "all" possible thresholds $0\leq p^\star\leq 1$, we trace out the **receiver operating characteristic curve** (ROC curve), which assesses the model's performance across a range of thresholds:
+
+```{r}
+#| echo: false
+roc_curve(log_aug_full, truth = spam, .pred_1) |>
+  ggplot(aes(x = 1 - specificity, y = sensitivity)) +
+  geom_path() +
+  geom_abline(lty = 3) +
+  coord_equal() + 
+  labs(
+    x = "False positive rate = 1 - specificity",
+    y = "True positive rate (sensitivity)"
+  )
+```
+
+## ROC curve {.scrollable}
+
+::: task
+Which corner of the plot indicates the best model performance?
+:::
+
+![](images/18/roc-curve-annotated.png)
+
+## ROC for full model
+
+```{r}
+#| echo: false
+roc_curve(log_aug_full, truth = spam, .pred_1) |>
+  ggplot(aes(x = 1 - specificity, y = sensitivity)) +
+  geom_path() +
+  geom_abline(lty = 3) +
+  coord_equal() + 
+  labs(
+    x = "False positive rate = 1 - specificity",
+    y = "True positive rate (sensitivity)"
+  )
+```
+
+## ROC for simple model
+
+```{r}
+#| echo: false
+augment(simple_logistic_fit, email) |>
+  roc_curve(truth = spam, .pred_1) |>
+  ggplot(aes(x = 1 - specificity, y = sensitivity)) +
+  geom_path() +
+  geom_abline(lty = 3) +
+  coord_equal() + 
+  labs(
+    x = "False positive rate = 1 - specificity",
+    y = "True positive rate (sensitivity)"
+  )
+```
+
+
+# Washington forests
+
+## Data {.smaller}
+
+-   The U.S. Forest Service maintains machine learning models to predict whether a plot of land is "forested."
+
+-   This classification is important for research, legislation, land management, etc. purposes.
+
+-   Plots are typically remeasured every 10 years.
+
+-   The `forested` dataset contains the most recent measurement per plot.
+
+## Data: `forested` {.smaller}
+
+```{r}
+forested
+```
+
+## Data: `forested` {.smaller}
+
+```{r}
+glimpse(forested)
+```
+
+## Outcome and predictors {.smaller}
+
+-   Outcome: `forested` - Factor, `Yes` or `No`
+
+```{r}
+levels(forested$forested)
+```
+
+-   Predictors: 18 remotely-sensed and easily-accessible predictors:
+
+    -   numeric variables based on weather and topography
+
+    -   categorical variables based on classifications from other governmental organizations
+
+## `?forested`
+
+<iframe width="900" height="500" src="https://simonpcouch.github.io/forested/reference/forested.html" title="forested" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+## Should we include a predictor?
+
+To determine whether we should include a predictor in a model, we should start by asking:
+
+::: incremental
+-   Is it ethical to use this variable?
+    (Or even legal?)
+
+-   Will this variable be available at prediction time?
+
+-   Does this variable contribute to explainability?
+:::
+
+# Data splitting and spending
+
+## We've been cheating!
+
+::: incremental
+-   So far, we've been using all the data we have for building models.
+    In predictive contexts, this would be considered *cheating*.
+
+-   Evaluating model performance for predicting outcomes that were used when building the models is like evaluating your learning with questions whose answers you've already seen.
+:::
+
+## Spending your data {.smaller}
+
+For predictive models (used primarily in machine learning), we typically split data into training and test sets:
+
+![](images/18/test-train-split-1.svg){fig-align="center"}
+
+-   The **training set** is used to estimate model parameters.
+
+-   The **test set** is used to find an independent assessment of model performance.
+
+. . .
+
+::: callout-warning
+Do not use, or even peek at, the test set during training.
+:::
+
+## How much to spend?
+
+::: incremental
+-   The more data we spend (use in training), the better estimates we’ll get.
+
+-   Spending too much data in training prevents us from computing a good assessment of predictive performance.
+
+-   Spending too much data in testing prevents us from computing a good estimate of model parameters.
+:::
+
+## The initial split
+
+```{r}
+#| label: initial-split
+set.seed(20241112)
+forested_split <- initial_split(forested)
+forested_split
+```
+
+## Setting a seed {.smaller}
+
+::: task
+What does `set.seed()` do?
+:::
+
+::: incremental
+-   To create that split of the data, R generates “pseudo-random” numbers: while they are made to behave like random numbers, their generation is deterministic given a “seed”.
+
+-   This allows us to reproduce results by setting that seed.
+
+-   Which seed you pick doesn’t matter, as long as you don’t try a bunch of seeds and pick the one that gives you the best performance.
+:::
+
+## Accessing the data
+
+```{r}
+#| label: access-data
+forested_train <- training(forested_split)
+forested_test <- testing(forested_split)
+```
+
+## The training set {.smaller}
+
+```{r}
+forested_train
+```
+
+## The testing data {.smaller}
+
+```{r}
+forested_test
+```
+
+# Exploratory data analysis
+
+## Initial questions {.smaller}
+
+-   What’s the distribution of the outcome, `forested`?
+
+-   What’s the distribution of numeric variables like `precip_annual`?
+
+-   How does the distribution of forested differ across the categorical and numerical variables?
+
+. . .
+
+::: task
+Which dataset should we use for the exploration?
+The entire data `forested`, the training data `forested_train`, or the testing data `forested_test`?
+:::
+
+## `forested`
+
+What’s the distribution of the outcome, `forested`?
+
+```{r}
+ggplot(forested_train, aes(x = forested)) +
+  geom_bar()
+```
+
+## `forested`
+
+What’s the distribution of the outcome, `forested`?
+
+```{r}
+forested_train |>
+  count(forested) |>
+  mutate(
+    p = n / sum(n)
+  )
+```
+
+## `precip_annual`
+
+What’s the distribution of `precip_annual`?
+
+```{r}
+#| message: false
+#| warning: false
+ggplot(forested_train, aes(x = precip_annual)) +
+  geom_histogram()
+```
+
+## `forested` and `precip_annual` {.smaller}
+
+```{r}
+ggplot(
+  forested_train,
+  aes(x = precip_annual, fill = forested, group = forested)
+  ) +
+  geom_histogram(binwidth = 200, position = "identity", alpha = 0.7) +
+  scale_fill_manual(values = c("Yes" = "forestgreen", "No" = "gold2")) +
+  theme_minimal()
+```
+
+## `forested` and `precip_annual` {.smaller}
+
+```{r}
+#| code-line-numbers: "|5"
+#| warning: false
+ggplot(
+  forested_train,
+  aes(x = precip_annual, fill = forested, group = forested)
+  ) +
+  geom_histogram(binwidth = 200, position = "fill", alpha = 0.7) +
+  scale_fill_manual(values = c("Yes" = "forestgreen", "No" = "gold2")) +
+  theme_minimal()
+```
+
+## `forested` and `tree_no_tree` {.smaller}
+
+```{r}
+ggplot(forested_train, aes(x = tree_no_tree, fill = forested)) +
+  geom_bar(position = "fill") +
+  scale_fill_manual(values = c("Yes" = "forestgreen", "No" = "gold2")) +
+  theme_minimal()
+```
+
+## `forested` and `lat` / `lon` {.smaller}
+
+```{r}
+ggplot(forested_train, aes(x = lon, y = lat, color = forested)) +
+  geom_point(alpha = 0.7) +
+  scale_color_manual(values = c("Yes" = "forestgreen", "No" = "gold2")) +
+  theme_minimal()
+```
+
+# Next steps
+
+## Next steps {.smaller}
+
+::: incremental
+-   Fit models on training data
+
+-   Make predictions on testing data
+
+-   Evaluate predictions on testing data:
+
+    -   Linear models: R-squared, adjusted R-squared, RMSE (root mean squared error), etc.
+    -   Logistic models: False negative and positive rates, AUC (area under the curve), etc.
+
+-   Make decisions based on model predictive performance, validity across various testing/training splits (aka "cross validation"), explainability
+:::
+
+. . .
+
+::: callout-note
+We will only learn about a subset of these in this course, but you can go further into these ideas in STA 210 or STA 221 as well as in various machine learning courses.
+:::
+
+## `{r} todays_ae` {.smaller}
+
+::: appex
+-   Go to your ae project in RStudio.
+
+-   If you haven't yet done so, make sure all of your changes up to this point are committed and pushed, i.e., there's nothing left in your Git pane.
+
+-   If you haven't yet done so, click Pull to get today's application exercise file: *`{r} paste0(todays_ae, ".qmd")`*. You might be prompted to install **forested**, say yes.
+
+-   Work through the application exercise in class, and render, commit, and push your edits.
+:::
