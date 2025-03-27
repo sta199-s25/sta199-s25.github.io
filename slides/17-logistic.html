@@ -11,7 +11,7 @@
 <meta charset="utf-8">
 <meta name="generator" content="quarto-1.4.555">
 <meta name="author" content="John Zito">
-<meta name="dcterms.date" content="2024-02-25">
+<meta name="dcterms.date" content="2025-03-25">
 <title>STA 199 Spring 2025 - Logistic regression</title>
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -410,7 +410,7 @@ John Zito
     </div>
 </div>
 
-  <p class="date">2024-02-25</p>
+  <p class="date">2025-03-25</p>
 </section><section id="while-you-wait" class="slide level2"><h2>While you wait…</h2>
 <div class="appex">
 <ul>
@@ -663,7 +663,7 @@ $ exclaim_mess &lt;dbl&gt; 0, 1, 6, 48, 1, 1, 1, 18, 1, 0, 2, 1, 0, 10, 4, 10, 2
 \log\left(\frac{\hat{p}}{1-\hat{p}}\right)
 =
 -2.27
--
++
 0.000272\times exclaim~mess
 \]</span></p>
 </section><section id="interpreting-the-intercept" class="slide level2"><h2>Interpreting the intercept</h2>
@@ -711,11 +711,10 @@ e^{b_0}e^{b_1x+b_1}
 \log\left(\frac{\hat{p}}{1-\hat{p}}\right)
 =
 -2.27
--
++
 0.000272\times exclaim~mess
 \]</span></p>
-<p>If we add one exclamation mark to the model, we predict the odds of an email being spam to be <strong>lower</strong> by a factor of <span class="math inline">\(e^{-0.000272}\approx 0.9998\)</span> on average.</p>
-<p>(So it doesn’t actually matter too much.)</p>
+<p>If we add one exclamation mark to the model, we predict the odds of an email being spam to be <strong>lower</strong> by a factor of <span class="math inline">\(e^{0.000272}\approx 1.000272\)</span> on average.</p>
 </section><section id="logistic-regression---classification" class="slide level2"><h2>Logistic regression -&gt; classification?</h2>
 </section><section id="step-0-fit-the-model" class="slide level2 smaller"><h2>Step 0: fit the model</h2>
 <p>Select a number <span class="math inline">\(0 &lt; p^* &lt; 1\)</span>:</p>
