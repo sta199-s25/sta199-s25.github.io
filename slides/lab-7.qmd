@@ -16,30 +16,62 @@ library(forested)
 
 ## Lab 7 Overview
 
--   Part 1
+-   Part 1: all things logistic regression
 
--   Part 2
+-   Part 2: a quick data science assessment survey
+
+# Data Science Reasoning Assessment
+
+## Data Science Reasoning Assessment {.medium}
+
+::: incremental
+-   The goal of this data science assessment, to accurately measure introductory data science students’ reasoning skills.
+
+-   You will be graded based on completion + honest effort. This assessment is not optional. This is meant to be an individual, closed notes assessment.
+
+-   At the end, you will be asked if your anonymized responses can be used to help better improve this assessment.
+
+    -   Your responses matter!
+    -   The goal of this assessment is to be a national data science reasoning assessment for introductory courses
+    -   This starts with improving questions based on your responses
+:::
 
 # Logistic regression overview
 
 ## `forested` data
 
-x rows and y columns. each observation is a spit of land. we have weather and geo info about it. is it forested or not. 
+::: incremental
+-   `r nrow(forested)` rows and `r ncol(forested)` columns;
 
-SOme areas are hard to reach, so given data about the location that can be collected remotely, we want to use a model to predict if that area is forested.
+-   Each observation (row) is a plot of land;
 
+-   Variables include geographical and meteorological information about each plot, as well as a binary indicator `forested` ("Yes" or "No");
+
+-   Given information about a plot that is easy (and cheap) to collect remotely, can we use a model to predict if a plot is forested without actually visiting it (which could be difficult and costly)?
+:::
 
 ## Goal
 
-Use the data we've already seen to predict if a yet-to-be-observed parcel of land is forested. 
+::: incremental
+-   Use the data we've already seen to predict if a yet-to-be-observed plot of land is forested;
 
-We want a model that does well on data it has never seen before. 
+-   We want a model that does well on data it has never seen before;
 
-To try this out, we randomly split the data into two parts
+-   "Out-of-sample" predictions on new data are more useful than "in-sample" predictions on old data;
+:::
+
+## Training versus testing data
+
+To mimic this "out-of-sample" idea, we randomly split the data into two parts:
+
+-   **training data**: this is what the model gets to see when we fit it;
+-   **test data**: withheld. We assess how well the trained model can predict on this data it hasn't seen before.
+
+![](images/18/test-train-split-1.svg){fig-align="center"}
 
 ## Randomly split data into training and test sets
 
-By default it's a 75/25 training/test split.
+By default it's a 75%/25% training/test split.
 
 ```{r}
 set.seed(8675309)
@@ -50,7 +82,7 @@ forested_train <- training(forested_split)
 forested_test <- testing(forested_split)
 ```
 
-The split is random, but we want the results to be reproducible, so we "freeze the random numbers in time" by setting a seed. If we don't tell you exactly what number to use, you can pick any integer you want. 
+The split is random, but we want the results to be reproducible, so we "freeze the random numbers in time" by setting a seed. If we don't tell you exactly what seed to use on an assignment, you can pick any positive integer you want.
 
 ## Explore: forested or not {.medium}
 
@@ -87,7 +119,33 @@ logistic_reg() |>
   fit(as.numeric(forested) ~ precip_annual, data = forested_train)
 ```
 
-## FYI: the base level is treated as "failure" (0)
+## FYI: the base level is treated as "failure" (0) {.medium}
+
+The base level here is "Yes", so "No" is treated as "success" (1):
+
+```{r}
+levels(forested$forested)
+```
+
+As a result, this code:
+
+```{r}
+#| eval: false
+logistic_reg() |>
+  fit(forested ~ precip_annual, data = forested_train)
+```
+
+Corresponds to this model:
+
+$$
+\text{Prob}(
+\texttt{forested = "No"}
+)
+=
+\frac{e^{\beta_0+\beta_1 x}}{1 + e^{\beta_0+\beta_1 x}}.
+$$
+
+This is not a problem, but it means that in order to interpret the output correctly, you need to understand how your factors are leveled.
 
 ## Fitting a logistic regression model
 
@@ -113,26 +171,72 @@ $$
 ## Interpreting the intercept
 
 $$
+\begin{aligned}
 \log\left(\frac{\hat{p}}{1-\hat{p}}\right)
-=
+&=
 1.57
 - 
 0.0019
 \times 
-precip.
-$$
-
-## Interpreting the slope 
-
-$$
-\log\left(\frac{\hat{p}}{1-\hat{p}}\right)
-=
-1.57
+precip\\
+\frac{\hat{p}}{1-\hat{p}}
+&=
+e^{1.57
 - 
 0.0019
 \times 
-precip.
+precip}
+.
+\end{aligned}
 $$
+
+So when $precip = 0$, the model predicts that the odds of `forested = "No"` are $e^{1.57}\approx 4.8$, on average.
+
+## Interpreting the slope {.medium .scrollable}
+
+At $precip$:
+
+$$
+\frac{\hat{p}}{1-\hat{p}}
+=
+{\color{blue}{e^{1.57
+- 
+0.0019
+\times 
+precip}}}
+$$
+
+At $precip + 1$:
+
+$$
+\begin{aligned}
+\frac{\hat{p}}{1-\hat{p}}
+&=
+e^{1.57
+- 
+0.0019
+\times 
+(precip + 1)}
+\\
+&=
+e^{1.57
+- 
+0.0019
+\times 
+precip - 0.0019}
+\\
+&=
+{\color{blue}{e^{1.57
+- 
+0.0019
+\times 
+precip}}}
+\times 
+\color{red}{e^{-0.0019}}
+\end{aligned}
+$$
+
+If $precip$ increases by one unit, the model predicts a *decrease* in the odds that `forested = "No"` by a multiplicative factor of $e^{-0.0019}\approx 0.99$, on average.
 
 ## Generate predictions for the test data {.small}
 
@@ -143,6 +247,14 @@ forested_precip_aug <- augment(forested_precip_fit, forested_test)
 forested_precip_aug
 ```
 
+## How did the model perform? {.medium}
+
+These are the four possibilities:
+
+![](images/labs/forested_errs.png){fig-align="center"}
+
+-   Our test data have the truth in the `forested` column;
+-   We can compare the predictions in `.pred_class` to the true values and see how we did.
 
 ## Getting the error rates {.medium}
 
@@ -161,10 +273,9 @@ forested_precip_aug |>
   )
 ```
 
-
 ## Change threshold to 0.00
 
-New threshold > New classifications > New error rates
+New threshold \> New classifications \> New error rates
 
 ```{r}
 #| code-line-numbers: 2-4
@@ -181,7 +292,7 @@ forested_precip_aug |>
 
 ## Change threshold to 0.25
 
-New threshold > New classifications > New error rates
+New threshold \> New classifications \> New error rates
 
 ```{r}
 #| code-line-numbers: 2-4
@@ -198,7 +309,7 @@ forested_precip_aug |>
 
 ## Change threshold to 0.50
 
-New threshold > New classifications > New error rates
+New threshold \> New classifications \> New error rates
 
 ```{r}
 #| code-line-numbers: 2-4
@@ -215,7 +326,7 @@ forested_precip_aug |>
 
 ## Change threshold to 0.75
 
-New threshold > New classifications > New error rates
+New threshold \> New classifications \> New error rates
 
 ```{r}
 #| code-line-numbers: 2-4
@@ -232,7 +343,7 @@ forested_precip_aug |>
 
 ## Change threshold to 1.00
 
-New threshold > New classifications > New error rates
+New threshold \> New classifications \> New error rates
 
 ```{r}
 #| code-line-numbers: 2-4
@@ -285,7 +396,6 @@ tibble(
   theme(legend.position = "none")
 ```
 
-
 ## But that was tedious
 
 Let do "all" of the thresholds and connect the dots:
@@ -310,11 +420,11 @@ ggplot(forested_precip_roc, aes(x = 1 - specificity, y = sensitivity)) +
 
 ## The ROC curve
 
-- ROC stands for receiver operating characteristic;
+-   ROC stands for receiver operating characteristic;
 
-- This visualizes the classification accuracy across a range of thresholds. The more "up and to the left" it is, the better.
+-   This visualizes the classification accuracy across a range of thresholds. The more "up and to the left" it is, the better.
 
-- We can quantify "up and to the left" with the area under the curve (AUC).
+-   We can quantify "up and to the left" with the area under the curve (AUC).
 
 ## The ROC curve
 
@@ -322,7 +432,7 @@ ggplot(forested_precip_roc, aes(x = 1 - specificity, y = sensitivity)) +
 
 ## AUC = 1
 
-This is the best we could possibly do: 
+This is the best we could possibly do:
 
 ```{r}
 #| echo: false
@@ -376,7 +486,6 @@ tibble(
 
 ## AUC for the model we fit
 
-
 ```{r}
 roc_auc(
   forested_precip_aug, 
@@ -390,22 +499,22 @@ Not bad!
 
 ## The area under the ROC curve
 
-- This is a "quality score" for a logistic regression model; 
+-   This is a "quality score" for a logistic regression model;
 
-- When you compute it for a test data set that you set aside, the AUC is a measure of *out-of-sample* prediction accuracy;
+-   When you compute it for a test data set that you set aside, the AUC is a measure of *out-of-sample* prediction accuracy;
 
-- AUC is a number between 0 and 1, where 0 is awful and 1 is great, similar to $R^2$ for linear regression.
+-   AUC is a number between 0 and 1, where 0 is awful and 1 is great, similar to $R^2$ for linear regression.
 
-- The function `roc_auc` computes it for you, and it takes the same set of arguments as `roc_curve`.
+-   The function `roc_auc` computes it for you, and it takes the same set of arguments as `roc_curve`.
 
 ## New commands introduced last week
 
-- `logistic_reg`
-- `augment`
-- `roc_curve`
-- `roc_auc`
-- `set.seed`
-- `initial_split`, `training`, `test`
-- `geom_path`
+-   `logistic_reg`
+-   `augment`
+-   `roc_curve`
+-   `roc_auc`
+-   `set.seed`
+-   `initial_split`, `training`, `test`
+-   `geom_path`
 
 You will use them all on Lab 7, and they should go on your Midterm 2 cheat sheet.
