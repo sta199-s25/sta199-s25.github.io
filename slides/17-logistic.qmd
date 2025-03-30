@@ -441,7 +441,7 @@ $$
 0.000272\times exclaim~mess
 $$
 
-If we add one exclamation mark to the model, we predict the odds of an email being spam to be **lower** by a factor of $e^{0.000272}\approx 1.000272$ on average.
+If we add one exclamation mark to the model, we predict the odds of an email being spam to be **higher** by a factor of $e^{0.000272}\approx 1.000272$ on average.
 
 ## Logistic regression -\> classification?
 
