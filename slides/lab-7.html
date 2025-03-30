@@ -513,6 +513,7 @@ John Zito
 <pre><code>[1] "Yes" "No" </code></pre>
 </div>
 </div>
+<div class="fragment">
 <p>But if it didn’t, things would not work:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a></a><span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
@@ -520,6 +521,7 @@ John Zito
 <div class="cell-output cell-output-error">
 <pre><code>Error in `check_outcome()`:
 ! For a classification model, the outcome should be a `factor`, not a `numeric`.</code></pre>
+</div>
 </div>
 </div>
 </section><section id="fyi-the-base-level-is-treated-as-failure-0" class="slide level2 medium"><h2>FYI: the base level is treated as “failure” (0)</h2>
@@ -530,11 +532,14 @@ John Zito
 <pre><code>[1] "Yes" "No" </code></pre>
 </div>
 </div>
+<div class="fragment">
 <p>As a result, this code:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a></a><span class="fu">logistic_reg</span>() <span class="sc">|&gt;</span></span>
 <span id="cb12-2"><a></a>  <span class="fu">fit</span>(forested <span class="sc">~</span> precip_annual, <span class="at">data =</span> forested_train)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</div>
+<div class="fragment">
 <p>Corresponds to this model:</p>
 <p><span class="math display">\[
 \text{Prob}(
@@ -543,7 +548,10 @@ John Zito
 =
 \frac{e^{\beta_0+\beta_1 x}}{1 + e^{\beta_0+\beta_1 x}}.
 \]</span></p>
+</div>
+<div class="fragment">
 <p>This is not a problem, but it means that in order to interpret the output correctly, you need to understand how your factors are leveled.</p>
+</div>
 </section><section id="fitting-a-logistic-regression-model" class="slide level2"><h2>Fitting a logistic regression model</h2>
 <p>Similar syntax to linear regression:</p>
 <div class="cell">
@@ -559,6 +567,7 @@ John Zito
 2 precip_annual -0.00190 0.0000602     -31.6 5.98e-219</code></pre>
 </div>
 </div>
+<div class="fragment">
 <p><span class="math display">\[
 \log\left(\frac{\hat{p}}{1-\hat{p}}\right)
 =
@@ -568,6 +577,7 @@ John Zito
 \times
 precip.
 \]</span></p>
+</div>
 </section><section id="interpreting-the-intercept" class="slide level2"><h2>Interpreting the intercept</h2>
 <p><span class="math display">\[
 \begin{aligned}
@@ -600,6 +610,7 @@ precip}
 \times
 precip}}}
 \]</span></p>
+<div class="fragment">
 <p>At <span class="math inline">\(precip + 1\)</span>:</p>
 <p><span class="math display">\[
 \begin{aligned}
@@ -628,7 +639,10 @@ precip}}}
 \color{red}{e^{-0.0019}}
 \end{aligned}
 \]</span></p>
+</div>
+<div class="fragment">
 <p>If <span class="math inline">\(precip\)</span> increases by one unit, the model predicts a <em>decrease</em> in the odds that <code>forested = "No"</code> by a multiplicative factor of <span class="math inline">\(e^{-0.0019}\approx 0.99\)</span>, on average.</p>
+</div>
 </section><section id="generate-predictions-for-the-test-data" class="slide level2 small"><h2>Generate predictions for the test data</h2>
 <p><em>Augment</em> the test data frame with three new columns on the left that include model predictions (classifications and probabilities) for each row:</p>
 <div class="cell">
@@ -689,7 +703,21 @@ precip}}}
 4 No       No            664 0.826 specificity   </code></pre>
 </div>
 </div>
-</section><section id="change-threshold-to-0.00" class="slide level2"><h2>Change threshold to 0.00</h2>
+</section><section id="fyi-the-default-threshold-is-50" class="slide level2"><h2>FYI: the default threshold is 50%</h2>
+<ul>
+<li><p>The model produces probabilities: <code>.pred_Yes</code> and <code>.pred_No</code>;</p></li>
+<li><p>The concrete classifications in the <code>.pred_class</code> column come from applying a 50% threshold to these probabilities:</p></li>
+</ul>
+<p><span class="math display">\[
+\widehat{\texttt{forested}}=
+\begin{cases}
+\texttt{"No"} &amp; \texttt{.pred\_Yes} \leq 0.5\\
+\texttt{"Yes"} &amp; \texttt{.pred\_Yes} &gt; 0.5.
+\end{cases}
+\]</span></p>
+<ul>
+<li>If you want to override that default, you must do so manually.</li>
+</ul></section><section id="change-threshold-to-0.00" class="slide level2"><h2>Change threshold to 0.00</h2>
 <p>New threshold &gt; New classifications &gt; New error rates</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19" data-code-line-numbers="2-4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>forested_precip_aug <span class="sc">|&gt;</span></span>
@@ -799,7 +827,7 @@ precip}}}
 2 No       No            804     1</code></pre>
 </div>
 </div>
-</section><section id="picture-how-errors-change-with-threshold" class="slide level2"><h2>Picture how errors change with threshold</h2>
+</section><section id="picture-how-errors-change-with-threshold-th" class="slide level2 medium"><h2>Picture how errors change with threshold (th)</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -808,7 +836,7 @@ precip}}}
 </div>
 </div>
 </div>
-</section><section id="picture-how-errors-change-with-threshold-1" class="slide level2"><h2>Picture how errors change with threshold</h2>
+</section><section id="picture-how-errors-change-with-threshold-th-1" class="slide level2 medium"><h2>Picture how errors change with threshold (th)</h2>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -818,7 +846,7 @@ precip}}}
 </div>
 </div>
 </section><section id="but-that-was-tedious" class="slide level2"><h2>But that was tedious</h2>
-<p>Let do “all” of the thresholds and connect the dots:</p>
+<p>Let’s do “all” of the thresholds and connect the dots:</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a>forested_precip_roc <span class="ot">&lt;-</span> <span class="fu">roc_curve</span>(forested_precip_aug, </span>
 <span id="cb29-2"><a></a>                                 <span class="at">truth =</span> forested, </span>
@@ -857,11 +885,15 @@ precip}}}
 </div>
 </div>
 </section><section id="the-roc-curve-1" class="slide level2"><h2>The ROC curve</h2>
+<div>
 <ul>
-<li><p>ROC stands for receiver operating characteristic;</p></li>
-<li><p>This visualizes the classification accuracy across a range of thresholds. The more “up and to the left” it is, the better.</p></li>
-<li><p>We can quantify “up and to the left” with the area under the curve (AUC).</p></li>
-</ul></section><section id="the-roc-curve-2" class="slide level2"><h2>The ROC curve</h2>
+<li class="fragment"><p>ROC stands for receiver operating characteristic;</p></li>
+<li class="fragment"><p>This visualizes the classification accuracy across a range of thresholds;</p></li>
+<li class="fragment"><p>The more “up and to the left” it is, the better.</p></li>
+<li class="fragment"><p>We can quantify “up and to the left” with the area under the curve (AUC).</p></li>
+</ul>
+</div>
+</section><section id="the-roc-curve-2" class="slide level2"><h2>The ROC curve</h2>
 <div class="quarto-figure quarto-figure-center">
 <figure><p><img data-src="images/18/roc-curve-annotated.png" class="quarto-figure quarto-figure-center"></p>
 </figure>
@@ -913,12 +945,15 @@ precip}}}
 </div>
 <p>Not bad!</p>
 </section><section id="the-area-under-the-roc-curve" class="slide level2"><h2>The area under the ROC curve</h2>
+<div>
 <ul>
-<li><p>This is a “quality score” for a logistic regression model;</p></li>
-<li><p>When you compute it for a test data set that you set aside, the AUC is a measure of <em>out-of-sample</em> prediction accuracy;</p></li>
-<li><p>AUC is a number between 0 and 1, where 0 is awful and 1 is great, similar to <span class="math inline">\(R^2\)</span> for linear regression.</p></li>
-<li><p>The function <code>roc_auc</code> computes it for you, and it takes the same set of arguments as <code>roc_curve</code>.</p></li>
-</ul></section><section id="new-commands-introduced-last-week" class="slide level2"><h2>New commands introduced last week</h2>
+<li class="fragment"><p>This is a “quality score” for a logistic regression model;</p></li>
+<li class="fragment"><p>When you compute it for a test data set that you set aside, the AUC is a measure of <em>out-of-sample</em> prediction accuracy;</p></li>
+<li class="fragment"><p>AUC is a number between 0 and 1, where 0 is awful and 1 is great, similar to <span class="math inline">\(R^2\)</span> for linear regression.</p></li>
+<li class="fragment"><p>The function <code>roc_auc</code> computes it for you, and it takes the same set of arguments as <code>roc_curve</code>.</p></li>
+</ul>
+</div>
+</section><section id="new-commands-introduced-last-week" class="slide level2"><h2>New commands introduced last week</h2>
 <ul>
 <li><code>logistic_reg</code></li>
 <li><code>augment</code></li>
