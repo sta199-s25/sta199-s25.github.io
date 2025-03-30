@@ -289,9 +289,19 @@ forested_precip_aug |>
 
 ## FYI: the default threshold is 50%
 
-XXX
+- The model produces probabilities: `.pred_Yes` and `.pred_No`; 
 
-If you want to override that, you must do so manually.
+- The concrete classifications in the `.pred_class` column come from applying a 50% threshold to these probabilities:
+
+$$
+\widehat{\texttt{forested}}=
+\begin{cases}
+\texttt{"No"} & \texttt{.pred\_Yes} \leq 0.5\\
+\texttt{"Yes"} & \texttt{.pred\_Yes} > 0.5.
+\end{cases}
+$$
+
+- If you want to override that default, you must do so manually.
 
 ## Change threshold to 0.00
 
@@ -443,13 +453,12 @@ ggplot(forested_precip_roc, aes(x = 1 - specificity, y = sensitivity)) +
 ::: incremental
 -   ROC stands for receiver operating characteristic;
 
--   This visualizes the classification accuracy across a range of thresholds; 
+-   This visualizes the classification accuracy across a range of thresholds;
 
 -   The more "up and to the left" it is, the better.
 
 -   We can quantify "up and to the left" with the area under the curve (AUC).
 :::
-
 
 ## The ROC curve
 
