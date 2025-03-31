@@ -4352,7 +4352,7 @@
     "href": "lab/lab-7.html#question-4---fit-an-alternative-model",
     "title": "Lab 7",
     "section": "Question 4 - fit an alternative model",
-    "text": "Question 4 - fit an alternative model\n\nFit the appropriate model to predict whether a reservation was cancelled from arrival_date_day_of_month and display a tidy summary of the model output. Make sure you use only the training data.\nInterpret the intercept coefficient in the context of the data and the research question.\nUse the augment function to generate predictions for every observation in the test dataset, and make sure you store the results in a variable with an informative name.\nPlot the ROC curve for this model and the test data."
+    "text": "Question 4 - fit an alternative model\n\nFit the appropriate model to predict whether a reservation was cancelled from hotel, arrival_date_month, and lead_time, and display a tidy summary of the model output. Make sure you use only the training data.\nInterpret the intercept coefficient in the context of the data and the research question.\nUse the augment function to generate predictions for every observation in the test dataset, and make sure you store the results in a variable with an informative name.\nPlot the ROC curve for this model and the test data."
   },
   {
     "objectID": "lab/lab-7.html#question-5---selecting-a-model",
