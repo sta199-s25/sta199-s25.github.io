@@ -7,7 +7,7 @@ description: "Monday April 7 at 8:30 AM"
 
 # Introduction
 
-All things logistic regression! This is a new statistical model we introduced for modeling a response variable that is binary (categorical with two levels) rather than numerical. If we can do that, then we can use the model for a special kind of prediction called *classification*. 
+All things logistic regression! This is a new statistical model we introduced for modeling a response variable that is binary (categorical with two levels) rather than numerical. If we can do that, then we can use the model for a special kind of prediction called *classification*.
 
 ::: callout-note
 This lab assumes you've completed the labs so far and doesn't repeat setup and overview content from those labs. If you haven't done those yet, you should review the previous labs before starting on this one.
@@ -127,7 +127,7 @@ Since the level of `is_canceled` we're predicting is the second level, we need t
 
 ## Question 4 - fit an alternative model
 
-a.  Fit the appropriate model to predict whether a reservation was cancelled from `arrival_date_day_of_month` and display a tidy summary of the model output. **Make sure you use only the training data**.
+a.  Fit the appropriate model to predict whether a reservation was cancelled from `hotel`, `arrival_date_month`, and `lead_time`, and display a tidy summary of the model output. **Make sure you use only the training data**.
 
 b.  Interpret the *intercept* coefficient in the context of the data and the research question.
 
