@@ -400,9 +400,13 @@ new_loans |>
 
 - As the sample size grew, the grey uncertainty band shrank;
 
-- There is a positive association between the two variables;
+- As the sample size grew, we observed a larger range of income values, anf the computer displayed more of the line; 
 
-- The linear model looks like it fits pretty well.
+- As the sample size grows, the picture the data paint becomes clearer:
+
+    - positive relationship;
+    - linear relationship;
+    - pretty strong
 :::
 
 
@@ -426,7 +430,7 @@ Which would you rather have for your data analysis? 5 people in your dataset or 
 
 - **Fact**: different data set -> different estimates; 
 
-- How would our estimate vary across alternative datasets?
+- How much would our estimate vary across alternative datasets?
 
     - If the answer is "a lot," uncertainty is high, and our estimates are not super reliable;
     - If the answer is "a little," uncertainty is low, and maybe we can take our estimates to the bank;
@@ -1076,7 +1080,7 @@ estimates |>
 
 ![](images/19/spongebob.jpg){fig-align="center"}
 
-## You get the idea
+## Variation in estimates across alternative datasets
 
 ```{r}
 #| echo: false
