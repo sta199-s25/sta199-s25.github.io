@@ -1,0 +1,45 @@
+---
+title: Midterm 2 Practice Answers
+execute:
+  echo: false
+---
+
+1.  \(c\) For every additional \$1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.
+2. \(d\) $R^2$ of `raise_2_fit` is higher than $R^2$ of `raise_1_fit` since `raise_2_fit` has one more predictor and $R^2$ always
+3.  The reference level of `performance_rating` is High, since it’s the first level alphabetically. Therefore, the coefficient -2.40% is the predicted difference in raise comparing High to Successful. In this context a negative coefficient makes sense since we would expect those with High performance rating to get higher raises than those with Successful performance.
+4.  \(a\) “Poor”, “Successful”, “High”, “Top”.
+5.  Option 3. It's a linear model with no interaction effect, so parallel lines. And since the slope for `salary_typeSalaried` is positive, its intercept is higher. The equations of the lines are as follows:
+    -   Hourly:
+
+        $$
+        \begin{align*}
+        \widehat{percent\_incr} &= 1.24 + 0.0000137 \times annual\_salary + 0.913 salary\_typeSalaried \\
+        &= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times 0 \\
+        &= 1.24 + 0.0000137 \times annual\_salary
+        \end{align*}
+        $$
+
+    -   Salaried:
+
+        $$
+        \begin{align*}
+        \widehat{percent\_incr} &= 1.24 + 0.0000137 \times annual\_salary + 0.913 salary\_typeSalaried \\
+        &= 1.24 + 0.0000137 \times annual\_salary + 0.913 \times 1 \\
+        &= 2.153 + 0.0000137 \times annual\_salary
+        \end{align*}
+        $$
+
+6. \(c\) The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.
+7.  \(d\) `as.numeric(str_remove(runtime, " mins"))`
+8.  \(e\) Blue City $>$ Rang De Basanti $>$ Winter Sleep
+9.  \(b\) 31\% of the variability in movie scores is explained by their runtime.
+10.  \(a\) summarize
+11.  \(b\) A value between 0 and 0.434.
+12. \(e\) G-rated movies that are 0 minutes in length are predicted to score, on average, 4.525 points.
+13. \(c\) All else held constant, for each additional minute of runtime, movie scores will be higher by 0.021 points on average.
+14. \(c\) is greater than
+15. \(a\) $\widehat{score} = (4.525 - 0.257) + 0.021 \times runtime$
+16. \(a\) and \(d\).
+17. \(c\) We are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.
+18.  A parsimonious model is the simplest model with the best predictive performance.
+
