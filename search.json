@@ -1434,6 +1434,335 @@
     "text": "This week’s lab\n\nGain more experience with joining and pivoting data frames; and modifying the order of factors.\nReview Quarto cell options\nLearn to read data in from Excel spreadsheets (will learn more on Tuesday about this)\n\nDatasets\n\nMore inflation!\n2020 and 2024 US Olympic Team rosters\nSurvey regarding medical marijuana in NC\nmtcars from 1974 Motor Trend US magazine"
   },
   {
+    "objectID": "slides/20-hypothesis-testing.html#while-you-wait",
+    "href": "slides/20-hypothesis-testing.html#while-you-wait",
+    "title": "Hypothesis testing",
+    "section": "While you wait…",
+    "text": "While you wait…\n\n\nGo to your ae project in RStudio.\nMake sure all of your changes up to this point are committed and pushed, i.e., there’s nothing left in your Git pane.\nClick Pull to get today’s application exercise file: ae-16-hypothesis-testing.qmd.\nWait till the you’re prompted to work on the application exercise during class before editing the file."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#midterm-2",
+    "href": "slides/20-hypothesis-testing.html#midterm-2",
+    "title": "Hypothesis testing",
+    "section": "Midterm 2",
+    "text": "Midterm 2\n\n\n\nPractice: released tonight or tomorrow;\n\nSolutions posted next Monday;\nLab 7 solutions posted next Tuesday night;\n\n\nReview: Kahoot during lab Monday April 7;\n\nIn-class: Thursday April 10 at 11:45 AM;\n\nExpect an email from Dr. Knox about room assignments;\n\n\nTake-home: 4/10 1:00 PM - 4/14 8:30 AM;\nExpect similar style, format, and intensity as Midterm 1;\nStatistical inference will appear!"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#what-if-this-was-my-dataset",
+    "href": "slides/20-hypothesis-testing.html#what-if-this-was-my-dataset",
+    "title": "Hypothesis testing",
+    "section": "What if this was my dataset?",
+    "text": "What if this was my dataset?\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)    2.94 \n2 log_inc        0.657"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#what-if-this-was-my-dataset-instead",
+    "href": "slides/20-hypothesis-testing.html#what-if-this-was-my-dataset-instead",
+    "title": "Hypothesis testing",
+    "section": "What if this was my dataset instead?",
+    "text": "What if this was my dataset instead?\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)    5.29 \n2 log_inc        0.486"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#what-if-this-was-my-dataset-instead-1",
+    "href": "slides/20-hypothesis-testing.html#what-if-this-was-my-dataset-instead-1",
+    "title": "Hypothesis testing",
+    "section": "What if this was my dataset instead?",
+    "text": "What if this was my dataset instead?\n\n\n\n\n\n\n\n\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)    1.62 \n2 log_inc        0.805"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#rinse-and-repeat-1000-times",
+    "href": "slides/20-hypothesis-testing.html#rinse-and-repeat-1000-times",
+    "title": "Hypothesis testing",
+    "section": "Rinse and repeat 1000 times…",
+    "text": "Rinse and repeat 1000 times…"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#sampling-uncertainty",
+    "href": "slides/20-hypothesis-testing.html#sampling-uncertainty",
+    "title": "Hypothesis testing",
+    "section": "Sampling uncertainty",
+    "text": "Sampling uncertainty\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow sensitive are the estimates to the data they are based on?\n- Very? Then uncertainty is high, results are unreliable;\n- Not very? Uncertainty is low, results are more reliable."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#that-was-for-n-50.-what-if-i-was-starting-with-n-1000",
+    "href": "slides/20-hypothesis-testing.html#that-was-for-n-50.-what-if-i-was-starting-with-n-1000",
+    "title": "Hypothesis testing",
+    "section": "That was for n = 50. What if I was starting with n = 1000?",
+    "text": "That was for n = 50. What if I was starting with n = 1000?"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#sampling-uncertainty-decreased",
+    "href": "slides/20-hypothesis-testing.html#sampling-uncertainty-decreased",
+    "title": "Hypothesis testing",
+    "section": "Sampling uncertainty decreased!",
+    "text": "Sampling uncertainty decreased!"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#bootstrapping",
+    "href": "slides/20-hypothesis-testing.html#bootstrapping",
+    "title": "Hypothesis testing",
+    "section": "Bootstrapping",
+    "text": "Bootstrapping\n\n\nData collection is costly, so we have to do our best with what we already have;\nWe approximate this idea of “alternative, hypothetical datasets I could have observed” by resampling our data with replacement;\n\nWe construct a new dataset of the same size by randomly picking rows out of the original one:\n\nSome rows will be duplicated;\nSome rows will not appear at all;\nHence, the new dataset is different from the original;\nDifferent dataset &gt;&gt; different estimate\n\n\nRepeat this processes hundred or thousands of times, and observe how the estimates vary as you refit the model on alternative datasets.\nThis gives you a sense of the sampling variability of your estimates."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#bootstrap-samples-1",
+    "href": "slides/20-hypothesis-testing.html#bootstrap-samples-1",
+    "title": "Hypothesis testing",
+    "section": "Bootstrap samples 1",
+    "text": "Bootstrap samples 1\n\n\nOriginal data\n\n\n# A tibble: 6 × 3\n     id       x       y\n  &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1     1  0.432   1.53  \n2     2 -2.01    1.80  \n3     3 -0.0467  1.43  \n4     4 -1.05    0.0518\n5     5  0.327   0.820 \n6     6 -0.679  -0.961 \n\n\nOriginal estimates:\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)   0.801 \n2 x             0.0450\n\n\n\nSample with replacement:\n\n\n# A tibble: 6 × 3\n     id      x      y\n  &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1     5  0.327  0.820\n2     6 -0.679 -0.961\n3     6 -0.679 -0.961\n4     1  0.432  1.53 \n5     6 -0.679 -0.961\n6     1  0.432  1.53 \n\n\nDifferent data &gt;&gt; new estimates:\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)    0.462\n2 x              2.11"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#bootstrap-samples-2",
+    "href": "slides/20-hypothesis-testing.html#bootstrap-samples-2",
+    "title": "Hypothesis testing",
+    "section": "Bootstrap samples 2",
+    "text": "Bootstrap samples 2\n\n\nOriginal data\n\n\n# A tibble: 6 × 3\n     id       x       y\n  &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1     1  0.432   1.53  \n2     2 -2.01    1.80  \n3     3 -0.0467  1.43  \n4     4 -1.05    0.0518\n5     5  0.327   0.820 \n6     6 -0.679  -0.961 \n\n\nOriginal estimates:\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)   0.801 \n2 x             0.0450\n\n\n\nSample with replacement:\n\n\n# A tibble: 6 × 3\n     id       x      y\n  &lt;int&gt;   &lt;dbl&gt;  &lt;dbl&gt;\n1     2 -2.01    1.80 \n2     5  0.327   0.820\n3     1  0.432   1.53 \n4     6 -0.679  -0.961\n5     3 -0.0467  1.43 \n6     2 -2.01    1.80 \n\n\nDifferent data &gt;&gt; new estimates:\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)    0.913\n2 x             -0.236"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#bootstrap-samples-3",
+    "href": "slides/20-hypothesis-testing.html#bootstrap-samples-3",
+    "title": "Hypothesis testing",
+    "section": "Bootstrap samples 3",
+    "text": "Bootstrap samples 3\n\n\nOriginal data\n\n\n# A tibble: 6 × 3\n     id       x       y\n  &lt;int&gt;   &lt;dbl&gt;   &lt;dbl&gt;\n1     1  0.432   1.53  \n2     2 -2.01    1.80  \n3     3 -0.0467  1.43  \n4     4 -1.05    0.0518\n5     5  0.327   0.820 \n6     6 -0.679  -0.961 \n\n\nOriginal estimates:\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)   0.801 \n2 x             0.0450\n\n\n\nSample with replacement:\n\n\n# A tibble: 6 × 3\n     id      x      y\n  &lt;int&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1     6 -0.679 -0.961\n2     1  0.432  1.53 \n3     5  0.327  0.820\n4     6 -0.679 -0.961\n5     6 -0.679 -0.961\n6     5  0.327  0.820\n\n\nDifferent data &gt;&gt; new estimates:\n\n\n# A tibble: 2 × 2\n  term        estimate\n  &lt;chr&gt;          &lt;dbl&gt;\n1 (Intercept)    0.357\n2 x              1.96"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#confidence-intervals",
+    "href": "slides/20-hypothesis-testing.html#confidence-intervals",
+    "title": "Hypothesis testing",
+    "section": "Confidence intervals",
+    "text": "Confidence intervals\n\nPoint estimation: report your single number best guess for the unknown quantity;\n\nInterval estimation: report a range, or interval, or values where you think the unknown quantity is likely to live;\n\nInterval should be wide enough to capture the truth with high probability;\nInterval should be narrow enough to be informative;\n\n\nUnfortunately, there is a trade-off. You adjust the confidence level to try to negotiate the trade-off;\nCommon choices: 90%, 95%, 99%."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#precision-vs.-accuracy",
+    "href": "slides/20-hypothesis-testing.html#precision-vs.-accuracy",
+    "title": "Hypothesis testing",
+    "section": "Precision vs. accuracy",
+    "text": "Precision vs. accuracy"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#data-houses-in-duke-forest",
+    "href": "slides/20-hypothesis-testing.html#data-houses-in-duke-forest",
+    "title": "Hypothesis testing",
+    "section": "Data: Houses in Duke Forest",
+    "text": "Data: Houses in Duke Forest\n\n\n\nData on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020\nScraped from Zillow\nSource: openintro::duke_forest\n\n\n\n\n\n\nGoal: Use the area (in square feet) to understand variability in the price of houses in Duke Forest."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#modeling",
+    "href": "slides/20-hypothesis-testing.html#modeling",
+    "title": "Hypothesis testing",
+    "section": "Modeling",
+    "text": "Modeling\n\ndf_fit &lt;- linear_reg() |&gt;\n  fit(price ~ area, data = duke_forest)\n\ntidy(df_fit) |&gt;\n  kable(digits = 2) # neatly format table to 2 digits\n\n\n\nterm\nestimate\nstd.error\nstatistic\np.value\n\n\n\n(Intercept)\n116652.33\n53302.46\n2.19\n0.03\n\n\narea\n159.48\n18.17\n8.78\n0.00"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#confidence-interval-for-the-slope",
+    "href": "slides/20-hypothesis-testing.html#confidence-interval-for-the-slope",
+    "title": "Hypothesis testing",
+    "section": "Confidence interval for the slope",
+    "text": "Confidence interval for the slope\nA confidence interval will allow us to make a statement like “For each additional square foot, the model predicts the sale price of Duke Forest houses to be higher, on average, by $159, plus or minus X dollars.”"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#slopes-of-bootstrap-samples",
+    "href": "slides/20-hypothesis-testing.html#slopes-of-bootstrap-samples",
+    "title": "Hypothesis testing",
+    "section": "Slopes of bootstrap samples",
+    "text": "Slopes of bootstrap samples\n\nFill in the blank: For each additional square foot, the model predicts the sale price of Duke Forest houses to be higher, on average, by $159, plus or minus ___ dollars."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#slopes-of-bootstrap-samples-1",
+    "href": "slides/20-hypothesis-testing.html#slopes-of-bootstrap-samples-1",
+    "title": "Hypothesis testing",
+    "section": "Slopes of bootstrap samples",
+    "text": "Slopes of bootstrap samples\n\nFill in the blank: For each additional square foot, we expect the sale price of Duke Forest houses to be higher, on average, by $159, plus or minus ___ dollars."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#confidence-level",
+    "href": "slides/20-hypothesis-testing.html#confidence-level",
+    "title": "Hypothesis testing",
+    "section": "Confidence level",
+    "text": "Confidence level\n\nHow confident are you that the true slope is between $0 and $250? How about $150 and $170? How about $90 and $210?"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#confidence-interval",
+    "href": "slides/20-hypothesis-testing.html#confidence-interval",
+    "title": "Hypothesis testing",
+    "section": "95% confidence interval",
+    "text": "95% confidence interval\n\n\n\n\n\n\n\n\n\n\nA 95% confidence interval is bounded by the middle 95% of the bootstrap distribution\nWe are 95% confident that for each additional square foot, the model predicts the sale price of Duke Forest houses to be higher, on average, by $90.43 to $205.77."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#where-do-the-bounds-come-from",
+    "href": "slides/20-hypothesis-testing.html#where-do-the-bounds-come-from",
+    "title": "Hypothesis testing",
+    "section": "Where do the bounds come from?",
+    "text": "Where do the bounds come from?\n\n\nThink IQR! 50% of the bootstrap distribution is between the 25% quantile on the left and the 75% quantile on the right. But we want more than 50%\n90% of the bootstrap distribution is between the 2.5% quantile on the left and the 97.5% quantile on the right;\n95% of the bootstrap distribution is between the 2.5% quantile on the left and the 97.5% quantile on the right;\nAnd so on."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#computing-the-ci-for-the-slope-i",
+    "href": "slides/20-hypothesis-testing.html#computing-the-ci-for-the-slope-i",
+    "title": "Hypothesis testing",
+    "section": "Computing the CI for the slope I",
+    "text": "Computing the CI for the slope I\nCalculate the observed slope:\n\nobserved_fit &lt;- duke_forest |&gt;\n  specify(price ~ area) |&gt;\n  fit()\n\nobserved_fit\n\n# A tibble: 2 × 2\n  term      estimate\n  &lt;chr&gt;        &lt;dbl&gt;\n1 intercept  116652.\n2 area          159."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#computing-the-ci-for-the-slope-ii",
+    "href": "slides/20-hypothesis-testing.html#computing-the-ci-for-the-slope-ii",
+    "title": "Hypothesis testing",
+    "section": "Computing the CI for the slope II",
+    "text": "Computing the CI for the slope II\nTake 100 bootstrap samples and fit models to each one:\n\nset.seed(1120)\n\nboot_fits &lt;- duke_forest |&gt;\n  specify(price ~ area) |&gt;\n  generate(reps = 100, type = \"bootstrap\") |&gt;\n  fit()\n\nboot_fits\n\n# A tibble: 200 × 3\n# Groups:   replicate [100]\n   replicate term      estimate\n       &lt;int&gt; &lt;chr&gt;        &lt;dbl&gt;\n 1         1 intercept   47819.\n 2         1 area          191.\n 3         2 intercept  144645.\n 4         2 area          134.\n 5         3 intercept  114008.\n 6         3 area          161.\n 7         4 intercept  100639.\n 8         4 area          166.\n 9         5 intercept  215264.\n10         5 area          125.\n# ℹ 190 more rows"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#computing-the-ci-for-the-slope-iii",
+    "href": "slides/20-hypothesis-testing.html#computing-the-ci-for-the-slope-iii",
+    "title": "Hypothesis testing",
+    "section": "Computing the CI for the slope III",
+    "text": "Computing the CI for the slope III\nPercentile method: Compute the 95% CI as the middle 95% of the bootstrap distribution:\n\nget_confidence_interval(\n  boot_fits, \n  point_estimate = observed_fit, \n  level = 0.95,\n  type = \"percentile\" # default method\n)\n\n# A tibble: 2 × 3\n  term      lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n1 area          92.1     223.\n2 intercept -36765.   296528."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#computing-the-ci-for-the-slope-iv",
+    "href": "slides/20-hypothesis-testing.html#computing-the-ci-for-the-slope-iv",
+    "title": "Hypothesis testing",
+    "section": "Computing the CI for the slope IV",
+    "text": "Computing the CI for the slope IV\nIf we did it manually…\n\nboot_fits |&gt;\n  filter(term == \"area\") |&gt;\n  ungroup() |&gt;\n  summarize(\n    lower_ci = quantile(estimate, 0.025),\n    upper_ci = quantile(estimate, 0.975),\n  )\n\n# A tibble: 1 × 2\n  lower_ci upper_ci\n     &lt;dbl&gt;    &lt;dbl&gt;\n1     92.1     223."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#changing-confidence-level",
+    "href": "slides/20-hypothesis-testing.html#changing-confidence-level",
+    "title": "Hypothesis testing",
+    "section": "Changing confidence level",
+    "text": "Changing confidence level\n\nHow would you modify the following code to calculate a 90% confidence interval? How would you modify it for a 99% confidence interval?\n\n\nget_confidence_interval(\n  boot_fits, \n  point_estimate = observed_fit, \n  level = 0.95,\n  type = \"percentile\"\n)\n\n# A tibble: 2 × 3\n  term      lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n1 area          92.1     223.\n2 intercept -36765.   296528."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#changing-confidence-level-1",
+    "href": "slides/20-hypothesis-testing.html#changing-confidence-level-1",
+    "title": "Hypothesis testing",
+    "section": "Changing confidence level",
+    "text": "Changing confidence level\n\n## confidence level: 90%\nget_confidence_interval(\n  boot_fits, point_estimate = observed_fit, \n  level = 0.90, type = \"percentile\"\n)\n\n# A tibble: 2 × 3\n  term      lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n1 area          104.     212.\n2 intercept  -24380.  256730.\n\n## confidence level: 99%\nget_confidence_interval(\n  boot_fits, point_estimate = observed_fit, \n  level = 0.99, type = \"percentile\"\n)\n\n# A tibble: 2 × 3\n  term      lower_ci upper_ci\n  &lt;chr&gt;        &lt;dbl&gt;    &lt;dbl&gt;\n1 area          56.3     226.\n2 intercept -61950.   370395."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#recap",
+    "href": "slides/20-hypothesis-testing.html#recap",
+    "title": "Hypothesis testing",
+    "section": "Recap",
+    "text": "Recap\n\n\nPopulation: Complete set of observations of whatever we are studying, e.g., people, tweets, photographs, etc. (population size = \\(N\\))\nSample: Subset of the population, ideally random and representative (sample size = \\(n\\))\nSample statistic \\(\\ne\\) population parameter, but if the sample is good, it can be a good estimate\nStatistical inference: Discipline that concerns itself with the development of procedures, methods, and theorems that allow us to extract meaning and information from data that has been generated by stochastic (random) process\nWe report the estimate with a confidence interval, and the width of this interval depends on the variability of sample statistics from different samples from the population\nSince we can’t continue sampling from the population, we bootstrap from the one sample we have to estimate sampling variability"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#hypothesis-testing-1",
+    "href": "slides/20-hypothesis-testing.html#hypothesis-testing-1",
+    "title": "Hypothesis testing",
+    "section": "Hypothesis testing",
+    "text": "Hypothesis testing\nA hypothesis test is a statistical technique used to evaluate competing claims using data\n\n\nNull hypothesis, \\(H_0\\): An assumption about the population. “There is nothing going on.”\nAlternative hypothesis, \\(H_A\\): A research question about the population. “There is something going on”.\n\n\n\nNote: Hypotheses are always at the population level!"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#setting-hypotheses",
+    "href": "slides/20-hypothesis-testing.html#setting-hypotheses",
+    "title": "Hypothesis testing",
+    "section": "Setting hypotheses",
+    "text": "Setting hypotheses\n\nNull hypothesis, \\(H_0\\): “There is nothing going on.” The slope of the model for predicting the prices of houses in Duke Forest from their areas is 0, \\(\\beta_1 = 0\\).\nAlternative hypothesis, \\(H_A\\): “There is something going on”. The slope of the model for predicting the prices of houses in Duke Forest from their areas is different than, \\(\\beta_1 \\ne 0\\)."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#hypothesis-testing-mindset",
+    "href": "slides/20-hypothesis-testing.html#hypothesis-testing-mindset",
+    "title": "Hypothesis testing",
+    "section": "Hypothesis testing “mindset”",
+    "text": "Hypothesis testing “mindset”\n\nAssume you live in a world where null hypothesis is true: \\(\\beta_1 = 0\\).\nAsk yourself how likely you are to observe the sample statistic, or something even more extreme, in this world: \\(P(b_1 \\leq 159.48~or~b_1 \\geq 159.48 | \\beta_1 = 0)\\) = ?"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#hypothesis-testing-as-a-court-trial",
+    "href": "slides/20-hypothesis-testing.html#hypothesis-testing-as-a-court-trial",
+    "title": "Hypothesis testing",
+    "section": "Hypothesis testing as a court trial",
+    "text": "Hypothesis testing as a court trial\n\nNull hypothesis, \\(H_0\\): Defendant is innocent\nAlternative hypothesis, \\(H_A\\): Defendant is guilty\n\n\n\n\nPresent the evidence: Collect data\n\n\n\n\n\nJudge the evidence: “Could these data plausibly have happened by chance if the null hypothesis were true?”\n\nYes: Fail to reject \\(H_0\\)\n\nNo: Reject \\(H_0\\)"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#hypothesis-testing-as-medical-diagnosis",
+    "href": "slides/20-hypothesis-testing.html#hypothesis-testing-as-medical-diagnosis",
+    "title": "Hypothesis testing",
+    "section": "Hypothesis testing as medical diagnosis",
+    "text": "Hypothesis testing as medical diagnosis\n\nNull hypothesis, \\(H_0\\): patient is fine\nAlternative hypothesis, \\(H_A\\): patient is sick\n\n\n\n\nPresent the evidence: Collect data\n\n\n\n\n\nJudge the evidence: “Could these data plausibly have happened by chance if the null hypothesis were true?”\n\nYes: Fail to reject \\(H_0\\)\n\nNo: Reject \\(H_0\\)"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#hypothesis-testing-framework",
+    "href": "slides/20-hypothesis-testing.html#hypothesis-testing-framework",
+    "title": "Hypothesis testing",
+    "section": "Hypothesis testing framework",
+    "text": "Hypothesis testing framework\n\n\nStart with a null hypothesis, \\(H_0\\), that represents the status quo\nSet an alternative hypothesis, \\(H_A\\), that represents the research question, i.e. what we’re testing for\n\nConduct a hypothesis test under the assumption that the null hypothesis is true and calculate a p-value (probability of observed or more extreme outcome given that the null hypothesis is true)\n\nif the test results suggest that the data do not provide convincing evidence for the alternative hypothesis, stick with the null hypothesis\nif they do, then reject the null hypothesis in favor of the alternative"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#calculate-observed-slope",
+    "href": "slides/20-hypothesis-testing.html#calculate-observed-slope",
+    "title": "Hypothesis testing",
+    "section": "Calculate observed slope",
+    "text": "Calculate observed slope\n… which we have already done:\n\nobserved_fit &lt;- duke_forest |&gt;\n  specify(price ~ area) |&gt;\n  fit()\n\nobserved_fit\n\n# A tibble: 2 × 2\n  term      estimate\n  &lt;chr&gt;        &lt;dbl&gt;\n1 intercept  116652.\n2 area          159."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#simulate-null-distribution",
+    "href": "slides/20-hypothesis-testing.html#simulate-null-distribution",
+    "title": "Hypothesis testing",
+    "section": "Simulate null distribution",
+    "text": "Simulate null distribution\n\nset.seed(20241118)\nnull_dist &lt;- duke_forest |&gt;\n  specify(price ~ area) |&gt;\n  hypothesize(null = \"independence\") |&gt;\n  generate(reps = 100, type = \"permute\") |&gt;\n  fit()"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#view-null-distribution",
+    "href": "slides/20-hypothesis-testing.html#view-null-distribution",
+    "title": "Hypothesis testing",
+    "section": "View null distribution",
+    "text": "View null distribution\n\nnull_dist\n\n# A tibble: 200 × 3\n# Groups:   replicate [100]\n   replicate term        estimate\n       &lt;int&gt; &lt;chr&gt;          &lt;dbl&gt;\n 1         1 intercept 547294.   \n 2         1 area           4.54 \n 3         2 intercept 568599.   \n 4         2 area          -3.13 \n 5         3 intercept 561547.   \n 6         3 area          -0.593\n 7         4 intercept 526286.   \n 8         4 area          12.1  \n 9         5 intercept 651476.   \n10         5 area         -33.0  \n# ℹ 190 more rows"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#visualize-null-distribution",
+    "href": "slides/20-hypothesis-testing.html#visualize-null-distribution",
+    "title": "Hypothesis testing",
+    "section": "Visualize null distribution",
+    "text": "Visualize null distribution\n\nnull_dist |&gt;\n  filter(term == \"area\") |&gt;\n  ggplot(aes(x = estimate)) +\n  geom_histogram(binwidth = 15)"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#visualize-null-distribution-alternative",
+    "href": "slides/20-hypothesis-testing.html#visualize-null-distribution-alternative",
+    "title": "Hypothesis testing",
+    "section": "Visualize null distribution (alternative)",
+    "text": "Visualize null distribution (alternative)\n\nvisualize(null_dist) +\n  shade_p_value(obs_stat = observed_fit, direction = \"two-sided\")"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#get-p-value",
+    "href": "slides/20-hypothesis-testing.html#get-p-value",
+    "title": "Hypothesis testing",
+    "section": "Get p-value",
+    "text": "Get p-value\n\nnull_dist |&gt;\n  get_p_value(obs_stat = observed_fit, direction = \"two-sided\")\n\n# A tibble: 2 × 2\n  term      p_value\n  &lt;chr&gt;       &lt;dbl&gt;\n1 area            0\n2 intercept       0"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#make-a-decision",
+    "href": "slides/20-hypothesis-testing.html#make-a-decision",
+    "title": "Hypothesis testing",
+    "section": "Make a decision",
+    "text": "Make a decision\n\nBased on the p-value calculated, what is the conclusion of the hypothesis test?"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#sometimes-the-test-will-be-wrong",
+    "href": "slides/20-hypothesis-testing.html#sometimes-the-test-will-be-wrong",
+    "title": "Hypothesis testing",
+    "section": "Sometimes the test will be wrong",
+    "text": "Sometimes the test will be wrong"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#think-about-the-judge",
+    "href": "slides/20-hypothesis-testing.html#think-about-the-judge",
+    "title": "Hypothesis testing",
+    "section": "Think about the judge",
+    "text": "Think about the judge\n\\(H_0\\) person innocent vs \\(H_A\\) person guilty"
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#think-about-the-doctor",
+    "href": "slides/20-hypothesis-testing.html#think-about-the-doctor",
+    "title": "Hypothesis testing",
+    "section": "Think about the doctor",
+    "text": "Think about the doctor\n\\(H_0\\) person well vs \\(H_A\\) person sick."
+  },
+  {
+    "objectID": "slides/20-hypothesis-testing.html#how-do-we-negotiate-the-trade-off",
+    "href": "slides/20-hypothesis-testing.html#how-do-we-negotiate-the-trade-off",
+    "title": "Hypothesis testing",
+    "section": "How do we negotiate the trade-off?",
+    "text": "How do we negotiate the trade-off?\n\nPick a threshold \\(\\alpha\\in[0,\\,1]\\) called the discernibility level and threshold the \\(p\\)-value:\n\nIf \\(p\\text{-value} &lt; \\alpha\\), reject null and accept alternative;\nIf \\(p\\text{-value} \\geq \\alpha\\), fail to reject null;"
+  },
+  {
     "objectID": "slides/19-interval-estimation.html#while-you-wait",
     "href": "slides/19-interval-estimation.html#while-you-wait",
     "title": "Uncertainty quantification",
@@ -4674,7 +5003,7 @@
     "href": "index.html",
     "title": "STA 199 Introduction to Data Science and Statistical Thinking",
     "section": "",
-    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\nlab 0\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\nslides 00\n\n\n\n1\nMon, Jan 13\n\nLab 1\nlab 1\n\n\n\n\nTue, Jan 14\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\nMeet the Toolkit\nslides 01\n\n\n\n\nThu, Jan 16\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\nData Vizualization\nslides 02\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\nData Transformation\n\nslides 03 ae 02\n\n\n\n\n\nWed, Jan 22\n\n\n\nLab 1 @ 11:59 PM\n\n\n\nThu, Jan 23\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\nData Exploration 1\n\nslides 04 ae 03\n\n\n\n\n3\nMon, Jan 27\n📗 r4ds - chp 4\n\nLab 2\nlab 2\n\n\n\n\nTue, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\nData Exploration 2\n\nslides 05 ae 04\n\n\n\n\n\nThu, Jan 30\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\nTidying data\n\nslides 06 ae 05\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\nlab 3\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\nJoining data\n\nslides 07 ae 06\n\n\n\n\n\nThu, Feb 6\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\nData types and classes\n\nslides 08 ae 07\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nlab 4 slides\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\nImporting and recoding data\nslides 09\n\n\n\n\nThu, Feb 13\n\nMore practice\n\nslides 10 ae 08\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\nData science ethics\nslides 11\n\n\n\n\nThu, Feb 20\n\nSnow Day - No Class\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nproject milestone 1 slides\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nBatch A of practice problems Batch B of practice problems Kahoot\n\nMidterm 1\n\n\n\n\n\nThu, Feb 27\n🎥 The language of models  📘 ims - chp 7.1\n\nThe language of models\n\nslides 12ae 9\n\n\n\n\n\nFri, Feb 28\n\n\n\nPeer evaluation 1 due by 5:00 pm\n\n\n8\nMon, Mar 3\n\nMilestone 2\nproject milestone 2\n\n\n\n\nTue, Mar 4\n🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\nSimple linear regression\n\nslides 13 ae 10\n\n\n\n\n\nThu, Mar 6\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\nMultiple linear regression 1\n\nslides 14 ae 11\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\nlab 5 slides\n\n\n\n\n\nTue, Mar 18\n📘 ims - chp 8.3-8.5\n\nMultiple linear regression 2\nslides 15\n\n\n\n\nThu, Mar 20\n🎥 Logistic regression\n\nModel selection\n\nslides 16 ae 12\n\n\n\n\n\nFri, Mar 21\n\n\n\nPeer evaluation 2 due by 5:00 pm\n\n\n11\nMon, Mar 24\n\nLab 6\nlab 6\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n📘 ims - chp 9\n\nLogistic regression 1\n\nslides 17 ae 13\n\n\n\n\n\nThu, Mar 27\n🎥 Prediction and overfitting\n\nLogistic regression 2\n\nslides 18 ae 14\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nlab 7 slides\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n🎥 Quantifying uncertainty  🎥 Bootstrapping  📘 ims - chp 12\n\nIntervals\n\nslides 19 ae 15\n\n\n\n\n\nThu, Apr 3\n📘 ims - chp 11\n\nIntervals/Testing\nslides 20  ae 16\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nTesting\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n\nFri, Apr 11\n\n\n\nPeer evaluation 3 due by 5:00 pm\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nInference Overview\n\n\n\n\n\nThu, Apr 17\n\nCommunication, Quarto\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nMon, Apr 28\n\nfinals week - no lab\n\nPeer evaluation 4 due by 5:00 pm\n\n\n\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12PM)",
+    "text": "Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nWEEK\nDATE\nPREPARE\nTOPIC\nMATERIALS\nDUE\n\n\n\n0\nWed, Jan 8\n\nLab 0: Hello, World!\nlab 0\nLab 0 @ End of Lab\n\n\n\nThu, Jan 9\n\nWelcome!\nslides 00\n\n\n\n1\nMon, Jan 13\n\nLab 1\nlab 1\n\n\n\n\nTue, Jan 14\n📗 r4ds - intro  📘 ims - chp 1  🎥 Meet the toolkit :: R and RStudio  🎥 Meet the toolkit :: Quarto  🎥 Code along :: First data viz with UN Votes\n\nMeet the Toolkit\nslides 01\n\n\n\n\nThu, Jan 16\n📗 r4ds - chp 1  📘 ims - chp 4  🎥 Visualizing data  🎥 Building a plot step-by-step with ggplot2  🎥 Grammar of graphics  🎥 Code along :: First look at Palmer Penguins\n\nData Vizualization\nslides 02\n\n\n\n2\nMon, Jan 20\n\nMLK Day - No Lab\n\n\n\n\n\nTue, Jan 21\n📗 r4ds - chp 2  📗 r4ds - chp 3.1-3.5  🎥 Grammar of data transformation  🎥 Code along :: Flights and pipes\n\nData Transformation\n\nslides 03 ae 02\n\n\n\n\n\nWed, Jan 22\n\n\n\nLab 1 @ 11:59 PM\n\n\n\nThu, Jan 23\n📗 r4ds - chp 3.6-3.7  🎥 Visualizing and summarizing categorical data  🎥 Visualizing and summarizing numerical data  🎥 Visualizing and summarizing relationships  🎥 Code along :: Star Wars characters\n\nData Exploration 1\n\nslides 04 ae 03\n\n\n\n\n3\nMon, Jan 27\n📗 r4ds - chp 4\n\nLab 2\nlab 2\n\n\n\n\nTue, Jan 28\n📘 ims - chp 5  📘 ims - chp 6  🎥 Code along :: Diving deeper with Palmer Penguins\n\nData Exploration 2\n\nslides 05 ae 04\n\n\n\n\n\nThu, Jan 30\n🎥 Tidy data  🎥 Tidying data  🎥 Code along :: Country populations over time  📗 r4ds - chp 5\n\nTidying data\n\nslides 06 ae 05\n\n\n\n\n4\nMon, Feb 3\n\nLab 3\nlab 3\nLab 2 @ 8:30AM\n\n\n\nTue, Feb 4\n🎥 Joining data  🎥 Code along :: Continent populations  📗 r4ds - chp 19.1-19.3\n\nJoining data\n\nslides 07 ae 06\n\n\n\n\n\nThu, Feb 6\n🎥 Data types  🎥 Data classes  🎥 Code along :: That’s my type  📗 r4ds - chp 16\n\nData types and classes\n\nslides 08 ae 07\n\n\n\n\n5\nMon, Feb 10\n\nLab 4\n\nlab 4 slides\n\nLab 3 @ 8:30AM\n\n\n\nTue, Feb 11\n🎥 Importing data  🎥 Code along :: Halving CO2 emissions  🎥 Code along :: Student survey  📗 r4ds - chp 7  📗 r4ds - chp 17.1 - 17.3\n\nImporting and recoding data\nslides 09\n\n\n\n\nThu, Feb 13\n\nMore practice\n\nslides 10 ae 08\n\n\n\n\n6\nMon, Feb 17\n\nExam Review\n\nLab 4 @ 8:30AM\n\n\n\nTue, Feb 18\n📕 mdsr - chp 8  📝 How to make a racist AI in R without really trying  🎥 Alberto Cairo - How charts lie  🎥 Joy Buolamwini - How I’m fighting bias in algorithms\n\nData science ethics\nslides 11\n\n\n\n\nThu, Feb 20\n\nSnow Day - No Class\n\n\n\n\n7\nMon, Feb 24\n\nMilestone 1\n\nproject milestone 1 slides\n\nTakehome 1 @ 8:30AM\n\n\n\nTue, Feb 25\n\nBatch A of practice problems Batch B of practice problems Kahoot\n\nMidterm 1\n\n\n\n\n\nThu, Feb 27\n🎥 The language of models  📘 ims - chp 7.1\n\nThe language of models\n\nslides 12ae 9\n\n\n\n\n\nFri, Feb 28\n\n\n\nPeer evaluation 1 due by 5:00 pm\n\n\n8\nMon, Mar 3\n\nMilestone 2\nproject milestone 2\n\n\n\n\nTue, Mar 4\n🎥 Fitting and interpreting models  🎥 Modeling nonlinear relationships  📘 ims - chp 7.2\n\nSimple linear regression\n\nslides 13 ae 10\n\n\n\n\n\nThu, Mar 6\n🎥 Models with multiple predictors  🎥 More models with multiple predictors  📘 ims - chp 8.1-8.2\n\nMultiple linear regression 1\n\nslides 14 ae 11\n\n\n\n\n\nFri, Mar 7\n\n\n\nMilestone 2 @ 5PM\n\n\n9\nMon, Mar 10\n\nSpring Break - No Lab\n\n\n\n\n\nTue, Mar 11\n\nSpring Break - No Lecture\n\n\n\n\n\nThu, Mar 13\n\nSpring Break - No Lecture\n\n\n\n\n10\nMon, Mar 17\n\nLab 5\n\nlab 5 slides\n\n\n\n\n\nTue, Mar 18\n📘 ims - chp 8.3-8.5\n\nMultiple linear regression 2\nslides 15\n\n\n\n\nThu, Mar 20\n🎥 Logistic regression\n\nModel selection\n\nslides 16 ae 12\n\n\n\n\n\nFri, Mar 21\n\n\n\nPeer evaluation 2 due by 5:00 pm\n\n\n11\nMon, Mar 24\n\nLab 6\nlab 6\nLab 5 @ 8:30AM\n\n\n\nTue, Mar 25\n📘 ims - chp 9\n\nLogistic regression 1\n\nslides 17 ae 13\n\n\n\n\n\nThu, Mar 27\n🎥 Prediction and overfitting\n\nLogistic regression 2\n\nslides 18 ae 14\n\n\n\n\n12\nMon, Mar 31\n\nLab 7\n\nlab 7 slides\n\nLab 6 @ 8:30AM\n\n\n\nTue, Apr 1\n🎥 Quantifying uncertainty  🎥 Bootstrapping  📘 ims - chp 12\n\nIntervals\n\nslides 19 ae 15\n\n\n\n\n\nThu, Apr 3\n📘 ims - chp 11\n\nHypothesis testing\n\nslides 20  ae 16\n\n\n\n\nFri, Apr 4\n\n\n\nMilestone 3 @ 5PM\n\n\n13\nMon, Apr 7\n\nExam Review\n\nLab 7 @ 8:30AM\n\n\n\nTue, Apr 8\n\nMore inference\n\n\n\n\n\nThu, Apr 10\n\nMidterm 2\n\n\n\n\n\nFri, Apr 11\n\n\n\nPeer evaluation 3 due by 5:00 pm\n\n\n14\nMon, Apr 14\n\nMilestone 4\n\nTakehome 2 @ 8:30AM  Milestone 4 @ End of Lab\n\n\n\nTue, Apr 15\n\nMore inference\n\n\n\n\n\nThu, Apr 17\n\nCommunication, Quarto\n\n\n\n\n15\nMon, Apr 21\n\nMilestone 5\n\n\n\n\n\nTue, Apr 22\n\nFarewell!\n\n\n\n\n\nWed, Apr 23\n\n\n\nMilestone 5 @ 5PM\n\n\n16\nMon, Apr 28\n\nfinals week - no lab\n\nPeer evaluation 4 due by 5:00 pm\n\n\n\nTue, Apr 29\nsee…everything above\nFinal (9AM - 12PM)",
     "crumbs": [
       "Syllabus",
       "Schedule"
