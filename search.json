@@ -1599,7 +1599,7 @@
     "href": "slides/20-hypothesis-testing.html#where-do-the-bounds-come-from",
     "title": "Hypothesis testing",
     "section": "Where do the bounds come from?",
-    "text": "Where do the bounds come from?\n\n\nThink IQR! 50% of the bootstrap distribution is between the 25% quantile on the left and the 75% quantile on the right. But we want more than 50%\n90% of the bootstrap distribution is between the 2.5% quantile on the left and the 97.5% quantile on the right;\n95% of the bootstrap distribution is between the 2.5% quantile on the left and the 97.5% quantile on the right;\nAnd so on."
+    "text": "Where do the bounds come from?\n\n\nThink IQR! 50% of the bootstrap distribution is between the 25% quantile on the left and the 75% quantile on the right. But we want more than 50%\n90% of the bootstrap distribution is between the 5% quantile on the left and the 95% quantile on the right;\n95% of the bootstrap distribution is between the 2.5% quantile on the left and the 97.5% quantile on the right;\nAnd so on."
   },
   {
     "objectID": "slides/20-hypothesis-testing.html#computing-the-ci-for-the-slope-i",
@@ -7961,154 +7961,242 @@
     "href": "exam/midterm-2-practice.html",
     "title": "Midterm 2 Practice Questions",
     "section": "",
-    "text": "In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation. (Source: Blizzard Workers Share Salaries in Revolt Over Pay)\nThe name of the data frame used for this analysis is blizzard_salary and the variables are:\n\npercent_incr: Raise given in July 2020, as percent increase with values ranging from 1 (1% increase to 21.5 (21.5% increase)\nsalary_type: Type of salary, with levels Hourly and Salaried\nannual_salary: Annual salary, in USD, with values ranging from $50,939 to $216,856.\nperformance_rating: Most recent review performance rating, with levels Poor, Successful, High, and Top. The Poor level is the lowest rating and the Top level is the highest rating.\n\nThe top ten rows of blizzard_salary are shown below:\n\n\n# A tibble: 409 × 4\n   percent_incr salary_type annual_salary performance_rating\n          &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n 1          1   Salaried               1  High              \n 2          1   Salaried               1  Successful        \n 3          1   Salaried               1  High              \n 4          1   Hourly             33987. Successful        \n 5         NA   Hourly             34798. High              \n 6         NA   Hourly             35360  &lt;NA&gt;              \n 7         NA   Hourly             37440  &lt;NA&gt;              \n 8          0   Hourly             37814. &lt;NA&gt;              \n 9          4   Hourly             41101. Top               \n10          1.2 Hourly             42328  &lt;NA&gt;              \n# ℹ 399 more rows\n\n\n\nYou fit a model for predicting raises (percent_incr) from salaries (annual_salary). We’ll call this model raise_1_fit. A tidy output of the model is shown below.\n\n\n# A tibble: 2 × 5\n  term           estimate  std.error statistic   p.value\n  &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   1.87      0.432           4.33 0.0000194\n2 annual_salary 0.0000155 0.00000452      3.43 0.000669 \n\n\nWhich of the following is the best interpretation of the slope coefficient?\n\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.55%.\nFor every additional $1,000 of annual salary, the raise goes up by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.87%.\n\nYou then fit a model for predicting raises (percent_incr) from salaries (annual_salary) and performance ratings (performance_rating). We’ll call this model raise_2_fit. Which of the following is definitely true based on the information you have so far?\n\nIntercept of raise_2_fit is higher than intercept of raise_1_fit.\nSlope of raise_2_fit is higher than RMSE of raise_1_fit.\nAdjusted \\(R^2\\) of raise_2_fit is higher than adjusted \\(R^2\\) of raise_1_fit.\n\n\\(R^2\\) of raise_2_fit is higher \\(R^2\\) of raise_1_fit.\n\nThe tidy model output for the raise_2_fit model you fit is shown below.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic  p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)                   3.55       0.508           6.99 1.99e-11\n2 annual_salary                 0.00000989 0.00000436      2.27 2.42e- 2\n3 performance_ratingPoor       -4.06       1.42           -2.86 4.58e- 3\n4 performance_ratingSuccessful -2.40       0.397          -6.05 4.68e- 9\n5 performance_ratingTop         2.99       0.715           4.18 3.92e- 5\n\n\nWhen your teammate sees this model output, they remark “The coefficient for performance_ratingSuccessful is negative, that’s weird. I guess it means that people who get successful performance ratings get lower raises.” How would you respond to your teammate?\n\nUltimately, your teammate decides they don’t like the negative slope coefficients in the model output you created (not that there’s anything wrong with negative slope coefficients!), does something else, and comes up with the following model output.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic    p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n1 (Intercept)                  -0.511      1.47          -0.347 0.729     \n2 annual_salary                 0.00000989 0.00000436     2.27  0.0242    \n3 performance_ratingSuccessful  1.66       1.42           1.17  0.242     \n4 performance_ratingHigh        4.06       1.42           2.86  0.00458   \n5 performance_ratingTop         7.05       1.53           4.60  0.00000644\n\n\nUnfortunately they didn’t write their code in a Quarto document, instead just wrote some code in the Console and then lost track of their work. They remember using the fct_relevel() function and doing something like the following:\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  mutate(performance_rating = fct_relevel(performance_rating, ___))\n\nWhat should they put in the blanks to get the same model output as above?\n\n“Poor”, “Successful”, “High”, “Top”\n“Successful”, “High”, “Top”\n“Top”, “High”, “Successful”, “Poor”\nPoor, Successful, High, Top\n\nSuppose we fit a model to predict percent_incr from annual_salary and salary_type. A tidy output of the model is shown below.\n\n\n# A tibble: 3 × 5\n  term                 estimate  std.error statistic p.value\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)         1.24      0.570           2.18 0.0300 \n2 annual_salary       0.0000137 0.00000464      2.96 0.00329\n3 salary_typeSalaried 0.913     0.544           1.68 0.0938 \n\n\nWhich of the following visualizations represent this model? Explain your reasoning.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\n\n\n\n\n\n(c) Option 3\n\n\n\n\n\n\n\n\n\n(d) Option 4\n\n\n\n\n\n\nFigure 1: Visualizations of the relationship between percent increase, annual salary, and salary type\n\n\n\n\nSuppose you now fit a model to predict the natural log of percent increase, log(percent_incr), from performance rating. The model is called raise_4_fit.\nYou’re provided the following:\n\ntidy(raise_4_fit) |&gt;\n  select(term, estimate) |&gt;\n  mutate(exp_estimate = exp(estimate))\n\n# A tibble: 4 × 3\n  term                         estimate exp_estimate\n  &lt;chr&gt;                           &lt;dbl&gt;        &lt;dbl&gt;\n1 (Intercept)                     -7.15     0.000786\n2 performance_ratingSuccessful     6.93  1025.      \n3 performance_ratingHigh           8.17  3534.      \n4 performance_ratingTop            8.91  7438.      \n\n\nBased on this, which of the following is true?\na. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 10.25% compared to the employees with Poor performance rating.\nb. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 6.93% compared to the employees with Poor performance rating.\nc. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\nd. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 6.93 compared to the employees with Poor performance rating."
+    "text": "In 2020, employees of Blizzard Entertainment circulated a spreadsheet to anonymously share salaries and recent pay increases amidst rising tension in the video game industry over wage disparities and executive compensation. (Source: Blizzard Workers Share Salaries in Revolt Over Pay)\nThe name of the data frame used for this analysis is blizzard_salary and the variables are:\n\npercent_incr: Raise given in July 2020, as percent increase with values ranging from 1 (1% increase to 21.5 (21.5% increase)\nsalary_type: Type of salary, with levels Hourly and Salaried\nannual_salary: Annual salary, in USD, with values ranging from $50,939 to $216,856.\nperformance_rating: Most recent review performance rating, with levels Poor, Successful, High, and Top. The Poor level is the lowest rating and the Top level is the highest rating.\n\nThe top ten rows of blizzard_salary are shown below:\n\n\n# A tibble: 409 × 4\n   percent_incr salary_type annual_salary performance_rating\n          &lt;dbl&gt; &lt;chr&gt;               &lt;dbl&gt; &lt;chr&gt;             \n 1          1   Salaried               1  High              \n 2          1   Salaried               1  Successful        \n 3          1   Salaried               1  High              \n 4          1   Hourly             33987. Successful        \n 5         NA   Hourly             34798. High              \n 6         NA   Hourly             35360  &lt;NA&gt;              \n 7         NA   Hourly             37440  &lt;NA&gt;              \n 8          0   Hourly             37814. &lt;NA&gt;              \n 9          4   Hourly             41101. Top               \n10          1.2 Hourly             42328  &lt;NA&gt;              \n# ℹ 399 more rows\n\n\n\nYou fit a model for predicting raises (percent_incr) from salaries (annual_salary). We’ll call this model raise_1_fit. A tidy output of the model is shown below.\n\n\n# A tibble: 2 × 5\n  term           estimate  std.error statistic   p.value\n  &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   1.87      0.432           4.33 0.0000194\n2 annual_salary 0.0000155 0.00000452      3.43 0.000669 \n\n\nWhich of the following is the best interpretation of the slope coefficient?\n\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.55%.\nFor every additional $1,000 of annual salary, the raise goes up by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.87%.\n\nYou then fit a model for predicting raises (percent_incr) from salaries (annual_salary) and performance ratings (performance_rating). We’ll call this model raise_2_fit. Which of the following is definitely true based on the information you have so far?\n\nIntercept of raise_2_fit is higher than intercept of raise_1_fit.\nSlope of raise_2_fit is higher than RMSE of raise_1_fit.\nAdjusted \\(R^2\\) of raise_2_fit is higher than adjusted \\(R^2\\) of raise_1_fit.\n\n\\(R^2\\) of raise_2_fit is higher \\(R^2\\) of raise_1_fit.\n\nThe tidy model output for the raise_2_fit model you fit is shown below.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic  p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)                   3.55       0.508           6.99 1.99e-11\n2 annual_salary                 0.00000989 0.00000436      2.27 2.42e- 2\n3 performance_ratingPoor       -4.06       1.42           -2.86 4.58e- 3\n4 performance_ratingSuccessful -2.40       0.397          -6.05 4.68e- 9\n5 performance_ratingTop         2.99       0.715           4.18 3.92e- 5\n\n\nWhen your teammate sees this model output, they remark “The coefficient for performance_ratingSuccessful is negative, that’s weird. I guess it means that people who get successful performance ratings get lower raises.” How would you respond to your teammate?\n\nUltimately, your teammate decides they don’t like the negative slope coefficients in the model output you created (not that there’s anything wrong with negative slope coefficients!), does something else, and comes up with the following model output.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic    p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n1 (Intercept)                  -0.511      1.47          -0.347 0.729     \n2 annual_salary                 0.00000989 0.00000436     2.27  0.0242    \n3 performance_ratingSuccessful  1.66       1.42           1.17  0.242     \n4 performance_ratingHigh        4.06       1.42           2.86  0.00458   \n5 performance_ratingTop         7.05       1.53           4.60  0.00000644\n\n\nUnfortunately they didn’t write their code in a Quarto document, instead just wrote some code in the Console and then lost track of their work. They remember using the fct_relevel() function and doing something like the following:\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  mutate(performance_rating = fct_relevel(performance_rating, ___))\n\nWhat should they put in the blanks to get the same model output as above?\n\n“Poor”, “Successful”, “High”, “Top”\n“Successful”, “High”, “Top”\n“Top”, “High”, “Successful”, “Poor”\nPoor, Successful, High, Top\n\nSuppose we fit a model to predict percent_incr from annual_salary and salary_type. A tidy output of the model is shown below.\n\n\n# A tibble: 3 × 5\n  term                 estimate  std.error statistic p.value\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)         1.24      0.570           2.18 0.0300 \n2 annual_salary       0.0000137 0.00000464      2.96 0.00329\n3 salary_typeSalaried 0.913     0.544           1.68 0.0938 \n\n\nWhich of the following visualizations represent this model? Explain your reasoning.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\n\n\n\n\n\n(c) Option 3\n\n\n\n\n\n\n\n\n\n(d) Option 4\n\n\n\n\n\n\nFigure 1: Visualizations of the relationship between percent increase, annual salary, and salary type\n\n\n\n\nSuppose you now fit a model to predict the natural log of percent increase, log(percent_incr), from performance rating. The model is called raise_4_fit.\nYou’re provided the following:\n\ntidy(raise_4_fit) |&gt;\n  select(term, estimate) |&gt;\n  mutate(exp_estimate = exp(estimate))\n\n# A tibble: 4 × 3\n  term                         estimate exp_estimate\n  &lt;chr&gt;                           &lt;dbl&gt;        &lt;dbl&gt;\n1 (Intercept)                     -7.15     0.000786\n2 performance_ratingSuccessful     6.93  1025.      \n3 performance_ratingHigh           8.17  3534.      \n4 performance_ratingTop            8.91  7438.      \n\n\nBased on this, which of the following is true?\na. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 10.25% compared to the employees with Poor performance rating.\nb. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 6.93% compared to the employees with Poor performance rating.\nc. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\nd. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 6.93 compared to the employees with Poor performance rating.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-1",
     "href": "exam/midterm-2-practice.html#question-1",
     "title": "Midterm 2 Practice Questions",
     "section": "",
-    "text": "You fit a model for predicting raises (percent_incr) from salaries (annual_salary). We’ll call this model raise_1_fit. A tidy output of the model is shown below.\n\n\n# A tibble: 2 × 5\n  term           estimate  std.error statistic   p.value\n  &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   1.87      0.432           4.33 0.0000194\n2 annual_salary 0.0000155 0.00000452      3.43 0.000669 \n\n\nWhich of the following is the best interpretation of the slope coefficient?\n\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.55%.\nFor every additional $1,000 of annual salary, the raise goes up by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.87%."
+    "text": "You fit a model for predicting raises (percent_incr) from salaries (annual_salary). We’ll call this model raise_1_fit. A tidy output of the model is shown below.\n\n\n# A tibble: 2 × 5\n  term           estimate  std.error statistic   p.value\n  &lt;chr&gt;             &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)   1.87      0.432           4.33 0.0000194\n2 annual_salary 0.0000155 0.00000452      3.43 0.000669 \n\n\nWhich of the following is the best interpretation of the slope coefficient?\n\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.55%.\nFor every additional $1,000 of annual salary, the raise goes up by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 0.0155%.\nFor every additional $1,000 of annual salary, the model predicts the raise to be higher, on average, by 1.87%.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-2",
     "href": "exam/midterm-2-practice.html#question-2",
     "title": "Midterm 2 Practice Questions",
     "section": "",
-    "text": "You then fit a model for predicting raises (percent_incr) from salaries (annual_salary) and performance ratings (performance_rating). We’ll call this model raise_2_fit. Which of the following is definitely true based on the information you have so far?\n\nIntercept of raise_2_fit is higher than intercept of raise_1_fit.\nSlope of raise_2_fit is higher than RMSE of raise_1_fit.\nAdjusted \\(R^2\\) of raise_2_fit is higher than adjusted \\(R^2\\) of raise_1_fit.\n\n\\(R^2\\) of raise_2_fit is higher \\(R^2\\) of raise_1_fit."
+    "text": "You then fit a model for predicting raises (percent_incr) from salaries (annual_salary) and performance ratings (performance_rating). We’ll call this model raise_2_fit. Which of the following is definitely true based on the information you have so far?\n\nIntercept of raise_2_fit is higher than intercept of raise_1_fit.\nSlope of raise_2_fit is higher than RMSE of raise_1_fit.\nAdjusted \\(R^2\\) of raise_2_fit is higher than adjusted \\(R^2\\) of raise_1_fit.\n\n\\(R^2\\) of raise_2_fit is higher \\(R^2\\) of raise_1_fit.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-3",
     "href": "exam/midterm-2-practice.html#question-3",
     "title": "Midterm 2 Practice Questions",
     "section": "",
-    "text": "The tidy model output for the raise_2_fit model you fit is shown below.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic  p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)                   3.55       0.508           6.99 1.99e-11\n2 annual_salary                 0.00000989 0.00000436      2.27 2.42e- 2\n3 performance_ratingPoor       -4.06       1.42           -2.86 4.58e- 3\n4 performance_ratingSuccessful -2.40       0.397          -6.05 4.68e- 9\n5 performance_ratingTop         2.99       0.715           4.18 3.92e- 5\n\n\nWhen your teammate sees this model output, they remark “The coefficient for performance_ratingSuccessful is negative, that’s weird. I guess it means that people who get successful performance ratings get lower raises.” How would you respond to your teammate?"
+    "text": "The tidy model output for the raise_2_fit model you fit is shown below.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic  p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;    &lt;dbl&gt;\n1 (Intercept)                   3.55       0.508           6.99 1.99e-11\n2 annual_salary                 0.00000989 0.00000436      2.27 2.42e- 2\n3 performance_ratingPoor       -4.06       1.42           -2.86 4.58e- 3\n4 performance_ratingSuccessful -2.40       0.397          -6.05 4.68e- 9\n5 performance_ratingTop         2.99       0.715           4.18 3.92e- 5\n\n\nWhen your teammate sees this model output, they remark “The coefficient for performance_ratingSuccessful is negative, that’s weird. I guess it means that people who get successful performance ratings get lower raises.” How would you respond to your teammate?",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-4",
     "href": "exam/midterm-2-practice.html#question-4",
     "title": "Midterm 2 Practice Questions",
     "section": "",
-    "text": "Ultimately, your teammate decides they don’t like the negative slope coefficients in the model output you created (not that there’s anything wrong with negative slope coefficients!), does something else, and comes up with the following model output.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic    p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n1 (Intercept)                  -0.511      1.47          -0.347 0.729     \n2 annual_salary                 0.00000989 0.00000436     2.27  0.0242    \n3 performance_ratingSuccessful  1.66       1.42           1.17  0.242     \n4 performance_ratingHigh        4.06       1.42           2.86  0.00458   \n5 performance_ratingTop         7.05       1.53           4.60  0.00000644\n\n\nUnfortunately they didn’t write their code in a Quarto document, instead just wrote some code in the Console and then lost track of their work. They remember using the fct_relevel() function and doing something like the following:\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  mutate(performance_rating = fct_relevel(performance_rating, ___))\n\nWhat should they put in the blanks to get the same model output as above?\n\n“Poor”, “Successful”, “High”, “Top”\n“Successful”, “High”, “Top”\n“Top”, “High”, “Successful”, “Poor”\nPoor, Successful, High, Top"
+    "text": "Ultimately, your teammate decides they don’t like the negative slope coefficients in the model output you created (not that there’s anything wrong with negative slope coefficients!), does something else, and comes up with the following model output.\n\n\n# A tibble: 5 × 5\n  term                            estimate  std.error statistic    p.value\n  &lt;chr&gt;                              &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;      &lt;dbl&gt;\n1 (Intercept)                  -0.511      1.47          -0.347 0.729     \n2 annual_salary                 0.00000989 0.00000436     2.27  0.0242    \n3 performance_ratingSuccessful  1.66       1.42           1.17  0.242     \n4 performance_ratingHigh        4.06       1.42           2.86  0.00458   \n5 performance_ratingTop         7.05       1.53           4.60  0.00000644\n\n\nUnfortunately they didn’t write their code in a Quarto document, instead just wrote some code in the Console and then lost track of their work. They remember using the fct_relevel() function and doing something like the following:\n\nblizzard_salary &lt;- blizzard_salary |&gt;\n  mutate(performance_rating = fct_relevel(performance_rating, ___))\n\nWhat should they put in the blanks to get the same model output as above?\n\n“Poor”, “Successful”, “High”, “Top”\n“Successful”, “High”, “Top”\n“Top”, “High”, “Successful”, “Poor”\nPoor, Successful, High, Top",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-5",
     "href": "exam/midterm-2-practice.html#question-5",
     "title": "Midterm 2 Practice Questions",
     "section": "",
-    "text": "Suppose we fit a model to predict percent_incr from annual_salary and salary_type. A tidy output of the model is shown below.\n\n\n# A tibble: 3 × 5\n  term                 estimate  std.error statistic p.value\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)         1.24      0.570           2.18 0.0300 \n2 annual_salary       0.0000137 0.00000464      2.96 0.00329\n3 salary_typeSalaried 0.913     0.544           1.68 0.0938 \n\n\nWhich of the following visualizations represent this model? Explain your reasoning.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\n\n\n\n\n\n(c) Option 3\n\n\n\n\n\n\n\n\n\n(d) Option 4\n\n\n\n\n\n\nFigure 1: Visualizations of the relationship between percent increase, annual salary, and salary type"
+    "text": "Suppose we fit a model to predict percent_incr from annual_salary and salary_type. A tidy output of the model is shown below.\n\n\n# A tibble: 3 × 5\n  term                 estimate  std.error statistic p.value\n  &lt;chr&gt;                   &lt;dbl&gt;      &lt;dbl&gt;     &lt;dbl&gt;   &lt;dbl&gt;\n1 (Intercept)         1.24      0.570           2.18 0.0300 \n2 annual_salary       0.0000137 0.00000464      2.96 0.00329\n3 salary_typeSalaried 0.913     0.544           1.68 0.0938 \n\n\nWhich of the following visualizations represent this model? Explain your reasoning.\n\n\n\n\n\n\n\n\n\n(a) Option 1\n\n\n\n\n\n\n\n\n\n(b) Option 2\n\n\n\n\n\n\n\n\n\n\n\n(c) Option 3\n\n\n\n\n\n\n\n\n\n(d) Option 4\n\n\n\n\n\n\nFigure 1: Visualizations of the relationship between percent increase, annual salary, and salary type",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-6",
     "href": "exam/midterm-2-practice.html#question-6",
     "title": "Midterm 2 Practice Questions",
     "section": "",
-    "text": "Suppose you now fit a model to predict the natural log of percent increase, log(percent_incr), from performance rating. The model is called raise_4_fit.\nYou’re provided the following:\n\ntidy(raise_4_fit) |&gt;\n  select(term, estimate) |&gt;\n  mutate(exp_estimate = exp(estimate))\n\n# A tibble: 4 × 3\n  term                         estimate exp_estimate\n  &lt;chr&gt;                           &lt;dbl&gt;        &lt;dbl&gt;\n1 (Intercept)                     -7.15     0.000786\n2 performance_ratingSuccessful     6.93  1025.      \n3 performance_ratingHigh           8.17  3534.      \n4 performance_ratingTop            8.91  7438.      \n\n\nBased on this, which of the following is true?\na. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 10.25% compared to the employees with Poor performance rating.\nb. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 6.93% compared to the employees with Poor performance rating.\nc. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\nd. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 6.93 compared to the employees with Poor performance rating."
+    "text": "Suppose you now fit a model to predict the natural log of percent increase, log(percent_incr), from performance rating. The model is called raise_4_fit.\nYou’re provided the following:\n\ntidy(raise_4_fit) |&gt;\n  select(term, estimate) |&gt;\n  mutate(exp_estimate = exp(estimate))\n\n# A tibble: 4 × 3\n  term                         estimate exp_estimate\n  &lt;chr&gt;                           &lt;dbl&gt;        &lt;dbl&gt;\n1 (Intercept)                     -7.15     0.000786\n2 performance_ratingSuccessful     6.93  1025.      \n3 performance_ratingHigh           8.17  3534.      \n4 performance_ratingTop            8.91  7438.      \n\n\nBased on this, which of the following is true?\na. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 10.25% compared to the employees with Poor performance rating.\nb. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by 6.93% compared to the employees with Poor performance rating.\nc. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 1025 compared to the employees with Poor performance rating.\nd. The model predicts that the percentage increase employees with Successful performance get, on average, is higher by a factor of 6.93 compared to the employees with Poor performance rating.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-7",
     "href": "exam/midterm-2-practice.html#question-7",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 7",
-    "text": "Question 7\nPartial code for producing Figure 2 is given below. Which of the following goes in the blank on Line 2? Select all that apply.\n\nmovies |&gt;\n  mutate(runtime = ___) |&gt;\n  ggplot(aes(x = runtime, y = score)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(method = \"lm\", se = FALSE)\n  # additional code for annotating Blue City on the plot\n\n\ngrepl(\" mins\", runtime)\ngrep(\" mins\", runtime)\nstr_remove(runtime, \" mins\")\nas.numeric(str_remove(runtime, \" mins\"))\nna.rm(runtime)"
+    "text": "Question 7\nPartial code for producing Figure 2 is given below. Which of the following goes in the blank on Line 2? Select all that apply.\n\nmovies |&gt;\n  mutate(runtime = ___) |&gt;\n  ggplot(aes(x = runtime, y = score)) +\n  geom_point(alpha = 0.5) +\n  geom_smooth(method = \"lm\", se = FALSE)\n  # additional code for annotating Blue City on the plot\n\n\ngrepl(\" mins\", runtime)\ngrep(\" mins\", runtime)\nstr_remove(runtime, \" mins\")\nas.numeric(str_remove(runtime, \" mins\"))\nna.rm(runtime)",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-8",
     "href": "exam/midterm-2-practice.html#question-8",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 8",
-    "text": "Question 8\nBased on this model, order the three labeled movies in Figure 2 in decreasing order of the magnitude (absolute value) of their residuals.\n\nWinter Sleep&gt; Rang De Basanti &gt; Blue City\nWinter Sleep&gt; Blue City &gt; Rang De Basanti\nRang De Basanti &gt; Winter Sleep&gt; Blue City\nBlue City &gt; Winter Sleep &gt; Rang De Basanti\nBlue City &gt; Rang De Basanti &gt; Winter Sleep"
+    "text": "Question 8\nBased on this model, order the three labeled movies in Figure 2 in decreasing order of the magnitude (absolute value) of their residuals.\n\nWinter Sleep&gt; Rang De Basanti &gt; Blue City\nWinter Sleep&gt; Blue City &gt; Rang De Basanti\nRang De Basanti &gt; Winter Sleep&gt; Blue City\nBlue City &gt; Winter Sleep &gt; Rang De Basanti\nBlue City &gt; Rang De Basanti &gt; Winter Sleep",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-9",
     "href": "exam/midterm-2-practice.html#question-9",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 9",
-    "text": "Question 9\nThe R-squared for the model visualized in Figure 2 is 31%. Which of the following is the best interpretation of this value?\n\n31% of the variability in movie runtimes is explained by their scores.\n31% of the variability in movie scores is explained by their runtime.\nThe model accurately predicts scores of 31% of the movies in this sample.\nThe model accurately predicts scores of 31% of all movies.\nThe correlation between scores and runtimes of movies is 0.31."
+    "text": "Question 9\nThe R-squared for the model visualized in Figure 2 is 31%. Which of the following is the best interpretation of this value?\n\n31% of the variability in movie runtimes is explained by their scores.\n31% of the variability in movie scores is explained by their runtime.\nThe model accurately predicts scores of 31% of the movies in this sample.\nThe model accurately predicts scores of 31% of all movies.\nThe correlation between scores and runtimes of movies is 0.31.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-10",
     "href": "exam/midterm-2-practice.html#question-10",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 10",
-    "text": "Question 10\nWhich of the following goes in __blank_1__?\n\nsummarize\nmutate\ngroup_by\narrange\nfilter"
+    "text": "Question 10\nWhich of the following goes in __blank_1__?\n\nsummarize\nmutate\ngroup_by\narrange\nfilter",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-11",
     "href": "exam/midterm-2-practice.html#question-11",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 11",
-    "text": "Question 11\nWhat can we say about the value that goes in __blank_2__?\n\nNA\nA value between 0 and 0.434.\nA value between 0.434 and 1.\nA value between 0 and -0.434.\nA value between -1 and -0.434."
+    "text": "Question 11\nWhat can we say about the value that goes in __blank_2__?\n\nNA\nA value between 0 and 0.434.\nA value between 0.434 and 1.\nA value between 0 and -0.434.\nA value between -1 and -0.434.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-12",
     "href": "exam/midterm-2-practice.html#question-12",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 12",
-    "text": "Question 12\nWhich of the following is TRUE about the intercept of score_runtime_rating_fit? Select all that are true.\n\nKeeping runtime constant, G-rated movies are predicted to score, on average, 4.525 points.\nKeeping runtime constant, movies without a rating are predicted to score, on average, 4.525 points.\nMovies without a rating that are 0 minutes in length are predicted to score, on average, 4.525 points.\nAll else held constant, movies that are 0 minutes in length are predicted to score, on average, 4.525 points.\nG-rated movies that are 0 minutes in length are predicted to score, on average, 4.525 points."
+    "text": "Question 12\nWhich of the following is TRUE about the intercept of score_runtime_rating_fit? Select all that are true.\n\nKeeping runtime constant, G-rated movies are predicted to score, on average, 4.525 points.\nKeeping runtime constant, movies without a rating are predicted to score, on average, 4.525 points.\nMovies without a rating that are 0 minutes in length are predicted to score, on average, 4.525 points.\nAll else held constant, movies that are 0 minutes in length are predicted to score, on average, 4.525 points.\nG-rated movies that are 0 minutes in length are predicted to score, on average, 4.525 points.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-13",
     "href": "exam/midterm-2-practice.html#question-13",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 13",
-    "text": "Question 13\nWhich of the following is the best interpretation of the slope of runtime in score_runtime_rating_fit?\n\nAll else held constant, as runtime increases by 1 minute, the score of the movie increases by 0.021 points.\nFor G-rated movies, all else held constant, as runtime increases by 1 minute, the score of the movie increases by 0.021 points.\nAll else held constant, for each additional minute of runtime, movie scores will be higher by 0.021 points on average.\nG-rated movies that are 0 minutes in length are predicted to score 0.021 points on average.\nFor each higher level of rating, the movie scores go up by 0.021 points on average."
+    "text": "Question 13\nWhich of the following is the best interpretation of the slope of runtime in score_runtime_rating_fit?\n\nAll else held constant, as runtime increases by 1 minute, the score of the movie increases by 0.021 points.\nFor G-rated movies, all else held constant, as runtime increases by 1 minute, the score of the movie increases by 0.021 points.\nAll else held constant, for each additional minute of runtime, movie scores will be higher by 0.021 points on average.\nG-rated movies that are 0 minutes in length are predicted to score 0.021 points on average.\nFor each higher level of rating, the movie scores go up by 0.021 points on average.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-14",
     "href": "exam/midterm-2-practice.html#question-14",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 14",
-    "text": "Question 14\nFill in the blank:\n\nR-squared for score_runtime_rating_fit (the model predicting score from runtime and rating) _________ the R-squared the model score_runtime_fit (for predicting score from runtime alone).\n\n\nis less than\nis equal to\nis greater than\ncannot be compared (based on the information provided) to\nis both greater than and less than"
+    "text": "Question 14\nFill in the blank:\n\nR-squared for score_runtime_rating_fit (the model predicting score from runtime and rating) _________ the R-squared the model score_runtime_fit (for predicting score from runtime alone).\n\n\nis less than\nis equal to\nis greater than\ncannot be compared (based on the information provided) to\nis both greater than and less than",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-15",
     "href": "exam/midterm-2-practice.html#question-15",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 15",
-    "text": "Question 15\nThe model score_runtime_rating_fit (the model predicting score from runtime and rating) can be visualized as parallel lines for each level of rating. Which of the following is the equation of the line for R-rated movies?\n\n\\(\\widehat{score} = (4.525 - 0.257) + 0.021 \\times runtime\\)\n\\(score = (4.525 - 0.257) + 0.021 \\times runtime\\)\n\\(\\widehat{score} = 4.525 + (0.021 - 0.257) \\times runtime\\)\n\\(score = 4.525 + (0.021 - 0.257) \\times runtime\\)\n\\(\\widehat{score} = (4.525 + 0.021) - 0.257 \\times runtime\\)"
+    "text": "Question 15\nThe model score_runtime_rating_fit (the model predicting score from runtime and rating) can be visualized as parallel lines for each level of rating. Which of the following is the equation of the line for R-rated movies?\n\n\\(\\widehat{score} = (4.525 - 0.257) + 0.021 \\times runtime\\)\n\\(score = (4.525 - 0.257) + 0.021 \\times runtime\\)\n\\(\\widehat{score} = 4.525 + (0.021 - 0.257) \\times runtime\\)\n\\(score = 4.525 + (0.021 - 0.257) \\times runtime\\)\n\\(\\widehat{score} = (4.525 + 0.021) - 0.257 \\times runtime\\)",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-16",
     "href": "exam/midterm-2-practice.html#question-16",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 16",
-    "text": "Question 16\nWhich of the following is the definition of a regression model? Select all that apply.\na. \\(\\hat{y} = b_0 + b_1 X_1\\)\nb. \\(y = \\beta_0 + \\beta_1 X_1\\)\nc. \\(\\hat{y} = \\beta_0 + \\beta_1 X_1 + \\epsilon\\)\nd. \\(y = \\beta_0 + \\beta_1 X_1 + \\epsilon\\)"
+    "text": "Question 16\nWhich of the following is the definition of a regression model? Select all that apply.\na. \\(\\hat{y} = b_0 + b_1 X_1\\)\nb. \\(y = \\beta_0 + \\beta_1 X_1\\)\nc. \\(\\hat{y} = \\beta_0 + \\beta_1 X_1 + \\epsilon\\)\nd. \\(y = \\beta_0 + \\beta_1 X_1 + \\epsilon\\)",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-17",
     "href": "exam/midterm-2-practice.html#question-17",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 17",
-    "text": "Question 17\nChoose the best answer.\nA survey based on a random sample of 2,045 American teenagers found that a 95% confidence interval for the mean number of texts sent per month was (1450, 1550). A valid interpretation of this interval is\n\n95% of all teens who text send between 1450 and 1550 text messages per month.\nIf a new survey with the same sample size were to be taken, there is a 95% chance that the mean number of texts in the sample would be between 1450 and 1550.\nWe are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.\nWe are 95% confident that, were we to repeat this survey, the mean number of texts per month of those taking part in the survey would be between 1450 and 1550."
+    "text": "Question 17\nChoose the best answer.\nA survey based on a random sample of 2,045 American teenagers found that a 95% confidence interval for the mean number of texts sent per month was (1450, 1550). A valid interpretation of this interval is\n\n95% of all teens who text send between 1450 and 1550 text messages per month.\nIf a new survey with the same sample size were to be taken, there is a 95% chance that the mean number of texts in the sample would be between 1450 and 1550.\nWe are 95% confident that the mean number of texts per month of all American teens is between 1450 and 1550.\nWe are 95% confident that, were we to repeat this survey, the mean number of texts per month of those taking part in the survey would be between 1450 and 1550.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-18",
     "href": "exam/midterm-2-practice.html#question-18",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 18",
-    "text": "Question 18\nDefine the term “parsimonious model”."
+    "text": "Question 18\nDefine the term “parsimonious model”.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-19",
     "href": "exam/midterm-2-practice.html#question-19",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 19",
-    "text": "Question 19\n\nWhat type of variable is spam? What percent of the emails are spam?\nWhat type of variable is dollar - number of times a dollar sign or the word “dollar” appeared in the email? Visualize and describe its distribution, supporting your description with the appropriate summary statistics.\nFit a logistic regression model predicting spam from dollar. Then, display the tidy output of the model.\n\nUsing this model and the predict() function, predict the probability the email is spam if it contains 5 dollar signs. Based on this probability, how does the model classify this email?\n\n\n\n\n\n\nNote\n\n\n\nTo obtain the predicted probability, you can set the type argument in predict() to \"prob\"."
+    "text": "Question 19\n\nWhat type of variable is spam? What percent of the emails are spam?\nWhat type of variable is dollar - number of times a dollar sign or the word “dollar” appeared in the email? Visualize and describe its distribution, supporting your description with the appropriate summary statistics.\nFit a logistic regression model predicting spam from dollar. Then, display the tidy output of the model.\n\nUsing this model and the predict() function, predict the probability the email is spam if it contains 5 dollar signs. Based on this probability, how does the model classify this email?\n\n\n\n\n\n\nNote\n\n\n\nTo obtain the predicted probability, you can set the type argument in predict() to \"prob\".",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-20",
     "href": "exam/midterm-2-practice.html#question-20",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 20",
-    "text": "Question 20\n\nFit another logistic regression model predicting spam from dollar, winner (indicating whether “winner” appeared in the email), and urgent_subj (whether the word “urgent” is in the subject of the email). Then, display the tidy output of the model.\nUsing this model and the augment() function, classify each email in the email dataset as spam or not spam. Store the resulting data frame with an appropriate name and display the data frame as well.\n\nUsing your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\nStore the resulting data frame with an appropriate name and display the data frame as well.\n\nIn a single pipeline, and using mutate(), calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates."
+    "text": "Question 20\n\nFit another logistic regression model predicting spam from dollar, winner (indicating whether “winner” appeared in the email), and urgent_subj (whether the word “urgent” is in the subject of the email). Then, display the tidy output of the model.\nUsing this model and the augment() function, classify each email in the email dataset as spam or not spam. Store the resulting data frame with an appropriate name and display the data frame as well.\n\nUsing your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\nStore the resulting data frame with an appropriate name and display the data frame as well.\n\nIn a single pipeline, and using mutate(), calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "exam/midterm-2-practice.html#question-21",
     "href": "exam/midterm-2-practice.html#question-21",
     "title": "Midterm 2 Practice Questions",
     "section": "Question 21",
-    "text": "Question 21\n\nFit another logistic regression model predicting spam from dollar and another variable you think would be a good predictor. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.\nUsing this model and the augment() function, classify each email in the email dataset as spam or not spam. Store the resulting data frame with an appropriate name and display the data frame as well.\n\nUsing your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\nStore the resulting data frame with an appropriate name and display the data frame as well.\n\nIn a single pipeline, and using mutate(), calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.\nBased on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 2 or Question 3) is preferable and why."
+    "text": "Question 21\n\nFit another logistic regression model predicting spam from dollar and another variable you think would be a good predictor. Provide a 1-sentence justification for why you chose this variable. Display the tidy output of the model.\nUsing this model and the augment() function, classify each email in the email dataset as spam or not spam. Store the resulting data frame with an appropriate name and display the data frame as well.\n\nUsing your data frame from the previous part, determine, in a single pipeline, and using count(), the numbers of emails:\n\nthat are labelled as spam that are actually spam\nthat are not labelled as spam that are actually spam\nthat are labelled as spam that are actually not spam\nthat are not labelled as spam that are actually not spam\n\nStore the resulting data frame with an appropriate name and display the data frame as well.\n\nIn a single pipeline, and using mutate(), calculate the false positive and false negative rates. In addition to these numbers showing in your R output, you must write a sentence that explicitly states and identified the two rates.\nBased on the false positive and false negatives rates of this model, comment, in 1-2 sentences, on which model (one from Question 2 or Question 3) is preferable and why.",
+    "crumbs": [
+      "Exam practice",
+      "Midterm 2"
+    ]
   },
   {
     "objectID": "computing/coding-principles-oh.html",
