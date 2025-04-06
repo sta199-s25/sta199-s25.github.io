@@ -4,10 +4,10 @@ title: "Kahoot How-to"
 
 You should not need to make a Kahoot account to complete any of this, but if you do, I posted my login credentials on slack.
 
-- **Midterm 1**: [https://create.kahoot.it/share/sta-199-midterm-1-review/57954244-aef7-48b7-bc98-2f44202340fd](https://create.kahoot.it/share/sta-199-midterm-1-review/57954244-aef7-48b7-bc98-2f44202340fd)
+-   **Midterm 1**: <https://create.kahoot.it/share/sta-199-midterm-1-review/57954244-aef7-48b7-bc98-2f44202340fd>
+-   **Midterm 2**: <https://create.kahoot.it/share/sta-199-midterm-2/ea5539cb-566c-4f9e-aaef-1853113287d0>
 
 # 1. Click the link and select "Host live"
-
 
 Click the link and you'll see something like this, where you can quickly skim through the questions and answers:
 
