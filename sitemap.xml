@@ -109,84 +109,88 @@
     <lastmod>2025-02-17T23:11:12.012Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/lab-7.html</loc>
-    <lastmod>2025-03-30T18:01:13.605Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/21-inference-overview.html</loc>
+    <lastmod>2025-04-07T23:49:23.634Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/lab-4.html</loc>
-    <lastmod>2025-02-17T23:11:12.792Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/lab-5.html</loc>
+    <lastmod>2025-03-17T01:05:03.987Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/20-hypothesis-testing.html</loc>
-    <lastmod>2025-04-04T16:44:57.871Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/project-intro-slides.html</loc>
+    <lastmod>2025-02-24T02:15:27.550Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/19-interval-estimation.html</loc>
-    <lastmod>2025-04-01T19:43:35.536Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/10-more-practice.html</loc>
+    <lastmod>2025-02-17T23:11:12.013Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/00-welcome.html</loc>
-    <lastmod>2025-02-17T23:11:12.010Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/12-language-models.html</loc>
+    <lastmod>2025-02-27T15:17:21.947Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/06-tidying-data.html</loc>
+    <loc>https://sta199-s25.github.io/slides/02-grammar-of-data-visualization.html</loc>
+    <lastmod>2025-02-17T23:11:12.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/04-exploring-data-1.html</loc>
+    <lastmod>2025-02-17T23:11:12.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/11-ethics.html</loc>
+    <lastmod>2025-02-20T16:27:47.320Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/08-data-types-classes.html</loc>
     <lastmod>2025-02-17T23:11:12.012Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/03-grammar-of-data-transformation.html</loc>
-    <lastmod>2025-02-17T23:11:12.011Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/15-linear-model-multiple-predictors-II.html</loc>
+    <lastmod>2025-03-18T14:38:06.314Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/01-meet-the-toolkit.html</loc>
-    <lastmod>2025-02-17T23:11:12.010Z</lastmod>
+    <loc>https://sta199-s25.github.io/index.html</loc>
+    <lastmod>2025-03-04T00:57:44.489Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/14-linear-model-multiple-predictors-I.html</loc>
-    <lastmod>2025-03-06T15:06:49.446Z</lastmod>
+    <loc>https://sta199-s25.github.io/lab/lab-7.html</loc>
+    <lastmod>2025-04-01T15:16:33.947Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/05-exploring-data-2.html</loc>
-    <lastmod>2025-02-17T23:11:12.011Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/lab/lab-6.html</loc>
-    <lastmod>2025-03-28T08:53:59.787Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/lab/lab-5.html</loc>
-    <lastmod>2025-03-18T23:41:45.759Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/lab/lab-0.html</loc>
-    <lastmod>2025-02-17T23:11:12.007Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/lab/lab-3.html</loc>
+    <loc>https://sta199-s25.github.io/lab/lab-4.html</loc>
     <lastmod>2025-02-17T23:11:12.009Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/ae/ae-07-durham-climate-factors.html</loc>
+    <loc>https://sta199-s25.github.io/lab/lab-1.html</loc>
+    <lastmod>2025-02-17T23:11:12.008Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/lab/lab-2.html</loc>
+    <lastmod>2025-02-17T23:11:12.008Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/ae/ae-15-duke-forest-bootstrap.html</loc>
+    <lastmod>2025-04-01T19:37:39.625Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/ae/ae-08-age-gaps-sales-import.html</loc>
+    <lastmod>2025-02-17T23:11:11.780Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/ae/ae-05-majors-tidy.html</loc>
     <lastmod>2025-02-17T23:11:11.779Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/ae/ae-09-modeling-fish.html</loc>
-    <lastmod>2025-03-12T17:19:56.644Z</lastmod>
+    <loc>https://sta199-s25.github.io/ae/ae-12-modeling-loans.html</loc>
+    <lastmod>2025-03-23T18:34:14.431Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/ae/ae-14-forest-classification.html</loc>
-    <lastmod>2025-03-27T21:29:50.259Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/ae/ae-01-meet-the-penguins.html</loc>
-    <lastmod>2025-02-17T23:11:11.777Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/ae/ae-06-taxes-join.html</loc>
-    <lastmod>2025-02-17T23:11:11.779Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/ae/ae-03-gerrymander-explore-I.html</loc>
+    <loc>https://sta199-s25.github.io/ae/ae-02-bechdel-dataviz.html</loc>
     <lastmod>2025-02-17T23:11:11.778Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/ae/ae-11-modeling-penguins-multi.html</loc>
+    <lastmod>2025-03-12T17:20:24.805Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s25.github.io/ae/ae-04-gerrymander-explore-II.html</loc>
@@ -201,84 +205,88 @@
     <lastmod>2025-03-12T17:20:01.871Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/ae/ae-11-modeling-penguins-multi.html</loc>
-    <lastmod>2025-03-12T17:20:24.805Z</lastmod>
+    <loc>https://sta199-s25.github.io/ae/ae-17-inference-overview.html</loc>
+    <lastmod>2025-04-08T00:04:10.497Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/ae/ae-02-bechdel-dataviz.html</loc>
+    <loc>https://sta199-s25.github.io/ae/ae-03-gerrymander-explore-I.html</loc>
     <lastmod>2025-02-17T23:11:11.778Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/ae/ae-12-modeling-loans.html</loc>
-    <lastmod>2025-03-23T18:34:14.431Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/ae/ae-05-majors-tidy.html</loc>
+    <loc>https://sta199-s25.github.io/ae/ae-06-taxes-join.html</loc>
     <lastmod>2025-02-17T23:11:11.779Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/ae/ae-08-age-gaps-sales-import.html</loc>
-    <lastmod>2025-02-17T23:11:11.780Z</lastmod>
+    <loc>https://sta199-s25.github.io/ae/ae-01-meet-the-penguins.html</loc>
+    <lastmod>2025-02-17T23:11:11.777Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/ae/ae-15-duke-forest-bootstrap.html</loc>
-    <lastmod>2025-04-01T19:37:39.625Z</lastmod>
+    <loc>https://sta199-s25.github.io/ae/ae-14-forest-classification.html</loc>
+    <lastmod>2025-03-27T21:29:50.259Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/lab/lab-2.html</loc>
-    <lastmod>2025-02-17T23:11:12.008Z</lastmod>
+    <loc>https://sta199-s25.github.io/ae/ae-09-modeling-fish.html</loc>
+    <lastmod>2025-03-12T17:19:56.644Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/lab/lab-1.html</loc>
-    <lastmod>2025-02-17T23:11:12.008Z</lastmod>
+    <loc>https://sta199-s25.github.io/ae/ae-07-durham-climate-factors.html</loc>
+    <lastmod>2025-02-17T23:11:11.779Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/lab/lab-4.html</loc>
+    <loc>https://sta199-s25.github.io/lab/lab-3.html</loc>
     <lastmod>2025-02-17T23:11:12.009Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/lab/lab-7.html</loc>
-    <lastmod>2025-04-01T15:16:33.947Z</lastmod>
+    <loc>https://sta199-s25.github.io/lab/lab-0.html</loc>
+    <lastmod>2025-02-17T23:11:12.007Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/index.html</loc>
-    <lastmod>2025-03-04T00:57:44.489Z</lastmod>
+    <loc>https://sta199-s25.github.io/lab/lab-5.html</loc>
+    <lastmod>2025-03-18T23:41:45.759Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/15-linear-model-multiple-predictors-II.html</loc>
-    <lastmod>2025-03-18T14:38:06.314Z</lastmod>
+    <loc>https://sta199-s25.github.io/lab/lab-6.html</loc>
+    <lastmod>2025-03-28T08:53:59.787Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/08-data-types-classes.html</loc>
+    <loc>https://sta199-s25.github.io/slides/05-exploring-data-2.html</loc>
+    <lastmod>2025-02-17T23:11:12.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/14-linear-model-multiple-predictors-I.html</loc>
+    <lastmod>2025-03-06T15:06:49.446Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/01-meet-the-toolkit.html</loc>
+    <lastmod>2025-02-17T23:11:12.010Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/03-grammar-of-data-transformation.html</loc>
+    <lastmod>2025-02-17T23:11:12.011Z</lastmod>
+  </url>
+  <url>
+    <loc>https://sta199-s25.github.io/slides/06-tidying-data.html</loc>
     <lastmod>2025-02-17T23:11:12.012Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/11-ethics.html</loc>
-    <lastmod>2025-02-20T16:27:47.320Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/00-welcome.html</loc>
+    <lastmod>2025-02-17T23:11:12.010Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/04-exploring-data-1.html</loc>
-    <lastmod>2025-02-17T23:11:12.011Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/19-interval-estimation.html</loc>
+    <lastmod>2025-04-01T19:43:35.536Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/02-grammar-of-data-visualization.html</loc>
-    <lastmod>2025-02-17T23:11:12.011Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/20-hypothesis-testing.html</loc>
+    <lastmod>2025-04-04T16:44:57.871Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/12-language-models.html</loc>
-    <lastmod>2025-02-27T15:17:21.947Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/lab-4.html</loc>
+    <lastmod>2025-02-17T23:11:12.792Z</lastmod>
   </url>
   <url>
-    <loc>https://sta199-s25.github.io/slides/10-more-practice.html</loc>
-    <lastmod>2025-02-17T23:11:12.013Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/slides/project-intro-slides.html</loc>
-    <lastmod>2025-02-24T02:15:27.550Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sta199-s25.github.io/slides/lab-5.html</loc>
-    <lastmod>2025-03-17T01:05:03.987Z</lastmod>
+    <loc>https://sta199-s25.github.io/slides/lab-7.html</loc>
+    <lastmod>2025-03-30T18:01:13.605Z</lastmod>
   </url>
   <url>
     <loc>https://sta199-s25.github.io/slides/17-logistic.html</loc>
