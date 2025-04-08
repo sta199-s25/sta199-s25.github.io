@@ -448,7 +448,7 @@ c.  1 / 4
 :::
 
 ::: column
-d.  1 / 2
+d.  1 / 2 (*correct*)
 e.  1
 f.  2
 :::
@@ -484,7 +484,7 @@ b.  1.75
 
 ::: column
 c.  2
-d.  3
+d.  3 (*correct*)
 :::
 :::
 
@@ -502,7 +502,7 @@ original_dataset <- tibble(scores = round(rnorm(5), 3))
 glimpse(original_dataset)
 ```
 
-| A      |     |     | B      |     |     | C      |     |     | D      |
+| A (*correct*)     |     |     | B      |     |     | C      |     |     | D      |
 |--------|-----|-----|--------|-----|-----|--------|-----|-----|--------|
 | -0.515 |     |     | 1.563  |     |     | -0.515 |     |     | -0.522 |
 | -0.411 |     |     | -0.411 |     |     | -0.411 |     |     | 1.12   |
@@ -547,7 +547,7 @@ axis(1, at = quantile(x, probs = c(0.01, 0.05, 0.09, 0.5, 0.91, 0.95, 0.99)),
 ::: columns
 ::: column
 a.  $(q_{0.01},\,q_{0.91})$
-b.  $(q_{0.01},\,q_{0.99})$
+b.  $(q_{0.01},\,q_{0.99})$ (*correct*)
 :::
 
 ::: column
@@ -582,13 +582,13 @@ abline(v = v[4], lty = 2, col = "red")
 
 ::: columns
 ::: column
-a.  0
-b.  0.045
+a.  0 (Plot 2)
+b.  0.045 (Plot 4)
 :::
 
 ::: column
-c.  0.32
-d.  0.62
+c.  0.32 (Plot 3)
+d.  0.62 (Plot 1)
 :::
 :::
 
@@ -630,6 +630,8 @@ ggplot(df, aes(x = draws)) +
     y = NULL
   )
 ```
+
+**Answer**: A
 
 # Application exercise
 
