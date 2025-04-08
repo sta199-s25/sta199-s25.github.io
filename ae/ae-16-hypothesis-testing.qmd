@@ -90,7 +90,7 @@ baby_loans |>
 
 ```{r}
 #| label: observed-baby-fit
-#| eval: FALSE
+#| eval: true
 
 observed_fit <- baby_loans |>
   specify(log_cred ~ log_inc) |>
@@ -101,7 +101,7 @@ observed_fit
 
 ```{r}
 #| label: simulate-null-dist
-#| eval: false
+#| eval: true
 set.seed(20241118)
 null_dist <- baby_loans |>
   specify(log_cred ~ log_inc) |>
@@ -120,14 +120,14 @@ null_dist |>
 
 ```{r}
 #| label: shade-p-value
-#| eval: false
+#| eval: true
 visualize(null_dist) +
   shade_p_value(obs_stat = observed_fit, direction = "two-sided")
 ```
 
 ```{r}
 #| label: compute-p-value
-#| eval: false
+#| eval: true
 null_dist |>
   get_p_value(obs_stat = observed_fit, direction = "two-sided")
 ```
