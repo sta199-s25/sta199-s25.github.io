@@ -1,0 +1,135 @@
+---
+title: "AE 16: loans again"
+---
+
+In this application exercise, we will do hypothesis testing for the slope in the linear model.
+
+## Packages
+
+We will use **tidyverse** and **tidymodels** for data exploration and modeling, respectively, and the **openintro** package for the data, and the **knitr** package for formatting tables.
+
+```{r}
+#| label: load-packages
+#| message: false
+library(tidyverse)
+library(tidymodels)
+library(openintro)
+library(knitr)
+```
+
+## Data
+
+Here is the loans data again:
+
+```{r}
+#| label: glimpse-data
+glimpse(loans_full_schema)
+```
+
+Let's clean a wee bit:
+
+```{r}
+full_loans <- loans_full_schema |>
+  drop_na(annual_income, total_credit_utilized) |>
+  filter(log(annual_income) > 0) |>
+  filter(log(total_credit_utilized) > 0) |>
+  mutate(
+    log_cred = log(total_credit_utilized),
+    log_inc = log(annual_income)
+  )
+```
+
+Now let's imagine we only had a tiny subset of these data to work with:
+
+```{r}
+set.seed(8675309)
+baby_loans <- full_loans |>
+  slice(sample(1:nrow(full_loans), 25))
+glimpse(baby_loans)
+```
+
+With so little information, can we draw super strong conclusions?
+
+## Plot
+
+Plot the full thing:
+
+```{r}
+full_loans |>
+  ggplot(aes(x = log_inc, y = log_cred)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") + 
+  xlim(7, 15) + 
+  ylim(0, 15) + 
+  labs(
+    x = "Annual income (log $)",
+    y = "Credit utilization (log $)",
+    title = paste("Model fit with sample size of ", nrow(full_loans), " people", sep = "")
+  ) + 
+  theme(title = element_text(size = 12, face = "bold"))
+```
+
+Plot the baby thing:
+
+```{r}
+baby_loans |>
+  ggplot(aes(x = log_inc, y = log_cred)) + 
+  geom_point() + 
+  geom_smooth(method = "lm") + 
+  xlim(7, 15) + 
+  ylim(0, 15) + 
+  labs(
+    x = "Annual income (log $)",
+    y = "Credit utilization (log $)",
+    title = paste("Model fit with sample size of ", nrow(baby_loans), " people", sep = "")
+  ) + 
+  theme(title = element_text(size = 12, face = "bold"))
+```
+
+## Inference with the small dataset
+
+```{r}
+#| label: observed-baby-fit
+#| eval: FALSE
+
+observed_fit <- baby_loans |>
+  specify(log_cred ~ log_inc) |>
+  fit()
+
+observed_fit
+```
+
+```{r}
+#| label: simulate-null-dist
+#| eval: false
+set.seed(20241118)
+null_dist <- baby_loans |>
+  specify(log_cred ~ log_inc) |>
+  hypothesize(null = "independence") |>
+  generate(reps = 1000, type = "permute") |>
+  fit()
+```
+
+```{r}
+#| label: plot-null-dist
+null_dist |> 
+  filter(term == "log_inc") |>
+  ggplot(aes(x = estimate)) + 
+  geom_histogram()
+```
+
+```{r}
+#| label: shade-p-value
+#| eval: false
+visualize(null_dist) +
+  shade_p_value(obs_stat = observed_fit, direction = "two-sided")
+```
+
+```{r}
+#| label: compute-p-value
+#| eval: false
+null_dist |>
+  get_p_value(obs_stat = observed_fit, direction = "two-sided")
+```
+
+**Interpretation**: if the null were true (the true slope was zero), then the probability of data as or more extreme than what we saw in about 10%. At a 5% discernibility level, we fail to reject the null. With the data we have, you can't discern with tremendously high confidence whether the null is true or not. We just don't know.
