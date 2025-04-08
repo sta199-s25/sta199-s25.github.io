@@ -583,7 +583,7 @@ abline(v = v[4], lty = 2, col = "red")
 ::: columns
 ::: column
 a.  0
-b.  0.45
+b.  0.045
 :::
 
 ::: column
