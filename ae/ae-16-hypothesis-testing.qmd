@@ -88,6 +88,8 @@ baby_loans |>
 
 ## Inference with the small dataset
 
+### Point estimate
+
 ```{r}
 #| label: observed-baby-fit
 #| eval: true
@@ -98,6 +100,10 @@ observed_fit <- baby_loans |>
 
 observed_fit
 ```
+
+### Simulate the null distribution
+
+We are testing $H_0: \beta_1=0$ versus the alternative $H_A: \beta_1\neq 0$. 
 
 ```{r}
 #| label: simulate-null-dist
@@ -110,6 +116,8 @@ null_dist <- baby_loans |>
   fit()
 ```
 
+Here's what it looks like. Note that it's centered at zero, because if the null were true and the true slope was in fact zero, we would expect noisy, imperfect estimates of the slope to wiggle around 0:
+
 ```{r}
 #| label: plot-null-dist
 null_dist |> 
@@ -117,6 +125,10 @@ null_dist |>
   ggplot(aes(x = estimate)) + 
   geom_histogram()
 ```
+
+### Where does our actual point estimate fall under the null distribution?
+
+Shade the $p$-value:
 
 ```{r}
 #| label: shade-p-value
