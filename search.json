@@ -710,7 +710,7 @@
     "href": "slides/18-model-selection.html#roc-curve-1",
     "title": "Model selection for logistic regression",
     "section": "ROC curve",
-    "text": "ROC curve\n\nWhich corner of the plot indicates the best model performance?\n\n\n\nUpper right!"
+    "text": "ROC curve\n\nWhich corner of the plot indicates the best model performance?\n\n\n\nUpper left!"
   },
   {
     "objectID": "slides/18-model-selection.html#roc-for-full-model",
