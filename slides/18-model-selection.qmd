@@ -325,7 +325,7 @@ Which corner of the plot indicates the best model performance?
 
 . . .
 
-Upper right!
+Upper left!
 
 ## ROC for full model
 
