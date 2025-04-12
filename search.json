@@ -1375,14 +1375,14 @@
     "href": "slides/10-more-practice.html#quotes-vs-no-quotes-vs-backticks-1",
     "title": "More practice",
     "section": "Quotes VS no quotes VS backticks",
-    "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"x\" &gt; 0)\n\n# A tibble: 5 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1  -2     -2  \n2  -0.5   -0.5\n3   0.5    0.5\n4   1      1  \n5   2      2  \n\n\n\"x\" means the literal character string.\n\n\n\ndf |&gt;\n  filter(x &gt; 0)\n\n# A tibble: 3 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1   0.5    0.5\n2   1      1  \n3   2      2  \n\n\nx means the column name in df.\n\n\n\ndf |&gt;\n  filter(`x` &gt; 0)\n\n# A tibble: 3 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1   0.5    0.5\n2   1      1  \n3   2      2  \n\n\n`x` also means the column name in df."
+    "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"x\" &gt; 0)\n\n# A tibble: 5 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1  -2     -2  \n2  -0.5   -0.5\n3   0.5    0.5\n4   1      1  \n5   2      2  \n\n\n\"x\" means the literal character string.\n\n\ndf |&gt;\n  filter(x &gt; 0)\n\n# A tibble: 3 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1   0.5    0.5\n2   1      1  \n3   2      2  \n\n\nx means the column name in df.\n\n\ndf |&gt;\n  filter(`x` &gt; 0)\n\n# A tibble: 3 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1   0.5    0.5\n2   1      1  \n3   2      2  \n\n\n`x` also means the column name in df."
   },
   {
     "objectID": "slides/10-more-practice.html#quotes-vs-no-quotes-vs-backticks-2",
     "href": "slides/10-more-practice.html#quotes-vs-no-quotes-vs-backticks-2",
     "title": "More practice",
     "section": "Quotes VS no quotes VS backticks",
-    "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"2011\" &gt; 0)\n\n# A tibble: 5 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1  -2     -2  \n2  -0.5   -0.5\n3   0.5    0.5\n4   1      1  \n5   2      2  \n\n\n\"2011\" means the literal character string.\n\n\n\ndf |&gt;\n  filter(2011 &gt; 0)\n\n# A tibble: 5 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1  -2     -2  \n2  -0.5   -0.5\n3   0.5    0.5\n4   1      1  \n5   2      2  \n\n\n2011 means the literal number.\n\n\n\ndf |&gt;\n  filter(`2011` &gt; 0)\n\n# A tibble: 3 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1   0.5    0.5\n2   1      1  \n3   2      2  \n\n\n`2011` means the column name in df."
+    "text": "Quotes VS no quotes VS backticks\n\ndf &lt;- tibble(\n  x = c(-2, -0.5, 0.5, 1, 2),\n  `2011` = c(-2, -0.5, 0.5, 1, 2)\n)\n\nReferencing a column in a pipeline:\n\n\n\ndf |&gt;\n  filter(\"2011\" &gt; 0)\n\n# A tibble: 5 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1  -2     -2  \n2  -0.5   -0.5\n3   0.5    0.5\n4   1      1  \n5   2      2  \n\n\n\"2011\" means the literal character string.\n\n\ndf |&gt;\n  filter(2011 &gt; 0)\n\n# A tibble: 5 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1  -2     -2  \n2  -0.5   -0.5\n3   0.5    0.5\n4   1      1  \n5   2      2  \n\n\n2011 means the literal number.\n\n\ndf |&gt;\n  filter(`2011` &gt; 0)\n\n# A tibble: 3 × 2\n      x `2011`\n  &lt;dbl&gt;  &lt;dbl&gt;\n1   0.5    0.5\n2   1      1  \n3   2      2  \n\n\n`2011` means the column name in df."
   },
   {
     "objectID": "slides/10-more-practice.html#why-in-instead-of",
@@ -2453,7 +2453,7 @@
     "href": "slides/11-ethics.html#axes-and-scales---pp-services",
     "title": "Data science ethics",
     "section": "Axes and scales - PP services",
-    "text": "Axes and scales - PP services\n\n\n\nWhat is wrong with this picture? How would you correct it?\n\n\n\n\n\n\n\nTimothy B. Lee. Whatever you think of Planned Parenthood, this is a terrible and dishonest chart. Vox. 29 September 2019."
+    "text": "Axes and scales - PP services\n\n\n\nWhat is wrong with this picture? How would you correct it?\n\n\n\n\n\n\nTimothy B. Lee. Whatever you think of Planned Parenthood, this is a terrible and dishonest chart. Vox. 29 September 2019."
   },
   {
     "objectID": "slides/11-ethics.html#axes-and-scales---pp-services-1",
@@ -2474,7 +2474,7 @@
     "href": "slides/11-ethics.html#maps-and-areas---two-alternate-tales",
     "title": "Data science ethics",
     "section": "Maps and areas - Two alternate tales",
-    "text": "Maps and areas - Two alternate tales\n\n\n\n\n\n\n\n\n\nAlberto Cairo. Visual Trumpery talk."
+    "text": "Maps and areas - Two alternate tales\n\n\n\n\n\n\n\n\nAlberto Cairo. Visual Trumpery talk."
   },
   {
     "objectID": "slides/11-ethics.html#maps-and-areas---voting-percentages",
@@ -2523,7 +2523,7 @@
     "href": "slides/11-ethics.html#what-happens-when-we-try-predictive-policing",
     "title": "Data science ethics",
     "section": "What happens when we try “predictive policing”?",
-    "text": "What happens when we try “predictive policing”?\n2016 ProPublica article on algorithm used for rating a defendant’s risk of future crime:\n\n\n\nIn forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.\n\nThe formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.\nWhite defendants were mislabeled as low risk more often than black defendants.\n\n\n\n\n\n\n\n\n\n\n\nSource: ProPublica"
+    "text": "What happens when we try “predictive policing”?\n2016 ProPublica article on algorithm used for rating a defendant’s risk of future crime:\n\n\n\nIn forecasting who would re-offend, the algorithm made mistakes with black and white defendants at roughly the same rate but in very different ways.\n\nThe formula was particularly likely to falsely flag black defendants as future criminals, wrongly labeling them this way at almost twice the rate as white defendants.\nWhite defendants were mislabeled as low risk more often than black defendants.\n\n\n\n\n\n\n\n\n\n\nSource: ProPublica"
   },
   {
     "objectID": "slides/11-ethics.html#notice-anything",
@@ -2803,14 +2803,14 @@
     "href": "slides/08-data-types-classes.html#logical-character",
     "title": "Data types and classes",
     "section": "Logical & character",
-    "text": "Logical & character\n\n\nlogical - Boolean values TRUE and FALSE\n\n\ntypeof(TRUE)\n\n[1] \"logical\"\n\n\n\n\ncharacter - character strings\n\n\ntypeof(\"First-year\")\n\n[1] \"character\""
+    "text": "Logical & character\n\n\nlogical - Boolean values TRUE and FALSE\n\n\ntypeof(TRUE)\n\n[1] \"logical\"\n\n\n\ncharacter - character strings\n\n\ntypeof(\"First-year\")\n\n[1] \"character\""
   },
   {
     "objectID": "slides/08-data-types-classes.html#double-integer",
     "href": "slides/08-data-types-classes.html#double-integer",
     "title": "Data types and classes",
     "section": "Double & integer",
-    "text": "Double & integer\n\n\ndouble - floating point numerical values (default numerical type)\n\n\ntypeof(2.5)\n\n[1] \"double\"\n\ntypeof(3)\n\n[1] \"double\"\n\n\n\n\ninteger - integer numerical values (indicated with an L)\n\n\ntypeof(3L)\n\n[1] \"integer\"\n\ntypeof(1:3)\n\n[1] \"integer\""
+    "text": "Double & integer\n\n\ndouble - floating point numerical values (default numerical type)\n\n\ntypeof(2.5)\n\n[1] \"double\"\n\ntypeof(3)\n\n[1] \"double\"\n\n\n\ninteger - integer numerical values (indicated with an L)\n\n\ntypeof(3L)\n\n[1] \"integer\"\n\ntypeof(1:3)\n\n[1] \"integer\""
   },
   {
     "objectID": "slides/08-data-types-classes.html#concatenation",
@@ -2824,14 +2824,14 @@
     "href": "slides/08-data-types-classes.html#converting-between-types",
     "title": "Data types and classes",
     "section": "Converting between types",
-    "text": "Converting between types\n\nwith intention…\n\n\n\n\nx &lt;- 1:3\nx\n\n[1] 1 2 3\n\ntypeof(x)\n\n[1] \"integer\"\n\n\n\n\n\ny &lt;- as.character(x)\ny\n\n[1] \"1\" \"2\" \"3\"\n\ntypeof(y)\n\n[1] \"character\""
+    "text": "Converting between types\n\nwith intention…\n\n\n\n\nx &lt;- 1:3\nx\n\n[1] 1 2 3\n\ntypeof(x)\n\n[1] \"integer\"\n\n\n\n\ny &lt;- as.character(x)\ny\n\n[1] \"1\" \"2\" \"3\"\n\ntypeof(y)\n\n[1] \"character\""
   },
   {
     "objectID": "slides/08-data-types-classes.html#converting-between-types-1",
     "href": "slides/08-data-types-classes.html#converting-between-types-1",
     "title": "Data types and classes",
     "section": "Converting between types",
-    "text": "Converting between types\n\nwith intention…\n\n\n\n\nx &lt;- c(TRUE, FALSE)\nx\n\n[1]  TRUE FALSE\n\ntypeof(x)\n\n[1] \"logical\"\n\n\n\n\n\ny &lt;- as.numeric(x)\ny\n\n[1] 1 0\n\ntypeof(y)\n\n[1] \"double\""
+    "text": "Converting between types\n\nwith intention…\n\n\n\n\nx &lt;- c(TRUE, FALSE)\nx\n\n[1]  TRUE FALSE\n\ntypeof(x)\n\n[1] \"logical\"\n\n\n\n\ny &lt;- as.numeric(x)\ny\n\n[1] 1 0\n\ntypeof(y)\n\n[1] \"double\""
   },
   {
     "objectID": "slides/08-data-types-classes.html#converting-between-types-2",
@@ -2852,7 +2852,7 @@
     "href": "slides/08-data-types-classes.html#explicit-vs.-implicit-coercion",
     "title": "Data types and classes",
     "section": "Explicit vs. implicit coercion",
-    "text": "Explicit vs. implicit coercion\n\n\nExplicit coercion:\nWhen you call a function like as.logical(), as.numeric(), as.integer(), as.double(), or as.character().\n\n\nImplicit coercion:\nHappens when you use a vector in a specific context that expects a certain type of vector."
+    "text": "Explicit vs. implicit coercion\n\n\nExplicit coercion:\nWhen you call a function like as.logical(), as.numeric(), as.integer(), as.double(), or as.character().\n\nImplicit coercion:\nHappens when you use a vector in a specific context that expects a certain type of vector."
   },
   {
     "objectID": "slides/08-data-types-classes.html#data-classes-1",
@@ -2866,7 +2866,7 @@
     "href": "slides/08-data-types-classes.html#factors",
     "title": "Data types and classes",
     "section": "Factors",
-    "text": "Factors\nR uses factors to handle categorical variables, variables that have a fixed and known set of possible values\n\nclass_years &lt;- factor(\n  c(\n    \"First-year\", \"Sophomore\", \"Sophomore\", \"Senior\", \"Junior\"\n    )\n  )\nclass_years\n\n[1] First-year Sophomore  Sophomore  Senior     Junior    \nLevels: First-year Junior Senior Sophomore\n\n\n\n\n\ntypeof(class_years)\n\n[1] \"integer\"\n\n\n\n\n\nclass(class_years)\n\n[1] \"factor\""
+    "text": "Factors\nR uses factors to handle categorical variables, variables that have a fixed and known set of possible values\n\nclass_years &lt;- factor(\n  c(\n    \"First-year\", \"Sophomore\", \"Sophomore\", \"Senior\", \"Junior\"\n    )\n  )\nclass_years\n\n[1] First-year Sophomore  Sophomore  Senior     Junior    \nLevels: First-year Junior Senior Sophomore\n\n\n\n\n\ntypeof(class_years)\n\n[1] \"integer\"\n\n\n\n\nclass(class_years)\n\n[1] \"factor\""
   },
   {
     "objectID": "slides/08-data-types-classes.html#more-on-factors",
@@ -3281,7 +3281,7 @@
     "href": "lab/lab-4.html#part-6---all-about-quarto",
     "title": "Lab 4",
     "section": "Part 6 - All about Quarto",
-    "text": "Part 6 - All about Quarto\nQuestion 11\nYou have the following code chunk:\n\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\nAdd the following code cell options, one at a time, and set each to false and then to true. After each value, render your document and observe its effect. Ultimately, choose the values that are the most appropriate for this code cell. Based on the behaviors you observe, describe what each code cell option does.\n\necho\nwarning\neval\nQuestion 12\n\nYou have the following code cell again.\n\n\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\nAdd fig-width and fig-asp as code chunk options. Try setting fig-width to values between 1 and 10. Try setting fig-asp to values between 0.1 and 1. Re-render the document after each value and observe its effect. Ultimately, choose values that make the plot look visually pleasing in the rendered document. Based on the behavior you observe, describe what each chunk option does.\n\n\n\n\n\n\nTip\n\n\n\nNow that you’ve had more practice with figure sizing in Quarto documents, review all of the plots you made in this lab and adjust their widths and aspect rations to improve how they look in your rendered document.\n\n\nb. You have the following code cell, but look carefully, it’s not exactly the same!\n\ngplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nAdd error as a code chunk option and set it to false and then set it to true. After each value, render your document and observe its effect. Ultimately, choose the value that allows you to render your document without altering the code. Based on the behavior you observe, describe what this code chunk option does.\n\n\n\n\n\n\nTip\n\n\n\nReading the documentation might also be helpful.\n\n\n\nRender, commit, and push your work. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.\n\n\n\n\nTeam USA 2020\nTeam USA 2024\nFigure 2: The `datasaurus_dozen` data frame stacks 13 datasets on top of each other. This figure shows the first three datasets.",
+    "text": "Part 6 - All about Quarto\nQuestion 11\nYou have the following code chunk:\n\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\nAdd the following code cell options, one at a time, and set each to false and then to true. After each value, render your document and observe its effect. Ultimately, choose the values that are the most appropriate for this code cell. Based on the behaviors you observe, describe what each code cell option does.\n\necho\nwarning\neval\nQuestion 12\n\nYou have the following code cell again.\n\n\nggplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nWarning: Removed 2 rows containing missing values or values outside the scale range\n(`geom_point()`).\n\n\n\n\n\n\n\n\nAdd fig-width and fig-asp as code chunk options. Try setting fig-width to values between 1 and 10. Try setting fig-asp to values between 0.1 and 1. Re-render the document after each value and observe its effect. Ultimately, choose values that make the plot look visually pleasing in the rendered document. Based on the behavior you observe, describe what each chunk option does.\n\n\n\n\n\n\nTip\n\n\n\nNow that you’ve had more practice with figure sizing in Quarto documents, review all of the plots you made in this lab and adjust their widths and aspect rations to improve how they look in your rendered document.\n\n\nb. You have the following code cell, but look carefully, it’s not exactly the same!\n\ngplot(penguins, aes(x = bill_length_mm, y = bill_depth_mm)) + \n  geom_point()\n\nAdd error as a code chunk option and set it to false and then set it to true. After each value, render your document and observe its effect. Ultimately, choose the value that allows you to render your document without altering the code. Based on the behavior you observe, describe what this code chunk option does.\n\n\n\n\n\n\nTip\n\n\n\nReading the documentation might also be helpful.\n\n\n\nRender, commit, and push your work. Make sure that you commit and push all changed documents and that your Git pane is completely empty before proceeding.",
     "crumbs": [
       "Labs",
       "Lab 4"
@@ -4021,7 +4021,7 @@
     "href": "ae/ae-01-meet-the-penguins.html",
     "title": "AE 01: Meet the penguins",
     "section": "",
-    "text": "For this application exercise, we’ll use the tidyverse and palmerpenguins packages.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.3     ✔ tidyr     1.3.1\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nThe dataset we will visualize is called penguins. Let’s glimpse() at it.\n\n\nYour turn: Replace #add code here with the code for “glimpse”ing at the data penguins data frame – glimpse(penguins). Render the document and view the output.\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\n\n\nDemo: First, replace the blank below with the number of rows in the penguins data frame based on the output of the chunk below. Then, replace it with “inline code” and render again.\n\n\nnrow(penguins)\n\n[1] 344\n\n\nThere are 344 penguins in the penguins data frame."
+    "text": "For this application exercise, we’ll use the tidyverse and palmerpenguins packages.\n\nlibrary(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.4     ✔ readr     2.1.5\n✔ forcats   1.0.0     ✔ stringr   1.5.1\n✔ ggplot2   3.5.1     ✔ tibble    3.2.1\n✔ lubridate 1.9.4     ✔ tidyr     1.3.1\n✔ purrr     1.0.4     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nThe dataset we will visualize is called penguins. Let’s glimpse() at it.\n\n\nYour turn: Replace #add code here with the code for “glimpse”ing at the data penguins data frame – glimpse(penguins). Render the document and view the output.\n\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…\n\n\n\n\nDemo: First, replace the blank below with the number of rows in the penguins data frame based on the output of the chunk below. Then, replace it with “inline code” and render again.\n\n\nnrow(penguins)\n\n[1] 344\n\n\nThere are 344 penguins in the penguins data frame."
   },
   {
     "objectID": "ae/ae-14-forest-classification.html",
@@ -4657,7 +4657,7 @@
     "href": "slides/05-exploring-data-2.html#intro-to-coding-principles-with-dav-king",
     "title": "Exploring data II",
     "section": "Intro to Coding Principles with Dav King",
-    "text": "Intro to Coding Principles with Dav King\n\n\n\n8:30 PM Thursday January 30;\nSocial Sciences 139;\nSpace is limited, so please sign up;\nMaterials will be posted afterward;\nWe might do more if there is interest and Dav is available.\n\n\n\n\n:::"
+    "text": "Intro to Coding Principles with Dav King\n\n\n\n8:30 PM Thursday January 30;\nSocial Sciences 139;\nSpace is limited, so please sign up;\nMaterials will be posted afterward;\nWe might do more if there is interest and Dav is available.\n\n\n\n:::"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#reminder-lab-guidelines",
@@ -4832,7 +4832,7 @@
     "href": "slides/05-exploring-data-2.html#count",
     "title": "Exploring data II",
     "section": "count()",
-    "text": "count()\n\n\n... |&gt;\n  count(variable)\n\n... |&gt;\n  count(variable1, variable2)\n\n\n\nCount the number of observations in each level of variable(s)\nPlace the counts in a variable called n"
+    "text": "count()\n\n\n... |&gt;\n  count(variable)\n\n... |&gt;\n  count(variable1, variable2)\n\n\nCount the number of observations in each level of variable(s)\nPlace the counts in a variable called n"
   },
   {
     "objectID": "slides/05-exploring-data-2.html#count-and-sort",
@@ -5294,7 +5294,7 @@
     "href": "slides/03-grammar-of-data-transformation.html#talking-about-one-numerical-variable",
     "title": "Grammar of data transformation",
     "section": "Talking about one numerical variable",
-    "text": "Talking about one numerical variable\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncenter: what is the “typical” value (mean, median, mode) the data are concentrating around?\nspread: how concentrated are the data around a typical value?\nshape: does the distribution have one peak, or many? is it symmetric or skewed?"
+    "text": "Talking about one numerical variable\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ncenter: what is the “typical” value (mean, median, mode) the data are concentrating around?\nspread: how concentrated are the data around a typical value?\nshape: does the distribution have one peak, or many? is it symmetric or skewed?"
   },
   {
     "objectID": "slides/03-grammar-of-data-transformation.html#interaction-between-shape-and-center",
@@ -5350,7 +5350,7 @@
     "href": "slides/03-grammar-of-data-transformation.html#the-pipe",
     "title": "Grammar of data transformation",
     "section": "The pipe |>",
-    "text": "The pipe |&gt;\nThe pipe operator passes what comes before it into the function that comes after it as the first argument in that function.\n\n\n\nsum(1, 2)\n\n[1] 3\n\n\n\n\n1 |&gt; \n  sum(2)\n\n[1] 3\n\n\n\n\n\n\n\n\nselect(filter(bechdel, roi &gt; 400), title)\n\n# A tibble: 3 × 1\n  title                  \n  &lt;chr&gt;                  \n1 Paranormal Activity    \n2 The Blair Witch Project\n3 El Mariachi            \n\n\n\n\nbechdel |&gt;\n  filter(roi &gt; 400) |&gt;\n  select(title)\n\n# A tibble: 3 × 1\n  title                  \n  &lt;chr&gt;                  \n1 Paranormal Activity    \n2 The Blair Witch Project\n3 El Mariachi"
+    "text": "The pipe |&gt;\nThe pipe operator passes what comes before it into the function that comes after it as the first argument in that function.\n\n\n\nsum(1, 2)\n\n[1] 3\n\n\n\n\n1 |&gt; \n  sum(2)\n\n[1] 3\n\n\n\n\n\n\n\nselect(filter(bechdel, roi &gt; 400), title)\n\n# A tibble: 3 × 1\n  title                  \n  &lt;chr&gt;                  \n1 Paranormal Activity    \n2 The Blair Witch Project\n3 El Mariachi            \n\n\n\n\nbechdel |&gt;\n  filter(roi &gt; 400) |&gt;\n  select(title)\n\n# A tibble: 3 × 1\n  title                  \n  &lt;chr&gt;                  \n1 Paranormal Activity    \n2 The Blair Witch Project\n3 El Mariachi"
   },
   {
     "objectID": "slides/03-grammar-of-data-transformation.html#code-style-tip",
@@ -5392,7 +5392,7 @@
     "href": "slides/03-grammar-of-data-transformation.html#in-this-class-you-will",
     "title": "Grammar of data transformation",
     "section": "In this class, you will…",
-    "text": "In this class, you will…\n\n\nBuild cakes (ggplot) \n\nStack dolls (pipe |&gt;) \n\n\nMaster these constructs, and everything will be coming up roses!"
+    "text": "In this class, you will…\n\n\nBuild cakes (ggplot) \n\nStack dolls (pipe |&gt;) \n\nMaster these constructs, and everything will be coming up roses!"
   },
   {
     "objectID": "slides/06-tidying-data.html#while-you-wait",
@@ -5406,7 +5406,7 @@
     "href": "slides/06-tidying-data.html#intro-to-coding-principles-with-dav-king",
     "title": "Tidying data",
     "section": "Intro to Coding Principles with Dav King",
-    "text": "Intro to Coding Principles with Dav King\n\n\n\n8:30 PM Tonight!;\nSocial Sciences 139;\nSpace is limited, so please sign up;\nMaterials will be posted afterward;\nWe might do more if there is interest and Dav is available.\n\n\n\n\n:::"
+    "text": "Intro to Coding Principles with Dav King\n\n\n\n8:30 PM Tonight!;\nSocial Sciences 139;\nSpace is limited, so please sign up;\nMaterials will be posted afterward;\nWe might do more if there is interest and Dav is available.\n\n\n\n:::"
   },
   {
     "objectID": "slides/06-tidying-data.html#syllabus-clarifications",
@@ -5448,7 +5448,7 @@
     "href": "slides/06-tidying-data.html#miscellany-assignment-2",
     "title": "Tidying data",
     "section": "Miscellany: assignment",
-    "text": "Miscellany: assignment\n\nSuppose you run the following and then you inspect df, will the x variable have values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?\n\n\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\n\n\nDo something and show me"
+    "text": "Miscellany: assignment\n\nSuppose you run the following and then you inspect df, will the x variable have values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?\n\n\n\n\ndf |&gt;\n  mutate(x = x * 2)\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     1 a    \n2     2 a    \n3     3 b    \n4     4 c    \n5     5 c    \n\n\n\n\n\nDo something and show me"
   },
   {
     "objectID": "slides/06-tidying-data.html#miscellany-assignment-3",
@@ -5462,28 +5462,28 @@
     "href": "slides/06-tidying-data.html#miscellany-assignment-4",
     "title": "Tidying data",
     "section": "Miscellany: assignment",
-    "text": "Miscellany: assignment\n\nSuppose you run the following and then you inspect df, will the x variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?\n\n\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\n\n\n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\n\n\nDo something and save result"
+    "text": "Miscellany: assignment\n\nSuppose you run the following and then you inspect df, will the x variable has values 1, 2, 3, 4, 5 or 2, 4, 6, 8, 10?\n\n\n\n\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\n\n\n\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\n\nDo something and save result"
   },
   {
     "objectID": "slides/06-tidying-data.html#miscellany-assignment-5",
     "href": "slides/06-tidying-data.html#miscellany-assignment-5",
     "title": "Tidying data",
     "section": "Miscellany: assignment",
-    "text": "Miscellany: assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
+    "text": "Miscellany: assignment\n\n\n\nDo something, save result, overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x * 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c    \n\n\n\n\nDo something, save result, not overwriting original\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_new &lt;- df |&gt;\n  mutate(x = x * 2)\ndf_new\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     2 a    \n2     4 a    \n3     6 b    \n4     8 c    \n5    10 c"
   },
   {
     "objectID": "slides/06-tidying-data.html#miscellany-assignment-6",
     "href": "slides/06-tidying-data.html#miscellany-assignment-6",
     "title": "Tidying data",
     "section": "Miscellany: assignment",
-    "text": "Miscellany: assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
+    "text": "Miscellany: assignment\n\n\n\nDo something, save result, overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5\n\n\n\n\nDo something, save result, not overwriting original when you shouldn’t\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf_summary &lt;- df |&gt;\n  group_by(y) |&gt;\n  summarize(mean_x = mean(x))\ndf_summary\n\n# A tibble: 3 × 2\n  y     mean_x\n  &lt;chr&gt;  &lt;dbl&gt;\n1 a        1.5\n2 b        3  \n3 c        4.5"
   },
   {
     "objectID": "slides/06-tidying-data.html#miscellany-assignment-7",
     "href": "slides/06-tidying-data.html#miscellany-assignment-7",
     "title": "Tidying data",
     "section": "Miscellany: assignment",
-    "text": "Miscellany: assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
+    "text": "Miscellany: assignment\n\n\n\nDo something, save result, overwriting originaldata frame\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(z = x + 2)\ndf\n\n# A tibble: 5 × 3\n      x y         z\n  &lt;dbl&gt; &lt;chr&gt; &lt;dbl&gt;\n1     1 a         3\n2     2 a         4\n3     3 b         5\n4     4 c         6\n5     5 c         7\n\n\n\n\nDo something, save result, overwriting originalcolumn\n\n\ndf &lt;- tibble(\n  x = c(1, 2, 3, 4, 5), \n  y = c(\"a\", \"a\", \"b\", \"c\", \"c\")\n)\ndf &lt;- df |&gt;\n  mutate(x = x + 2)\ndf\n\n# A tibble: 5 × 2\n      x y    \n  &lt;dbl&gt; &lt;chr&gt;\n1     3 a    \n2     4 a    \n3     5 b    \n4     6 c    \n5     7 c"
   },
   {
     "objectID": "slides/06-tidying-data.html#tidy-data",
@@ -5525,7 +5525,7 @@
     "href": "slides/06-tidying-data.html#the-challenge",
     "title": "Tidying data",
     "section": "The challenge",
-    "text": "The challenge\n\n\n\nHow do we go from this…\n\n\n\n# A tibble: 4 × 8\n  degree `2011` `2012` `2013` `2014` `2015` `2016` `2017`\n  &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 AB2        NA      1     NA     NA      4      4      1\n2 AB          2      2      4      1      3      6      3\n3 BS2         2      6      1     NA      5      6      6\n4 BS          5      9      4     13     10     17     24\n\n\n\n\n\n…to this?\n\n\n\n# A tibble: 56 × 3\n   degree_type  year     n\n   &lt;fct&gt;       &lt;dbl&gt; &lt;dbl&gt;\n 1 AB2          2011     0\n 2 AB2          2012     1\n 3 AB2          2013     0\n 4 AB2          2014     0\n 5 AB2          2015     4\n 6 AB2          2016     4\n 7 AB2          2017     1\n 8 AB2          2018     0\n 9 AB2          2019     0\n10 AB2          2020     1\n11 AB2          2021     2\n12 AB2          2022     0\n13 AB2          2023     3\n14 AB2          2024     1\n15 AB           2011     2\n16 AB           2012     2\n# ℹ 40 more rows\n\n\n\n\n\nWith the command pivot_longer()!"
+    "text": "The challenge\n\n\n\nHow do we go from this…\n\n\n\n# A tibble: 4 × 8\n  degree `2011` `2012` `2013` `2014` `2015` `2016` `2017`\n  &lt;fct&gt;   &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;  &lt;dbl&gt;\n1 AB2        NA      1     NA     NA      4      4      1\n2 AB          2      2      4      1      3      6      3\n3 BS2         2      6      1     NA      5      6      6\n4 BS          5      9      4     13     10     17     24\n\n\n\n\n…to this?\n\n\n\n# A tibble: 56 × 3\n   degree_type  year     n\n   &lt;fct&gt;       &lt;dbl&gt; &lt;dbl&gt;\n 1 AB2          2011     0\n 2 AB2          2012     1\n 3 AB2          2013     0\n 4 AB2          2014     0\n 5 AB2          2015     4\n 6 AB2          2016     4\n 7 AB2          2017     1\n 8 AB2          2018     0\n 9 AB2          2019     0\n10 AB2          2020     1\n11 AB2          2021     2\n12 AB2          2022     0\n13 AB2          2023     3\n14 AB2          2024     1\n15 AB           2011     2\n16 AB           2012     2\n# ℹ 40 more rows\n\n\n\n\nWith the command pivot_longer()!"
   },
   {
     "objectID": "slides/06-tidying-data.html#pivot_longer",
@@ -5735,7 +5735,7 @@
     "href": "slides/00-welcome.html#how-old-is-this-person",
     "title": "Welcome to STA 199!",
     "section": "How old is this person?",
-    "text": "How old is this person?\n\n\n\n \n\n\n\n\nEthel Merman"
+    "text": "How old is this person?\n\n\n\n\n\n\n \n\n\n\n\nEthel Merman"
   },
   {
     "objectID": "slides/00-welcome.html#ethel-merman",
@@ -5749,7 +5749,7 @@
     "href": "slides/00-welcome.html#how-old-is-this-person-1",
     "title": "Welcome to STA 199!",
     "section": "How old is this person?",
-    "text": "How old is this person?\n\n\n\n \n\n\n\n\nMegan Pete"
+    "text": "How old is this person?\n\n\n\n\n\n\n \n\n\n\n\nMegan Pete"
   },
   {
     "objectID": "slides/00-welcome.html#megan-thee-stallion",
@@ -5763,7 +5763,7 @@
     "href": "slides/00-welcome.html#how-old-is-this-person-2",
     "title": "Welcome to STA 199!",
     "section": "How old is this person?",
-    "text": "How old is this person?\n\n\n\n \n\n\n\n\n봉준호"
+    "text": "How old is this person?\n\n\n\n\n\n\n \n\n\n\n\n봉준호"
   },
   {
     "objectID": "slides/00-welcome.html#bong-joon-ho",
@@ -6169,14 +6169,14 @@
     "href": "slides/19-interval-estimation.html#variation-in-estimates-across-alternative-datasets",
     "title": "Uncertainty quantification",
     "section": "Variation in estimates across alternative datasets",
-    "text": "Variation in estimates across alternative datasets\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe amount of variation in the histogram tells us something about the uncertainty, and gives us a range of likely values."
+    "text": "Variation in estimates across alternative datasets\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nThe amount of variation in the histogram tells us something about the uncertainty, and gives us a range of likely values."
   },
   {
     "objectID": "slides/19-interval-estimation.html#data-houses-in-duke-forest",
     "href": "slides/19-interval-estimation.html#data-houses-in-duke-forest",
     "title": "Uncertainty quantification",
     "section": "Data: Houses in Duke Forest",
-    "text": "Data: Houses in Duke Forest\n\n\n\nData on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020\nScraped from Zillow\nSource: openintro::duke_forest\n\n\n\n\n\n\nGoal: Use the area (in square feet) to understand variability in the price of houses in Duke Forest."
+    "text": "Data: Houses in Duke Forest\n\n\n\nData on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020\nScraped from Zillow\nSource: openintro::duke_forest\n\n\n\n\n\nGoal: Use the area (in square feet) to understand variability in the price of houses in Duke Forest."
   },
   {
     "objectID": "slides/19-interval-estimation.html#exploratory-data-analysis",
@@ -6267,7 +6267,7 @@
     "href": "slides/19-interval-estimation.html#bootstrap-sample-5",
     "title": "Uncertainty quantification",
     "section": "Bootstrap sample 5",
-    "text": "Bootstrap sample 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nso on and so forth…"
+    "text": "Bootstrap sample 5\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nso on and so forth…"
   },
   {
     "objectID": "slides/19-interval-estimation.html#bootstrap-samples-1---5",
@@ -6421,7 +6421,7 @@
     "href": "slides/20-hypothesis-testing.html#sampling-uncertainty",
     "title": "Hypothesis testing",
     "section": "Sampling uncertainty",
-    "text": "Sampling uncertainty\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow sensitive are the estimates to the data they are based on?\n- Very? Then uncertainty is high, results are unreliable;\n- Not very? Uncertainty is low, results are more reliable."
+    "text": "Sampling uncertainty\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nHow sensitive are the estimates to the data they are based on?\n- Very? Then uncertainty is high, results are unreliable;\n- Not very? Uncertainty is low, results are more reliable."
   },
   {
     "objectID": "slides/20-hypothesis-testing.html#that-was-for-n-50.-what-if-i-was-starting-with-n-1000",
@@ -6484,7 +6484,7 @@
     "href": "slides/20-hypothesis-testing.html#data-houses-in-duke-forest",
     "title": "Hypothesis testing",
     "section": "Data: Houses in Duke Forest",
-    "text": "Data: Houses in Duke Forest\n\n\n\nData on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020\nScraped from Zillow\nSource: openintro::duke_forest\n\n\n\n\n\n\nGoal: Use the area (in square feet) to understand variability in the price of houses in Duke Forest."
+    "text": "Data: Houses in Duke Forest\n\n\n\nData on houses that were sold in the Duke Forest neighborhood of Durham, NC around November 2020\nScraped from Zillow\nSource: openintro::duke_forest\n\n\n\n\n\nGoal: Use the area (in square feet) to understand variability in the price of houses in Duke Forest."
   },
   {
     "objectID": "slides/20-hypothesis-testing.html#modeling",
@@ -6764,7 +6764,7 @@
     "href": "slides/lab-4.html#example-pivot_",
     "title": "Lab 4",
     "section": "Example: pivot_*()\n",
-    "text": "Example: pivot_*()\n\nLet’s examine the number of hours people slept during the week.\n\n\n\n\nHow do we go from this…\n\n\n\n\n\nppl\nMon\nTues\nWeds\nThurs\nFri\n\n\n\nperson1\n8\n7\n6\n10\n8\n\n\nperson2\n7\n5\n4\n6\n7\n\n\n\n\n\n\n\n…to this?\n\n\n\n\n\nppl\nday\nhours\n\n\n\nperson1\nMon\n8\n\n\nperson1\nTues\n7\n\n\nperson1\nWeds\n6\n\n\nperson1\nThurs\n10\n\n\nperson1\nFri\n8\n\n\nperson2\nMon\n7\n\n\nperson2\nTues\n5\n\n\nperson2\nWeds\n4\n\n\nperson2\nThurs\n6\n\n\nperson2\nFri\n7\n\n\n\n\n\n\n\n\n\n\ndf_longer &lt;- df |&gt;\n  pivot_longer(\n    cols = -ppl,\n    names_to = \"day\",\n    values_to = \"hours\"\n  )\n\npivot_longer() or pivot_wider()? Have the students vote. pivot_longer()!\nWhat should the arguments be? (Go through the argument discussion first, then reveal the result toward the end – giving them enough time to look at it for visual learners)\ncols = -ppl: cols – the columns to be pivoted (i.e., stacked into rows). in this case all of the columns except ppl (ppl column/variable remains)\nnames_to = \"day\": names_to – the new column/variable name for the original column/variable names [point to the Mon, Tues, Weds, … in the original table]\nvalues_to = \"hours\": names_to – the new column/variable name for the values from the original data [point to the hours of sleep in the original table]\nNote that the column/variable names “day” and “hours” did not exist until using pivot_longer()\nQuestion: What if I hadn’t assigned the result to df_longer? What would the display look like and what would the df data frame be if I had deleted the df_longer &lt;- portion of the code?\nAnswer: The console would show the data frame df_longer (though it wouldn’t be named – it would just read # A tibble: 10 x 3 and so on), and df remains unchanged. It’s the same wide (2 x 6) tibble it originally was defined as."
+    "text": "Example: pivot_*()\n\nLet’s examine the number of hours people slept during the week.\n\n\n\n\nHow do we go from this…\n\n\n\n\n\nppl\nMon\nTues\nWeds\nThurs\nFri\n\n\n\nperson1\n8\n7\n6\n10\n8\n\n\nperson2\n7\n5\n4\n6\n7\n\n\n\n\n\n\n\n…to this?\n\n\n\n\n\nppl\nday\nhours\n\n\n\nperson1\nMon\n8\n\n\nperson1\nTues\n7\n\n\nperson1\nWeds\n6\n\n\nperson1\nThurs\n10\n\n\nperson1\nFri\n8\n\n\nperson2\nMon\n7\n\n\nperson2\nTues\n5\n\n\nperson2\nWeds\n4\n\n\nperson2\nThurs\n6\n\n\nperson2\nFri\n7\n\n\n\n\n\n\n\n\n\ndf_longer &lt;- df |&gt;\n  pivot_longer(\n    cols = -ppl,\n    names_to = \"day\",\n    values_to = \"hours\"\n  )\n\npivot_longer() or pivot_wider()? Have the students vote. pivot_longer()!\nWhat should the arguments be? (Go through the argument discussion first, then reveal the result toward the end – giving them enough time to look at it for visual learners)\ncols = -ppl: cols – the columns to be pivoted (i.e., stacked into rows). in this case all of the columns except ppl (ppl column/variable remains)\nnames_to = \"day\": names_to – the new column/variable name for the original column/variable names [point to the Mon, Tues, Weds, … in the original table]\nvalues_to = \"hours\": names_to – the new column/variable name for the values from the original data [point to the hours of sleep in the original table]\nNote that the column/variable names “day” and “hours” did not exist until using pivot_longer()\nQuestion: What if I hadn’t assigned the result to df_longer? What would the display look like and what would the df data frame be if I had deleted the df_longer &lt;- portion of the code?\nAnswer: The console would show the data frame df_longer (though it wouldn’t be named – it would just read # A tibble: 10 x 3 and so on), and df remains unchanged. It’s the same wide (2 x 6) tibble it originally was defined as."
   },
   {
     "objectID": "slides/lab-4.html#join",
@@ -6785,28 +6785,28 @@
     "href": "slides/lab-4.html#left_join",
     "title": "Lab 4",
     "section": "left_join()",
-    "text": "left_join()\n\n\n\n\n\nleft_join(x, y)\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;   \n\n\n\n\nKeep all rows from left data frame."
+    "text": "left_join()\n\n\n\n\n\nleft_join(x, y)\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;   \n\n\n\nKeep all rows from left data frame."
   },
   {
     "objectID": "slides/lab-4.html#right_join",
     "href": "slides/lab-4.html#right_join",
     "title": "Lab 4",
     "section": "right_join()",
-    "text": "right_join()\n\n\n\n\n\nright_join(x, y)\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     4 &lt;NA&gt;    y4     \n\n\n\n\n  Keep all rows from right data frame."
+    "text": "right_join()\n\n\n\n\n\nright_join(x, y)\n\n# A tibble: 3 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     4 &lt;NA&gt;    y4     \n\n\n\n  Keep all rows from right data frame."
   },
   {
     "objectID": "slides/lab-4.html#full_join",
     "href": "slides/lab-4.html#full_join",
     "title": "Lab 4",
     "section": "full_join()",
-    "text": "full_join()\n\n\n\n\n\nfull_join(x, y)\n\n# A tibble: 4 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;   \n4     4 &lt;NA&gt;    y4     \n\n\n\n\n \nKeep all rows from both data frames."
+    "text": "full_join()\n\n\n\n\n\nfull_join(x, y)\n\n# A tibble: 4 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n3     3 x3      &lt;NA&gt;   \n4     4 &lt;NA&gt;    y4     \n\n\n\n \nKeep all rows from both data frames."
   },
   {
     "objectID": "slides/lab-4.html#inner_join",
     "href": "slides/lab-4.html#inner_join",
     "title": "Lab 4",
     "section": "inner_join()",
-    "text": "inner_join()\n\n\n\n\n\ninner_join(x, y)\n\n# A tibble: 2 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n\n\n\n\n \nKeep all rows that exist in both data frames."
+    "text": "inner_join()\n\n\n\n\n\ninner_join(x, y)\n\n# A tibble: 2 × 3\n     id value_x value_y\n  &lt;dbl&gt; &lt;chr&gt;   &lt;chr&gt;  \n1     1 x1      y1     \n2     2 x2      y2     \n\n\n\n \nKeep all rows that exist in both data frames."
   },
   {
     "objectID": "slides/lab-4.html#example-_join-more-info",
@@ -6827,7 +6827,7 @@
     "href": "slides/lab-4.html#factor-example",
     "title": "Lab 4",
     "section": "Factor example",
-    "text": "Factor example\nRecall from Thursday’s lecture\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsurvey |&gt;\n  mutate(\n    year = fct_relevel(year, \"First-year\", \"Sophomore\", \"Junior\", \"Senior\")\n    ) |&gt;\n  ggplot(aes(x = year)) +\n  geom_bar() + \n  labs(\n    title = \"Number of students by year\",\n    x = \"Year\",\n    y = \"Count\"\n  )\n\n\n\nHow is the x-axis ordered in the left and right plots?\n\nRecall from Thursday’s lecture, using context we know about the data it’s more appropriate for the year to have the order: first-year, sophomore, junior, senior and we used fct_revel to manually (we explicityly wrote out the order) change the ordering of the year variable.\nThe data is ordered alphabetically on the left (default for ggplot to order numerically or alphabetically).\nOrdered according to fct_relevel ordering on the right\nAlso that fct_revel did two things: it made the year variable a factor AND it set the order. (aside if asked) Note that ggplot will by default coerce the character variable to be a factor. Regardless if you assigned the data frame after running fct_revel it will be a factor (and you don’t need to separately use the factor() function)."
+    "text": "Factor example\nRecall from Thursday’s lecture\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nsurvey |&gt;\n  mutate(\n    year = fct_relevel(year, \"First-year\", \"Sophomore\", \"Junior\", \"Senior\")\n    ) |&gt;\n  ggplot(aes(x = year)) +\n  geom_bar() + \n  labs(\n    title = \"Number of students by year\",\n    x = \"Year\",\n    y = \"Count\"\n  )\n\n\n\nHow is the x-axis ordered in the left and right plots?\n\nRecall from Thursday’s lecture, using context we know about the data it’s more appropriate for the year to have the order: first-year, sophomore, junior, senior and we used fct_revel to manually (we explicityly wrote out the order) change the ordering of the year variable.\nThe data is ordered alphabetically on the left (default for ggplot to order numerically or alphabetically).\nOrdered according to fct_relevel ordering on the right\nAlso that fct_revel did two things: it made the year variable a factor AND it set the order. (aside if asked) Note that ggplot will by default coerce the character variable to be a factor. Regardless if you assigned the data frame after running fct_revel it will be a factor (and you don’t need to separately use the factor() function)."
   },
   {
     "objectID": "slides/lab-4.html#this-weeks-lab",
@@ -6897,7 +6897,7 @@
     "href": "slides/lab-7.html#fyi-the-response-variable-must-be-a-factor",
     "title": "Lab 7",
     "section": "FYI: the response variable must be a factor",
-    "text": "FYI: the response variable must be a factor\nforested already comes as a factor, so we’re lucky:\n\nclass(forested$forested)\n\n[1] \"factor\"\n\nlevels(forested$forested)\n\n[1] \"Yes\" \"No\" \n\n\n\nBut if it didn’t, things would not work:\n\nlogistic_reg() |&gt;\n  fit(as.numeric(forested) ~ precip_annual, data = forested_train)\n\nError in `check_outcome()`:\n! For a classification model, the outcome should be a `factor`, not a `numeric`."
+    "text": "FYI: the response variable must be a factor\nforested already comes as a factor, so we’re lucky:\n\nclass(forested$forested)\n\n[1] \"factor\"\n\nlevels(forested$forested)\n\n[1] \"Yes\" \"No\" \n\n\n\nBut if it didn’t, things would not work:\n\nlogistic_reg() |&gt;\n  fit(as.numeric(forested) ~ precip_annual, data = forested_train)\n\nError in `check_outcome()`:\n! For a classification model, the outcome should be a &lt;factor&gt;, not a\n  double vector."
   },
   {
     "objectID": "slides/lab-7.html#fyi-the-base-level-is-treated-as-failure-0",
@@ -8068,7 +8068,7 @@
     "href": "project/4-peer-review.html",
     "title": "Peer review",
     "section": "",
-    "text": "During the peer feedback process, you will be provided read-only access to your partner team’s GitHub repo. You will provide your feedback in the form of GitHub issues to your partner team’s GitHub repo.\nGoals\nThe goals of this milestone are as follows:\n\nReview others’ project drafts as a team and provide feedback\nPost issues on GitHub using an issue template\nLearn from others’ projects and improve your own project based on their strengths and weaknesses\nInstructions\nReview two other teams’ projects. As a team you should spend ~30 minutes on each team’s project.\n\nFind the names of the teams whose projects you’re reviewing below. You should already have access to this team’s repo.\nEach team member should go to the repo of the team you’re reviewing.\n\nThen,\n\n1-2 team members clone the team’s project and renders it to check for reproducibility.\n1-2 team members open the team’s project in their browser and starts reading through the project draft.\n1 team member opens an issue on the team’s repo using the peer review template.\nAll team members discuss the project based on the prompts on the issue template and one team member records the feedback and submits the issue.\n\n\n\nTo open an issue in the repo you’re reviewing, click on New issue, and click on Get started for the Peer review issue. Fill out this issue, answering the following questions:\n\nPeer review by: [NAME OF TEAM DOING THE REVIEW]\nNames of team members that participated in this review: [FULL NAMES OF TEAM MEMBERS DOING THE REVIEW]\nDescribe the goal of the project.\nDescribe the data used or collected, if any. If the proposal does not include the use of a specific dataset, comment on whether the project would be strengthened by the inclusion of a dataset.\nDescribe the approaches, tools, and methods that will be used.\nProvide constructive feedback on how the team might be able to improve their project. Make sure your feedback includes at least one comment on the statistical reasoning aspect of the project, but do feel free to comment on aspects beyond the reasoning as well.\nWhat aspect of this project are you most interested in and would like to see highlighted in the presentation?\nWere you able to reproduce the project by clicking on Render Website once you cloned it? Were there any issues with reproducibility?\nProvide constructive feedback on any issues with file and/or code organization.\nWhat have you learned from this team’s project that you are considering implementing in your own project?\n(Optional) Any further comments or feedback?\n\n\nReview pairings\n\n\nL1 - 8:30 am\nL2 - 10:05 am\nL3 - 10:05 am\nL4 - 11:45 am\nL5 - 11:45 am\nL6 - 1:25 pm\nL7 - 1:25 pm\nL8 - 3:05 pm\nL9 - 3:05 pm\nL10 - 4:40 pm\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrading\nPeer reviews will be graded on the extent to which it comprehensively and constructively addresses the components of the reviewee’s team’s report.\nOnly the team members participating in the review during the lab session are eligible for points for the peer review. If you’re unable to make it to lab in person, you should arrange to virtually connect with your team during your lab session.\n\n0 points: No peer review\n1 point: Feedback provided is not constructive or actionable\n2-4 points: Feedback provided is not sufficiently thorough\n5 points: Peer review is constructive, actionable, and sufficiently thorough\n\n\n\n\n\n\n\nNote\n\n\n\nThe feedback issue will come from one team member on GitHub since you can’t collectively edit an issue. However it must represent the opinions of the entire team. It is not a single team member’s responsibility to provide feedback, they’re just the record keeper for the team.",
+    "text": "During the peer feedback process, you will be provided read-only access to your partner team’s GitHub repo. You will provide your feedback in the form of GitHub issues to your partner team’s GitHub repo.\nGoals\nThe goals of this milestone are as follows:\n\nReview others’ project drafts as a team and provide feedback\nPost issues on GitHub using an issue template\nLearn from others’ projects and improve your own project based on their strengths and weaknesses\nInstructions\nReview two other teams’ projects. As a team you should spend ~30 minutes on each team’s project.\n\nFind the names of the teams whose projects you’re reviewing below. You should already have access to this team’s repo.\nEach team member should go to the repo of the team you’re reviewing.\n\nThen,\n\n1-2 team members clone the team’s project and renders it to check for reproducibility.\n1-2 team members open the team’s project in their browser and starts reading through the project draft.\n1 team member opens an issue on the team’s repo using the peer review template.\nAll team members discuss the project based on the prompts on the issue template and one team member records the feedback and submits the issue.\n\n\n\nTo open an issue in the repo you’re reviewing, click on New issue, and click on Get started for the Peer review issue. Fill out this issue, answering the following questions:\n\nPeer review by: [NAME OF TEAM DOING THE REVIEW]\nNames of team members that participated in this review: [FULL NAMES OF TEAM MEMBERS DOING THE REVIEW]\nDescribe the goal of the project.\nDescribe the data used or collected, if any. If the proposal does not include the use of a specific dataset, comment on whether the project would be strengthened by the inclusion of a dataset.\nDescribe the approaches, tools, and methods that will be used.\nProvide constructive feedback on how the team might be able to improve their project. Make sure your feedback includes at least one comment on the statistical reasoning aspect of the project, but do feel free to comment on aspects beyond the reasoning as well.\nWhat aspect of this project are you most interested in and would like to see highlighted in the presentation?\nWere you able to reproduce the project by clicking on Render Website once you cloned it? Were there any issues with reproducibility?\nProvide constructive feedback on any issues with file and/or code organization.\nWhat have you learned from this team’s project that you are considering implementing in your own project?\n(Optional) Any further comments or feedback?\n\n\nReview pairings\n\n\nL1 - 8:30 am\nL2 - 10:05 am\nL3 - 10:05 am\nL4 - 11:45 am\nL5 - 11:45 am\nL6 - 1:25 pm\nL7 - 1:25 pm\nL8 - 3:05 pm\nL9 - 3:05 pm\nL10 - 4:40 pm\n\n\n\n\n\n\n\n\n\nYour team name\nTeam to review 1\nTeam to review 2\n\n\n\nthe-outliers\nclav\nteam-d\n\n\nclav\nteam-d\njams\n\n\nteam-d\njams\nelephants\n\n\njams\nelephants\nstandard-deviants\n\n\nelephants\nstandard-deviants\nmutate\n\n\nstandard-deviants\nmutate\nthe-outliers\n\n\nmutate\nthe-outliers\nclav\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nGrading\nPeer reviews will be graded on the extent to which it comprehensively and constructively addresses the components of the reviewee’s team’s report.\nOnly the team members participating in the review during the lab session are eligible for points for the peer review. If you’re unable to make it to lab in person, you should arrange to virtually connect with your team during your lab session.\n\n0 points: No peer review\n1 point: Feedback provided is not constructive or actionable\n2-4 points: Feedback provided is not sufficiently thorough\n5 points: Peer review is constructive, actionable, and sufficiently thorough\n\n\n\n\n\n\n\nNote\n\n\n\nThe feedback issue will come from one team member on GitHub since you can’t collectively edit an issue. However it must represent the opinions of the entire team. It is not a single team member’s responsibility to provide feedback, they’re just the record keeper for the team.",
     "crumbs": [
       "Project",
       "Milestone 4"
@@ -8496,7 +8496,7 @@
     "href": "computing/coding-principles-oh.html#examples",
     "title": "Intro to Coding Principles",
     "section": "Examples",
-    "text": "Examples\nEvery column in a data frame will have a particular data type - sort of a way that R recognizes, classifies, and interacts with the data. Let’s look at an example, using the convenient glimpse function:\n\nglimpse(midwest)\n\nRows: 437\nColumns: 28\n$ PID                  &lt;int&gt; 561, 562, 563, 564, 565, 566, 567, 568, 569, 570,…\n$ county               &lt;chr&gt; \"ADAMS\", \"ALEXANDER\", \"BOND\", \"BOONE\", \"BROWN\", \"…\n$ state                &lt;chr&gt; \"IL\", \"IL\", \"IL\", \"IL\", \"IL\", \"IL\", \"IL\", \"IL\", \"…\n$ area                 &lt;dbl&gt; 0.052, 0.014, 0.022, 0.017, 0.018, 0.050, 0.017, …\n$ poptotal             &lt;int&gt; 66090, 10626, 14991, 30806, 5836, 35688, 5322, 16…\n$ popdensity           &lt;dbl&gt; 1270.9615, 759.0000, 681.4091, 1812.1176, 324.222…\n$ popwhite             &lt;int&gt; 63917, 7054, 14477, 29344, 5264, 35157, 5298, 165…\n$ popblack             &lt;int&gt; 1702, 3496, 429, 127, 547, 50, 1, 111, 16, 16559,…\n$ popamerindian        &lt;int&gt; 98, 19, 35, 46, 14, 65, 8, 30, 8, 331, 51, 26, 17…\n$ popasian             &lt;int&gt; 249, 48, 16, 150, 5, 195, 15, 61, 23, 8033, 89, 3…\n$ popother             &lt;int&gt; 124, 9, 34, 1139, 6, 221, 0, 84, 6, 1596, 20, 7, …\n$ percwhite            &lt;dbl&gt; 96.71206, 66.38434, 96.57128, 95.25417, 90.19877,…\n$ percblack            &lt;dbl&gt; 2.57527614, 32.90043290, 2.86171703, 0.41225735, …\n$ percamerindan        &lt;dbl&gt; 0.14828264, 0.17880670, 0.23347342, 0.14932156, 0…\n$ percasian            &lt;dbl&gt; 0.37675897, 0.45172219, 0.10673071, 0.48691813, 0…\n$ percother            &lt;dbl&gt; 0.18762294, 0.08469791, 0.22680275, 3.69733169, 0…\n$ popadults            &lt;int&gt; 43298, 6724, 9669, 19272, 3979, 23444, 3583, 1132…\n$ perchsd              &lt;dbl&gt; 75.10740, 59.72635, 69.33499, 75.47219, 68.86152,…\n$ percollege           &lt;dbl&gt; 19.63139, 11.24331, 17.03382, 17.27895, 14.47600,…\n$ percprof             &lt;dbl&gt; 4.355859, 2.870315, 4.488572, 4.197800, 3.367680,…\n$ poppovertyknown      &lt;int&gt; 63628, 10529, 14235, 30337, 4815, 35107, 5241, 16…\n$ percpovertyknown     &lt;dbl&gt; 96.27478, 99.08714, 94.95697, 98.47757, 82.50514,…\n$ percbelowpoverty     &lt;dbl&gt; 13.151443, 32.244278, 12.068844, 7.209019, 13.520…\n$ percchildbelowpovert &lt;dbl&gt; 18.011717, 45.826514, 14.036061, 11.179536, 13.02…\n$ percadultpoverty     &lt;dbl&gt; 11.009776, 27.385647, 10.852090, 5.536013, 11.143…\n$ percelderlypoverty   &lt;dbl&gt; 12.443812, 25.228976, 12.697410, 6.217047, 19.200…\n$ inmetro              &lt;int&gt; 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0…\n$ category             &lt;chr&gt; \"AAR\", \"LHR\", \"AAR\", \"ALU\", \"AAR\", \"AAR\", \"LAR\", …\n\n\nNext to the data, we can see various designations - &lt;int&gt;, &lt;dbl&gt;, &lt;chr&gt;, etc. These are data types. But what exactly is the difference?\nDouble/Numeric\nThe dbl data type, which is the default implementation of the numeric class, stands for double - meaning “double-precision floating-point format”. It’s pretty clear that double is an easier word to remember! This allows you to store numbers with a lot of decimal points (but not infinite!). For example, let’s look at \\(\\pi\\), which is built in as pi in R:\n\npi\n\n[1] 3.141593\n\ntypeof(pi)\n\n[1] \"double\"\n\n\nHere, we use the typeof() function to determine what data type R is using to store our variables. In this case, we can see that R stores pi as a double variable, which is the default for all numeric variables. In general, whenever you work with numbers, they will be doubles, and for purposes of STA 199 there is no issue with this.\nInteger\nThe int data type means integer - as in, the mathematical concept of an integer. All data represented as integers will be whole numbers. This data type is not capable of storing decimal places, so if you try to do decimal operations with it, R will implicitly cast it to another data type. Implicitly means that it does this without us telling it to. Let’s take a look at a couple of examples:\n\na &lt;- 3\ntypeof(a)\n\n[1] \"double\"\n\n\nBy default, R will treat all numbers as the numeric class. If you want to explicitly tell R that your number is an integer, follow the number with “L”:\n\na &lt;- 3L\ntypeof(a)\n\n[1] \"integer\"\n\n\nNow, let’s say we want to divide this number by 2:\n\nb &lt;- a / 2\ntypeof(b)\n\n[1] \"double\"\n\n\nSince 3 is not divisible by 2, the output is a decimal. However, since we have performed a decimal operation, rather than trying to guess whether to round up or down, R simply implicitly casts it back to numeric.\nLogical/Boolean\nWhile there isn’t an example in this data frame, there is a data type called logical - which represents true/false.\n\nc &lt;- TRUE\ntypeof(c)\n\n[1] \"logical\"\n\n\nIn R, you need to type out TRUE/FALSE in all caps for it to be recognized. Under the hood, R stores these values as “FALSE = 0” and “TRUE = 1”, which means that if you want to find the percentage of TRUE in your data, you can just take the average:\n\nd &lt;- c(TRUE, FALSE, TRUE)\nmean(d)\n\n[1] 0.6666667\n\n\nCharacter/String\nThe character data type represents all characters and strings in R. Unlike some languages, R does not differentiate between these. In general, strings are used to represent words and categorical data, for example:\n\nplace &lt;- \"Durham, NC\"\ntypeof(place)\n\n[1] \"character\"\n\n\nIn order for R to recognize a variable as a string, it needs to be wrapped in quotation marks. Single or double quotation marks are acceptable:\n\nnew_place &lt;- 'Cincinnati'\ntypeof(new_place)\n\n[1] \"character\"\n\n\nHowever, missing quotation marks will generate an error:\n\nanother_place &lt;- Timbuktu\n\nError in eval(expr, envir, enclos): object 'Timbuktu' not found\n\n\nIn this case, since Timbuktu is not wrapped in quotation marks, R is looking for a pre-existing object - a variable or a function - called Timbuktu. Since no such object exists, R throws an error, and will refuse to compile your document (unless you force it to).\nThere is another important point of caution here. Sometimes, when you load in a data frame, there will be columns that should be represented as numbers, but are accidentally represented as strings. If you’re not careful, this can have consequences. For example, consider the following:\n\n0 == 00\n\n[1] TRUE\n\n\"0\" == \"00\"\n\n[1] FALSE\n\n\nIn R, the numbers 0 and 00 represent the same thing! However, when they are strings, they do not. R treats numbers differently than it does strings, so it’s important to pay attention to which one you are actually implementing. You might also run into issues with some of your operations - for example, if you try to take the average of a column of strings, R has no idea what to do and will throw an error.\nNote: pay attention to the usage of two equal signs here, rather than just one. Why did we do this? (More on this shortly.)",
+    "text": "Examples\nEvery column in a data frame will have a particular data type - sort of a way that R recognizes, classifies, and interacts with the data. Let’s look at an example, using the convenient glimpse function:\n\nglimpse(midwest)\n\nRows: 437\nColumns: 28\n$ PID                  &lt;int&gt; 561, 562, 563, 564, 565, 566, 567, 568, 569, 570,…\n$ county               &lt;chr&gt; \"ADAMS\", \"ALEXANDER\", \"BOND\", \"BOONE\", \"BROWN\", \"…\n$ state                &lt;chr&gt; \"IL\", \"IL\", \"IL\", \"IL\", \"IL\", \"IL\", \"IL\", \"IL\", \"…\n$ area                 &lt;dbl&gt; 0.052, 0.014, 0.022, 0.017, 0.018, 0.050, 0.017, …\n$ poptotal             &lt;int&gt; 66090, 10626, 14991, 30806, 5836, 35688, 5322, 16…\n$ popdensity           &lt;dbl&gt; 1270.9615, 759.0000, 681.4091, 1812.1176, 324.222…\n$ popwhite             &lt;int&gt; 63917, 7054, 14477, 29344, 5264, 35157, 5298, 165…\n$ popblack             &lt;int&gt; 1702, 3496, 429, 127, 547, 50, 1, 111, 16, 16559,…\n$ popamerindian        &lt;int&gt; 98, 19, 35, 46, 14, 65, 8, 30, 8, 331, 51, 26, 17…\n$ popasian             &lt;int&gt; 249, 48, 16, 150, 5, 195, 15, 61, 23, 8033, 89, 3…\n$ popother             &lt;int&gt; 124, 9, 34, 1139, 6, 221, 0, 84, 6, 1596, 20, 7, …\n$ percwhite            &lt;dbl&gt; 96.71206, 66.38434, 96.57128, 95.25417, 90.19877,…\n$ percblack            &lt;dbl&gt; 2.57527614, 32.90043290, 2.86171703, 0.41225735, …\n$ percamerindan        &lt;dbl&gt; 0.14828264, 0.17880670, 0.23347342, 0.14932156, 0…\n$ percasian            &lt;dbl&gt; 0.37675897, 0.45172219, 0.10673071, 0.48691813, 0…\n$ percother            &lt;dbl&gt; 0.18762294, 0.08469791, 0.22680275, 3.69733169, 0…\n$ popadults            &lt;int&gt; 43298, 6724, 9669, 19272, 3979, 23444, 3583, 1132…\n$ perchsd              &lt;dbl&gt; 75.10740, 59.72635, 69.33499, 75.47219, 68.86152,…\n$ percollege           &lt;dbl&gt; 19.63139, 11.24331, 17.03382, 17.27895, 14.47600,…\n$ percprof             &lt;dbl&gt; 4.355859, 2.870315, 4.488572, 4.197800, 3.367680,…\n$ poppovertyknown      &lt;int&gt; 63628, 10529, 14235, 30337, 4815, 35107, 5241, 16…\n$ percpovertyknown     &lt;dbl&gt; 96.27478, 99.08714, 94.95697, 98.47757, 82.50514,…\n$ percbelowpoverty     &lt;dbl&gt; 13.151443, 32.244278, 12.068844, 7.209019, 13.520…\n$ percchildbelowpovert &lt;dbl&gt; 18.011717, 45.826514, 14.036061, 11.179536, 13.02…\n$ percadultpoverty     &lt;dbl&gt; 11.009776, 27.385647, 10.852090, 5.536013, 11.143…\n$ percelderlypoverty   &lt;dbl&gt; 12.443812, 25.228976, 12.697410, 6.217047, 19.200…\n$ inmetro              &lt;int&gt; 0, 0, 0, 1, 0, 0, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0…\n$ category             &lt;chr&gt; \"AAR\", \"LHR\", \"AAR\", \"ALU\", \"AAR\", \"AAR\", \"LAR\", …\n\n\nNext to the data, we can see various designations - &lt;int&gt;, &lt;dbl&gt;, &lt;chr&gt;, etc. These are data types. But what exactly is the difference?\nDouble/Numeric\nThe dbl data type, which is the default implementation of the numeric class, stands for double - meaning “double-precision floating-point format”. It’s pretty clear that double is an easier word to remember! This allows you to store numbers with a lot of decimal points (but not infinite!). For example, let’s look at \\(\\pi\\), which is built in as pi in R:\n\npi\n\n[1] 3.141593\n\ntypeof(pi)\n\n[1] \"double\"\n\n\nHere, we use the typeof() function to determine what data type R is using to store our variables. In this case, we can see that R stores pi as a double variable, which is the default for all numeric variables. In general, whenever you work with numbers, they will be doubles, and for purposes of STA 199 there is no issue with this.\nInteger\nThe int data type means integer - as in, the mathematical concept of an integer. All data represented as integers will be whole numbers. This data type is not capable of storing decimal places, so if you try to do decimal operations with it, R will implicitly cast it to another data type. Implicitly means that it does this without us telling it to. Let’s take a look at a couple of examples:\n\na &lt;- 3\ntypeof(a)\n\n[1] \"double\"\n\n\nBy default, R will treat all numbers as the numeric class. If you want to explicitly tell R that your number is an integer, follow the number with “L”:\n\na &lt;- 3L\ntypeof(a)\n\n[1] \"integer\"\n\n\nNow, let’s say we want to divide this number by 2:\n\nb &lt;- a / 2\ntypeof(b)\n\n[1] \"double\"\n\n\nSince 3 is not divisible by 2, the output is a decimal. However, since we have performed a decimal operation, rather than trying to guess whether to round up or down, R simply implicitly casts it back to numeric.\nLogical/Boolean\nWhile there isn’t an example in this data frame, there is a data type called logical - which represents true/false.\n\nc &lt;- TRUE\ntypeof(c)\n\n[1] \"logical\"\n\n\nIn R, you need to type out TRUE/FALSE in all caps for it to be recognized. Under the hood, R stores these values as “FALSE = 0” and “TRUE = 1”, which means that if you want to find the percentage of TRUE in your data, you can just take the average:\n\nd &lt;- c(TRUE, FALSE, TRUE)\nmean(d)\n\n[1] 0.6666667\n\n\nCharacter/String\nThe character data type represents all characters and strings in R. Unlike some languages, R does not differentiate between these. In general, strings are used to represent words and categorical data, for example:\n\nplace &lt;- \"Durham, NC\"\ntypeof(place)\n\n[1] \"character\"\n\n\nIn order for R to recognize a variable as a string, it needs to be wrapped in quotation marks. Single or double quotation marks are acceptable:\n\nnew_place &lt;- 'Cincinnati'\ntypeof(new_place)\n\n[1] \"character\"\n\n\nHowever, missing quotation marks will generate an error:\n\nanother_place &lt;- Timbuktu\n\nError: object 'Timbuktu' not found\n\n\nIn this case, since Timbuktu is not wrapped in quotation marks, R is looking for a pre-existing object - a variable or a function - called Timbuktu. Since no such object exists, R throws an error, and will refuse to compile your document (unless you force it to).\nThere is another important point of caution here. Sometimes, when you load in a data frame, there will be columns that should be represented as numbers, but are accidentally represented as strings. If you’re not careful, this can have consequences. For example, consider the following:\n\n0 == 00\n\n[1] TRUE\n\n\"0\" == \"00\"\n\n[1] FALSE\n\n\nIn R, the numbers 0 and 00 represent the same thing! However, when they are strings, they do not. R treats numbers differently than it does strings, so it’s important to pay attention to which one you are actually implementing. You might also run into issues with some of your operations - for example, if you try to take the average of a column of strings, R has no idea what to do and will throw an error.\nNote: pay attention to the usage of two equal signs here, rather than just one. Why did we do this? (More on this shortly.)",
     "crumbs": [
       "Computing",
       "Dav's coding review"
