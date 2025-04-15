@@ -62,7 +62,7 @@ Review two other teams' projects. As a team you should spend \~30 minutes on eac
 
 ```{r}
 #| message: false
-#| eval: false
+#| eval: true
 library(tidyverse)
 library(gt)
 library(googlesheets4)
@@ -83,6 +83,7 @@ make_pairing_table <- function(df) {
       team_to_review_2 = "Team to review 2"
     )
 }
+
 ```
 
 ::: panel-tabset
@@ -90,8 +91,8 @@ make_pairing_table <- function(df) {
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 1))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 1))
 make_pairing_table(teams)
 ```
 
@@ -99,8 +100,8 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 2))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 2))
 make_pairing_table(teams)
 ```
 
@@ -108,8 +109,8 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 3))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 3))
 make_pairing_table(teams)
 ```
 
@@ -117,8 +118,8 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 4))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 4))
 make_pairing_table(teams)
 ```
 
@@ -126,8 +127,8 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 5))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 5))
 make_pairing_table(teams)
 ```
 
@@ -135,8 +136,8 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 6))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 6))
 make_pairing_table(teams)
 ```
 
@@ -144,8 +145,8 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 7))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 7))
 make_pairing_table(teams)
 ```
 
@@ -153,8 +154,8 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 8))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 8))
 make_pairing_table(teams)
 ```
 
@@ -162,8 +163,8 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 9))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 9))
 make_pairing_table(teams)
 ```
 
@@ -171,8 +172,8 @@ make_pairing_table(teams)
 
 ```{r}
 #| message: false
-#| eval: false
-teams <- read_sheet("https://docs.google.com/spreadsheets/d/1SBnjF2qCOvg-_oz6leihuV3lM6gNZ5KYx4z4ZOgnbQM/edit?gid=715214055#gid=715214055", sheet = paste0("lab_", 10))
+#| eval: true
+teams <- read_sheet("https://docs.google.com/spreadsheets/d/16r5FvyJHWm2QBRJEredFB_f_l_JIolzOZGLkfmy92Bg", sheet = paste0("lab_", 10))
 make_pairing_table(teams)
 ```
 :::
