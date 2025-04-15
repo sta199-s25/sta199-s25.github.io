@@ -32,14 +32,6 @@ new_loans <- loans_full_schema |>
 
 -   Wait until you're prompted to work on the application exercise during class before editing the file.
 
-## Quick updates
-
--   Regrade requests done! Labs 1 - 6, Midterm 2;
-
--   Lab 7 grades returned; regrade requests open;
-
--   Midterm 2 grades returned Tuesday April 22.
-
 ## The home stretch
 
 ::: incremental
