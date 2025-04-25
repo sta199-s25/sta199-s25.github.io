@@ -1,5 +1,5 @@
 ---
-title: "What's it all about, Alfie?"
+title: "[What's it all about, Alfie?](https://youtu.be/2-he6twMEF0?feature=shared)"
 subtitle: "Lecture 24"
 date: "2025-4-22"
 format: revealjs
@@ -9,7 +9,6 @@ auto-stretch: false
 # Course admin
 
 ## While you wait
-
 
 ```{r}
 #| label: load-packages
@@ -30,33 +29,33 @@ todays_ae <- "ae-20-final-review"
 
 -   Wait until you're prompted to work on the application exercise during class before editing the file.
 
-
 ## Projects due tomorrow at 5PM
 
-- Written report in the `index` file;
-- Code chunks should *not* be displayed;
-- Five minute video presentation;
-- It needs to be obvious that all team members participated.
+-   Written report in the `index` file;
+-   Code chunks should *not* be displayed;
+-   Five minute video presentation;
+-   It needs to be obvious that all team members participated.
 
 ## Final exam next Tuesday 4/29 at 9AM
 
-- Roughly the same length as a midterm;
-- You have three hours to complete it;
-- You get both sides of an 8.5" x 11" sheet of notes;
-- All multiple choice;
-- Room assignments emailed to you;
-- 20% of your final course grade;
-- Replaces a lower in-class midterm score.
+-   Roughly the same length as a midterm;
+-   You have three hours to complete it;
+-   You get both sides of an 8.5" x 11" sheet of notes;
+-   All multiple choice;
+-   Room assignments emailed to you;
+-   20% of your final course grade;
+-   Replaces a lower in-class midterm score;
+-   Visit my OHs to view old midterm solutions.
 
 ## Style of questions
 
 Things you've seen that will reappear:
 
-- Do you understand this picture?
-- Can you debug this incorrect code?
-- What is the correct statistical interpretation of this quantity?
+-   Do you understand this picture?
+-   Can you debug this incorrect code?
+-   What is the correct statistical interpretation of this quantity?
 
-A skill you will need: 
+A skill you will need:
 
 > Can you picture the *intermediate output* of a data pipeline.
 
@@ -142,15 +141,13 @@ survey_counts |>
 
 ## The full monty
 
-- *Preparation*: importing, joining, reshaping, mutating, etc;
+-   *Preparation*: importing, joining, reshaping, mutating, etc;
 
-- *Exploration*: pictures and summaries;
+-   *Exploration*: pictures and summaries;
 
-- *Modeling*: linear/logistic regression, model selection, etc.
+-   *Modeling*: linear/logistic regression, model selection, etc.
 
-- *Inference*: interval estimation and hypothesis testing.
-
-
+-   *Inference*: interval estimation and hypothesis testing.
 
 ## `{r} todays_ae`
 
