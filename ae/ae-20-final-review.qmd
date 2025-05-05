@@ -1,0 +1,406 @@
+---
+title: "AE 20: A Dataset's Life"
+execute:
+  warning: false
+  message: false
+---
+
+[![](images/airplane-joke.webp){fig-align="center" width="75%"}](https://en.wikipedia.org/wiki/Airplane!)
+
+Nope, it's not [A Hero's Life](https://youtu.be/0QsaPvrT-40?feature=shared), or A Boy's Life, or A Nun's Life; it's A Dataset's Life. Let's take a data set through all four steps in our data science workflow:
+
+1.  **preparation**: import, join, clean, reshape, mutate, etc;
+2.  **exploration**: pictures (ABV!) and a concise set of numerical summaries;
+3.  **modeling**: linear/logistic regression, model selection, etc;
+4.  **inference**: interval estimation and hypothesis testing.
+
+```{r}
+#| eval: false
+#| echo: false
+
+library(palmerpenguins)
+
+set.seed(123456)
+
+penguins <- palmerpenguins::penguins |>
+  mutate(
+    earth_weight_lb = 0.00220462 * body_mass_g,
+    id = 1:nrow(penguins)
+  ) |>
+  select(id, species, island, sex, flipper_length_mm, earth_weight_lb)
+
+penguins_venus <- penguins |> 
+  mutate(weight_lb =  0.91 * earth_weight_lb + rnorm(nrow(penguins))) |>
+  select(id, species, island, sex, flipper_length_mm, weight_lb)
+  
+penguins_mars <- penguins |> 
+  mutate(weight_lb =  0.38 * earth_weight_lb + rnorm(nrow(penguins))) |>
+  select(id, weight_lb)
+
+write_csv(penguins_venus, "data/penguins_venus.csv")
+write_csv(penguins_mars, "data/penguins_mars.csv")
+```
+
+```{r}
+#| message: false
+library(tidyverse)
+library(tidymodels)
+```
+
+If you're like me, you are sick of the penguins at this point. So for our last act, let's banish them to worlds beyond. I packed all of those lil' beasts onto a rocket ship and took them to both Mars and Venus, where I recorded their weights (in pounds). I then abandoned the ship to hurtle through space so that future stawanana students never have to study them again.
+
+# 1. Preparation
+
+## Load the data
+
+I have two sets of measurements for the same sample of penguins: one set taken on Mars, and another on Venus. They are contained in two separate files that need to be merged:
+
+```{r}
+#| message: false
+penguins_venus <- read_csv("data/penguins_venus.csv")
+penguins_mars <- read_csv("data/penguins_mars.csv")
+
+glimpse(penguins_venus)
+glimpse(penguins_mars)
+```
+
+## Merge the data
+
+**Task**: Use an appropriate `join` function to create a new data frame called `space_penguins`, where each penguin's weight on either planet is recorded in a separate column:
+
+```{r}
+space_penguins <- full_join(penguins_venus, penguins_mars, by = join_by(id)) |>
+  rename(venus_weight = weight_lb.x,
+         mars_weight = weight_lb.y)
+space_penguins
+```
+
+## Reshape the data
+
+**Task**: Use an appropriate `pivot` function to create a new version of `space_penguins` where the information about the planet where the measurements were taken is its own column:
+
+```{r}
+#| error: true
+space_penguins_long <- space_penguins |>
+  pivot_longer(
+    cols = c(venus_weight, mars_weight),
+    names_to = "planet",
+    values_to = "weight_lb"
+  )
+```
+
+Woops! Looks like we might have a problem here. Why is it saying that the Mars weights are type character?
+
+```{r}
+space_penguins |>
+  select(mars_weight) |>
+  arrange(desc(mars_weight))
+```
+
+Oh. That's really stupid. If we tell it to convert this column to numbers, it will do it, and anything it cannot convert (such as those two pieces of text) will simply be replaced with `NA`, which is fine by me in this case:
+
+```{r}
+space_penguins <- space_penguins |>
+  mutate(
+    mars_weight = as.numeric(mars_weight)
+  )
+
+space_penguins
+```
+
+Alright, let's try to reshape again:
+
+```{r}
+space_penguins_long <- space_penguins |>
+  pivot_longer(
+    cols = c(venus_weight, mars_weight),
+    names_to = "planet",
+    values_to = "weight_lb"
+  ) |>
+  mutate(
+    planet = if_else(planet == "venus_weight", "Venus", "Mars")
+  )
+space_penguins_long
+```
+
+So, we have the wide view in `space_penguins`, where each row is a penguin, and we have the long view in `space_penguins_long` where each row is a penguin/planet. Which of these is "tidy"? As we will see, it depends on the task.
+
+# 2. Exploration
+
+## Pictures
+
+**Task**: Generate side-by-side density plots of the weights on each planet.
+
+```{r}
+#| warning: false
+ggplot(space_penguins_long, aes(x = weight_lb, fill = planet)) + 
+  geom_density(alpha = 0.5)
+```
+
+So, weights on Mars are systematically lower than weights on Venus.
+
+If we wished to slice-and-dice the data further according to other categorical variables like `sex` or `island`, we could do it with one of those darned `facet` functions (I can never remember which is which or where the `~` goes):
+
+```{r}
+#| warning: false
+ggplot(space_penguins_long, aes(x = weight_lb, fill = planet)) + 
+  geom_density(alpha = 0.5) + 
+  facet_grid(island ~ .)
+```
+
+## A concise set of numerical summaries
+
+**Task**: compute the mean, standard deviation, and median of weight on each planet:
+
+```{r}
+space_penguins_long |>
+  group_by(planet) |>
+  summarize(
+    mean_wt = mean(weight_lb, na.rm = TRUE),
+    sd_wt = sd(weight_lb, na.rm = TRUE),
+    med_wt = median(weight_lb, na.rm = TRUE)
+  )
+```
+
+Notice that these numbers match what we saw in the plot. The distributions are symmetric, and so the means and medians are about the same. Furthermore, the spread of the Mars distribution was lower than the spread of the Venus distribution, and we see that in the numbers as well.
+
+# 3. Modeling
+
+What is the conversion factor between weights on Venus and weights on Mars? If you ask a physicist, I'm pretty sure they will tell you it's this:
+
+$$
+Mars~weight~(lb)\approx Venus~weight~(lb)\times 0.41.
+$$
+
+So, you weigh less on Mars than you do on Venus. Something something gravity. If we didn't already know this, could we learn it from our data? Note that is is not a foregone conclusion, because our data are *noisy*. The weights have been measured *with error*, and so what should be a perfect straight line relationship won't be, exactly.
+
+## Linear
+
+**Task**: Create a scatterplot of **Venus weights versus Mars weights**, and add a line of best fit:
+
+```{r}
+#| warning: false
+ggplot(space_penguins, aes(x = venus_weight, y = mars_weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm")
+```
+
+::: callout-warning
+## Plotting "this" versus "that"
+
+There has been some controversy about how to read a phrase like "Venus weights versus Mars weights." I personally take it to mean that Venus weights go on the $x$-axis and Mars weights go on the $y$-axis, but some on the teaching team think I am psychotic for thinking this. Based on my informal polling of students, we all would seem to be evenly split on this point. Anyway, you're not being tested on this, and on an exam I will try to be sufficiently clear so that it doesn't end up mattering.
+:::
+
+**Task**: Compute and interpret the estimated slope and intercept of the best fit line:
+
+```{r}
+linear_fit <- linear_reg() |>
+  fit(mars_weight ~ venus_weight, data = space_penguins)
+
+tidy(linear_fit)
+```
+
+$$
+\widehat{Mars~weight} = 1.17 + 0.28\times Venus~weight
+$$
+
+**Interpretations**:
+
+-   **intercept**: if a penguin weighs zero pounds on Venus, we predict that, on average, they weigh 1.17 pounds on Mars. This obviously makes no sense;
+-   **slope**: a one pound increase on Venus predicts a 0.28 pounds increase on Mars, on average.
+
+Hmmm. We know that the "true" relationship has an intercept of 0 and a slope of 0.41, so this is not so good.
+
+::: {.callout-note collapse="true"}
+## Don't read this. You don't need to know this.
+
+What we're witnessing here is [*attenuation bias*](https://en.wikipedia.org/wiki/Regression_dilution).
+:::
+
+## Logistic
+
+**Task**: fit a logistic regression that predicts the planet the measurement was made on from the value of the measurement. Lower measurements were probably more likely to have been taken on Mars, as we saw.
+
+```{r}
+space_penguins_long <- space_penguins_long |>
+  mutate(planet = as_factor(planet))
+
+levels(space_penguins_long$planet)
+```
+
+```{r}
+logistic_fit <- logistic_reg() |>
+  fit(planet ~ weight_lb, data = space_penguins_long)
+
+tidy(logistic_fit)
+```
+
+$$
+\log\left(\frac{\hat{p}}{1-\hat{p}}\right)=14.4-2.6\times weight
+$$
+
+**Interpretations**:
+
+-   **intercept**: we predict a weight measurement of zero lb to have come from the planet Mars with an odds of $e^{14.4}\approx 1794075$. Again, doesn't make a tremendous amount of sense, but in general, the lower the weight, the more likely it was to have been recorded on Mars;
+-   **slope**: for each one pound increase in the measurement, we predict on average that the odds of the measurement coming from Mars decrease by a multiplicative factor of $e^{-2.6}\approx 0.074$. That is precipitous!
+
+**Task**: generate the ROC curve for this model:
+
+```{r}
+log_aug <- augment(logistic_fit, space_penguins_long)
+
+log_roc <- roc_curve(log_aug, 
+                     truth = planet, 
+                     .pred_Mars, 
+                     event_level = "second")
+
+ggplot(log_roc, aes(x = 1 - specificity, y = sensitivity)) +
+  geom_path() +
+  geom_abline(lty = 3) +
+  coord_equal() + 
+  theme_minimal()
+```
+
+So, given a measurement, it's not too hard to predict what planet it was taken on. Our model does a pretty good job.
+
+# 4. Inference
+
+Back to linear regression now...
+
+## Interval estimation
+
+**Task**: Compute, visualize, and interpret a 95% confidence interval for the slope of the regression line:
+
+```{r}
+observed_fit <- space_penguins |>
+  specify(mars_weight ~ venus_weight) |>
+  fit()
+
+set.seed(8675309)
+boot_fits <- space_penguins |>
+  specify(mars_weight ~ venus_weight) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  fit()
+
+ci_95 <- get_confidence_interval(
+  boot_fits,
+  point_estimate = observed_fit,
+  level = 0.95,
+  type = "percentile"
+)
+ci_95
+
+visualize(boot_fits) + 
+  shade_confidence_interval(ci_95)
+```
+
+We are 95% confident that the true slope is between 0.228 and 0.342. 
+
+## Hypothesis testing
+
+**Task**: Test the following hypotheses at the 5% level:
+
+$$
+\begin{aligned}
+H_0&:\beta_1=0\\
+H_A&:\beta_1\neq0
+\end{aligned}
+$$
+
+```{r}
+set.seed(20)
+null_dist <- space_penguins |>
+  specify(mars_weight ~ venus_weight) |>
+  hypothesize(null = "independence") |>
+  generate(reps = 1000, type = "permute") |>
+  fit()
+
+visualize(null_dist) +
+  shade_p_value(obs_stat = observed_fit, direction = "two-sided")
+
+null_dist |>
+  get_p_value(obs_stat = observed_fit, direction = "two-sided")
+```
+
+The p-value is basically zero. This means that, in a world where the null hypothesis is true, and $\beta_1$ does in fact equal zero, then there is a 0% chance that we would observe an estimated slope as or more extreme than the one we saw. This provides evidence that the null is totally bogus, and so we reject it. 
+
+**Task**: Test the following hypotheses at the 5% level:
+
+$$
+\begin{aligned}
+H_0&:\beta_1=0.41\\
+H_A&:\beta_1\neq0.41
+\end{aligned}
+$$
+
+We haven't exactly learned how to do this, but there's a duality between confidence intervals and hypothesis testing. Determining how far the estimate is in the tails of the null distribution is the same as determining whether or not the hypothesized value is contained in a confidence interval. Our 95% confidence interval was (0.228, 0.342). This **does not** contain the hypothesized value of 0.41, meaning that the hypothesized value is not within the range of likely values. So we reject the null at the 5% level (because it was a 95% interval). 
+
+::: callout-note
+## Reality check
+This is a setting where we sorta know the true value. Physicists are pretty sure the slope is 0.41, so it's alarming that we just rejected that hypothesis. What's a boy to do?
+:::
+
+# BONUS: regression through the origin
+
+This is the (population) linear model we are estimating with data:
+
+$$
+Mars~weight = \beta_0+\beta_1\times Venus~weight + \varepsilon.
+$$
+
+So we are allowing for the possibility that $\beta_0\neq 0$ even though we know this is logically impossible. If the weight on Venus is zero, then the weight on Mars for the same subject must also be zero. Period. 
+
+If we wish to *force* the intercept to be zero to align with this logic, then we are using the **regression-through-the-origin** model:
+
+$$
+Mars~weight = \beta_1\times Venus~weight + \varepsilon.
+$$
+
+We still estimate $\beta_1$ using least squares, but now we're getting the best fitting line that goes through the origin, as opposed to the best fitting line that could go anywhere.
+
+This is how to fit this in `R`. That `-1` syntax is like saying "remove the intercept." 
+
+```{r}
+better_fit <- linear_reg() |>
+  fit(mars_weight ~ venus_weight - 1, data = space_penguins)
+
+tidy(better_fit)
+```
+
+Hey good lookin', what's cookin'! That's a number I like. So, when we use some *domain knowledge* to change the model and force it to better match how reality works, we get better results. Here's how the previous line of best fit and the best-fit-through-the-origin line compare:
+
+```{r}
+ggplot(space_penguins, aes(x = venus_weight, y = mars_weight)) + 
+  geom_point() + 
+  geom_smooth(method = "lm", se = FALSE) + 
+  geom_smooth(method = "lm", se = FALSE, formula = y ~ x - 1, color = "red") + 
+  xlim(0, 14) + 
+  ylim(0, 7)
+```
+
+If we redo the confidence interval for the slope in this new model, the "true value" is comfortably inside:
+
+```{r}
+observed_fit <- space_penguins |>
+  specify(mars_weight ~ venus_weight - 1) |>
+  fit()
+
+set.seed(8675309)
+boot_fits <- space_penguins |>
+  specify(mars_weight ~ venus_weight - 1) |>
+  generate(reps = 1000, type = "bootstrap") |>
+  fit()
+
+ci_90 <- get_confidence_interval(
+  boot_fits,
+  point_estimate = observed_fit,
+  level = 0.95,
+  type = "percentile"
+)
+ci_90
+
+visualize(boot_fits) + 
+  shade_confidence_interval(ci_90)
+```
+
+Fab.
