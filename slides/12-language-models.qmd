@@ -21,7 +21,7 @@ library(gt)
 todays_ae <- "ae-09-modeling-fish"
 ```
 
-## While you wait... 
+## While you wait...
 
 ::: appex
 -   Go to your `ae` project in RStudio.
@@ -110,7 +110,7 @@ ggplot(new_mtcars, aes(x = wt,
   ylim(-5.128312, 49.172836) +
   geom_point(color = "green3") +
   geom_line(color = "pink3") +
-  geom_area(color = "brown4") +
+  #geom_area(color = "brown4") +
   geom_quantile(linewidth = 2, color = "yellow4") +
   geom_text(
     size = new_mtcars$wt,
@@ -174,8 +174,7 @@ ggplot(fixed_mtcars, aes(x = wt, y = mpg, color = am)) +
 
 ## Semi or garage? {.smaller}
 
-> i love how Tesla thinks the wall in my garage is a semi.
-> 😅
+> i love how Tesla thinks the wall in my garage is a semi. 😅
 
 ![](images/12/tesla-get-wrong-1.png){fig-align="center" width="300"}
 
@@ -185,9 +184,7 @@ Source: [Reddit](https://www.reddit.com/r/TeslaModelY/comments/vjcpte/i_love_how
 
 ## Semi or garage? {.smaller}
 
-> New owner here.
-> Just parked in my garage.
-> Tesla thinks I crashed onto a semi.
+> New owner here. Just parked in my garage. Tesla thinks I crashed onto a semi.
 
 ![](images/12/tesla-get-wrong-2.png){fig-align="center" width="300"}
 
@@ -211,22 +208,13 @@ Source: [Reddit](https://www.reddit.com/r/FUCKYOUINPARTICULAR/comments/hi5srx/te
 
 > [Relation Between Leisure Time, Commuting, and Occupational Physical Activity With Blood Pressure in 125,402 Adults: The Lifelines Cohort](https://www.ahajournals.org/doi/full/10.1161/JAHA.119.014313)
 >
-> Byambasukh, Oyuntugs, Harold Snieder, and Eva Corpeleijn.
-> "Relation between leisure time, commuting, and occupational physical activity with blood pressure in 125 402 adults: the lifelines cohort." *Journal of the American Heart Association* 9.4 (2020): e014313.
+> Byambasukh, Oyuntugs, Harold Snieder, and Eva Corpeleijn. "Relation between leisure time, commuting, and occupational physical activity with blood pressure in 125 402 adults: the lifelines cohort." *Journal of the American Heart Association* 9.4 (2020): e014313.
 
 ## Leisure, commute, physical activity and BP {.smaller .scrollable}
 
 **Background:** Whether all domains of daily‐life moderate‐to‐vigorous physical activity (MVPA) are associated with lower blood pressure (BP) and how this association depends on age and body mass index remains unclear.
 
-**Methods and Results:** In the population‐based Lifelines cohort (N=125,402), MVPA was assessed by the Short Questionnaire to Assess Health‐Enhancing Physical Activity, a validated questionnaire in different domains such as commuting, leisure‐time, and occupational PA.
-BP was assessed using the last 3 of 10 measurements after 10 minutes’ rest in the supine position.
-Hypertension was defined as systolic BP ≥140 mm Hg and/or diastolic BP ≥90 mm Hg and/or use of antihypertensives.
-In regression analysis, higher commuting and leisure‐time but not occupational MVPA related to lower BP and lower hypertension risk.
-Commuting‐and‐leisure‐time MVPA was associated with BP in a dose‐dependent manner.
-β Coefficients (95% CI) from linear regression analyses were −1.64 (−2.03 to −1.24), −2.29 (−2.68 to −1.90), and finally −2.90 (−3.29 to −2.50) mm Hg systolic BP for the low, middle, and highest tertile of MVPA compared with “No MVPA” as the reference group after adjusting for age, sex, education, smoking and alcohol use.
-Further adjustment for body mass index attenuated the associations by 30% to 50%, but more MVPA remained significantly associated with lower BP and lower risk of hypertension.
-This association was age dependent.
-β Coefficients (95% CI) for the highest tertiles of commuting‐and‐leisure‐time MVPA were −1.67 (−2.20 to −1.15), −3.39 (−3.94 to −2.82) and −4.64 (−6.15 to −3.14) mm Hg systolic BP in adults \<40, 40 to 60, and \>60 years, respectively.
+**Methods and Results:** In the population‐based Lifelines cohort (N=125,402), MVPA was assessed by the Short Questionnaire to Assess Health‐Enhancing Physical Activity, a validated questionnaire in different domains such as commuting, leisure‐time, and occupational PA. BP was assessed using the last 3 of 10 measurements after 10 minutes’ rest in the supine position. Hypertension was defined as systolic BP ≥140 mm Hg and/or diastolic BP ≥90 mm Hg and/or use of antihypertensives. In regression analysis, higher commuting and leisure‐time but not occupational MVPA related to lower BP and lower hypertension risk. Commuting‐and‐leisure‐time MVPA was associated with BP in a dose‐dependent manner. β Coefficients (95% CI) from linear regression analyses were −1.64 (−2.03 to −1.24), −2.29 (−2.68 to −1.90), and finally −2.90 (−3.29 to −2.50) mm Hg systolic BP for the low, middle, and highest tertile of MVPA compared with “No MVPA” as the reference group after adjusting for age, sex, education, smoking and alcohol use. Further adjustment for body mass index attenuated the associations by 30% to 50%, but more MVPA remained significantly associated with lower BP and lower risk of hypertension. This association was age dependent. β Coefficients (95% CI) for the highest tertiles of commuting‐and‐leisure‐time MVPA were −1.67 (−2.20 to −1.15), −3.39 (−3.94 to −2.82) and −4.64 (−6.15 to −3.14) mm Hg systolic BP in adults \<40, 40 to 60, and \>60 years, respectively.
 
 **Conclusions:** Higher commuting and leisure‐time but not occupational MVPA were significantly associated with lower BP and lower hypertension risk at all ages, but these associations were stronger in older adults.
 
@@ -514,7 +502,7 @@ ggplot(mtcars, aes(x = wt, y = mpg)) +
 
 # Application exercise
 
-## `{r} todays_ae` 
+## `{r} todays_ae`
 
 ::: appex
 -   Go to your ae project in RStudio.
