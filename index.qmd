@@ -6,7 +6,13 @@ editor_options:
   chunk_output_type: console
 ---
 
-Below is a prospective outline for the course. Due dates are firm, but topics may change with advanced notice.
+::: callout-important
+## L'esprit de l'escalier
+
+For the most current incarnation of these materials, see here:
+
+<https://sta199-s26.github.io>
+:::
 
 ```{r}
 #| echo: false
